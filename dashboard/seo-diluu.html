@@ -80,7 +80,7 @@ footer{color:var(--muted);font-size:12.5px;line-height:1.6}
       <figure class="card"><figcaption><h3>Clics al mes de búsquedas de padres</h3><p>Search Console, consultas sin marca ni mapas. Línea de puntos: objetivo del 31 de marzo (150) fuera de escala; el de diciembre (25) se marca.</p></figcaption><div class="chart" id="chClics"></div></figure>
       <figure class="card"><figcaption><h3>Veces que un padre nos ve en Google (impresiones)</h3><p>Mismas consultas. Lo primero que sube cuando una página mejora.</p></figcaption><div class="chart" id="chImpr"></div></figure>
       <figure class="card"><figcaption><h3>Sesiones desde ChatGPT, Gemini y Perplexity</h3><p>GA4, canal "AI Assistant". Objetivo: 150 en diciembre, 300 en marzo.</p></figcaption><div class="chart" id="chIA"></div></figure>
-      <figure class="card"><figcaption><h3>Conversiones GA4 desde páginas de padres con tráfico orgánico</h3><p>Páginas de clases (ES, EN, FR), lectoescritura, heritage y kindergartners. Sin /trial ni /course-direct. Son eventos clave de GA4, no pruebas pagadas.</p></figcaption><div class="chart" id="chConv"></div></figure>
+      <figure class="card"><figcaption><h3>Eventos clave GA4 desde páginas de padres con tráfico orgánico</h3><p>Páginas de clases (ES, EN, FR, por edades), lectoescritura, heritage y kindergartners. Sin /trial ni /course-direct. Son eventos clave de GA4 (su definición cambió en julio), no pruebas pagadas.</p></figcaption><div class="chart" id="chConv"></div></figure>
     </div>
   </section>
 
@@ -114,7 +114,7 @@ const D = {
     { k: "Enlaces nuevos (dominios)", v: 0, meta: 8, fecha: "31 dic", d: "Hoja de outreach; 20 el 31 de marzo" },
     { k: "Preguntas a IA en las que aparece Diluu", v: null, meta: null, fecha: "base 31 oct", d: "10 preguntas en ChatGPT, Gemini y Perplexity; +2 en dic, 5 de 10 en mar" },
     { k: "Clics de padres al mes", v: 3, meta: 25, fecha: "dic · 150 en mar", d: "Septiembre: 3 clics, 743 impresiones" },
-    { k: "Conversiones desde páginas de padres al mes", v: 23, meta: 4, fecha: "dic · 10 en mar", d: "Septiembre (GA4, orgánico). Ojo: definición de conversiones de GA4" },
+    { k: "Eventos clave GA4 desde páginas de padres al mes", v: 145, meta: null, fecha: "sep 2026", d: "Orgánico en páginas de clases ES/EN/FR, lectoescritura y heritage. No son pruebas pagadas: el objetivo de 4 (dic) y 10 (mar) pruebas se medirá en la base de producción cuando guarde el origen" },
     { k: "Sesiones desde IA al mes", v: 135, meta: 150, fecha: "dic · 300 en mar", d: "Septiembre: 120 de ChatGPT, 10 de Gemini" }
   ],
   meses: ["jun 25","jul","ago","sep","oct","nov","dic","ene 26","feb","mar","abr","may","jun","jul","ago","sep","oct*"],
@@ -124,8 +124,8 @@ const D = {
   iaSesiones: [0,0,0,0,0,23,15,30,135,17],
   iaConv: [0,0,0,0,0,0,0,7,44,3],
   convMeses: ["ene 26","feb","mar","abr","may","jun","jul","ago","sep","oct*"],
-  convSesiones: [55,39,59,32,11,21,49,19,247,76],
-  conv: [0,0,0,0,0,0,0,2,23,14],
+  convSesiones: [611,506,416,297,278,293,550,237,659,200],
+  conv: [0,1,0,1,1,0,1,8,145,69],
   queries: [
     ["clases de español para niños","ES",393,2,17.4,"/es/spanish-classes-for-kids","Reescribir (7 nov)"],
     ["español para niños","ES",280,2,53.7,"/es/spanish-classes-for-kids","Reescribir (7 nov)"],
@@ -174,7 +174,8 @@ const D = {
     "\"Búsquedas de padres\" = consultas que contienen class, clases, cours, lesson, tutor, learn spanish/french, aprender español, apprendre, online spanish/french, spanish/french for kids, español/francés para niños, heritage, bilingual kids o lectoescritura, sin marca ni mapas.",
     "Las conversiones de GA4 son eventos clave (reservas, compras y otros), no pruebas pagadas; su definición cambió en julio de 2026. Sirven para la tendencia.",
     "GA4 etiqueta como \"Organic Search\" miles de sesiones en /trial-sp y /trial-fr que no vienen de Google: se excluyen de este panel.",
-    "Las posiciones son medias de 12 meses; una página reescrita tarda de 4 a 12 semanas en moverse."
+    "Las posiciones son medias de 12 meses; una página reescrita tarda de 4 a 12 semanas en moverse.",
+    "Las páginas de clases en inglés (/spanish-classes-for-kids y /french-classes-for-kids) son hoy las que más eventos traen desde orgánico: 132 sesiones y 62 eventos la de francés en septiembre."
   ],
   fuentes: "Fuentes: Search Console (diluu.com) y GA4 (425989233) vía Supermetrics, jun 2025 – 7 oct 2026; tablero de Notion de Bárbara. Lo actualiza la rutina registro-semanal cada lunes."
 };
@@ -215,7 +216,7 @@ function columns(el, labels, data, colorVar, goal, unit) {
 columns($("#chClics"), D.meses, D.clics, "--s1", 25, "clics");
 columns($("#chImpr"), D.meses, D.impresiones, "--s1", null, "impresiones");
 columns($("#chIA"), D.iaMeses, D.iaSesiones, "--s3", 150, "sesiones");
-columns($("#chConv"), D.convMeses, D.conv, "--s2", 4, "conversiones");
+columns($("#chConv"), D.convMeses, D.conv, "--s2", null, "eventos clave");
 
 const estadoCls = e => e.startsWith("Reescribir") ? "warn" : e === "Artículo" ? "neutral" : e === "Hecho" ? "good" : "muted";
 $("#queries tbody").innerHTML = D.queries.map(q => `<tr><td>${q[0]}</td><td>${q[1]}</td><td class="n">${q[2].toLocaleString("es-ES")}</td><td class="n">${q[3]}</td><td class="n">${q[4] === null ? "—" : fmt(q[4])}</td><td>${q[5]}</td><td><span class="chip ${estadoCls(q[6])}">${q[6]}</span></td></tr>`).join("");
