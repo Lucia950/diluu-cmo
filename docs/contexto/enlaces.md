@@ -5,7 +5,8 @@
 - Deck de bienvenida de Marta "Bienvenida a Marketing Diluu" (compartido por enlace): https://claude.ai/artifact/ToJBwHBeysFiUj3mQ4vdgW
 - Deck "SEO Diluu · Bárbara" (privado hasta que Lucia lo comparta): https://claude.ai/artifact/KeMr8EsNC3HaUdz4puC1gE
 - Métricas mensuales (CFO): https://claude.ai/artifact/MLHBG7tuhvUmvamvqRVFvT · fuente local Projects/CFO/dashboard/diluu-metricas.html
-- Dashboard semanal de canales (agosto, local): ~/Documents/Claude/Artifacts/diluu-canales-semanal/index.html
+- Dashboard "Semana CMO Diluu" (lo republica la rutina de los lunes; fuente dashboard/semana-cmo.html): https://claude.ai/artifact/LsYQbEjQcBu4xcmiTWL5Lw
+- Dashboard semanal de canales (agosto, local, obsoleto): ~/Documents/Claude/Artifacts/diluu-canales-semanal/index.html
 - Migración del proyecto CMO a Claude Code: https://claude.ai/artifact/1g2DbNwbnDGpCbqmr12Hrs
 - Bárbara: "Bárbara: dónde estamos" https://claude.ai/artifact/RgSoWpyXj7rsnhhiDDzWEx · guion https://claude.ai/artifact/XEYasZM24VVG5sFgFcKrvB (copias en Projects/VENTAS/docs/).
 - Francés · Revisión anual y Q4 2026: https://claude.ai/artifact/F9YV3p5wUjwCTdDNZgWHNV
