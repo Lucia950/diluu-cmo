@@ -5,10 +5,10 @@ avisos de datos. La entrada más reciente va arriba. Lo escribe la skill registr
 
 ## Semana del 5 al 11 de octubre de 2026 (lectura parcial del 8 oct, con datos del 1 al 7)
 
-**Objetivo Q4.** 3.000 plazas (suelo) / 3.100 el 31 dic; ≥ 640 altas (oct 300). Quedan 84 días.
+**Objetivo Q4.** 3.000 plazas (suelo) / 3.100 el 31 dic; ≥ 700 altas (suelo revisado el 8 oct; oct ≈ 320). Quedan 84 días.
 
-**Plazas (base de producción, 8 oct).** 2.754 activas empezadas sin fin programado (+49 con fin
-futuro). Del 1 al 8 oct: 120 nuevas (15/día; sep 17,3/día) y 68 canceladas (8,5/día; sep 11,9/día).
+**Plazas (base de producción, 8 oct).** 2.907 activas (contratadas y no finalizadas, incluidas las
+pausadas y las 101 que empiezan estos días; 52 con fin programado). Solo empezadas: 2.803. Del 1 al 8 oct: 120 nuevas (15/día; sep 17,3/día) y 68 canceladas (8,5/día; sep 11,9/día).
 Neto +52. Pruebas: 168 (21/día, igual que en sep). Panel bi.diluu.com: 2.829 el 2 oct (definición
 distinta, pendiente de cuadrar). Stripe: sin dato (conector desconectado). Proxy: la hoja ATRIBUCIÓN
 AUTOMÁTICA registra ≈48 pedidos del 1 al 8 oct (20 enlaces de pago + 28 compras web), ≈6 al día frente

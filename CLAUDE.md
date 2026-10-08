@@ -20,8 +20,9 @@ horas en hora de Bali e indica la zona.
 - Las clases se pausan en Navidad (2026: del 22 dic al 5 ene).
 - Objetivo Q4 2026: ≥ 3.000 plazas activas el 31 dic (suelo) y 3.100 (objetivo); ≥ 700 altas en
   el trimestre (suelo revisado el 8 oct; el plan decía 640); CAC de medios por familia nueva ≤ £60.
-  Plaza activa = matrícula empezada (startDate ≤ hoy) y sin fin pasado (end null o lastLesson ≥
-  hoy), incluidas las pausadas (decidido el 8 oct). Base de producción, 8 oct: 2.803.
+  Plaza activa = matrícula contratada y no finalizada (end null o end.lastLesson ≥ hoy), con
+  cualquier fecha de inicio, incluidas las pausadas (decidido el 8 oct; es la definición que más se
+  parece al panel). Base de producción, 8 oct: 2.907 (2.882 el 2 oct frente a 2.829 del panel).
   Hoja de ruta 2027: ≥ 5.800 plazas el 30 nov 2027 siendo rentables. Detalle en docs/planes/.
 - Equipo de marketing: Lucia lleva Meta Ads y Google Ads con Claude. Daniela (contenido ES) y
   Morgane (contenido FR). Marta (prácticas, 20 h/semana, desde octubre 2026). Bárbara (ventas;
