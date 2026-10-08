@@ -13,6 +13,8 @@
 - Piloto YouTube Pepe el Loro: https://claude.ai/artifact/KNvqkvSoBXiwVtgQdr8QHJ
 
 ## Notion
+- Tablero "SEO · Proyectos y entregas de Bárbara": https://app.notion.com/p/679f71f6b8414e85bdb117fbc8a231ce
+  (data source collection://1267be7c-c4ef-4259-accf-b4b809417aee).
 - Tablero "Marketing · Proyectos y entregas de Marta": https://app.notion.com/p/430948cda85c409ab2f6775bf97ea1e9
   (data source collection://f9158902-f0d3-410c-a0d1-9fa3bbf28940; vistas: Tablero por estado, Calendario de entregas, Cronograma). Marta Ballesteros está en el workspace; hay que compartirle la base de datos.
 - MARKETING (DILUU): https://app.notion.com/p/c4268a310cd043899dfe26609443a792 · SEO: https://app.notion.com/p/73025ad784ef472c82166afff657a949

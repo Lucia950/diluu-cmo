@@ -9,13 +9,15 @@ plataformas.
 ## 1. El mes contra el plan
 Tabla con objetivo (docs/planes/plan-q4-2026-y-hoja-de-ruta-2027.md, sección Objetivos Q4), real,
 mes anterior y mismo mes de 2025:
-- Altas de pago, familias nuevas, bajas, neto (Stripe). Plazas activas a fin de mes (panel y base
-  de producción), plazas nuevas y perdidas (base de producción) y pérdida mensual de plazas.
+- Altas, familias nuevas, bajas y neto (base de producción; Stripe solo para ingresos y MRR).
+  Plazas activas a fin de mes (base; panel como contraste), plazas nuevas y canceladas y pérdida
+  mensual de plazas.
 - Paid: Meta y Google (gasto, compras píxel/conversiones, CTR, CPM) frente al presupuesto del mes y
   CAC de medios por alta y por familia nueva.
 - Conversión prueba → curso a 30 días (base de producción: pagos de prueba del mes anterior al
   revisado, emparejados con su matrícula posterior). Bajas en los primeros 30 días de la cohorte.
-- SEO (clics de padres, pruebas desde páginas de padres), email (altas por automatización),
+- SEO (clics de padres, pruebas desde páginas de padres, sesiones desde IA, artículos, enlaces:
+  tablero y panel de Bárbara), email (altas por automatización),
   referidos (altas con código), ventas (ventas válidas por código y enlaces de pago creados).
 - Tests activos del plan (Black Friday, pausa, tarjeta regalo, garantía) con su métrica de éxito.
 

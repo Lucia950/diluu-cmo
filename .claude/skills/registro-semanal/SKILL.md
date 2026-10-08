@@ -14,9 +14,9 @@ Google Ads, Brevo ni Notion (solo lectura; el tablero de Marta se lee, no se edi
 1. **Plazas** (base de producción, docs/medicion/fuentes.md): activas empezadas hoy; nuevas y
    perdidas en la semana y en el trimestre; pruebas (TRIAL) de la semana. Si el panel bi.diluu.com
    está accesible por el navegador, anota también su cifra de plazas activas.
-2. **Stripe** (conector; si falla, dilo y usa la pestaña ATRIBUCIÓN AUTOMÁTICA como proxy): altas de
-   pago, familias nuevas y bajas de la semana y del mes; altas con utm_campaign=bf26 o promo
-   bf26_trimestral cuando toque; altas con código de referido.
+2. **Altas, familias nuevas y bajas: base de producción** (definiciones en docs/medicion/fuentes.md;
+   Stripe no cuenta a las familias de Seal Subscriptions). Stripe solo para metadatos de campaña
+   (utm_campaign=bf26, promo=bf26_trimestral, referral_code) e ingresos.
 3. **Meta** (Supermetrics FA, dos cuentas, por día): gasto, impresiones, clics, compras de píxel,
    CTR, CPM. **Google** (AW): gasto, clics, conversiones por campaña. Compara el ritmo mensual con el
    presupuesto del mes (docs/contexto/decisiones.md) y aplica los guardrails de CLAUDE.md.
@@ -27,7 +27,14 @@ Google Ads, Brevo ni Notion (solo lectura; el tablero de Marta se lee, no se edi
 6. **Marta** (Notion, query de collection://f9158902-f0d3-410c-a0d1-9fa3bbf28940): tareas con
    Entrega en esta semana y la siguiente, y las vencidas que no estén en Done. Cruza con
    docs/equipo/marta-plan-entregas.md para calcular el margen hasta la fecha límite real.
-7. **Bárbara**: fechas de sus entregas de la semana (plan Q4 y docs/equipo/barbara-seo-propuesta.md).
+7. **Bárbara (SEO)**: tareas de su tablero de Notion (collection://1267be7c-c4ef-4259-accf-b4b809417aee)
+   que vencen esta semana o están vencidas; artículos publicados, enlaces (hoja de outreach) y la
+   hoja de preguntas a IA si hay dato nuevo.
+8. **SEO para el panel de Bárbara**: Search Console por mes y semana con el filtro de búsquedas de
+   padres (regex de docs/medicion/fuentes.md), posición de las 30 búsquedas objetivo y de las
+   páginas reescritas; GA4 sesiones y conversiones orgánicas en páginas de clases (classes-for-kids,
+   cours-de-francais, heritage, lectoescritura, literacy, kindergartners; nunca /trial ni
+   /course-direct, que GA4 etiqueta mal) y canal "AI Assistant" por fuente.
 
 ## 3. Cálculo del aporte de cada canal al objetivo
 - Objetivo: ≥ 3.000 plazas el 31 dic (3.100 deseable) y ≥ 640 altas en el Q4 (300/220/120).
@@ -49,7 +56,8 @@ cambió más respecto a la semana anterior. Cada punto con la cifra que lo justi
    anterior (tabla de canales, plazas, foco, Marta, avisos de datos).
 2. Actualiza el bloque `const D = {...}` de dashboard/semana-cmo.html (solo datos; añade la semana
    a las series) y publica el artefacto "Semana CMO Diluu" con el Artifact tool al mismo URL que
-   figura en docs/contexto/enlaces.md.
+   figura en docs/contexto/enlaces.md. Haz lo mismo con dashboard/seo-diluu.html → artefacto
+   "SEO Diluu" (el de Bárbara: sin presupuestos ni CAC).
 3. Mensaje a Lucia por Slack (DM a U030M5K0C0Y): 10 líneas máximo: plazas y altas frente a objetivo,
    foco de la semana, tareas de Marta de la semana con fecha y margen, enlace al dashboard.
 4. Si hay una decisión nueva, añádela a docs/contexto/decisiones.md. Haz commit en git con mensaje
