@@ -36,11 +36,16 @@ Script: `node "$S/mongo-read.cjs"` con `S=/Users/luciamarin/.claude/plugins/cach
   el etiquetado antes de atribuir.
 - SIB (Brevo): autenticado; sin explorar aún.
 
+- Altas (familias con matrícula nueva en el periodo): `aggregate v3-enrolments '[{"$match": {"createdAt": {"$gte": "<ini>", "$lt": "<fin>"}, "previousEnrolmentId": null}}, {"$group": {"_id": "$client.id"}}, {"$count": "n"}]'`
+  (sep 2026: 310; 1–8 oct: 82). Familias nuevas (primera matrícula de su historia en el periodo):
+  `[{"$group": {"_id": "$client.id", "first": {"$min": "$createdAt"}}}, {"$match": {"first": {"$gte": "<ini>", "$lt": "<fin>"}}}, {"$count": "n"}]` (sep: 223; 1–8 oct: 45).
+  Bajas de familias (última plaza cancelada en el periodo, aproximación): familias con alguna
+  plaza CANCEL en el periodo (sep: 220; 1–8 oct: 65); afinar excluyendo las que conservan otra plaza.
+
 ## Stripe
-Conector claude.ai (lectura). Altas = suscripciones creadas con pago (sin incomplete); bajas =
-canceled_at. Si el conector falla ("connection invalidated"), reconectar desde ajustes de conectores.
-Proxy mientras tanto: pestaña ATRIBUCIÓN AUTOMÁTICA de TRACKING VENTAS INTERNO (la rutina
-diluu-atribucion-ventas-diaria la rellena cada día con compras web y enlaces de pago).
+Solo para ingresos, MRR, cupones y metadatos de campaña (bf26, promo, referral_code). No se usa
+para contar altas ni bajas: hay familias que pagan por Seal Subscriptions fuera de Stripe. Si el
+conector falla ("connection invalidated"), reconectar desde ajustes de conectores de claude.ai.
 
 ## Plan Q4: cifras de referencia
 Presupuesto paid oct £14.000 (Meta 12.500 + Google 1.500), nov £9.000, dic £4.500. Altas objetivo

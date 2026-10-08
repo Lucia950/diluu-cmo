@@ -1,5 +1,13 @@
 # Decisiones (más reciente arriba)
 
+- **2026-10-08** · Fuente de verdad de altas, bajas y plazas: la base de producción, no Stripe (hay
+  familias en Seal Subscriptions que no pasan por Stripe). Stripe queda para ingresos y metadatos.
+- **2026-10-08** · SEO entero para Bárbara, con objetivos propios y con Claude; Marta no hace SEO:
+  lleva creatividades, Black Friday, email marketing (automatizaciones, Navidad, referidos) y la
+  campaña de enero. Bárbara no toca Brevo. Las reseñas de Google las pide todo el equipo de ops.
+  Con Bárbara no hay reunión semanal: seguimiento asíncrono en Notion. Nuevo objetivo de canal:
+  visibilidad en asistentes de IA (ChatGPT trajo 135 sesiones y 44 conversiones en septiembre).
+
 - **2026-10-08** · Plaza activa = matrícula contratada y no finalizada, con cualquier fecha de inicio,
   incluidas las pausadas (Lucia: "tomaría el que tiene en cuenta a los pausados"). Base de producción,
   8 oct: 2.907; es la definición que más se parece al panel (2.882 frente a 2.829 el 2 oct). El
