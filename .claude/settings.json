@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "deny": [
+      "mcp__cef348ae-19e4-4050-ae4d-5468656d4795__stripe_api_write",
+      "mcp__0153988a-bc69-401d-a51e-59063db8a635__manage_campaign",
+      "mcp__47a913a9-f8be-4ac6-abea-d958c8112f9c__email_campaign_management_create_email_campaign",
+      "mcp__47a913a9-f8be-4ac6-abea-d958c8112f9c__sms_campaigns_create_sms_campaign",
+      "mcp__47a913a9-f8be-4ac6-abea-d958c8112f9c__templates_create_smtp_template",
+      "mcp__47a913a9-f8be-4ac6-abea-d958c8112f9c__templates_send_test_template"
+    ],
+    "allow": [
+      "Bash(node /Users/luciamarin/.claude/plugins/cache/diluu/diluu-ops/*/scripts/mongo-read.cjs *)",
+      "mcp__0153988a-bc69-401d-a51e-59063db8a635__data_query",
+      "mcp__0153988a-bc69-401d-a51e-59063db8a635__get_async_query_results",
+      "mcp__0153988a-bc69-401d-a51e-59063db8a635__field_discovery",
+      "mcp__0153988a-bc69-401d-a51e-59063db8a635__accounts_discovery",
+      "mcp__cef348ae-19e4-4050-ae4d-5468656d4795__stripe_api_read",
+      "mcp__1b15159d-981f-45b4-89e1-70ac8e6f13a4__notion-query-data-sources",
+      "mcp__1b15159d-981f-45b4-89e1-70ac8e6f13a4__notion-fetch"
+    ]
+  }
+}

@@ -1,0 +1,5 @@
+data/
+CLAUDE.local.md
+.env
+.DS_Store
+*.tmp

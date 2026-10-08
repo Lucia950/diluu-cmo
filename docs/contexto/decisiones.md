@@ -1,0 +1,38 @@
+# Decisiones (más reciente arriba)
+
+- **2026-10-08** · Las fechas de entrega de Marta llevan margen: cada entrega tiene una fecha de
+  Marta y una fecha límite real posterior (docs/equipo/marta-plan-entregas.md). Marta solo ve sus
+  fechas en Notion. Si no llega, Lucia la termina en el margen.
+- **2026-10-08** · El objetivo del SEO se mide solo sobre búsquedas y páginas de padres: 150 clics al
+  mes de consultas sin marca ni mapas y 10 pruebas al mes desde páginas de clases y artículos
+  (GA4 por página de destino) el 31 mar 2027. Las páginas de mapas no se tocan ni cuentan.
+- **2026-10-08** · Reparto del SEO (propuesta, pendiente de Lucia y de la revisión de Bárbara del
+  13 oct): Marta analiza y propone (diagnóstico, páginas, briefs); Bárbara escribe los artículos,
+  consigue enlaces y cuida la ficha de Google; Lucia publica con Claude Code. Lucía F. pide reseñas.
+- **2026-10-08** · Black Friday para familias nuevas: Lucia cierra la oferta el 13 oct; el plan en
+  una página de Marta es del 24 oct (no del 31); todo probado el 10 nov (límite real, 14 nov).
+- **2026-10-08** · Rutinas locales de Claude Code: registro semanal (lunes 08:30 Bali) y revisión
+  mensual (día 1, 09:00 Bali). Sustituyen a las tareas del proyecto CMO de claude.ai cuando lleven
+  dos ejecuciones correctas.
+- **2026-10-07** · Atribución de ventas: cuenta para la vendedora por código (LF-, BA-, VI-, VC-) o
+  por enlace de pago con client_reference_id; manda el código. Se cobra aunque no paguen el 2.º mes.
+- **2026-10-06** · Descuento de seguimiento en Course Pending: 10 % (antes 20 %), cupón VENTAS10.
+- **2026-10-02** · Presupuesto de paid Q4: £14.000 oct (12.500 Meta + 1.500 Google), £9.000 nov,
+  £4.500 dic; enero £22.000. Regla a mitad de mes: CAC de medios por familia nueva < £50 → Meta
+  +15 %; > £65 → −15 %. Objetivo de plazas: 3.000 suelo, 3.100 objetivo.
+- **2026-10-02** · Meta: pausar tests con CPA de píxel > £80; Video1 FR ≤ 30 % del gasto; 6–8
+  creativos nuevos. Google: francés hasta £20/día si CPA 14 d < £90; genérica no sube (CPA £100).
+- **2026-10-02** · Bonus de ventas nuevo desde el 1 nov, por tramos (16–29 ventas: 7 $; 30–39: 9 $;
+  40–49: 11 $; 50+: 13 $), sin tope; equipo 50/100 $ si conversión ≥ 48/52 %. Ningún enlace de pago
+  creado en Stripe desde el 1 nov.
+- **2026-10-02** · Tests de Navidad: trimestral de Black Friday para familias activas (≥ 80 cambios),
+  pausa larga con plaza reservada (≥ 25 % acepta, ≥ 70 % vuelve), tarjeta regalo (≥ 40 vendidas).
+  Todo montado y probado el 14 nov. Black Friday para captar solo con audiencias templadas (≥ 60
+  altas, ≤ £55, £1.500 en Meta). Curso directo con garantía: test en noviembre.
+- **2026-10-02** · Email: parar envíos masivos; pasar a automatizaciones de ciclo de vida. Email
+  propio de referidos el 13 oct. Guardar referral_code en la prueba y en la suscripción.
+- **2026-09-15** · Bárbara: tres compromisos de ventas con revisión el 13 oct (velocidad ≤ 30 min y
+  ≥ 60 % en 1 h; 0 tareas CALL 2/3 vencidas al cerrar; 0 errores críticos).
+- **2026-09-03** · Clasificación de canales vigente: Meta MANTENER (sin subir), Google francés
+  ESCALAR con control, Google genérica ARREGLAR, SEO ARREGLAR, Email CAMBIAR DE FUNCIÓN, Referidos
+  MEDIR, Social orgánico MANTENER, Leads CORTAR.

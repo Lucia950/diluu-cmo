@@ -1,0 +1,285 @@
+<title>Semana CMO Diluu</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@800;900&family=DM+Sans:wght@400;500;700&display=swap">
+<style>
+/* Layout: cabecera, objetivo del trimestre (barra + tiles), aporte por canal (cards), dos gráficos semanales, foco, Marta, Bárbara, avisos. Marca Diluu + paleta de datos validada. */
+:root{
+  --bg:#FAF9F7; --surface:#FFFFFF; --ink:#313131; --ink2:#6B6B6B; --muted:#9A9A9A; --line:#E5E2DA;
+  --accent:#1E64C9; --accent-soft:#E7EDF6; --yellow:#F5D057; --yellow-ink:#7A5E00;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s6:#008300;
+  --good:#0ca30c; --good-soft:#E3FBD7; --warn:#fab219; --warn-soft:#FAF5E7; --serious:#ec835a; --serious-soft:#FBEFE3; --critical:#d03b3b; --critical-soft:#FAE3E5;
+  --display:'Nunito',Arial,sans-serif; --body:'DM Sans',Helvetica,Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#141414; --surface:#1F1F1E; --ink:#F3F2EE; --ink2:#B8B6B0; --muted:#8A8884; --line:#34332F;
+  --accent:#7FA4F2; --accent-soft:#1F2B44; --yellow:#F5D057; --yellow-ink:#F5D057;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300;
+  --good-soft:#173324; --warn-soft:#3A2D14; --serious-soft:#3E2A1F; --critical-soft:#3E1F23; color-scheme:dark } }
+:root[data-theme="dark"]{
+  --bg:#141414; --surface:#1F1F1E; --ink:#F3F2EE; --ink2:#B8B6B0; --muted:#8A8884; --line:#34332F;
+  --accent:#7FA4F2; --accent-soft:#1F2B44; --yellow:#F5D057; --yellow-ink:#F5D057;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300;
+  --good-soft:#173324; --warn-soft:#3A2D14; --serious-soft:#3E2A1F; --critical-soft:#3E1F23; color-scheme:dark }
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.5;margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:20px;padding-block:28px 56px;display:flex;flex-direction:column;gap:28px}
+header{display:flex;flex-direction:column;gap:6px}
+.eyebrow{margin:0;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:700}
+h1{margin:0;font-family:var(--display);font-weight:900;font-size:clamp(28px,4.5vw,40px);line-height:1.1;text-wrap:balance}
+h2{margin:0;font-family:var(--display);font-weight:900;font-size:22px;text-wrap:balance}
+h3{margin:0;font-size:15px;font-weight:700}
+p{margin:0}
+.sub{color:var(--ink2);max-width:70ch}
+section{display:flex;flex-direction:column;gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px;min-width:0}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.tile .k{font-size:12.5px;color:var(--ink2)}
+.tile .v{font-family:var(--display);font-weight:900;font-size:30px;line-height:1.05;font-variant-numeric:tabular-nums}
+.tile .d{font-size:12.5px;color:var(--ink2)}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:2px 10px;border-radius:999px;font-size:11.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
+.chip.good{background:var(--good-soft);color:var(--good)} .chip.warn{background:var(--warn-soft);color:var(--yellow-ink)} .chip.serious{background:var(--serious-soft);color:var(--serious)} .chip.critical{background:var(--critical-soft);color:var(--critical)} .chip.neutral{background:var(--accent-soft);color:var(--accent)} .chip.muted{background:var(--line);color:var(--ink2)}
+/* progreso de plazas */
+.progress{display:flex;flex-direction:column;gap:10px}
+.track{position:relative;height:22px;background:var(--line);border-radius:6px;overflow:visible}
+.fill{position:absolute;left:0;top:0;bottom:0;background:var(--s1);border-radius:6px 0 0 6px}
+.mark{position:absolute;top:-6px;bottom:-6px;width:2px;background:var(--ink)}
+.mark span{position:absolute;top:-20px;left:50%;transform:translateX(-50%);font-size:11.5px;white-space:nowrap;color:var(--ink2);font-variant-numeric:tabular-nums}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12.5px;color:var(--ink2)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.sw{width:10px;height:10px;border-radius:2px;display:inline-block}
+/* canales */
+.canales{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
+.canal{display:flex;flex-direction:column;gap:8px}
+.canal .top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.canal .top h3{display:flex;align-items:center;gap:8px}
+.canal .nums{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;font-size:13.5px}
+.canal .nums b{font-variant-numeric:tabular-nums}
+.canal .nums .k{color:var(--ink2);font-size:12px}
+.budget{height:8px;background:var(--line);border-radius:4px;overflow:hidden}
+.budget i{display:block;height:100%;border-radius:4px}
+.canal .nota{font-size:13px;color:var(--ink2)}
+/* gráficos */
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:760px){.grid2{grid-template-columns:minmax(0,1fr)}}
+figure{margin:0;display:flex;flex-direction:column;gap:6px}
+figcaption{display:flex;flex-direction:column;gap:2px}
+figcaption p{font-size:12.5px;color:var(--ink2)}
+.chart{width:100%;position:relative}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+.chart text{font-family:var(--body);font-size:11px;fill:var(--muted);font-variant-numeric:tabular-nums}
+.chart text.lab{fill:var(--ink);font-weight:700}
+.chart .gridl{stroke:var(--line);stroke-width:1}
+.chart .base{stroke:var(--muted);stroke-width:1}
+.tip{position:fixed;z-index:10;pointer-events:none;background:var(--ink);color:var(--bg);border-radius:8px;padding:7px 10px;font-size:12px;line-height:1.4;max-width:240px;display:none;font-variant-numeric:tabular-nums}
+/* barras horizontales */
+.hbars{display:flex;flex-direction:column;gap:8px}
+.hrow{display:grid;grid-template-columns:150px minmax(0,1fr) 60px;align-items:center;gap:10px;font-size:13px}
+@media (max-width:480px){.hrow{grid-template-columns:110px minmax(0,1fr) 56px}}
+.hrow .t{height:12px;position:relative}
+.hrow .t i{position:absolute;inset:0 auto 0 0;background:var(--s1);border-radius:0 4px 4px 0;min-width:2px}
+.hrow .n{text-align:right;color:var(--ink2);font-variant-numeric:tabular-nums}
+/* listas */
+ol.foco{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:8px}
+ol.foco li{padding-left:4px}
+table{border-collapse:collapse;width:100%;font-size:13.5px;font-variant-numeric:tabular-nums}
+th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+thead th{font-weight:700;color:var(--ink2);font-size:12px;text-transform:uppercase;letter-spacing:.04em}
+.tbl-wrap{overflow-x:auto}
+ul.plain{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+footer{color:var(--muted);font-size:12.5px;line-height:1.6}
+</style>
+
+<div class="wrap">
+  <header>
+    <p class="eyebrow" id="periodo">Semana</p>
+    <h1>Semana CMO Diluu</h1>
+    <p class="sub" id="lede"></p>
+  </header>
+
+  <section>
+    <h2>Objetivo del trimestre: plazas activas el 31 de diciembre</h2>
+    <div class="card progress" id="progreso"></div>
+    <div class="tiles" id="tiles"></div>
+  </section>
+
+  <section>
+    <h2>Aporte de cada canal esta semana</h2>
+    <p class="sub">Inversión frente al presupuesto del mes, resultado medible y clasificación vigente. Las altas de Stripe se reparten por canal solo cuando llevan utm o código; mientras tanto, el reparto es el de las conversiones de GA4.</p>
+    <div class="canales" id="canales"></div>
+  </section>
+
+  <section>
+    <div class="grid2">
+      <figure class="card">
+        <figcaption><h3>Meta: gasto semanal (£)</h3><p>Semanas ISO, lunes a domingo. La última puede ser parcial.</p></figcaption>
+        <div class="chart" id="chMetaCost"></div>
+      </figure>
+      <figure class="card">
+        <figcaption><h3>Meta: compras de píxel por semana</h3><p>Desde agosto incluye matrículas; sirve para la tendencia, no como altas.</p></figcaption>
+        <div class="chart" id="chMetaPur"></div>
+      </figure>
+      <figure class="card">
+        <figcaption><h3>Google Ads: conversiones por semana</h3><p>Pruebas reservadas según Google. Coste semanal en el tooltip.</p></figcaption>
+        <div class="chart" id="chGoog"></div>
+      </figure>
+      <figure class="card">
+        <figcaption><h3>GA4: conversiones por canal (semana)</h3><p id="ga4cap"></p></figcaption>
+        <div class="hbars" id="ga4"></div>
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <h2>En qué nos centramos esta semana</h2>
+    <div class="card"><ol class="foco" id="foco"></ol></div>
+  </section>
+
+  <section>
+    <h2>Marta: tareas y fechas</h2>
+    <p class="sub" id="martaSub"></p>
+    <div class="card tbl-wrap"><table id="marta"><thead><tr><th>Tarea</th><th>Proyecto</th><th>Entrega de Marta</th><th>Límite real</th><th>Margen</th><th>Estado</th></tr></thead><tbody></tbody></table></div>
+  </section>
+
+  <section>
+    <h2>Bárbara: compromisos de la semana</h2>
+    <div class="card"><ul class="plain" id="barbara"></ul></div>
+  </section>
+
+  <section>
+    <h2>Avisos sobre los datos</h2>
+    <div class="card"><ul class="plain" id="avisos"></ul></div>
+  </section>
+
+  <footer id="fuentes"></footer>
+</div>
+<div class="tip" id="tip"></div>
+
+<script>
+// ============ DATOS (los actualiza la rutina registro-semanal cada lunes) ============
+const D = {
+  periodo: "1–7 de octubre de 2026 · lectura del 8 oct (semana 41 en curso)",
+  lede: "Octubre arranca en presupuesto y más barato que septiembre, con pruebas estables y menos cancelaciones. El riesgo del trimestre está en noviembre y diciembre: las 3.000 plazas dependen de los tests de Navidad.",
+  objetivo: { suelo: 3000, deseable: 3100, plazasDB: 2754, plazasDBFecha: "8 oct", plazasPanel: 2829, plazasPanelFecha: "2 oct", diasRestantes: 84, altasQ4: 640, altasMes: 300, mes: "octubre" },
+  tiles: [
+    { k: "Plazas nuevas 1–8 oct", v: "120", d: "15 al día · sep 17,3 al día", cls: "warn" },
+    { k: "Plazas canceladas 1–8 oct", v: "68", d: "8,5 al día · sep 11,9 al día", cls: "good" },
+    { k: "Neto de plazas 1–8 oct", v: "+52", d: "Hacen falta ≈ +60 al mes hasta dic", cls: "good" },
+    { k: "Pruebas 1–8 oct", v: "168", d: "21 al día · igual que sep", cls: "neutral" },
+    { k: "Altas Stripe en octubre", v: "sin dato", d: "Conector desconectado", cls: "critical" },
+    { k: "Meta: coste por compra píxel", v: "£46,9", d: "sep £49,8 · guardrail £50/£65", cls: "good" }
+  ],
+  canales: [
+    { n: "Meta Ads", color: "--s1", cls: "neutral", clsTxt: "Mantener", inv: 2718, ritmo: 12038, presupuesto: 12500, res: "58 compras píxel", coste: "£46,9 / compra", ref: "sep: 292 · £49,8", nota: "Más barato pero con un 14 % menos de compras al día que en septiembre. Cortar tests > £80 y meter creativos nuevos." },
+    { n: "Google Ads", color: "--s2", cls: "neutral", clsTxt: "Mantener", inv: 285, ritmo: 1264, presupuesto: 1500, res: "9 pruebas", coste: "£31,7 / prueba", ref: "sep: 35 · £48,8", nota: "La genérica no sube mientras su CPA pase de £90 (sep £100); el francés puede subir a £20/día." },
+    { n: "SEO", color: "--s3", cls: "serious", clsTxt: "Arreglar", inv: 0, ritmo: 0, presupuesto: 0, res: "1.462 clics (casi todo marca y mapas)", coste: "—", ref: "sep: 7.060 clics", nota: "Búsquedas de padres fuera del top 60. Diagnóstico de Marta el 12 nov; artículos de Bárbara desde el 14 nov si se aprueba." },
+    { n: "Email (Brevo)", color: "--s4", cls: "warn", clsTxt: "Cambiar de función", inv: 0, ritmo: 0, presupuesto: 0, res: "GA4: 60 sesiones · 28 conv.", coste: "—", ref: "sin envíos masivos", nota: "Email propio de referidos el 13 oct. Automatizaciones de ciclo de vida antes del 15 nov." },
+    { n: "Referidos", color: "--s5", cls: "muted", clsTxt: "Medir", inv: 0, ritmo: 0, presupuesto: 0, res: "sin medir", coste: "—", ref: "objetivo Q4: 40 altas", nota: "Hace falta referral_code en la prueba y en Stripe para verlo." },
+    { n: "Social orgánico", color: "--s6", cls: "neutral", clsTxt: "Mantener", inv: 0, ritmo: 0, presupuesto: 0, res: "GA4: 68 sesiones · 21 conv.", coste: "—", ref: "sep: 498 · 71", nota: "Sin presupuesto; alimenta los anuncios." }
+  ],
+  semanas: ["31 ago", "7 sep", "14 sep", "21 sep", "28 sep", "5 oct*"],
+  metaCost: [3337, 3507, 3356, 3113, 2812, 1137],
+  metaPur: [64, 75, 67, 54, 65, 25],
+  googCost: [369, 477, 332, 395, 246, 175],
+  googConv: [7, 10, 7, 7, 10, 3],
+  ga4: { cap: "1–7 de octubre. Las conversiones de GA4 son reservas y compras según la web; no son altas de Stripe.", rows: [["Paid Social", 264], ["Unassigned", 115], ["Direct", 96], ["Organic Search", 87], ["Paid Search", 46], ["Cross-network (nuevo)", 42], ["Email", 28], ["Referral", 22], ["Organic Social", 21]] },
+  foco: [
+    "<b>Lunes 13 oct:</b> Lucia cierra las ofertas de Black Friday, pausa navideña y tarjeta regalo, y sale el email propio de referidos. Sin esas decisiones el calendario de noviembre no arranca.",
+    "<b>Reconectar Stripe y cuadrar la plaza activa:</b> la base da 2.754 y el panel 2.829 (2 oct). El objetivo de 3.000 necesita una sola definición antes del 31 oct.",
+    "<b>Conversión prueba → curso:</b> las pruebas entran al mismo ritmo que en septiembre (21 al día); lo que decide octubre es cuántas pagan. Cadencia día 0, 3 y 10 y checkouts abandonados en menos de 2 h.",
+    "<b>GA4 \"Cross-network\":</b> 905 sesiones del 1 al 7 oct frente a 14 en todo septiembre. Revisar el etiquetado antes de atribuir nada a Google.",
+    "<b>Revisión de Bárbara (13 oct)</b> y, si se supera, presentar la propuesta de SEO (8 h/semana a confirmar)."
+  ],
+  martaSub: "Incorporación asumida el 13 de octubre. Marta ve solo su fecha en Notion; el límite real es el margen de Lucia.",
+  marta: [
+    ["Accesos, lecturas y primera semana", "Onboarding", "17 oct", "17 oct", "—", "Esta semana"],
+    ["Plan de Black Friday en una página", "Black Friday", "24 oct", "31 oct", "5 días", "Próxima"],
+    ["Informe \"qué vende y qué no\"", "Creatividades", "28 oct", "31 oct", "3 días", "Próxima"],
+    ["Brief de vídeos BF y textos de la landing", "Black Friday", "31 oct", "5 nov", "3 días", "Más adelante"],
+    ["5 emails de BF en Brevo", "Black Friday", "5 nov", "10 nov", "3 días", "Más adelante"],
+    ["Todo montado y probado", "Black Friday", "10 nov", "14 nov", "4 días", "Más adelante"]
+  ],
+  barbara: [
+    "<b>13 oct:</b> email propio de referidos en ES, EN y FR a todas las familias activas.",
+    "<b>13 oct:</b> revisión de los tres compromisos de ventas (velocidad, tareas CALL 2/3, errores).",
+    "<b>31 oct:</b> estudio de plazas perdidas (¿cuántas familias quitan una clase sin irse?).",
+    "<b>Antes del 15 nov:</b> automatizaciones de Brevo activas (bienvenida, prueba no convertida, win-back)."
+  ],
+  avisos: [
+    "Stripe: conector desconectado el 8 oct; sin altas ni bajas de Stripe esta semana.",
+    "Plazas: cifras de la base de producción (nuevas = creadas sin cambio de grupo; canceladas = fin con motivo CANCEL). El panel bi.diluu.com usa otra definición.",
+    "Meta: el píxel cuenta matrículas como compras desde agosto; el coste por compra no es el CAC.",
+    "Search Console: 3.306 clics de consultas anonimizadas en 30 días; el reparto marca/mapas/padres es aproximado."
+  ],
+  fuentes: "Fuentes: base de producción de Diluu (8 oct 2026); Supermetrics: Meta Ads (act_2456974117647730 y act_911299640142242), Google Ads (4584208097), Search Console (diluu.com), GA4 (425989233), 1 sep – 7 oct 2026; plan Q4 de marketing (2 oct). Lo escribe la rutina registro-semanal cada lunes."
+};
+// ============ FIN DATOS ============
+const $ = s => document.querySelector(s);
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const fmt = n => n.toLocaleString("es-ES", { maximumFractionDigits: 0 });
+const tip = $("#tip");
+function showTip(html, x, y) { tip.innerHTML = html; tip.style.display = "block"; const r = tip.getBoundingClientRect(); tip.style.left = Math.min(x + 12, innerWidth - r.width - 8) + "px"; tip.style.top = Math.max(8, y - r.height - 12) + "px"; }
+function hideTip() { tip.style.display = "none"; }
+
+$("#periodo").textContent = D.periodo; $("#lede").textContent = D.lede;
+
+// Progreso de plazas
+(function () {
+  const o = D.objetivo, max = o.deseable * 1.02, pct = v => (v / max * 100).toFixed(2) + "%";
+  const faltan = o.suelo - o.plazasDB;
+  $("#progreso").innerHTML = `
+    <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px"><h3>Plazas activas: ${fmt(o.plazasDB)} (base, ${o.plazasDBFecha}) · faltan ${fmt(faltan)} para ${fmt(o.suelo)}</h3><span class="chip neutral">${o.diasRestantes} días</span></div>
+    <div style="padding-top:22px"><div class="track"><div class="fill" style="width:${pct(o.plazasDB)}"></div>
+      <div class="mark" style="left:${pct(o.plazasPanel)};background:var(--ink2)"><span>panel ${fmt(o.plazasPanel)} (${o.plazasPanelFecha})</span></div>
+      <div class="mark" style="left:${pct(o.suelo)}"><span>suelo ${fmt(o.suelo)}</span></div>
+      <div class="mark" style="left:${pct(o.deseable)};background:var(--accent)"><span>objetivo ${fmt(o.deseable)}</span></div></div></div>
+    <div class="legend"><span><i class="sw" style="background:var(--s1)"></i>plazas empezadas y sin fin (base de producción)</span><span>Altas del trimestre: ≥ ${o.altasQ4} (${o.mes}: ≥ ${o.altasMes})</span></div>`;
+})();
+
+// Tiles
+$("#tiles").innerHTML = D.tiles.map(t => `<div class="tile"><span class="k">${t.k}</span><span class="v">${t.v}</span><span class="d">${t.d}</span></div>`).join("");
+
+// Canales
+$("#canales").innerHTML = D.canales.map(c => {
+  const hasB = c.presupuesto > 0, p = hasB ? Math.min(100, c.ritmo / c.presupuesto * 100) : 0;
+  const bcol = !hasB ? "var(--line)" : (p > 110 ? "var(--critical)" : p < 80 ? "var(--warn)" : "var(--good)");
+  return `<div class="card canal">
+    <div class="top"><h3><i class="sw" style="background:var(${c.color})"></i>${c.n}</h3><span class="chip ${c.cls}">${c.clsTxt}</span></div>
+    <div class="nums"><div><span class="k">Inversión semana</span><br><b>${c.inv ? "£" + fmt(c.inv) : "£0"}</b></div><div><span class="k">Ritmo mes / presupuesto</span><br><b>${hasB ? "£" + fmt(c.ritmo) + " / £" + fmt(c.presupuesto) : "—"}</b></div>
+    <div><span class="k">Resultado</span><br><b>${c.res}</b></div><div><span class="k">Coste · ref.</span><br><b>${c.coste}</b> <span class="k">${c.ref}</span></div></div>
+    ${hasB ? `<div class="budget" title="${p.toFixed(0)} % del presupuesto al ritmo actual"><i style="width:${p}%;background:${bcol}"></i></div>` : ""}
+    <p class="nota">${c.nota}</p></div>`;
+}).join("");
+
+// Gráfico de columnas (una serie)
+function columns(el, labels, data, colorVar, fmtVal, extra) {
+  const W = 520, H = 190, pL = 36, pR = 8, pT = 18, pB = 28, pw = W - pL - pR, ph = H - pT - pB;
+  const max = Math.max(...data) * 1.15 || 1, step = pw / labels.length, bw = Math.min(40, step * .6);
+  const ns = "http://www.w3.org/2000/svg", svg = document.createElementNS(ns, "svg"); svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  for (let i = 1; i <= 3; i++) { const y = pT + ph - ph * i / 3, l = document.createElementNS(ns, "line"); l.setAttribute("x1", pL); l.setAttribute("x2", W - pR); l.setAttribute("y1", y); l.setAttribute("y2", y); l.setAttribute("class", "gridl"); svg.appendChild(l); const t = document.createElementNS(ns, "text"); t.setAttribute("x", pL - 6); t.setAttribute("y", y + 4); t.setAttribute("text-anchor", "end"); t.textContent = fmt(max * i / 3); svg.appendChild(t); }
+  const b = document.createElementNS(ns, "line"); b.setAttribute("x1", pL); b.setAttribute("x2", W - pR); b.setAttribute("y1", pT + ph); b.setAttribute("y2", pT + ph); b.setAttribute("class", "base"); svg.appendChild(b);
+  labels.forEach((lab, i) => {
+    const v = data[i], h = v / max * ph, x = pL + step * i + (step - bw) / 2, y = pT + ph - h;
+    const r = document.createElementNS(ns, "rect"); r.setAttribute("x", x); r.setAttribute("y", y); r.setAttribute("width", bw); r.setAttribute("height", h); r.setAttribute("rx", 4); r.setAttribute("fill", css(colorVar)); r.setAttribute("tabindex", "0");
+    const show = e => { const p = e.touches ? e.touches[0] : e; showTip(`<b>Semana del ${lab.replace("*", "")}</b><br>${fmtVal(v)}${extra ? "<br>" + extra(i) : ""}`, p.clientX ?? 0, p.clientY ?? 0); };
+    r.addEventListener("mousemove", show); r.addEventListener("mouseleave", hideTip); r.addEventListener("focus", e => showTip(`<b>${lab}</b><br>${fmtVal(v)}`, innerWidth / 2, innerHeight / 2)); r.addEventListener("blur", hideTip);
+    svg.appendChild(r);
+    if (i === labels.length - 1 || i === 0 || v === Math.max(...data)) { const t = document.createElementNS(ns, "text"); t.setAttribute("x", x + bw / 2); t.setAttribute("y", y - 5); t.setAttribute("text-anchor", "middle"); t.setAttribute("class", "lab"); t.textContent = fmtVal(v); svg.appendChild(t); }
+    const xt = document.createElementNS(ns, "text"); xt.setAttribute("x", x + bw / 2); xt.setAttribute("y", H - 8); xt.setAttribute("text-anchor", "middle"); xt.textContent = lab; svg.appendChild(xt);
+  });
+  el.appendChild(svg);
+}
+columns($("#chMetaCost"), D.semanas, D.metaCost, "--s1", v => "£" + fmt(v));
+columns($("#chMetaPur"), D.semanas, D.metaPur, "--s1", v => fmt(v) + " compras", i => "£" + fmt(D.metaCost[i] / D.metaPur[i]) + " por compra");
+columns($("#chGoog"), D.semanas, D.googConv, "--s2", v => fmt(v) + " conversiones", i => "£" + fmt(D.googCost[i]) + " de gasto");
+
+// GA4 barras horizontales
+(function () { const max = Math.max(...D.ga4.rows.map(r => r[1])); $("#ga4cap").textContent = D.ga4.cap; $("#ga4").innerHTML = D.ga4.rows.map(r => `<div class="hrow"><span>${r[0]}</span><div class="t" title="${r[0]}: ${r[1]} conversiones"><i style="width:${r[1] / max * 100}%"></i></div><span class="n">${fmt(r[1])}</span></div>`).join(""); })();
+
+$("#foco").innerHTML = D.foco.map(f => `<li>${f}</li>`).join("");
+$("#martaSub").textContent = D.martaSub;
+const estadoCls = e => e === "Esta semana" ? "serious" : e === "Vencida" ? "critical" : e === "Hecha" ? "good" : e === "Próxima" ? "warn" : "muted";
+$("#marta tbody").innerHTML = D.marta.map(r => `<tr><td>${r[0]}</td><td>${r[1]}</td><td><b>${r[2]}</b></td><td>${r[3]}</td><td>${r[4]}</td><td><span class="chip ${estadoCls(r[5])}">${r[5]}</span></td></tr>`).join("");
+$("#barbara").innerHTML = D.barbara.map(b => `<li>${b}</li>`).join("");
+$("#avisos").innerHTML = D.avisos.map(a => `<li>${a}</li>`).join("");
+$("#fuentes").textContent = D.fuentes;
+</script>
