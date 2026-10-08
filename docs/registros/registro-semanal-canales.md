@@ -10,7 +10,9 @@ avisos de datos. La entrada más reciente va arriba. Lo escribe la skill registr
 **Plazas (base de producción, 8 oct).** 2.754 activas empezadas sin fin programado (+49 con fin
 futuro). Del 1 al 8 oct: 120 nuevas (15/día; sep 17,3/día) y 68 canceladas (8,5/día; sep 11,9/día).
 Neto +52. Pruebas: 168 (21/día, igual que en sep). Panel bi.diluu.com: 2.829 el 2 oct (definición
-distinta, pendiente de cuadrar). Stripe: sin dato (conector desconectado).
+distinta, pendiente de cuadrar). Stripe: sin dato (conector desconectado). Proxy: la hoja ATRIBUCIÓN
+AUTOMÁTICA registra ≈48 pedidos del 1 al 8 oct (20 enlaces de pago + 28 compras web), ≈6 al día frente
+a ≈9 al día en septiembre por esas dos vías (273 en el mes); no incluye altas manuales. Confirmar con Stripe.
 
 | Canal | Inversión 1–7 oct | Ritmo mes / presupuesto | Resultado | Coste | Ref. sep | Clasificación |
 | --- | --- | --- | --- | --- | --- | --- |
