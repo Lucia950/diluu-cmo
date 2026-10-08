@@ -174,7 +174,7 @@ A 1,65 plazas por alta (media de jun–sep). **Ojo: el panel apunta a una pérdi
 | --- | --- | --- | --- | --- |
 | Negocio | Plazas activas a 31 dic | 2.829 | ≥ 3.000 (suelo) · 3.100 (objetivo) | Panel de métricas |
 | Negocio | Facturación oct–dic | Sep £118.755 | ≥ £338.600 (previsión del P&L) | P&L |
-| Captación | Altas oct / nov / dic | Q4 2025: 198 / 129 / 50 | ≥ 300 / 220 / 120 (≥ 640) | Stripe |
+| Captación | Altas oct / nov / dic | Q4 2025: 198 / 129 / 50 | ≥ 300 / 220 / 120 (≥ 640); **suelo revisado el 8 oct: ≥ 700 (≈ 320 / 240 / 140)** | Stripe |
 | Captación | Familias nuevas en el trimestre | Q4 2025: 290 | ≥ 470 | Stripe |
 | Eficiencia | CAC de medios por familia nueva | Sep £60,2 | ≤ £60 (no empeorar) | Meta + Google / Stripe |
 | Retención | Pérdida mensual de plazas | \~10,5 % (Stripe, sep) | ≤ 9,5 % en nov–dic | Stripe y panel |

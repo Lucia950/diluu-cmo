@@ -18,8 +18,10 @@ horas en hora de Bali e indica la zona.
 - Ventas no crea enlaces de pago en Stripe desde el 1 de noviembre de 2026: envía a la web de
   curso directo con su código personal (LF-, BA-, VI-, VC-).
 - Las clases se pausan en Navidad (2026: del 22 dic al 5 ene).
-- Objetivo Q4 2026: ≥ 3.000 plazas activas en el panel bi.diluu.com el 31 dic (suelo) y 3.100
-  (objetivo); ≥ 640 altas en el trimestre; CAC de medios por familia nueva ≤ £60.
+- Objetivo Q4 2026: ≥ 3.000 plazas activas el 31 dic (suelo) y 3.100 (objetivo); ≥ 700 altas en
+  el trimestre (suelo revisado el 8 oct; el plan decía 640); CAC de medios por familia nueva ≤ £60.
+  Plaza activa = matrícula empezada (startDate ≤ hoy) y sin fin pasado (end null o lastLesson ≥
+  hoy), incluidas las pausadas (decidido el 8 oct). Base de producción, 8 oct: 2.803.
   Hoja de ruta 2027: ≥ 5.800 plazas el 30 nov 2027 siendo rentables. Detalle en docs/planes/.
 - Equipo de marketing: Lucia lleva Meta Ads y Google Ads con Claude. Daniela (contenido ES) y
   Morgane (contenido FR). Marta (prácticas, 20 h/semana, desde octubre 2026). Bárbara (ventas;

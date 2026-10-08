@@ -3,10 +3,12 @@
 ## Base de producción (mongo-read.cjs, solo lectura)
 Script: `node "$S/mongo-read.cjs"` con `S=/Users/luciamarin/.claude/plugins/cache/diluu/diluu-ops/<hash>/scripts`
 (la ruta exacta la da el aviso de inicio de sesión). Fechas como texto ISO.
-- Plazas activas empezadas: `count v3-enrolments '{"end": null, "startDate": {"$lte": "<hoy>T23:59:59"}}'`
-  (8 oct 2026: 2.754). Con fin futuro programado y aún en clase: `{"end": {"$ne": null}, "end.lastLesson": {"$gte": "<hoy>"}, "startDate": {"$lte": ...}}` (49).
-  Pendiente: cuadrar con el panel bi.diluu.com (2.829 el 2 oct), que cuenta desde la primera clase y
-  excluye bajas programadas.
+- **Plaza activa (definición oficial desde el 8 oct 2026, incluye pausadas):** matrícula empezada y
+  sin fin pasado: `count v3-enrolments '{"startDate": {"$lte": "<hoy>T23:59:59"}, "$or": [{"end": null}, {"end.lastLesson": {"$gte": "<hoy>"}}]}'`
+  (8 oct 2026: 2.803, de las que 49 tienen fin programado). Las pausas (`v3-students-pauses`, 75
+  vigentes el 8 oct) no cierran la matrícula, así que ya están dentro. Quedan fuera las 101
+  matrículas con inicio futuro. El panel bi.diluu.com daba 2.829 el 2 oct; la rutina semanal anota
+  las dos cifras hasta que cuadren.
 - Plazas nuevas de un periodo: enrolments con `createdAt` en el periodo y `previousEnrolmentId: null`
   (excluye cambios de grupo). Sep 2026: 519; 1–8 oct: 120.
 - Plazas canceladas (bajas): enrolments con `end.lastLesson` en el periodo y `end.reason: "CANCEL"`

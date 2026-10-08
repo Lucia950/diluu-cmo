@@ -1,5 +1,13 @@
 # Decisiones (más reciente arriba)
 
+- **2026-10-08** · Plaza activa = matrícula empezada y sin fin pasado, incluidas las pausadas (Lucia:
+  "tomaría el que tiene en cuenta a los pausados"). Base de producción, 8 oct: 2.803. El objetivo de
+  3.000/3.100 se mide con esta definición; el panel se anota como contraste.
+- **2026-10-08** · Suelo de altas del Q4 revisado de 640 a ≥ 700 (Lucia, OK): septiembre tuvo 359
+  cancelaciones de plaza (≈ 12 % de la base), no el 10,5 % que suponía el plan. Reparto orientativo:
+  oct ≥ 320, nov ≥ 240, dic ≥ 140.
+- **2026-10-08** · Repo GitHub privado: Lucia950/diluu-cmo.
+
 - **2026-10-08** · Las fechas de entrega de Marta llevan margen: cada entrega tiene una fecha de
   Marta y una fecha límite real posterior (docs/equipo/marta-plan-entregas.md). Marta solo ve sus
   fechas en Notion. Si no llega, Lucia la termina en el margen.
