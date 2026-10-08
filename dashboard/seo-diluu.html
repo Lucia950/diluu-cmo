@@ -1,0 +1,226 @@
+<title>SEO Diluu</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@800;900&family=DM+Sans:wght@400;500;700&display=swap">
+<style>
+/* Panel de SEO para Bárbara: objetivos con su avance, series mensuales (clics de padres, conversiones desde páginas de padres, sesiones desde IA), posiciones de las búsquedas objetivo y avisos. Sin presupuestos ni CAC. */
+:root{
+  --bg:#FAF9F7; --surface:#FFFFFF; --ink:#313131; --ink2:#6B6B6B; --muted:#9A9A9A; --line:#E5E2DA;
+  --accent:#1E64C9; --accent-soft:#E7EDF6; --yellow:#F5D057; --yellow-ink:#7A5E00;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4;
+  --good:#0ca30c; --good-soft:#E3FBD7; --warn:#fab219; --warn-soft:#FAF5E7; --critical:#d03b3b; --critical-soft:#FAE3E5;
+  --display:'Nunito',Arial,sans-serif; --body:'DM Sans',Helvetica,Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#141414; --surface:#1F1F1E; --ink:#F3F2EE; --ink2:#B8B6B0; --muted:#8A8884; --line:#34332F;
+  --accent:#7FA4F2; --accent-soft:#1F2B44; --yellow-ink:#F5D057;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181;
+  --good-soft:#173324; --warn-soft:#3A2D14; --critical-soft:#3E1F23; color-scheme:dark } }
+:root[data-theme="dark"]{
+  --bg:#141414; --surface:#1F1F1E; --ink:#F3F2EE; --ink2:#B8B6B0; --muted:#8A8884; --line:#34332F;
+  --accent:#7FA4F2; --accent-soft:#1F2B44; --yellow-ink:#F5D057;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181;
+  --good-soft:#173324; --warn-soft:#3A2D14; --critical-soft:#3E1F23; color-scheme:dark }
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.5;margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:20px;padding-block:28px 56px;display:flex;flex-direction:column;gap:28px}
+header{display:flex;flex-direction:column;gap:6px}
+.eyebrow{margin:0;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:700}
+h1{margin:0;font-family:var(--display);font-weight:900;font-size:clamp(28px,4.5vw,40px);line-height:1.1;text-wrap:balance}
+h2{margin:0;font-family:var(--display);font-weight:900;font-size:22px;text-wrap:balance}
+h3{margin:0;font-size:15px;font-weight:700}
+p{margin:0}
+.sub{color:var(--ink2);max-width:70ch}
+section{display:flex;flex-direction:column;gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px;min-width:0}
+.objs{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.obj{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.obj .k{font-size:12.5px;color:var(--ink2)}
+.obj .v{font-family:var(--display);font-weight:900;font-size:30px;line-height:1.05;font-variant-numeric:tabular-nums}
+.obj .v small{font-size:14px;font-weight:700;color:var(--ink2)}
+.obj .track{height:8px;background:var(--line);border-radius:4px;overflow:hidden}
+.obj .track i{display:block;height:100%;background:var(--s1);border-radius:4px}
+.obj .d{font-size:12.5px;color:var(--ink2)}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:760px){.grid2{grid-template-columns:minmax(0,1fr)}}
+figure{margin:0;display:flex;flex-direction:column;gap:6px}
+figcaption{display:flex;flex-direction:column;gap:2px}
+figcaption p{font-size:12.5px;color:var(--ink2)}
+.chart{width:100%;position:relative}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+.chart text{font-family:var(--body);font-size:11px;fill:var(--muted);font-variant-numeric:tabular-nums}
+.chart text.lab{fill:var(--ink);font-weight:700}
+.chart .gridl{stroke:var(--line);stroke-width:1}
+.chart .base{stroke:var(--muted);stroke-width:1}
+.chart .goal{stroke:var(--ink2);stroke-width:1;stroke-dasharray:4 4}
+.tip{position:fixed;z-index:10;pointer-events:none;background:var(--ink);color:var(--bg);border-radius:8px;padding:7px 10px;font-size:12px;line-height:1.4;max-width:240px;display:none;font-variant-numeric:tabular-nums}
+table{border-collapse:collapse;width:100%;font-size:13.5px;font-variant-numeric:tabular-nums}
+th,td{padding:7px 10px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+thead th{font-weight:700;color:var(--ink2);font-size:12px;text-transform:uppercase;letter-spacing:.04em}
+td.n,th.n{text-align:right}
+.tbl-wrap{overflow-x:auto}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:2px 10px;border-radius:999px;font-size:11.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
+.chip.good{background:var(--good-soft);color:var(--good)} .chip.warn{background:var(--warn-soft);color:var(--yellow-ink)} .chip.critical{background:var(--critical-soft);color:var(--critical)} .chip.neutral{background:var(--accent-soft);color:var(--accent)} .chip.muted{background:var(--line);color:var(--ink2)}
+ul.plain{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+footer{color:var(--muted);font-size:12.5px;line-height:1.6}
+</style>
+
+<div class="wrap">
+  <header>
+    <p class="eyebrow" id="periodo"></p>
+    <h1>SEO Diluu</h1>
+    <p class="sub" id="lede"></p>
+  </header>
+
+  <section>
+    <h2>Objetivos y dónde estamos</h2>
+    <div class="objs" id="objs"></div>
+  </section>
+
+  <section>
+    <div class="grid2">
+      <figure class="card"><figcaption><h3>Clics al mes de búsquedas de padres</h3><p>Search Console, consultas sin marca ni mapas. Línea de puntos: objetivo del 31 de marzo (150) fuera de escala; el de diciembre (25) se marca.</p></figcaption><div class="chart" id="chClics"></div></figure>
+      <figure class="card"><figcaption><h3>Veces que un padre nos ve en Google (impresiones)</h3><p>Mismas consultas. Lo primero que sube cuando una página mejora.</p></figcaption><div class="chart" id="chImpr"></div></figure>
+      <figure class="card"><figcaption><h3>Sesiones desde ChatGPT, Gemini y Perplexity</h3><p>GA4, canal "AI Assistant". Objetivo: 150 en diciembre, 300 en marzo.</p></figcaption><div class="chart" id="chIA"></div></figure>
+      <figure class="card"><figcaption><h3>Conversiones GA4 desde páginas de padres con tráfico orgánico</h3><p>Páginas de clases (ES, EN, FR), lectoescritura, heritage y kindergartners. Sin /trial ni /course-direct. Son eventos clave de GA4, no pruebas pagadas.</p></figcaption><div class="chart" id="chConv"></div></figure>
+    </div>
+  </section>
+
+  <section>
+    <h2>Búsquedas objetivo: posición en Google</h2>
+    <p class="sub">Las 30 búsquedas de padres del diagnóstico, con su posición media de los últimos 12 meses. Cuando una página se reescribe o un artículo se publica, su fila cambia de estado y la posición se sigue cada lunes.</p>
+    <div class="card tbl-wrap"><table id="queries"><thead><tr><th>Búsqueda</th><th>Idioma</th><th class="n">Impresiones 12 m</th><th class="n">Clics</th><th class="n">Posición</th><th>Página objetivo</th><th>Estado</th></tr></thead><tbody></tbody></table></div>
+  </section>
+
+  <section>
+    <h2>Entregas de Bárbara</h2>
+    <div class="card tbl-wrap"><table id="tareas"><thead><tr><th>Tarea</th><th>Proyecto</th><th>Entrega</th><th>Estado</th></tr></thead><tbody></tbody></table></div>
+  </section>
+
+  <section>
+    <h2>Avisos sobre los datos</h2>
+    <div class="card"><ul class="plain" id="avisos"></ul></div>
+  </section>
+  <footer id="fuentes"></footer>
+</div>
+<div class="tip" id="tip"></div>
+
+<script>
+// ============ DATOS (los actualiza la rutina registro-semanal cada lunes) ============
+const D = {
+  periodo: "Actualizado el 8 de octubre de 2026 · datos hasta el 7 oct",
+  lede: "Los padres nos ven 743 veces al mes en Google y clican 3. Lo que convierte hoy en orgánico son las páginas de clases de francés y español; ChatGPT ya manda 135 sesiones al mes que convierten una de cada tres. El trabajo del trimestre: reescribir 3 páginas, publicar 4 artículos, conseguir 8 enlaces.",
+  objetivos: [
+    { k: "Páginas de clases reescritas", v: 0, meta: 3, fecha: "7 nov", d: "/spanish-classes-for-kids (EN), /es/spanish-classes-for-kids, /es/spanish-for-kindergartners" },
+    { k: "Artículos para padres publicados", v: 0, meta: 4, fecha: "19 dic", d: "Cada uno en dos idiomas; 10 el 31 de marzo" },
+    { k: "Enlaces nuevos (dominios)", v: 0, meta: 8, fecha: "31 dic", d: "Hoja de outreach; 20 el 31 de marzo" },
+    { k: "Preguntas a IA en las que aparece Diluu", v: null, meta: null, fecha: "base 31 oct", d: "10 preguntas en ChatGPT, Gemini y Perplexity; +2 en dic, 5 de 10 en mar" },
+    { k: "Clics de padres al mes", v: 3, meta: 25, fecha: "dic · 150 en mar", d: "Septiembre: 3 clics, 743 impresiones" },
+    { k: "Conversiones desde páginas de padres al mes", v: 23, meta: 4, fecha: "dic · 10 en mar", d: "Septiembre (GA4, orgánico). Ojo: definición de conversiones de GA4" },
+    { k: "Sesiones desde IA al mes", v: 135, meta: 150, fecha: "dic · 300 en mar", d: "Septiembre: 120 de ChatGPT, 10 de Gemini" }
+  ],
+  meses: ["jun 25","jul","ago","sep","oct","nov","dic","ene 26","feb","mar","abr","may","jun","jul","ago","sep","oct*"],
+  clics: [6,20,16,41,18,9,6,8,6,8,1,1,1,0,3,3,1],
+  impresiones: [8857,13049,11092,7327,3256,2647,2638,3003,2404,2522,1044,662,482,407,513,743,299],
+  iaMeses: ["ene 26","feb","mar","abr","may","jun","jul","ago","sep","oct*"],
+  iaSesiones: [0,0,0,0,0,23,15,30,135,17],
+  iaConv: [0,0,0,0,0,0,0,7,44,3],
+  convMeses: ["ene 26","feb","mar","abr","may","jun","jul","ago","sep","oct*"],
+  convSesiones: [55,39,59,32,11,21,49,19,247,76],
+  conv: [0,0,0,0,0,0,0,2,23,14],
+  queries: [
+    ["clases de español para niños","ES",393,2,17.4,"/es/spanish-classes-for-kids","Reescribir (7 nov)"],
+    ["español para niños","ES",280,2,53.7,"/es/spanish-classes-for-kids","Reescribir (7 nov)"],
+    ["cursos para niños de 10 a 12 años","ES",280,3,11.7,"página 10–12 años ES","Pendiente"],
+    ["cursos de lectoescritura para niños","ES",186,4,5.3,"/es/lectoescritura-en-espanol-para-ninos","Pendiente"],
+    ["curso de lectoescritura para niños","ES",84,1,3.5,"/es/lectoescritura-en-espanol-para-ninos","Pendiente"],
+    ["aprender español para niños","ES",81,1,28.6,"artículo 1 (14 nov)","Artículo"],
+    ["cómo enseñar español a niños","ES",78,1,6.5,"artículo 1 (14 nov)","Artículo"],
+    ["aplicaciones para aprender español niños","ES",129,1,3.9,"artículo 2 (28 nov)","Artículo"],
+    ["libros para aprender español para niños","ES",115,8,13.5,"/es/blog/spanish-books-for-kids","Pendiente"],
+    ["programas educativos para niños en español","ES",37,1,4.0,"/es/blog/spanish-kids-shows-on-youtube","Pendiente"],
+    ["idiomas para niños","ES",190,2,34.3,"artículo nuevo","Pendiente"],
+    ["clases de español para niños de 3 a 5 años","ES",31,1,6.4,"/es/spanish-for-kindergartners","Reescribir (7 nov)"],
+    ["actividades para enseñar español a niños extranjeros","ES",2,0,46.5,"artículo nuevo","Pendiente"],
+    ["clases de francés para niños cerca de mi","ES",6,1,9.7,"/es/clases-de-frances-para-ninos-de-10-a-12-anos","Pendiente"],
+    ["spanish online classes for kids","EN",69,1,49.7,"/spanish-classes-for-kids","Reescribir (31 oct)"],
+    ["spanish classes near me","EN",45,2,20.0,"/spanish-classes-for-kids","Reescribir (31 oct)"],
+    ["toddler spanish classes near me","EN",2,1,2.5,"/spanish-classes-for-kids-4-6","Pendiente"],
+    ["how to teach kids spanish at home","EN",11,1,38.8,"artículo 1 (14 nov)","Artículo"],
+    ["duolingo for kids spanish","EN",72,3,12.0,"artículo 2 (28 nov)","Artículo"],
+    ["spanish kids shows / spanish tv for kids","EN",223,3,36.0,"/blog/spanish-kids-shows-on-youtube","Pendiente"],
+    ["spanish classes london","EN",27,1,16.0,"artículo nuevo (enero)","Pendiente"],
+    ["spanish for heritage speakers kids","EN",0,0,null,"artículo 3 (12 dic) + página nueva","Artículo"],
+    ["my child understands spanish but won't speak","EN",0,0,null,"artículo 3 (12 dic)","Artículo"],
+    ["french classes for kids online","EN",26,1,36.1,"/french-classes-for-kids","Pendiente"],
+    ["cours de français en ligne pour enfants","FR",210,2,9.5,"/fr/cours-de-francais-pour-enfants-en-ligne","Pendiente"],
+    ["cours de français pour enfants de 7 ans","FR",35,1,8.1,"página 7–9 años FR","Pendiente"],
+    ["comment enseigner le français aux enfants","FR",40,1,11.5,"artículo 4 (19 dic)","Artículo"],
+    ["cours espagnol enfant gratuit","FR",37,1,7.1,"/fr/cours-despagnol-pour-enfants-de-7-a-9-ans","Pendiente"],
+    ["livres pour enfants en espagnol","FR",38,1,9.4,"/fr/blog/spanish-books-for-kids","Pendiente"],
+    ["dessin animé pour apprendre l'espagnol","FR",24,2,13.0,"/fr/blog/spanish-disney-movies","Pendiente"]
+  ],
+  tareas: [
+    ["Arranque: accesos, diagnóstico y plantillas","Onboarding","20 oct","Sin empezar"],
+    ["Lista de 30 búsquedas: copia de trabajo","Artículos","20 oct","Sin empezar"],
+    ["Lista de 20 sitios y primeros 5 contactos","Enlaces","24 oct","Sin empezar"],
+    ["Reescribir /spanish-classes-for-kids (EN)","Páginas de clases","31 oct","Sin empezar"],
+    ["Línea base de visibilidad en IA","Visibilidad en IA","31 oct","Sin empezar"],
+    ["Reescribir páginas ES (clases y 3–5 años)","Páginas de clases","7 nov","Sin empezar"],
+    ["Primer artículo publicado con Claude Code","Blog y publicación","7 nov","Sin empezar"],
+    ["Artículo 1: aprender español en casa","Artículos","14 nov","Sin empezar"],
+    ["Artículo 2: apps y Duolingo Kids","Artículos","28 nov","Sin empezar"],
+    ["Página \"Diluu en 10 datos\" y FAQ","Visibilidad en IA","28 nov","Sin empezar"]
+  ],
+  avisos: [
+    "\"Búsquedas de padres\" = consultas que contienen class, clases, cours, lesson, tutor, learn spanish/french, aprender español, apprendre, online spanish/french, spanish/french for kids, español/francés para niños, heritage, bilingual kids o lectoescritura, sin marca ni mapas.",
+    "Las conversiones de GA4 son eventos clave (reservas, compras y otros), no pruebas pagadas; su definición cambió en julio de 2026. Sirven para la tendencia.",
+    "GA4 etiqueta como \"Organic Search\" miles de sesiones en /trial-sp y /trial-fr que no vienen de Google: se excluyen de este panel.",
+    "Las posiciones son medias de 12 meses; una página reescrita tarda de 4 a 12 semanas en moverse."
+  ],
+  fuentes: "Fuentes: Search Console (diluu.com) y GA4 (425989233) vía Supermetrics, jun 2025 – 7 oct 2026; tablero de Notion de Bárbara. Lo actualiza la rutina registro-semanal cada lunes."
+};
+// ============ FIN DATOS ============
+const $ = s => document.querySelector(s);
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const fmt = n => n.toLocaleString("es-ES", { maximumFractionDigits: 1 });
+const tip = $("#tip");
+function showTip(html, x, y) { tip.innerHTML = html; tip.style.display = "block"; const r = tip.getBoundingClientRect(); tip.style.left = Math.min(x + 12, innerWidth - r.width - 8) + "px"; tip.style.top = Math.max(8, y - r.height - 12) + "px"; }
+function hideTip() { tip.style.display = "none"; }
+$("#periodo").textContent = D.periodo; $("#lede").textContent = D.lede;
+
+$("#objs").innerHTML = D.objetivos.map(o => {
+  const has = o.v !== null && o.meta !== null, p = has ? Math.min(100, o.v / o.meta * 100) : 0;
+  const col = !has ? "var(--line)" : p >= 100 ? "var(--good)" : p >= 50 ? "var(--s1)" : "var(--warn)";
+  return `<div class="obj"><span class="k">${o.k}</span><span class="v">${o.v === null ? "—" : fmt(o.v)}${o.meta !== null ? ` <small>/ ${fmt(o.meta)} · ${o.fecha}</small>` : ` <small>${o.fecha}</small>`}</span>${has ? `<div class="track"><i style="width:${p}%;background:${col}"></i></div>` : ""}<span class="d">${o.d}</span></div>`;
+}).join("");
+
+function columns(el, labels, data, colorVar, goal, unit) {
+  const W = 520, H = 200, pL = 40, pR = 8, pT = 18, pB = 28, pw = W - pL - pR, ph = H - pT - pB;
+  const top = Math.max(Math.max(...data), goal || 0) * 1.15 || 1, step = pw / labels.length, bw = Math.min(26, step * .62);
+  const ns = "http://www.w3.org/2000/svg", svg = document.createElementNS(ns, "svg"); svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  for (let i = 1; i <= 3; i++) { const y = pT + ph - ph * i / 3, l = document.createElementNS(ns, "line"); l.setAttribute("x1", pL); l.setAttribute("x2", W - pR); l.setAttribute("y1", y); l.setAttribute("y2", y); l.setAttribute("class", "gridl"); svg.appendChild(l); const t = document.createElementNS(ns, "text"); t.setAttribute("x", pL - 6); t.setAttribute("y", y + 4); t.setAttribute("text-anchor", "end"); t.textContent = Math.round(top * i / 3).toLocaleString("es-ES"); svg.appendChild(t); }
+  const b = document.createElementNS(ns, "line"); b.setAttribute("x1", pL); b.setAttribute("x2", W - pR); b.setAttribute("y1", pT + ph); b.setAttribute("y2", pT + ph); b.setAttribute("class", "base"); svg.appendChild(b);
+  if (goal) { const y = pT + ph - goal / top * ph, g = document.createElementNS(ns, "line"); g.setAttribute("x1", pL); g.setAttribute("x2", W - pR); g.setAttribute("y1", y); g.setAttribute("y2", y); g.setAttribute("class", "goal"); svg.appendChild(g); const t = document.createElementNS(ns, "text"); t.setAttribute("x", W - pR); t.setAttribute("y", y - 4); t.setAttribute("text-anchor", "end"); t.setAttribute("class", "lab"); t.textContent = "objetivo dic " + goal; svg.appendChild(t); }
+  const maxV = Math.max(...data);
+  labels.forEach((lab, i) => {
+    const v = data[i], h = v / top * ph, x = pL + step * i + (step - bw) / 2, y = pT + ph - h;
+    const r = document.createElementNS(ns, "rect"); r.setAttribute("x", x); r.setAttribute("y", y); r.setAttribute("width", bw); r.setAttribute("height", Math.max(h, v > 0 ? 2 : 0)); r.setAttribute("rx", 3); r.setAttribute("fill", css(colorVar)); r.setAttribute("tabindex", "0");
+    const show = e => { const p = e.touches ? e.touches[0] : e; showTip(`<b>${lab.replace("*", " (parcial)")}</b><br>${fmt(v)} ${unit}`, p.clientX ?? 0, p.clientY ?? 0); };
+    r.addEventListener("mousemove", show); r.addEventListener("mouseleave", hideTip); r.addEventListener("focus", () => showTip(`<b>${lab}</b><br>${fmt(v)} ${unit}`, innerWidth / 2, innerHeight / 2)); r.addEventListener("blur", hideTip);
+    svg.appendChild(r);
+    if (v === maxV || i === labels.length - 1) { const t = document.createElementNS(ns, "text"); t.setAttribute("x", x + bw / 2); t.setAttribute("y", y - 5); t.setAttribute("text-anchor", "middle"); t.setAttribute("class", "lab"); t.textContent = fmt(v); svg.appendChild(t); }
+    if (labels.length <= 10 || i % 2 === 0) { const xt = document.createElementNS(ns, "text"); xt.setAttribute("x", x + bw / 2); xt.setAttribute("y", H - 8); xt.setAttribute("text-anchor", "middle"); xt.textContent = lab; svg.appendChild(xt); }
+  });
+  el.appendChild(svg);
+}
+columns($("#chClics"), D.meses, D.clics, "--s1", 25, "clics");
+columns($("#chImpr"), D.meses, D.impresiones, "--s1", null, "impresiones");
+columns($("#chIA"), D.iaMeses, D.iaSesiones, "--s3", 150, "sesiones");
+columns($("#chConv"), D.convMeses, D.conv, "--s2", 4, "conversiones");
+
+const estadoCls = e => e.startsWith("Reescribir") ? "warn" : e === "Artículo" ? "neutral" : e === "Hecho" ? "good" : "muted";
+$("#queries tbody").innerHTML = D.queries.map(q => `<tr><td>${q[0]}</td><td>${q[1]}</td><td class="n">${q[2].toLocaleString("es-ES")}</td><td class="n">${q[3]}</td><td class="n">${q[4] === null ? "—" : fmt(q[4])}</td><td>${q[5]}</td><td><span class="chip ${estadoCls(q[6])}">${q[6]}</span></td></tr>`).join("");
+const tcls = e => e === "Hecho" ? "good" : e === "En curso" ? "neutral" : e === "Vencida" ? "critical" : "muted";
+$("#tareas tbody").innerHTML = D.tareas.map(t => `<tr><td>${t[0]}</td><td>${t[1]}</td><td><b>${t[2]}</b></td><td><span class="chip ${tcls(t[3])}">${t[3]}</span></td></tr>`).join("");
+$("#avisos").innerHTML = D.avisos.map(a => `<li>${a}</li>`).join("");
+$("#fuentes").textContent = D.fuentes;
+</script>
