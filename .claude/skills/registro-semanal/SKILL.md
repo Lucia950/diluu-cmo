@@ -28,16 +28,20 @@ Google Ads, Brevo ni Notion (solo lectura; el tablero de Marta se lee, no se edi
    Entrega en esta semana y la siguiente, y las vencidas que no estén en Done. Cruza con
    docs/equipo/marta-plan-entregas.md para calcular el margen hasta la fecha límite real.
 7. **Bárbara (SEO)**: tareas de su tablero de Notion (collection://1267be7c-c4ef-4259-accf-b4b809417aee)
-   que vencen esta semana o están vencidas; artículos publicados, enlaces (hoja de outreach 12Z8eQ79Yy9xA9yn0z18fg1s8RLXX4Wv8BthT-0_76W0, pestaña Resumen: D5 enlaces, D7 contactos nuevos en 7 días) y la
+   que vencen esta semana o están vencidas; hoja SEO Diluu · Búsquedas y enlaces (12Z8eQ79Yy9xA9yn0z18fg1s8RLXX4Wv8BthT-0_76W0): pestaña
+   Búsquedas (A3:M33: estado, URL y fecha de publicación de las 30 búsquedas; las Publicado son
+   las páginas reescritas y artículos publicados), pestaña Resumen (D5 enlaces, D7 contactos nuevos
+   en 7 días, B39:B42 búsquedas publicadas, en curso, pendientes y con entrega vencida) y la
    hoja de preguntas a IA si hay dato nuevo.
 8. **SEO para el panel de Bárbara**: Search Console por mes y semana con el filtro de búsquedas de
-   padres (regex de docs/medicion/fuentes.md), posición de las 30 búsquedas objetivo y de las
+   padres (regex de docs/medicion/fuentes.md), posición de las 30 búsquedas objetivo (lista y estado
+   en la pestaña Búsquedas de la hoja; actualiza en el panel el estado de cada fila) y de las
    páginas reescritas; GA4 sesiones y conversiones orgánicas en páginas de clases (classes-for-kids,
    cours-de-francais, heritage, lectoescritura, literacy, kindergartners; nunca /trial ni
    /course-direct, que GA4 etiqueta mal) y canal "AI Assistant" por fuente.
 
 ## 3. Cálculo del aporte de cada canal al objetivo
-- Objetivo: ≥ 3.000 plazas el 31 dic (3.100 deseable) y ≥ 640 altas en el Q4 (300/220/120).
+- Objetivo: ≥ 3.000 plazas el 31 dic (3.100 deseable) y ≥ 700 altas en el Q4 (320/240/140; suelo revisado el 8 oct).
 - Altas necesarias por semana = (altas objetivo del mes − altas del mes hasta hoy) ÷ semanas que
   quedan del mes. Plazas: idem con 1,65 plazas por alta y la pérdida prevista (9,5–10,5 % mensual).
 - Por canal, en la semana: inversión, resultado (compras píxel / conversiones / clics de padres /

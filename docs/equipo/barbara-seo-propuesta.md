@@ -5,7 +5,9 @@ No toca Brevo ni email. Seguimiento asíncrono por comentarios en Notion (Lucia 
 sin reunión semanal. Arranque: lunes 20 de octubre, después de la revisión de ventas del 13.
 
 Deck: https://claude.ai/artifact/KeMr8EsNC3HaUdz4puC1gE · Tablero de Notion: https://app.notion.com/p/679f71f6b8414e85bdb117fbc8a231ce
-Diagnóstico y lista de 30 búsquedas: docs/analisis/seo-diagnostico-2026-10.md
+Diagnóstico y lista de 30 búsquedas: docs/analisis/seo-diagnostico-2026-10.md. La lista de trabajo
+de Bárbara (estado, URL y fecha de cada búsqueda) está en la pestaña Búsquedas de la hoja SEO Diluu ·
+Búsquedas y enlaces; no se copia a Notion.
 
 ## Horas: 10 a la semana, sacadas del final de cada turno de ventas
 Turnos (hora de Chile, calendario VENTAS DILUU): lunes, martes y viernes 15:00–22:00; miércoles
@@ -37,4 +39,4 @@ cabeza fresca: SEO antes del turno (13:00–15:00) y acabar ventas a las 20:00; 
 Repositorio del blog aparte con Claude Code restringido a `content/blog/**` (docs/equipo/blog-barbara-claude-code.md). Revisión con la skill de comprobación; Lucia lee los 3 primeros artículos. Objetivo de Daniel: 7 nov. Hasta entonces, textos en Notion.
 
 ## Medición
-Panel "SEO Diluu" (artefacto) que la rutina de los lunes republica con Search Console, GA4 y Notion. Bárbara mantiene la hoja de outreach y la hoja mensual de preguntas a IA.
+Panel "SEO Diluu" (artefacto) que la rutina de los lunes republica con Search Console, GA4 y Notion. Bárbara mantiene la hoja de búsquedas y enlaces y la hoja mensual de preguntas a IA.

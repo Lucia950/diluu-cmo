@@ -30,7 +30,7 @@ Para cada canal, aplica clasificar-canal y propón la reasignación de presupues
 empieza, con la regla de ajuste a mitad de mes (decisiones.md) y los guardrails de CLAUDE.md.
 
 ## 4. Lo que hay que tener en cuenta para el trimestre
-- Plazas y altas que faltan para 3.000/3.100 y 640, repartidas por semanas que quedan.
+- Plazas y altas que faltan para 3.000/3.100 y 700 altas, repartidas por semanas que quedan.
 - Riesgos con cifra (pérdida de plazas, CAC, fatiga creativa, dependencia de un anuncio, Navidad).
 - Las 3 decisiones que Lucia debe tomar este mes, con fecha.
 - Entregas de Marta y Bárbara del mes (docs/equipo/) y las que se retrasaron.
