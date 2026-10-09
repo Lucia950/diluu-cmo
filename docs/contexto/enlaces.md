@@ -22,6 +22,7 @@
 - Bonus de ventas desde 1 nov 2026: página 3edba622eef1805db0f4f219dad25c82 · TRIAL A CURSO: 334ba622eef1808f8986cb8ccac59a12
 
 ## Hojas y paneles
+- SEO Diluu · Enlaces y outreach (Bárbara; pestañas Esta semana, Contactos, Resumen, Rutina del lunes, Listas): 12Z8eQ79Yy9xA9yn0z18fg1s8RLXX4Wv8BthT-0_76W0
 - TRACKING VENTAS INTERNO: 1IcypLYUlo_PbntrbmbJclFgUfFUSK3F2p0kRx5lETLc (ATRIBUCIÓN AUTOMÁTICA, Sales results monthly, BONUS OCT 2026).
 - Enrolments: 1ulSiqD25IVGRel2oLIasFSUaDGnA49zAG81RZge-y-o · Tracker de creatividades: TRACKER_CREATIVOS_HeySpanish (Drive).
 - Panel: bi.diluu.com (enrolments, direct-course). Kommo: lumafamik95.kommo.com. Cloudtalk analytics.

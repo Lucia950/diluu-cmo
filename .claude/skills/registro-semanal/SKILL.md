@@ -28,7 +28,7 @@ Google Ads, Brevo ni Notion (solo lectura; el tablero de Marta se lee, no se edi
    Entrega en esta semana y la siguiente, y las vencidas que no estén en Done. Cruza con
    docs/equipo/marta-plan-entregas.md para calcular el margen hasta la fecha límite real.
 7. **Bárbara (SEO)**: tareas de su tablero de Notion (collection://1267be7c-c4ef-4259-accf-b4b809417aee)
-   que vencen esta semana o están vencidas; artículos publicados, enlaces (hoja de outreach) y la
+   que vencen esta semana o están vencidas; artículos publicados, enlaces (hoja de outreach 12Z8eQ79Yy9xA9yn0z18fg1s8RLXX4Wv8BthT-0_76W0, pestaña Resumen: D5 enlaces, D7 contactos nuevos en 7 días) y la
    hoja de preguntas a IA si hay dato nuevo.
 8. **SEO para el panel de Bárbara**: Search Console por mes y semana con el filtro de búsquedas de
    padres (regex de docs/medicion/fuentes.md), posición de las 30 búsquedas objetivo y de las
