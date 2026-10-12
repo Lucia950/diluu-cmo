@@ -1,5 +1,9 @@
 # Decisiones (más reciente arriba)
 
+- **2026-10-12** · Referidos: la acreditación de los 30 $ funciona (Lucia). La alta referida del 6 oct es
+  de una familia de Seal Subscriptions y se le acredita a mano. Se levanta el bloqueo: el email propio de
+  referidos puede salir el 15 oct. El canal sigue en ARREGLAR por participación (2 invitaciones en 19
+  días), no por el circuito.
 - **2026-10-12** · Guardrail de CTR de Meta: se mide solo sobre las campañas optimizadas a compra, no
   sobre la cuenta (Lucia): el CTR de cuenta baja cada vez que corre un cribado por reproducciones.
   Semana 41: cuenta 1,02 %, núcleo 1,28 %. Meta se juzga además con el coste por prueba pagada de

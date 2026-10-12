@@ -28,7 +28,7 @@ familias (aprox.): 42 en la semana, 69 del 1 al 11. Stripe no se usa para contar
 | Google Ads | £386 | £1.399 / £1.500 | 6 conversiones (marca 3, keywords EN 3) | £64 / conv. | £246 · 10 · £24,6 | MANTENER (2 campañas nuevas desde el 5 oct, sin 14 días) |
 | SEO | £0 | — | 1.577 clics 5–9 oct (SC llega hasta el 9); búsquedas de padres: 0 clics, 198 impresiones | — | 1.462 clics (1–7 oct) | ARREGLAR |
 | Email (Brevo) | £0 | — | 0 campañas enviadas 1–11 oct; 6 automatizaciones activas (carrito abandonado prueba 505 contactos desde el 16 sep, matrícula 324; las 3 secuencias del quiz, 2–3 contactos cada una); GA4: 52 sesiones, 21 conv. (1–11: 88 / 39) | — | 60 / 28 (1–7) | CAMBIAR DE FUNCIÓN |
-| Referidos | £0 | — | 23 sep–11 oct: 332 familias con código (17 % de las activas), 2 amigos invitados, 1 prueba hecha, 1 alta (6 oct) sin acreditar los 30 $ (base de producción, scripts/referidos.sh; corregido el 12 oct) | 30 $ de crédito por alta | objetivo propuesto: 25 suelo / 40 | ARREGLAR |
+| Referidos | £0 | — | 23 sep–11 oct: 332 familias con código (17 % de las activas), 2 amigos invitados, 1 prueba hecha, 1 alta (6 oct; familia de Seal, los 30 $ se acreditan a mano) (base de producción, scripts/referidos.sh). Semana 5–11: 94 familias nuevas con código, 0 invitaciones | 30 $ de crédito por alta | objetivo propuesto: 25 suelo / 40 | ARREGLAR (por participación; la acreditación funciona) |
 | Social orgánico | £0 | — | GA4: 49 sesiones, 13 conv. | — | 68 / 21 (1–7) | MANTENER |
 | IA (ChatGPT, Gemini) | £0 | — | GA4: 30 sesiones, 3 conv.; 1–11 oct 36 / 3 (sep 135 / 44) | — | — | MEDIR (nuevo objetivo de Bárbara) |
 
@@ -82,8 +82,8 @@ tener los 14 días de las campañas nuevas (19 oct).
    septiembre: el foco es prueba → curso (cadencia día 0, 3 y 10, checkouts abandonados en 2 h) y
    las 58 cancelaciones ya programadas (llamada de retención antes de la última clase).
 4. Martes 13 oct: Lucia cierra Black Friday, pausa navideña y tarjeta regalo y decide incentivo y
-   objetivo de referidos (docs/planes/referidos-2026-10.md; el email sale cuando Daniel confirme que
-   la recompensa se acredita, objetivo 15 oct); revisión de los tres compromisos de ventas de
+   objetivo de referidos (docs/planes/referidos-2026-10.md; la acreditación funciona, la alta del 6 oct es
+   de Seal y se acredita a mano: el email puede salir el 15 oct); revisión de los tres compromisos de ventas de
    Bárbara. Marta arranca (fecha asumida).
 5. Google: dos campañas nuevas (keywords EN y EEUU exacta) con 7 días de datos: nada que decidir
    hasta el 19 oct. El francés con 0 conversiones en la semana (3 en 14 días).
