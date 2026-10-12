@@ -106,26 +106,26 @@ footer{color:var(--muted);font-size:12.5px;line-height:1.6}
 <script>
 // ============ DATOS (los actualiza la rutina registro-semanal cada lunes) ============
 const D = {
-  periodo: "Actualizado el 8 de octubre de 2026 · datos hasta el 7 oct",
-  lede: "Los padres nos ven 743 veces al mes en Google y clican 3. Lo que convierte hoy en orgánico son las páginas de clases de francés y español; ChatGPT ya manda 135 sesiones al mes que convierten una de cada tres. El trabajo del trimestre: reescribir 3 páginas, publicar 4 artículos, conseguir 8 enlaces.",
+  periodo: "Actualizado el 12 de octubre de 2026 · Search Console hasta el 9 oct, GA4 hasta el 11",
+  lede: "Los padres nos ven unas 700 veces al mes en Google y clican 1 o 3 según la lista de búsquedas; en octubre, 1 clic y 329 impresiones hasta el día 9. Lo que convierte hoy en orgánico son las páginas de clases de francés y español; ChatGPT ya manda 135 sesiones al mes que convierten una de cada tres. El trabajo del trimestre: reescribir 3 páginas, publicar 4 artículos, conseguir 8 enlaces.",
   objetivos: [
     { k: "Páginas de clases reescritas", v: 0, meta: 3, fecha: "7 nov", d: "/spanish-classes-for-kids (EN), /es/spanish-classes-for-kids, /es/spanish-for-kindergartners" },
     { k: "Artículos para padres publicados", v: 0, meta: 4, fecha: "19 dic", d: "Cada uno en dos idiomas; 10 el 31 de marzo" },
     { k: "Enlaces nuevos (dominios)", v: 0, meta: 8, fecha: "31 dic", d: "Hoja de outreach; 20 el 31 de marzo" },
     { k: "Preguntas a IA en las que aparece Diluu", v: null, meta: null, fecha: "base 31 oct", d: "10 preguntas en ChatGPT, Gemini y Perplexity; +2 en dic, 5 de 10 en mar" },
-    { k: "Clics de padres al mes", v: 3, meta: 25, fecha: "dic · 150 en mar", d: "Septiembre: 3 clics, 743 impresiones" },
-    { k: "Eventos clave GA4 desde páginas de padres al mes", v: 145, meta: null, fecha: "sep 2026", d: "Orgánico en páginas de clases ES/EN/FR, lectoescritura y heritage. No son pruebas pagadas: el objetivo de 4 (dic) y 10 (mar) pruebas se medirá en la base de producción cuando guarde el origen" },
-    { k: "Sesiones desde IA al mes", v: 135, meta: 150, fecha: "dic · 300 en mar", d: "Septiembre: 120 de ChatGPT, 10 de Gemini" }
+    { k: "Clics de padres al mes", v: 3, meta: 25, fecha: "dic · 150 en mar", d: "Septiembre: 3 clics, 743 impresiones · 1–9 oct: 1 clic, 329 impresiones (regla del panel; sep con esa regla: 1 y 565)" },
+    { k: "Eventos clave GA4 desde páginas de padres al mes", v: 145, meta: null, fecha: "sep 2026", d: "Orgánico en páginas de clases ES/EN/FR, lectoescritura y heritage. No son pruebas pagadas: el objetivo de 4 (dic) y 10 (mar) pruebas se medirá en la base de producción cuando guarde el origen · 1–11 oct: 63 eventos en 160 sesiones" },
+    { k: "Sesiones desde IA al mes", v: 135, meta: 150, fecha: "dic · 300 en mar", d: "Septiembre: 120 de ChatGPT, 10 de Gemini · 1–11 oct: 36 (ChatGPT 24, Gemini 11, Copilot 1), 3 conversiones: va a la mitad del ritmo" }
   ],
   meses: ["jun 25","jul","ago","sep","oct","nov","dic","ene 26","feb","mar","abr","may","jun","jul","ago","sep","oct*"],
   clics: [6,20,16,41,18,9,6,8,6,8,1,1,1,0,3,3,1],
-  impresiones: [8857,13049,11092,7327,3256,2647,2638,3003,2404,2522,1044,662,482,407,513,743,299],
+  impresiones: [8857,13049,11092,7327,3256,2647,2638,3003,2404,2522,1044,662,482,407,513,743,329],
   iaMeses: ["ene 26","feb","mar","abr","may","jun","jul","ago","sep","oct*"],
-  iaSesiones: [0,0,0,0,0,23,15,30,135,17],
+  iaSesiones: [0,0,0,0,0,23,15,30,135,36],
   iaConv: [0,0,0,0,0,0,0,7,44,3],
   convMeses: ["ene 26","feb","mar","abr","may","jun","jul","ago","sep","oct*"],
-  convSesiones: [611,506,416,297,278,293,550,237,659,200],
-  conv: [0,1,0,1,1,0,1,8,145,69],
+  convSesiones: [611,506,416,297,278,293,550,237,659,160],
+  conv: [0,1,0,1,1,0,1,8,145,63],
   queries: [
     ["clases de español para niños","ES",393,2,17.4,"/es/spanish-classes-for-kids","Reescribir (7 nov)"],
     ["español para niños","ES",280,2,53.7,"/es/spanish-classes-for-kids","Reescribir (7 nov)"],
@@ -159,7 +159,7 @@ const D = {
     ["dessin animé pour apprendre l'espagnol","FR",24,2,13.0,"/fr/blog/spanish-disney-movies","Pendiente"]
   ],
   tareas: [
-    ["Arranque: accesos, diagnóstico y plantillas","Onboarding","20 oct","Sin empezar"],
+    ["Arranque: accesos, diagnóstico y plantillas","Onboarding","13 oct (Notion) · 20 oct (propuesta)","Sin empezar"],
     ["Lista de 30 búsquedas: ya en la hoja","Artículos","20 oct","Hecho"],
     ["Lista de 20 sitios y primeros 5 contactos","Enlaces","24 oct","Sin empezar"],
     ["Reescribir /spanish-classes-for-kids (EN)","Páginas de clases","31 oct","Sin empezar"],
@@ -174,10 +174,11 @@ const D = {
     "\"Búsquedas de padres\" = consultas que contienen class, clases, cours, lesson, tutor, learn spanish/french, aprender español, apprendre, online spanish/french, spanish/french for kids, español/francés para niños, heritage, bilingual kids o lectoescritura, sin marca ni mapas.",
     "Las conversiones de GA4 son eventos clave (reservas, compras y otros), no pruebas pagadas; su definición cambió en julio de 2026. Sirven para la tendencia.",
     "GA4 etiqueta como \"Organic Search\" miles de sesiones en /trial-sp y /trial-fr que no vienen de Google: se excluyen de este panel.",
-    "Las posiciones son medias de 12 meses; una página reescrita tarda de 4 a 12 semanas en moverse.",
+    "Las posiciones son medias de 12 meses (lectura del 8 oct; se refrescan cuando una fila cambia de estado y el día 1 de cada mes); una página reescrita tarda de 4 a 12 semanas en moverse.",
+    "Octubre (barra con asterisco) es parcial: Search Console hasta el 9 oct y GA4 hasta el 11. Con la regla de búsquedas de padres del panel, septiembre da 1 clic y 565 impresiones; el 743 de la serie salió de una lista más amplia.",
     "Las páginas de clases en inglés (/spanish-classes-for-kids y /french-classes-for-kids) son hoy las que más eventos traen desde orgánico: 132 sesiones y 62 eventos la de francés en septiembre."
   ],
-  fuentes: "Fuentes: Search Console (diluu.com) y GA4 (425989233) vía Supermetrics, jun 2025 – 7 oct 2026; tablero de Notion de Bárbara. Lo actualiza la rutina registro-semanal cada lunes."
+  fuentes: "Fuentes: Search Console (diluu.com, hasta el 9 oct) y GA4 (425989233, hasta el 11 oct) vía Supermetrics, jun 2025 – oct 2026; tablero de Notion de Bárbara; hoja SEO Diluu · Búsquedas y enlaces (12 oct). Lo actualiza la rutina registro-semanal cada lunes."
 };
 // ============ FIN DATOS ============
 const $ = s => document.querySelector(s);
