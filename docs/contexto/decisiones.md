@@ -1,5 +1,21 @@
 # Decisiones (más reciente arriba)
 
+- **2026-10-12** · Guardrail de CTR de Meta: se mide solo sobre las campañas optimizadas a compra, no
+  sobre la cuenta (Lucia): el CTR de cuenta baja cada vez que corre un cribado por reproducciones.
+  Semana 41: cuenta 1,02 %, núcleo 1,28 %. Meta se juzga además con el coste por prueba pagada de
+  Stripe (sem. 41: £35,5, 76 pruebas), no solo con el píxel. Los informes de anuncios los hace Lucia.
+- **2026-10-12** · Tablero de Marta sin tareas recurrentes (Lucia): "Rutina de los lunes" y "Reunión de
+  los viernes" se han sacado del tablero (movidas a la página MARKETING de Notion). Quedan solo entregas.
+- **2026-10-12** · Panel bi.diluu.com: la rutina lo lee desde Chrome con la sesión de Lucia (12 oct:
+  2.881 activas, 2.931 en vigor; la base, 2.933). Brevo: las estadísticas de automatizaciones se leen
+  en la web, no por API.
+- **2026-10-12** · Referidos se miden en la base de producción (`v3-referral-codes`, `v3-referrals`,
+  bookings con `sourceId referral:`; `scripts/referidos.sh`), no en Stripe: la prueba referida es
+  gratis y no pasa por el checkout. 23 sep–11 oct: 332 familias con código, 2 referidos reales, 1 alta
+  (6 oct) sin acreditar los 30 $. Canal en ARREGLAR hasta que Daniel confirme la acreditación; el
+  email de referidos no sale antes (propuesta: 15 oct, lo manda Lucia con Claude). Objetivo propuesto
+  pendiente de Lucia: suelo 25, objetivo 40 altas referidas en el Q4, ≤ £40 por alta
+  (docs/planes/referidos-2026-10.md).
 - **2026-10-08** · Fuente de verdad de altas, bajas y plazas: la base de producción, no Stripe (hay
   familias en Seal Subscriptions que no pasan por Stripe). Stripe queda para ingresos y metadatos.
 - **2026-10-08** · SEO entero para Bárbara, con objetivos propios y con Claude; Marta no hace SEO:

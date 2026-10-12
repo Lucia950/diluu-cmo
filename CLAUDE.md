@@ -26,7 +26,7 @@ horas en hora de Bali e indica la zona.
   Hoja de ruta 2027: ≥ 5.800 plazas el 30 nov 2027 siendo rentables. Detalle en docs/planes/.
 - Equipo de marketing: Lucia lleva Meta Ads y Google Ads con Claude. Daniela (contenido ES) y
   Morgane (contenido FR). Marta (prácticas, 20 h/semana, desde octubre 2026: creatividades,
-  Black Friday, email marketing y campañas). Bárbara (ventas y SEO a fondo con Claude; no toca
+  Black Friday, email marketing y campañas; no hace informes de anuncios ni SEO). Bárbara (ventas y SEO a fondo con Claude; no toca
   Brevo). Lucía F. y Virginia (ventas; las reseñas de Google las pide todo el equipo de ops).
   Genesis (operaciones).
 
@@ -91,7 +91,8 @@ semana, y desde agosto cuenta matrículas como compras.
 ## Guardrails
 - No escalar un canal si empeora el CAC blended o el LTV:CAC baja de 3:1.
 - Meta: CAC de medios por familia nueva > £65 → bajar un 15 %; < £50 → subir un 15 % (a mitad
-  de mes). CTR < 1,1 % → rotar creativos. Frecuencia 7 d > 3,5 → avisar.
+  de mes). CTR < 1,1 % → rotar creativos, medido solo sobre las campañas optimizadas a compra (el CTR de cuenta
+  baja cada vez que corre un cribado por reproducciones). Frecuencia 7 d > 3,5 → avisar.
 - Google: la genérica no sube mientras su CPA > £90; el francés puede subir a £20/día.
 - Nunca decidir sobre anuncios con menos de 14 días de datos.
 - Todo experimento con hipótesis, métrica de éxito, presupuesto máximo y fecha de revisión.

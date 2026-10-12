@@ -158,8 +158,8 @@ footer{color:var(--muted);font-size:12.5px;line-height:1.6}
 // ============ DATOS (los actualiza la rutina registro-semanal cada lunes) ============
 const D = {
   periodo: "Semana 41 · 5–11 de octubre de 2026 · lectura del lunes 12 oct",
-  lede: "Octubre va justo en el ritmo de altas (113 de 320) y las plazas suben a 2.933, pero las pruebas caen un 19 % frente a septiembre y Meta ha perdido CTR y coste por compra en una semana. Toca rotar creativos y fijar cómo se mide el guardrail del CAC antes del 15.",
-  objetivo: { suelo: 3000, deseable: 3100, plazasDB: 2933, plazasDBFecha: "12 oct, contratadas y no finalizadas, con pausadas", plazasPanel: 2829, plazasPanelFecha: "2 oct", diasRestantes: 80, altasQ4: 700, altasMes: 320, mes: "octubre" },
+  lede: "Octubre va justo en el ritmo de altas (113 de 320) y las plazas suben a 2.933 (panel: 2.931 en vigor), pero las pruebas caen un 19 % frente a septiembre y el coste por prueba pagada sube de £33,5 a £35,5. Toca fijar cómo se mide el guardrail del CAC antes del 15 y arreglar la acreditación de referidos.",
+  objetivo: { suelo: 3000, deseable: 3100, plazasDB: 2933, plazasDBFecha: "12 oct, contratadas y no finalizadas, con pausadas", plazasPanel: 2881, plazasPanelFecha: "12 oct", diasRestantes: 80, altasQ4: 700, altasMes: 320, mes: "octubre" },
   tiles: [
     { k: "Plazas nuevas 5–11 oct", v: "125", d: "17,9 al día · semana anterior 116 · sep 17,3 al día", cls: "good" },
     { k: "Plazas canceladas 5–11 oct", v: "60", d: "8,6 al día · semana anterior 96 · sep 11,9 al día · 58 ya programadas", cls: "good" },
@@ -169,11 +169,11 @@ const D = {
     { k: "CAC de medios por familia nueva", v: "£66,4", d: "1–11 oct, base de producción (semana £65,7) · sep misma base £72,9 · guardrail £50/£65 calibrado con Stripe", cls: "warn" }
   ],
   canales: [
-    { n: "Meta Ads", color: "--s1", cls: "neutral", clsTxt: "Mantener", inv: 2700, ritmo: 12070, presupuesto: 12500, res: "55 compras píxel · CTR 1,02 %", coste: "£49,1 / compra", ref: "sem. ant.: 65 · £43,3", nota: "CTR por debajo del guardrail (1,1 %): rotar creativos. El domingo 11 dobló las impresiones (56.565) con CPM £8,8 y CTR 0,85 %: revisar qué cambió." },
+    { n: "Meta Ads", color: "--s1", cls: "neutral", clsTxt: "Mantener", inv: 2700, ritmo: 12070, presupuesto: 12500, res: "55 compras píxel · 76 pruebas pagadas (Stripe)", coste: "£35,5 / prueba pagada · £49,1 / compra píxel", ref: "sem. ant.: £33,5 · 65 · £43,3", nota: "CTR del núcleo a compra 1,28 % (sube desde 1,20 %); el de cuenta (1,02 %) lo bajan un test FR ya corregido y dos campañas de reproducciones que acaban el 14. Frecuencia 1,2–1,6. Rotación en calendario: tanda 13 el 14 oct, carteles el 17." },
     { n: "Google Ads", color: "--s2", cls: "neutral", clsTxt: "Mantener", inv: 386, ritmo: 1399, presupuesto: 1500, res: "6 conversiones (marca 3, keywords EN 3)", coste: "£64 / conv.", ref: "sem. ant.: 10 · £24,6", nota: "Dos campañas nuevas desde el 5 oct (keywords EN £141 / 3; EEUU exacta £76 / 0): nada que decidir hasta el 19 oct. Francés £107 / 0 esta semana (14 d: £68). Genérica congelada." },
     { n: "SEO", color: "--s3", cls: "serious", clsTxt: "Arreglar", inv: 0, ritmo: 0, presupuesto: 0, res: "1.577 clics 5–9 oct · padres 0 clics / 198 impr.", coste: "—", ref: "1–7 oct: 1.462 clics", nota: "Casi todo marca y mapas. Bárbara arranca; primera página reescrita el 31 oct. Orgánico en páginas de padres 1–11 oct: 160 sesiones, 63 eventos." },
-    { n: "Email (Brevo)", color: "--s4", cls: "warn", clsTxt: "Cambiar de función", inv: 0, ritmo: 0, presupuesto: 0, res: "GA4: 52 sesiones · 21 conv.", coste: "—", ref: "0 campañas enviadas 1–11 oct", nota: "Email propio de referidos el 13 oct. Automatizaciones de ciclo de vida antes del 15 nov; la API no da sus estadísticas." },
-    { n: "Referidos", color: "--s5", cls: "muted", clsTxt: "Medir", inv: 0, ritmo: 0, presupuesto: 0, res: "sin medir", coste: "—", ref: "objetivo Q4: 40 altas", nota: "Hace falta referral_code en la prueba y en la suscripción para verlo." },
+    { n: "Email (Brevo)", color: "--s4", cls: "warn", clsTxt: "Cambiar de función", inv: 0, ritmo: 0, presupuesto: 0, res: "GA4: 52 sesiones · 21 conv.", coste: "—", ref: "0 campañas enviadas 1–11 oct", nota: "6 automatizaciones activas: carrito abandonado prueba 505 contactos desde el 16 sep y matrícula 324; las 3 secuencias del quiz apenas se disparan (2–3 contactos). Email de referidos cuando Daniel confirme que la recompensa se acredita (objetivo 15 oct). Ciclo de vida antes del 15 nov." },
+    { n: "Referidos", color: "--s5", cls: "serious", clsTxt: "Arreglar", inv: 0, ritmo: 0, presupuesto: 0, res: "23 sep–11 oct: 2 amigos invitados · 1 prueba hecha · 1 alta (6 oct)", coste: "30 $ de crédito, sin acreditar", ref: "objetivo Q4 propuesto: 25 suelo · 40", nota: "332 familias han abierto Referidos (17 % de las activas) y solo 2 han invitado. La alta del 6 oct no acreditó los 30 $ al referidor: arreglar antes de comunicar. Base de producción (scripts/referidos.sh); plan en docs/planes/referidos-2026-10.md." },
     { n: "Social orgánico e IA", color: "--s6", cls: "neutral", clsTxt: "Mantener", inv: 0, ritmo: 0, presupuesto: 0, res: "GA4: 49 sesiones · 13 conv. · IA 30 / 3", coste: "—", ref: "IA 1–11 oct: 36 / 3 (sep 135 / 44)", nota: "ChatGPT y Gemini van a la mitad del ritmo de septiembre; objetivo de Bárbara: 150 sesiones en diciembre." }
   ],
   semanas: ["31 ago", "7 sep", "14 sep", "21 sep", "28 sep", "5 oct"],
@@ -183,24 +183,22 @@ const D = {
   googConv: [7, 10, 7, 7, 10, 6],
   ga4: { cap: "5–11 de octubre. Las conversiones de GA4 son reservas y compras según la web; no son altas. GA4 reasigna el canal de los últimos 3 días al procesar.", rows: [["Paid Social", 259], ["Organic Search", 93], ["Unassigned", 90], ["Direct", 80], ["Paid Search", 69], ["Email", 21], ["Referral", 20], ["Cross-network", 14], ["Organic Social", 13], ["AI Assistant", 3]] },
   foco: [
-    "<b>Meta, guardrail saltado:</b> CTR 1,02 % (< 1,1 %) y coste por compra de £43 a £49 en una semana. Rotar creativos ya (los 6–8 nuevos del 2 oct) y revisar hoy qué cambió el domingo 11 (impresiones ×2, CPM £8,8). No esperar al informe de Marta del 28 oct.",
+    "<b>Meta:</b> la alarma de CTR era de cuenta, no del núcleo (1,28 %, subiendo); el guardrail se mide desde hoy solo sobre campañas optimizadas a compra. Lo que sube es el coste por prueba pagada en Stripe (£33,5 → £35,5, 76 pruebas): vigilar el jueves 16 con la tanda 13 rodando.",
     "<b>Cómo se mide el CAC antes del 15 oct:</b> con la base de producción octubre va en £66,4 por familia nueva (sep £72,9); el umbral £50/£65 se calibró con Stripe (sep £60,2). Propuesta: £60/£79 con la base de producción, aplicado el 15 oct con 14 días de datos.",
     "<b>Altas justo en ritmo</b> (113 de 320; hacen falta 72 a la semana, esta semana 73) con las pruebas un 19 % por debajo de septiembre: foco en prueba → curso (día 0, 3 y 10; checkouts abandonados en 2 h) y en las 58 cancelaciones ya programadas.",
-    "<b>Martes 13 oct:</b> Lucia cierra Black Friday, pausa navideña y tarjeta regalo; email propio de referidos; revisión de los compromisos de ventas de Bárbara; Marta arranca (fecha asumida).",
+    "<b>Martes 13 oct:</b> Lucia cierra Black Friday, pausa navideña y tarjeta regalo y decide incentivo y objetivo de referidos (docs/planes/referidos-2026-10.md); el email de referidos sale cuando Daniel confirme que la recompensa se acredita (objetivo 15 oct); revisión de los compromisos de ventas de Bárbara; Marta arranca (fecha asumida).",
     "<b>Google:</b> dos campañas nuevas con 7 días de datos; el francés no convirtió esta semana (3 en 14 días, £68). Nada que tocar hasta el 19 oct."
   ],
-  martaSub: "Incorporación asumida el 13 de octubre (martes). Marta ve solo su fecha en Notion; el límite real es el margen de Lucia. En Notion todo está en Not started y nada ha vencido.",
+  martaSub: "Incorporación asumida el 13 de octubre (martes). Marta ve solo su fecha en Notion; el límite real es el margen de Lucia. Nada vencido. Las tareas recurrentes (rutina del lunes, reunión del viernes) se quitaron del tablero el 12 oct; Marta no hace informes de anuncios.",
   marta: [
     ["Accesos, lecturas y primera semana", "Onboarding", "17 oct", "17 oct", "—", "Esta semana"],
-    ["Reunión de los viernes con Lucia y formación", "Rutina semanal", "17 oct", "—", "—", "Esta semana"],
-    ["Rutina de los lunes: resumen de canales y UTM", "Rutina semanal", "20 oct", "—", "—", "Próxima"],
     ["Plan de Black Friday en una página", "Black Friday", "24 oct", "31 oct", "5 días", "Próxima"],
     ["Informe \"qué vende y qué no\"", "Creatividades", "28 oct", "31 oct", "3 días", "Más adelante"],
     ["Brief de vídeos BF y textos de la landing", "Black Friday", "31 oct", "5 nov", "3 días", "Más adelante"],
     ["5 emails de BF en Brevo", "Black Friday", "5 nov", "10 nov", "3 días", "Más adelante"]
   ],
   barbara: [
-    "<b>13 oct:</b> revisión de los tres compromisos de ventas (velocidad, tareas CALL 2/3, errores) y email propio de referidos en ES, EN y FR.",
+    "<b>13 oct:</b> revisión de los tres compromisos de ventas (velocidad, tareas CALL 2/3, errores). El email de referidos ya no es suyo (no toca Brevo): lo manda Lucia con Claude.",
     "<b>13 oct en Notion / 20 oct en la propuesta:</b> arranque de SEO (accesos, diagnóstico, plantillas). Unificar la fecha.",
     "<b>24 oct:</b> lista de 20 sitios y primeros 5 contactos (hoy: 6 sitios en lista, 0 contactados, 0 enlaces).",
     "<b>31 oct:</b> reescribir /spanish-classes-for-kids (EN) y línea base de visibilidad en IA (10 preguntas)."
@@ -209,8 +207,9 @@ const D = {
     "Altas, bajas y plazas salen de la base de producción (incluye a las familias de Seal Subscriptions, que no están en Stripe). Stripe no se usa para contar.",
     "CAC de medios: el plan lo calculó con familias nuevas de Stripe (sep 270); con la base de producción (sep 223) los mismos £16.253 dan £72,9, no £60,2. El guardrail hay que recalibrarlo.",
     "Search Console llega hasta el 9 oct: la semana SEO es de 5 días. Búsquedas de padres con la regla del panel SEO (sin marca, mapas ni Disney).",
-    "Meta: el píxel cuenta matrículas como compras desde agosto. GA4 reprocesa el canal de los últimos días (el Cross-network de 905 sesiones del 8 oct es hoy 319 en todo el mes).",
-    "Panel bi.diluu.com sin dato (pide inicio de sesión). Brevo: la API no da estadísticas de automatizaciones. El 13 de octubre es martes."
+    "Meta: el píxel cuenta matrículas como compras desde agosto y solo lo atribuido; el coste por prueba pagada sale de Stripe. El guardrail de CTR se mide sobre campañas optimizadas a compra (decidido el 12 oct). GA4 reprocesa el canal de los últimos días (el Cross-network de 905 sesiones del 8 oct es hoy 319 en todo el mes).",
+    "Panel bi.diluu.com (12 oct): 2.881 plazas activas y 2.931 en vigor (la base, 2.933); churn mensual 8,1 %, retención a 1 año 36,1 %. Brevo: la API no da estadísticas de automatizaciones; los acumulados se leen en la web. El 13 de octubre es martes.",
+    "Referidos: base de producción (códigos, amigos invitados, pruebas y altas referidas; scripts/referidos.sh), sin las cuentas internas del equipo. Stripe no los ve: la prueba referida es gratis y no pasa por el checkout. GA4 no mide el panel."
   ],
   fuentes: "Fuentes: base de producción de Diluu (12 oct 2026, 10:30 Bali); Supermetrics: Meta Ads (act_2456974117647730 y act_911299640142242), Google Ads (4584208097), Search Console (diluu.com, hasta el 9 oct), GA4 (425989233), 28 sep – 11 oct 2026; Brevo; tableros de Notion de Marta y Bárbara; hoja SEO Diluu. Lo escribe la rutina registro-semanal cada lunes."
 };

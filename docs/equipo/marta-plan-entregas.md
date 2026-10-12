@@ -29,8 +29,8 @@ en Done en Notion.
 | 16 | Email 3: baja hace 60 días (win-back) | Emails | 12 ene | 15 ene | 3 | Lucia con Claude |
 | 17 | Primer experimento propio | Campaña de enero | 15 ene | — | — | — |
 
-Recurrentes: lunes, resumen de canales y comprobación de UTM (1 h, desde el 20 oct); viernes,
-reunión con Lucia y formación (3 h, desde el 17 oct). Marta no hace SEO: lo lleva Bárbara.
+Sin tareas recurrentes en su tablero (decidido el 12 oct: la rutina del lunes y la reunión de los viernes
+no son entregas). Marta no hace SEO ni informes de anuncios: SEO lo lleva Bárbara y los anuncios, Lucia.
 
 Fechas fijas del plan que no se mueven: 13 oct Lucia cierra ofertas; 14 nov todo probado; 17 nov
 aviso; 24 nov–1 dic Black Friday; 15 dic campaña de enero lista; 22 dic–5 ene pausa.
