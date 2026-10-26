@@ -1,5 +1,188 @@
 # Decisiones (más reciente arriba)
 
+- **2026-10-26** · Correcciones de Lucia al registro de la semana 43: (1) si Stripe falta, se usa el conector de Stripe
+  (listado de cargos, nunca la búsqueda) o se pide el acceso; Meta y el CAC no se juzgan con el píxel (skill y rutina
+  actualizadas). Semana 43: 92 pruebas pagadas, £39,1 por prueba (sem. 42: 69, £42,2). (2) El WhatsApp automático a la
+  familia a las 2 h de una cesta de matrícula abandonada se activó el fin de semana del 24–25 oct (decidido el 14 oct);
+  la tarea de Kommo a las 24 h, sin confirmar. Octubre hasta el 25 (Stripe): 103 checkouts de matrícula completados y
+  56 caducados; la lectura del efecto se hace con las cestas abiertas desde el 26 oct. Pendiente de Lucia: denominador y
+  umbral del CAC (propuesta en el registro de la semana 43).
+
+- **2026-10-22** · Artículo 1: Lucia da por buena la revisión (58/100), que casi todo era falso positivo. Contrastada con la
+  web: la versión FR siempre ha sido la traducción de este post (hreflang), en la web no hay imágenes pendientes y la fecha
+  es el 18 oct, y el test, el quiz y /trial-sp/ existen. Lo real y menor (7 menciones a Diluu por versión, 5 dominios externos en ES,
+  entradillas de los H3 y dos FAQ algo cortas) lo ajusta Lucia sin prisa. `revisiones/a1` pasa a ok (revisora Lucia; el
+  comentario de Claude queda en `comentarioClaude`). Revisión de la herramienta corregida: cuenta los idiomas del plan
+  (no da por «no pedida» ninguna versión), incluye las páginas de test y de prueba como llamadas a la acción y avisa de los
+  10 posts de /fr/blog/ cuya URL dice «français» pero tratan de español.
+
+- **2026-10-22** · Enlaces (Lucia, respuesta a la nota de Bárbara del 20 oct): ActivityHero sigue (la ficha es gratuita); Bárbara
+  tiene invitación al Instagram de Diluu (barbara.fuentes.palma@gmail.com) para La Tundra el 4 nov y los accesos de Hoop y Happity
+  por Zoho Vault; si Yell pide verificar por teléfono, lo hacen juntas en la reunión. Blog: los cambios sin guardar del 16 oct
+  en su carpeta son su intento de cambiar la URL ES del A1 (descartado el 17 oct); los aparta y publica solo su post.
+
+- **2026-10-21** · Herramienta SEO Diluu (Lucia): Bárbara marcó dos pasos sin querer. Se desmarcan en la base los
+  pasos l1 y l2 del lunes 19, que había marcado el martes 20, y vuelven a «Pendiente de días anteriores». Nuevo bloque
+  plegable en Hoy, «Ya marcados de otros días» (últimos 14 días, sin hoy ni los adelantos abiertos): lista los pasos
+  marcados con su fecha y se desmarcan quitando la casilla. Antes, un paso pendiente desaparecía al marcarlo y no
+  había forma de corregirlo. Los pasos de hoy se desmarcan volviendo a pulsar la casilla.
+
+- **2026-10-20** · Herramienta SEO Diluu (Lucia): los pasos que cambian el blog (publicar, primera publicación, enlazar,
+  enlaces a clases, quitar LOROPEPE y los de `pub`) no se pueden marcar sin pegar la URL publicada en diluu.com. La rutina
+  seo-lunes comprueba cada domingo esas URLs con curl y escribe `verificaciones/<día>_<paso>`; si falla, el paso vuelve a
+  pendientes con el motivo hasta que Bárbara guarde otra URL. Primera verificación: la «primera publicación» del 13 oct
+  (marcada el 19) no está en la web; martes 20, paso propio para revisarla.
+- **2026-10-20** · Enlaces (Lucia): CourseHorse descartado (marketplace con comisión, sin enlace); Cathy Duffy sí, con prueba +
+  4 semanas gratis para un niño de su equipo; SourceBottle y Qwoted sí, perfiles gratuitos a nombre de Lucia con las dos citas de
+  las tarjetas (las nuevas, a Lucia). Los artículos «ya escritos» que ofrecen cinco correos (Le Petit Journal, UFE, Express News,
+  homeschool.com, Spanish Mama) no se escriben hasta que respondan. Bárbara contactó 15 sitios el lunes 19 (plan: 5). Su «primera
+  publicación» (enlace a la página de clases en /blog/online-spanish-classes-for-kids-usa/) está marcada pero no publicada:
+  se le pide en la herramienta que la publique o diga qué la frenó.
+- **2026-10-19** · Rutina de los lunes más barata (Lucia, OK a los seis cambios): (1) `scripts/semana-datos.cjs`
+  saca todos los datos de la base en una conexión (20 s frente a 8 min); (2) las pruebas pagadas de Stripe van en
+  ese script con `STRIPE_API_KEY` en `.env` (pendiente de que Lucia pegue la clave), por listado de cargos en hora de
+  Londres, nunca por búsqueda; (3) las consultas de Supermetrics quedan fijadas en la skill (siete, con la regex del
+  panel); (4) los datos de los dashboards viven en `dashboard/semana-cmo-data.js` y `dashboard/seo-diluu-data.js`,
+  publicados con `files`, y se lee la versión viva antes de publicar; (5) la rutina se parte en cmo-semana-diluu
+  (lunes 08:30) y seo-lunes-diluu (domingo 20:00 Bali, skill seo-lunes, registro en docs/registros/seo-semanal.md);
+  (6) la rutina deja de usar Chrome y Slack y, de Notion, solo lee la página Q4 2026 de Lucia (nueva ubicación:
+  https://app.notion.com/p/Q4-2026-b450218fc6ff822dbda4019e331b3a0d), que es la fuente oficial de fechas; el
+  tablero de Marta no se consulta (sus entregas de Black Friday están en la sección 8 de esa página), el panel bi
+  no se lee (la cifra oficial es la de la base) y lo que Lucia tiene que decidir va en el bloque "Pendientes para
+  Lucia" del registro, no en un DM. Black Friday para familias nuevas ya está en Notion y el presupuesto de
+  noviembre vuelve al plan (£9.000 de paid + £4.000; Lucia quitó el ≥ £15k de Notion): los dos pendientes del 17 oct
+  quedan resueltos. Artículo 1: completado por Lucia el 19 oct; se quita de la herramienta de Bárbara el paso
+  "Compara el artículo 1 con su brief"; quedan la revisión y la indexación del martes 20.
+  Herramienta SEO Diluu: las tarjetas "Por contactar" ya no aparecen vencidas; su fecha es el inicio del outreach
+  (19 oct) y solo vencen los seguimientos.
+- **2026-10-19** · Correcciones de Lucia al registro de la semana 42: el coste de Meta por prueba pagada es £42,2
+  (69 pruebas, hora de Londres), no £57 (la búsqueda de Stripe dejó fuera el domingo 18); el email de referidos sí
+  salió el 15 oct a toda la base (test A/B, lectura el 29 oct). Las pausas de los tests de Meta con CPA > £80
+  estaban aprobadas desde el 14 oct y entran en la rutina diaria: la semanal las menciona, no las vuelve a pedir.
+
+- **2026-10-18** · Botones de prueba del blog según el tema del post (Lucia): español → trial-sp, francés → trial-fr
+  (en fr/blog con lang=fr), genérico → home de su idioma («Ver las clases»). Hoy los 9 posts de francés llevan la
+  cabecera a trial-sp y los 30 genéricos van a trial-sp. Impacto pequeño (GA4 1 jul–17 oct: unas 40 sesiones de
+  entrada en los genéricos y unas 40 en los de francés): va al developer detrás de las páginas de clases. La regla
+  queda en el CLAUDE.md del blog junto con la de no publicar posts del plan de SEO sin el «listo» de la revisión.
+- **2026-10-18** · Artículo 1: lo completa Lucia desde el proyecto del developer (docs/analisis/encargo-dev-articulo-1-2026-10.md,
+  que añade también al CLAUDE.md del blog la regla de no publicar posts del plan de SEO sin el «listo» de la revisión). Bárbara
+  lo pasa por «Revisar con Claude» el martes 20 y pide la indexación. Herramienta SEO Diluu: los pasos sin marcar de días
+  anteriores siguen en Hoy hasta que se marcan (los que ya no aplican los decide Lucia/Claude en RESUELTOS, con motivo);
+  barra de progreso semanal y objetivos en Hoy, animación al marcar cada paso, aviso «sin listo, no publiques» en los pasos de
+  publicar y revisión también para las mejoras de posts (libros, 21 oct).
+- **2026-10-17** · Artículo 1 (Bárbara): publicado el 15–16 oct en ES, EN y FR, con 1.340 palabras y 4 de las 11 secciones
+  del brief, sin pasar la revisión de la herramienta (`revisiones` vacía). Hay que completarlo (semana realista, si no
+  hablas español, entiende pero contesta en inglés, recursos, errores y 5 preguntas frecuentes). El A1 lleva FR porque la
+  versión francesa tiene tráfico real (2.243 impr. y 30 clics en 12 meses, heredados de /fr/blog/how-to-teach-…, frente a
+  27 clics del ES); A2–A4 siguen en dos idiomas. La URL del ES no se cambia (respuesta de Lucia en la herramienta). La
+  revisión con Claude compara ahora con el esquema y la longitud del brief, y no se publica sin su «listo». Indexación:
+  Bárbara la pide con Claude in Chrome en Search Console (ya tiene acceso). Semana del 19 oct: completar A1, mejorar el
+  post de libros, primeros contactos y dos fichas de directorio; el post de series pasa a la semana del 14 dic. Dos fichas
+  de directorio cada viernes (23 oct, 6, 13 y 20 nov, 4 dic) para llegar a las 10 antes del 31 dic.
+
+- **2026-10-14** · Lucia corrige su página de Notion "Q4 2026": 700 altas y £27.500 de medios en el trimestre (igual
+  que el plan). Trimestral por defecto, bonos de continuidad y ventas adicionales en la página de gracias se ven en
+  enero de 2027. Siguen abiertas: marketing de noviembre (Notion ≥ £15k frente a £9.000 de paid + £4.000) y si
+  Black Friday para familias nuevas sigue (no está en Notion; Marta tiene 7 entregas).
+- **2026-10-14** · Lucia confirma las seis decisiones del plan Q4 (casillas marcadas en el artefacto): presupuesto
+  de paid, pausar tests con CPA > £80, bonus nuevo y códigos con prefijo (ya aplicado), curso directo con garantía y
+  Black Friday templadas, email de referidos (sale el 15 oct) y los tres tests de Navidad.
+- **2026-10-14** · Referidos: objetivo 25 altas referidas en el Q4 (≤ £40 por alta). Sin semana de recompensa doble
+  (requiere código): se elimina del plan y la entrega 8 de Marta. Calendario de Lucia: email 15 oct, email automático
+  tras la 4.ª clase y texto en el de bienvenida, WhatsApp personal a 150 embajadoras el 26 oct. Todo lo demás agendado.
+- **2026-10-14** · Ventas, ya en marcha (Lucia): cadencia día 0/3/10 en Kommo; salvamento de bajas < 90 días por
+  operaciones; medición por persona desde Stripe y Kommo; bonus nuevo aplicado. Cesta abandonada: en vez de aviso al
+  equipo, WhatsApp automático a la familia a las 2 h y tarea en Kommo a las 24 h con el código del 10 % (objetivo:
+  cestas pagadas 68 % → 80 %, BI). Recordatorios de prueba: 12 h y 4 h antes (no "víspera y 1 h").
+- **2026-10-14** · Email marketing entero lo hace Lucia (con Claude; Marta escribe textos); Bárbara solo SEO. Lo que
+  en los planes de Navidad y referidos figuraba como Bárbara pasa a Lucia.
+- **2026-10-14** · La página de Notion "Q4 2026" (DILUU › STRATEGY › GOALS) es el plan resumido de Lucia con fechas;
+  la rutina de los lunes la lee y recuerda lo pendiente de la semana. Fechas de Lucia: T1 montado 13 nov y lanzado
+  24 nov; pausa larga: email 16 nov, WhatsApp 20 nov, recordatorio 14 dic; tarjeta regalo: creativos 2 nov, campaña
+  19 nov; landing de curso directo con garantía como muy tarde el 3 nov (£60/día × 28 ≈ £1.700, solo ES y EE. UU.,
+  ≤ £110 por familia matriculada); campaña de enero: creativos pedidos 7 dic, listos 14 dic, encendida 26 dic;
+  secuencia de email tras la baja configurada el 23 dic; plantillas del win-back de enero a aprobación el 28 dic.
+- **2026-10-14** · No presentados en pruebas (base de producción, v3-trial-results): ago 95/602 (15,8 %), sep 85/571
+  (14,9 %), 1–13 oct 28/208 (13,5 %). Sep–oct por antelación de la reserva: < 1 día 6,5 %, 1–3 días 10,5 %, 3–7 días
+  23,6 %, > 7 días 4/27. Propuesta pendiente de Lucia: confirmación 48 h antes solo para pruebas reservadas con ≥ 3 días.
+- **2026-10-14** · Pendiente de Lucia (17 oct): cuatro diferencias entre Notion y el plan (altas 620/700, medios
+  £25.400/£27.500, marketing de noviembre ≥ £15k frente a £9.000 + £4.000, Black Friday para familias nuevas no está
+  en Notion aunque Marta tiene 7 entregas) y si trimestral por defecto, bonos de continuidad y ventas adicionales se
+  descartan o pasan a enero. Pestaña "Seguimiento Q4: objetivos y fechas" en el artefacto del plan.
+- **2026-10-13** · Directorios: solo 10 de los revisados son gratuitos y encajan (6 con enlace directo y follow, 1 nofollow,
+  3 sin enlace); ninguno de Australia. En el tablero: Online Homeschool Curriculum Directory (alta), French Morning,
+  ActivityHero, KidsActivities.ie, Homeschool Hub Utah (registro), Oxford Brookes Babylab y OFTP Ontario (por correo) y
+  Happity (ya existe happity.co.uk/diluu: actualizarla, añadir francés y retirar la de HeySpanish). Descartados por cobrar:
+  Expatica, Moving to the UK, Expat Child, Le Petit Journal (packs), Homeschool.com (sin alta gratuita), entre otros.
+- **2026-10-13** · Marca antigua HeySpanish: 27 fichas encontradas (docs/analisis/marca-heyspanish-2026-10.md). Urgente
+  para Lucia: dirección antigua de un piso publicada (Trustpilot, Yelp, Mum's Guide To, Scoot, pin de Google); enlace
+  de reservas de Google a heyspanish.com; 16+ vídeos de YouTube con "HeySpanish" y enlaces a heyspanish.com/based,
+  que acaba en 404 (encargo al developer, sección 0.5). Hoop, Happity, Yell y Mum's Guide To, al tablero de Bárbara.
+- **2026-10-13** · Ya no hay prueba gratis (Lucia): la clase de prueba cuesta 3 € o 4 $; el código LOROPEPE no vale.
+  Quedaba en tres posts (los dos del A1, que se rehacen, y /fr/blog/enseigner-le-francais-a-la-maison-gratuitement/,
+  que Bárbara corrige el viernes 16). El A1 lo firma Lucia Marin; el "caso real" se escribe como caso típico presentado
+  como tal (sin nombre, citas ni cifras), no como un alumno inventado que se hace pasar por real.
+- **2026-10-13** · Artículo 1 se publica esta semana (Lucia): martes 13 arranque, miércoles borrador con el brief,
+  jueves revisión y revisión SEO con Claude, viernes 16 publicación (ES y EN). Calendario adelantado: semana del 19 oct
+  mejorar los dos posts que casi posicionan (libros 13,5; series 31) y primeros contactos; A2 6 nov, A3 20 nov,
+  A4 4 dic, "Diluu en 10 datos" 27 nov; semana del 7 dic, artículo 5 a elegir por Lucia. Lucia contesta antes del
+  miércoles las preguntas del brief del A1 (ejemplos de clase, LOROPEPE, firma, fotos).
+- **2026-10-13** · Directorios como vía propia dentro de Enlaces (propuesta, pendiente del OK de Lucia al objetivo): tarjetas
+  "Registro" sin correo ni seguimientos (formulario + datos de la ficha copiables + comprobación a los 14 días).
+  Objetivo propuesto: 10 fichas antes del 31 dic, contadas aparte de los 8 enlaces de medios y asociaciones.
+  020.co.uk pasa a registro nuevo como Diluu + aviso para retirar la ficha antigua de HeySpanish (su enlace va por
+  redirect: valor SEO bajo).
+- **2026-10-13** · Herramienta de Bárbara "a prueba de principiante" (Lucia): los correos de enlaces llegan
+  redactados en cada tarjeta (investigación + correo + mensaje por otra vía + 2 seguimientos + hora de envío),
+  enviados desde partnerships@diluu.com (Zoho; contraseña en Zoho Vault). Secuencia de 5 toques en 35 días por
+  correo y otra vía. Briefs de artículos preparados por Claude con la competencia real. Fuera hojas de cálculo:
+  URLs publicadas y preguntas a las IA se registran en la herramienta; resultados por post en Datos. Glosario.
+  Unificar growth (CMO + FACEBOOK ADS + GOOGLE ADS) en un solo proyecto el 22–23 dic
+  (docs/planes/migracion-growth-2026-12.md; recordatorio programado el 21 dic).
+- **2026-10-13** · Enlaces (outreach) en un tablero dentro de la herramienta SEO Diluu (pestaña Enlaces, colección
+  `contactos`), no en la pestaña Contactos de la hoja. Seguimiento: primer mensaje → seguimiento 1 a los 7 días →
+  seguimiento 2 a los 14 → "Sin respuesta" a los 14 → reintento con otra oferta a los 3 meses. Sembrado con los 6
+  sitios de la hoja. Bárbara (barbara.fuentes.palma@gmail.com y heyspanishuk@gmail.com) debe seguir como Editora:
+  quien entra invitado por email desde fuera de la organización solo puede escribir con ese nivel, y no hay que
+  activar el enlace público (le quitaría la escritura).
+- **2026-10-13** · Los cuatro artículos del Q4 ya tienen post en el blog (lista completa de /blog, /es/blog y
+  /fr/blog: 123 posts; el sitemap solo lista 47): se rehacen con su URL, no se escriben nuevos. A2 pasa a
+  "las mejores apps para aprender español" (el post ES posiciona 8,6) y A4 a ES+EN. Cada artículo lleva
+  las búsquedas reales que ya traen el post (Search Console) dentro del texto para Claude. La revisión
+  previa a publicar la hace Claude desde la herramienta (capacidad sample); a Lucia solo le llegan los
+  datos sobre Diluu que Claude no puede verificar. Bárbara empieza el martes 13 oct (hora de Chile): arranque
+  con su primera publicación (M), primeros contactos (X), enlaces a las páginas de clases (J), cierre (V). Botón "Adelantar"
+  para hacer el día siguiente si le sobra tiempo (lo marcado se guarda en ese día).
+- **2026-10-13** · Bárbara no usa Notion (Lucia): todo va en la herramienta "SEO Diluu". Notas del día y
+  respuestas de Lucia, y revisión de los tres primeros artículos (Bárbara los envía el jueves desde su
+  paso; Lucia pide cambios o da el OK en la pestaña Semana), en la base del artefacto (`dias`,
+  `respuestas`, `revisiones`). El tablero de Notion queda en la papelera.
+- **2026-10-13** · Calendario de Bárbara aprobado (Lucia): A1 31 oct, A2 14 nov, A3 28 nov, A4 12 dic
+  (A1–A3 rehacen posts existentes) y dos posts mejorados el 19 dic. Preguntas a IA: 8 de la propuesta +
+  2 cambiadas por búsquedas reales de Search Console ("cours de français en ligne pour enfants
+  expatriés"; "¿cuáles son las mejores aplicaciones para aprender español para niños?", 82 impr.,
+  pos. 8,6, abr–oct). Dato: ChatGPT manda 68 sesiones y 38 eventos clave a /french-classes-for-kids
+  (jun–12 oct, GA4); es la página que más recomiendan las IA. Aprendizaje de SEO semanal y recursos
+  (incl. @peter.lead, recomendado por Lucia) en la herramienta.
+- **2026-10-13** · Las páginas de clases (/spanish-classes-for-kids, /es/spanish-classes-for-kids,
+  /es/spanish-for-kindergartners) las hace Lucia, no Bárbara (Lucia). Brief de cambios para el proyecto
+  de developer en docs/analisis/brief-paginas-clases-2026-10.md. Bárbara lleva blog, enlaces e IA.
+  Propuesta de calendario (pendiente de OK de Lucia; Notion aún con las fechas antiguas): un artículo
+  cada dos semanas (escribir / publicar), A1 31 oct, A2 14 nov, A3 28 nov, A4 12 dic, y dos posts
+  existentes mejorados el 19 dic.
+  Hallazgos del brief (13 oct, comprobados con curl): /es/spanish-classes-for-kids/ redirige a un post
+  en inglés y /es/spanish-for-kindergartners/ da 404 (las páginas reales son
+  /es/clases-de-espanol-para-ninos-online/ y /es/espanol-para-preescolar/); los botones de prueba de
+  /spanish-classes-for-kids/ van a /trial-sp/ sin ?lang=en (los de francés sí lo llevan). Tres de los
+  cuatro artículos del plan ya tienen post en el blog: se rehacen con su URL, no se duplican.
+- **2026-10-13** · Bárbara trabaja el SEO desde una sola herramienta: el artefacto "SEO Diluu" pasa de
+  panel a herramienta diaria (qué toca hoy con casillas, datos, semana, plan y guías con animaciones;
+  las casillas y la nota del día se guardan en la base del artefacto, Lucia las ve en la pestaña
+  Semana y la rutina de los lunes las lee). Publica sola en el blog con Claude Code (/empezar-blog,
+  sesión en workspaces/diluu-blog). Hay que compartirle el artefacto como colaboradora. Las 10
+  preguntas a IA de la guía son una propuesta pendiente de Lucia.
+
 - **2026-10-12** · Referidos: la acreditación de los 30 $ funciona (Lucia). La alta referida del 6 oct es
   de una familia de Seal Subscriptions y se le acredita a mano. Se levanta el bloqueo: el email propio de
   referidos puede salir el 15 oct. El canal sigue en ARREGLAR por participación (2 invitaciones en 19

@@ -45,6 +45,14 @@ antes, y esta semana tuvo el máximo de pruebas pagadas del mes). Las 189 suscri
 proyecto de Meta (£57 por suscripción) caen entre los dos denominadores de la base. Cuál de los dos cuenta para el guardrail
 lo decide Lucia: el umbral de £65 se fijó con familias nuevas de Stripe y el de £79 es la propuesta del 12 oct para pasarlo a
 familias nuevas de la base.
+Desglose de las altas (base de producción, 26 oct): de las 222 altas del 1 al 25 oct, 134 son familias nuevas, 51 son
+familias con plaza activa que añaden otra (hermano o segundo idioma), 33 vuelven en menos de 90 días (mediana 4 días fuera:
+sobre todo cambios de grupo sin enlazar y salvamentos de operaciones) y 4 vuelven tras más de 90 días. Septiembre: 310 =
+223 + 35 + 37 + 15. Lo que compran los anuncios son las nuevas y las que vuelven tras > 90 días (138 en octubre): CAC de
+medios £85,6. Contraste por el embudo: £39,1 por prueba pagada ÷ 43 % de conversión a familia nueva (familias nuevas de la
+semana frente a pruebas pagadas de la anterior: 32/76 y 30/69) ≈ £90. Propuesta (pendiente de Lucia): CAC de medios por
+familia nueva, mensual, base de producción, con umbrales ligados al LTV: < £80 subir Meta un 15 %, > £100 bajarlo un 15 %
+(sustituyen a £50/£65); semanalmente, coste por prueba pagada de Stripe.
 
 Meta por campaña (19–25 oct): USA Prospecting ES £913, 16 compras (£57); FR TEST Creativos ABO £717, 7 (£102); FR Prospecting
 Video1 £704, 15 (£47; 19,6 % del gasto, dentro del tope del 30 %, la semana pasada 41,5 %); USA TEST Conversión ES £493, 6 (£82);
@@ -75,9 +83,10 @@ del núcleo 1,21 % (≥ 1,1 %); frecuencia ≤ 1,9; Video1 FR 19,6 % (≤ 30 %).
 conversión en 14 días → no sube; EEUU exacta cortada; PMax y keywords FR sin 14 días (nada que decidir hasta el 6 nov).
 
 **Foco de la semana.**
-1. Cesta de matrícula: en octubre, 56 checkouts caducados frente a 103 completados en la landing (Stripe). Es la palanca
-   más barata del mes: el WhatsApp a la familia a las 2 h y la tarea de Kommo a las 24 h (decididos el 14 oct) siguen sin
-   fecha de Daniel, vencida el 20 oct. Si se recupera una de cada cuatro, son unas 14 matrículas al mes.
+1. Cesta de matrícula: en octubre, 56 checkouts caducados frente a 103 completados en la landing (Stripe). El WhatsApp a
+   la familia a las 2 h se activó el fin de semana del 24–25 oct (Lucia, 26 oct); la tarea de Kommo a las 24 h, sin
+   confirmar. Lectura: cestas abiertas desde el 26 oct, pagadas frente a caducadas (punto de partida 65 %, objetivo 80 %).
+   Si se recupera una de cada cuatro, son unas 14 matrículas al mes.
 2. Meta rinde mejor por prueba (£39,1 con 92 pruebas pagadas, frente a £42,2) pero gasta por encima del presupuesto: £3.600
    en la semana (+24 %) y octubre a ≈ £13.900 frente a £12.500. Lucia decide si vuelve a ≈ £400/día hasta el 31 o asume el
    exceso. Las pausas de los tres tests con CPA píxel > £80 (£1.393) ya estaban aprobadas el 14 oct: se revisan en la rutina
@@ -99,7 +108,7 @@ conversión en 14 días → no sube; EEUU exacta cortada; PMax y keywords FR sin
   de pausa larga por escrito; 31 oct (Marta, límite 5 nov) brief de vídeos de BF y textos de la landing.
 - Próxima semana: 2 nov pedir creativos de la tarjeta regalo; 3 nov lanzar la landing de curso directo (£60/día × 28);
   1 nov test EE. UU. de Google en la revisión mensual; 5 nov (Marta, límite 10 nov) 5 emails de BF en Brevo.
-- Vencidas: 20 oct política de pausa larga y fecha del WhatsApp de cesta abandonada (Daniel); 24 oct confirmación 48 h de
+- Vencidas: 20 oct política de pausa larga (el WhatsApp de cesta abandonada ya está activo desde el 24–25 oct); 24 oct confirmación 48 h de
   pruebas, encargo al developer (sección 0) y marca HeySpanish; desde el 15 oct, denominador y umbral del CAC; elegir oferta de
   Black Friday para familias nuevas (docs/analisis/black-friday-ofertas-2026-10-22.md).
 - Datos: pegar `STRIPE_API_KEY` (clave restringida de solo lectura) en `.env` para que el script saque las pruebas pagadas.
