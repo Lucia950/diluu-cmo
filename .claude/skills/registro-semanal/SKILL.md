@@ -25,7 +25,7 @@ altas (familias), familias nuevas, bajas aprox.; motivos de cancelación, prueba
 semana y acumulados desde el 23 sep; pruebas pagadas de Stripe (semana y anterior) si hay `STRIPE_API_KEY` en `.env`.
 Si Stripe sale "sin dato", NO sigas sin él (Lucia, 26 oct): saca las pruebas pagadas con el conector de Stripe de la
 sesión (`stripe_api_read`, `GetCharges` con `created[gte]`/`created[lt]` en hora de Londres, `limit 100`, paginando con
-`starting_after`; mismo filtro que el script: `succeeded`, `amount ≤ 400`, sin reembolso). Nunca la búsqueda de Stripe
+`starting_after`; mismo filtro que el script: `succeeded`, `metadata.direct_trial = true`, sin reembolso ni pruebas internas de Lucia). Nunca la búsqueda de Stripe
 (el 19 oct dio 51 en vez de 69). Si tampoco se puede, "falta Stripe" va el primero en "Pendientes para Lucia" y Meta y
 el CAC no se juzgan con el píxel: el píxel mete matrículas y se deja pruebas. No uses plazas.sh ni
 referidos.sh en esta rutina: están dentro del script. Definiciones en docs/medicion/fuentes.md.
