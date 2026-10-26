@@ -123,7 +123,11 @@ async function stripePruebas(ini, fin) {
 	// pruebas de 2–3 niños y las de AUD, NZD, JPY, SEK o DKK; semana 43: 67 frente a 90). Sin las de prueba de Lucia
 	// (lucia/lily/lilita en la descripción o el nombre, teléfono +34 o país ID), igual que el proyecto de Meta. Listado /v1/charges (en tiempo real), no la
 	// búsqueda: la búsqueda deja fuera las últimas horas y el 19 oct dio 51 en vez de 69. No incluye pruebas referidas (gratis).
-	const porMoneda = {}, porDia = {}; let total = 0, starting_after
+	const porMoneda = {}, porDia = {}, porOrigen = {}; let total = 0, starting_after
+	// Origen según el metadata que guarda la web: Meta (utm_id, fbclid o utm_source facebook/ig), Google Ads (gclid o
+	// utm_source google), y si no, el `src` de la web (organic, direct, email…). ChatGPT y los asistentes no se distinguen
+	// aquí: el referrer guardado es la página anterior de diluu.com; se miran en GA4 (canal AI Assistant).
+	const origen = (m) => m.utm_id || m.fbclid || ['facebook', 'ig'].includes(m.utm_source) ? 'meta' : m.gclid || m.utm_source === 'google' ? 'google_ads' : m.src || (m.utm_source ? `utm_${m.utm_source}` : 'sin_origen')
 	const diaLondres = (unix) => new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/London', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date(unix * 1000))
 	do {
 		const url = new URL('https://api.stripe.com/v1/charges')
@@ -137,6 +141,7 @@ async function stripePruebas(ini, fin) {
 			if (c.status === 'succeeded' && m.direct_trial === 'true' && !c.refunded && !interna) {
 				total++; porMoneda[c.currency] = (porMoneda[c.currency] || 0) + 1
 				const d = diaLondres(c.created); porDia[d] = (porDia[d] || 0) + 1
+				const o = origen(m); porOrigen[o] = (porOrigen[o] || 0) + 1
 			}
 		}
 		starting_after = json.has_more && json.data.length ? json.data[json.data.length - 1].id : null
@@ -144,7 +149,7 @@ async function stripePruebas(ini, fin) {
 	// Comprobación: los siete días tienen que estar; si el último trae menos de la mitad de la media, avisa (datos incompletos).
 	const dias = Array.from({ length: 7 }, (_, i) => addDays(ini, i)), ultimo = porDia[dias[6]] || 0
 	const aviso = dias.some((d) => !(d in porDia)) ? 'faltan días: comprueba Stripe antes de usar la cifra' : ultimo < (total / 7) / 2 ? `el último día (${dias[6]}) trae ${ultimo}: posible lectura incompleta` : null
-	return { rango: `${ini} – ${fin} (hora de Londres)`, pruebas_pagadas: total, por_moneda: porMoneda, por_dia: dias.map((d) => porDia[d] || 0), ...(aviso ? { aviso } : {}) }
+	return { rango: `${ini} – ${fin} (hora de Londres)`, pruebas_pagadas: total, por_origen: porOrigen, por_moneda: porMoneda, por_dia: dias.map((d) => porDia[d] || 0), ...(aviso ? { aviso } : {}) }
 }
 
 async function main() {
@@ -185,7 +190,7 @@ async function main() {
 	console.log(`pruebas por día: ${Object.values(s.pruebas_por_dia).join(' ')} · nuevas por día: ${Object.values(s.plazas_nuevas_por_dia).join(' ')}`)
 	console.log(`referidos semana: códigos ${rs.codigos_nuevos} · amigos ${rs.amigos_invitados} ${JSON.stringify(rs.por_estado)} · pruebas ${rs.pruebas_referidas.total} (conv. ${rs.pruebas_referidas.convertidas}) · altas ${rs.altas_referidas.familias} fam./${rs.altas_referidas.plazas} plazas · recompensas ${rs.recompensas_acreditadas}`)
 	console.log(`referidos desde ${REFERIDOS_DESDE}: códigos ${ra.familias_con_codigo_total} · amigos ${ra.amigos_invitados} · pruebas ${ra.pruebas_referidas.total} (conv. ${ra.pruebas_referidas.convertidas}) · altas ${ra.altas_referidas.familias} fam./${ra.altas_referidas.plazas} plazas · recompensas ${ra.recompensas_acreditadas}`)
-	if (out.stripe_semana) console.log(`stripe pruebas pagadas (hora de Londres): ${out.stripe_semana.sin_dato ? 'sin dato: ' + out.stripe_semana.sin_dato : `${out.stripe_semana.pruebas_pagadas} ${JSON.stringify(out.stripe_semana.por_moneda)} · por día ${out.stripe_semana.por_dia.join(' ')} (ant. ${out.stripe_semana_anterior.pruebas_pagadas ?? 'sin dato'})${out.stripe_semana.aviso ? ' · AVISO: ' + out.stripe_semana.aviso : ''}`}`)
+	if (out.stripe_semana) console.log(`stripe pruebas pagadas (hora de Londres): ${out.stripe_semana.sin_dato ? 'sin dato: ' + out.stripe_semana.sin_dato : `${out.stripe_semana.pruebas_pagadas} · origen ${JSON.stringify(out.stripe_semana.por_origen)} · por día ${out.stripe_semana.por_dia.join(' ')} (ant. ${out.stripe_semana_anterior.pruebas_pagadas ?? 'sin dato'})${out.stripe_semana.aviso ? ' · AVISO: ' + out.stripe_semana.aviso : ''}`}`)
 }
 
 main().catch((e) => { console.error('ERROR:', String(e.message).replace(/sk_[A-Za-z0-9_]+|rk_[A-Za-z0-9_]+|mongodb(\+srv)?:\/\/\S+/g, '[oculto]')); process.exit(1) })
