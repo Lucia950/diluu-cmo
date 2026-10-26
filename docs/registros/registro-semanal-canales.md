@@ -16,8 +16,9 @@ el stock del lunes. 33 cancelaciones ya programadas. Proyección con 1,65 plazas
 noviembre y diciembre cumplan 240 y 140 altas, el 31 dic queda en ≈ 2.980, por debajo del suelo (aproximación: no incluye el
 efecto de la pausa de Navidad ni del trimestral de BF). Pruebas: 128 en la semana (94 la anterior, +36 %; releído: por día
 11, 12, 11, 20, 26, 33, 15, el pico es jueves–sábado); 416 del 1 al 25. No presentados: 20 de 119 con resultado (16,8 %;
-semana anterior 10,2 %; mes 13,7 %). Pruebas pagadas en Stripe: sin dato (el script no tiene `STRIPE_API_KEY` en `.env` y
-el diario del proyecto de Meta no tiene lectura de esta semana; la última es del 19 oct).
+semana anterior 10,2 %; mes 13,7 %). Pruebas pagadas en Stripe: 92 (69 la anterior, +33 %; cifra de Lucia desde el proyecto
+de Meta, corrección del 26 oct; el script no tiene `STRIPE_API_KEY`). Checkouts de matrícula de la landing en octubre (Stripe,
+misma fuente): 103 completados y 56 caducados: una de cada tres familias que empieza a pagar no termina.
 
 **Altas (base de producción).** 60 familias con matrícula nueva en la semana (56 la anterior); 222 del 1 al 25 oct (8,9/día).
 Para llegar a 320 harían falta 98 en 6 días (16,3/día): no se llega. Al ritmo actual octubre cierra en ≈ 275 (−45). Familias
@@ -26,7 +27,7 @@ faltan de octubre llevan noviembre a ≥ 285 si se quiere mantener 700 en el tri
 
 | Canal | Inversión 19–25 oct | Ritmo mes (1–25) / presupuesto | Resultado | Coste | Semana anterior | Clasificación |
 | --- | --- | --- | --- | --- | --- | --- |
-| Meta Ads | £3.600 (+24 %) | £13.383 / £12.500 (+7 %) | 58 compras píxel · pruebas pagadas en Stripe sin dato · CTR del núcleo (= cuenta, sin cribados esta semana) 1,21 % · frecuencia ≤ 1,9 | £62,1 / compra píxel · gasto Meta ÷ pruebas totales de la base £28,1 (no comparable con Stripe) | £2.909 · 50 · £58,2 · £42,2 / prueba pagada | MANTENER, sin subir; los tres tests siguen gastando con CPA píxel > £80 |
+| Meta Ads | £3.600 (+24 %) | £13.383 / £12.500 (+7 %) | 92 pruebas pagadas en Stripe · 58 compras píxel (incluye matrículas) · CTR del núcleo (= cuenta, sin cribados esta semana) 1,21 % · frecuencia ≤ 1,9 | £39,1 / prueba pagada (−7 %) · £62,1 / compra píxel | £2.909 · 69 pruebas · £42,2 / prueba pagada | MANTENER; mejora por prueba, pero los tres tests con CPA píxel > £80 siguen gastando |
 | Google Ads | £264 | £1.272 / £1.500 | 6 conversiones (marca 3, keywords EN 2, francés inglés 1) | £44 / conv. | £269 · 2 · £135 | MANTENER; EEUU exacta parada desde el 20; dos campañas nuevas desde el 23 (PMax ES-EN £33 / 0, Francés keywords FR £18 / 0) |
 | SEO | £0 | — | 1.175 clics 19–25 oct (24 y 25 incompletos); búsquedas de padres: 0 clics, 140 impresiones | — | 1.560 clics · padres 0 / 192 | ARREGLAR |
 | Email (Brevo) | £0 | — | API: ninguna campaña clásica nueva (la última, 30 sep); el email de referidos del 15 oct no aparece en la API (lectura del A/B el 29 oct); GA4: 27 sesiones, 15 conv. | — | 53 / 27 | CAMBIAR DE FUNCIÓN |
@@ -34,11 +35,16 @@ faltan de octubre llevan noviembre a ≥ 285 si se quiere mantener 700 en el tri
 | Social orgánico | £0 | — | GA4: 39 sesiones, 24 conv. | — | 74 / 24 | MANTENER |
 | IA (ChatGPT, Gemini) | £0 | — | GA4: 49 sesiones, 22 conv.; 1–25 oct 114 / 36 (sep 135 / 44) | — | 26 / 11 | MEDIR (línea base de Bárbara el 30–31 oct) |
 
-CAC de medios por familia nueva (Meta + Google ÷ familias nuevas de la base de producción): £128,8 en la semana (£3.864 / 30)
-y £88,2 del 1 al 25 oct (£11.819 / 134; el 18 oct iba en £76,5). Rompe los dos umbrales: el de CLAUDE.md (> £65, calculado
-con Stripe) y el recalibrado a la base (> £79, propuesto el 12 oct, sin decisión de Lucia). El gasto de medios subió un 22 %
-en la semana y las familias nuevas bajaron un 6 %. Matiz: las pruebas subieron un 36 % con el pico el jueves–sábado, así que
-parte de esas familias caerán en la semana 44; aun así, el mes ya está por encima de £79.
+CAC de medios (Meta + Google, base de producción), con los dos denominadores de CLAUDE.md:
+- por familia nueva (primera matrícula de su historia): £128,8 en la semana (£3.864 / 30) y £88,2 del 1 al 25 oct
+  (£11.819 / 134);
+- por alta (familia con alguna matrícula nueva, incluye las que vuelven y las que añaden plaza): £64,4 en la semana
+  (£3.864 / 60) y £53,2 en el mes (£11.819 / 222). Solo Meta: £60 y £48,6.
+Corrección del 26 oct: la semana no es una vara válida (compara el gasto de hoy con matrículas de pruebas de 1–3 semanas
+antes, y esta semana tuvo el máximo de pruebas pagadas del mes). Las 189 suscripciones de Stripe del 1 al 25 que da el
+proyecto de Meta (£57 por suscripción) caen entre los dos denominadores de la base. Cuál de los dos cuenta para el guardrail
+lo decide Lucia: el umbral de £65 se fijó con familias nuevas de Stripe y el de £79 es la propuesta del 12 oct para pasarlo a
+familias nuevas de la base.
 
 Meta por campaña (19–25 oct): USA Prospecting ES £913, 16 compras (£57); FR TEST Creativos ABO £717, 7 (£102); FR Prospecting
 Video1 £704, 15 (£47; 19,6 % del gasto, dentro del tope del 30 %, la semana pasada 41,5 %); USA TEST Conversión ES £493, 6 (£82);
@@ -62,27 +68,29 @@ SEO (para el panel de Bárbara): búsquedas de padres con la regla del panel: 0 
 aún incompletos).
 
 **Guardrails.** Meta: tres tests con CPA píxel > £80 (£1.393, 39 % del gasto) siguen activos aunque la pausa está aprobada
-desde el 14 oct; gasto de octubre al ritmo de £13.383–13.900 frente a £12.500; CAC de medios 1–25 oct £88,2 > £79 (y > £65):
-la regla de mitad de mes dice bajar Meta un 15 %, pendiente de que Lucia fije la base del umbral; CPA píxel £62,1 > £50; CTR
+desde el 14 oct; gasto de octubre al ritmo de £13.383–13.900 frente a £12.500; CAC de medios 1–25 oct £88,2 por familia
+nueva (> £79) o £53,2 por alta (< £65): la regla depende del denominador, que está sin decidir; coste por prueba pagada £39,1
+(mejora frente a £42,2); CPA píxel £62,1 (no es la vara: incluye matrículas y se deja pruebas); CTR
 del núcleo 1,21 % (≥ 1,1 %); frecuencia ≤ 1,9; Video1 FR 19,6 % (≤ 30 %). Google: genérica congelada; francés £124 por
 conversión en 14 días → no sube; EEUU exacta cortada; PMax y keywords FR sin 14 días (nada que decidir hasta el 6 nov).
 
 **Foco de la semana.**
-1. Meta gasta de más con peor resultado: £3.600 en la semana (+24 %), 58 compras píxel (£62) y CAC de medios por familia
-   nueva £128,8 en la semana y £88,2 en el mes (> £79). Las pausas de los tres tests con CPA > £80 (£1.393, 15 compras) ya
-   estaban aprobadas el 14 oct y entran en la rutina diaria de Meta: comprobar allí por qué siguen activos. Octubre va a
-   cerrar ≈ £900–1.400 por encima de los £12.500: Lucia decide si se recorta a £400/día hasta el 31.
-2. Octubre no llega: 222 altas el día 25, ≈ 275 al cierre (−45). Las pruebas suben a 128 (+36 %) pero los no presentados
+1. Cesta de matrícula: en octubre, 56 checkouts caducados frente a 103 completados en la landing (Stripe). Es la palanca
+   más barata del mes: el WhatsApp a la familia a las 2 h y la tarea de Kommo a las 24 h (decididos el 14 oct) siguen sin
+   fecha de Daniel, vencida el 20 oct. Si se recupera una de cada cuatro, son unas 14 matrículas al mes.
+2. Meta rinde mejor por prueba (£39,1 con 92 pruebas pagadas, frente a £42,2) pero gasta por encima del presupuesto: £3.600
+   en la semana (+24 %) y octubre a ≈ £13.900 frente a £12.500. Lucia decide si vuelve a ≈ £400/día hasta el 31 o asume el
+   exceso. Las pausas de los tres tests con CPA píxel > £80 (£1.393) ya estaban aprobadas el 14 oct: se revisan en la rutina
+   diaria de Meta, que también debe decir por qué siguen activos.
+3. Octubre no llega: 222 altas el día 25, ≈ 275 al cierre (−45). Las pruebas suben a 128 (+36 %) pero los no presentados
    pasan del 10,2 % al 16,8 % (20 pruebas perdidas). El foco es prueba → curso: las 79 pruebas del jueves–sábado necesitan la
    cadencia 0/3/10 esta semana, y la confirmación 48 h (vencida el 24 oct) es justo para este tramo.
-3. Decisiones vencidas: base del umbral del CAC (£60/£79, desde el 15 oct), confirmación 48 h de pruebas (24 oct), encargo al
+4. Decisiones vencidas: denominador y umbral del CAC (por familia nueva o por alta, desde el 15 oct), confirmación 48 h de pruebas (24 oct), encargo al
    developer (24 oct), política de pausa larga (20 oct) y la oferta de Black Friday (análisis del 22 oct: recomendada la
    oferta 1). Esta semana: WhatsApp a 150 embajadoras hoy 26 oct, landing de curso directo (quién la hace, 28 oct; sale como
    muy tarde el 3 nov), 6–8 creativos de Meta (31 oct).
-4. Referidos parados: 0 invitaciones en la semana tras el email del 15 oct; 2 altas de 25 en el trimestre. El WhatsApp
-   personal de hoy a las 150 embajadoras es la palanca; lectura del A/B del email el 29 oct.
-5. Plazas: 2.913, +5 en la semana. Ni cumpliendo noviembre y diciembre se llega a 3.000 (≈ 2.980): el suelo depende de bajar
-   la pérdida (trimestral de BF y pausa larga) más que de altas.
+5. Referidos parados (0 invitaciones en la semana; 2 altas de 25; WhatsApp a embajadoras hoy) y plazas en 2.913 (+5):
+   ni cumpliendo noviembre y diciembre se llega a 3.000 (≈ 2.980); el suelo depende de bajar la pérdida (trimestral de BF y pausa larga) más que de altas.
 
 **Pendientes para Lucia** (página Q4 2026 de Notion, leída hoy; fechas con 📅 no tachadas, y seguimiento del 14 oct).
 - Hoy 26 oct: WhatsApp personal a ~150 embajadoras (Lucía F. y Virginia).
@@ -92,7 +100,7 @@ conversión en 14 días → no sube; EEUU exacta cortada; PMax y keywords FR sin
 - Próxima semana: 2 nov pedir creativos de la tarjeta regalo; 3 nov lanzar la landing de curso directo (£60/día × 28);
   1 nov test EE. UU. de Google en la revisión mensual; 5 nov (Marta, límite 10 nov) 5 emails de BF en Brevo.
 - Vencidas: 20 oct política de pausa larga y fecha del WhatsApp de cesta abandonada (Daniel); 24 oct confirmación 48 h de
-  pruebas, encargo al developer (sección 0) y marca HeySpanish; desde el 15 oct, base del umbral del CAC; elegir oferta de
+  pruebas, encargo al developer (sección 0) y marca HeySpanish; desde el 15 oct, denominador y umbral del CAC; elegir oferta de
   Black Friday para familias nuevas (docs/analisis/black-friday-ofertas-2026-10-22.md).
 - Datos: pegar `STRIPE_API_KEY` (clave restringida de solo lectura) en `.env` para que el script saque las pruebas pagadas.
 
@@ -106,8 +114,9 @@ semana (17 oct): sin confirmar.
 **Bárbara.** Sin dato: seo-lunes no ha corrido (docs/registros/seo-semanal.md no existe; la rutina del domingo 25 no dejó el
 bloque "Para el registro del lunes").
 
-**Avisos de datos.** Stripe sin dato (falta `.env` con `STRIPE_API_KEY`); no se usa la búsqueda del conector; el coste por
-prueba pagada de esta semana no se puede calcular. La cifra "plazas activas empezadas" del script (1.664 frente a 2.725 la semana
+**Avisos de datos.** Stripe: el script no tiene `STRIPE_API_KEY`; las 92 pruebas pagadas, las 189 suscripciones del mes y los
+checkouts (103 completados / 56 caducados) son cifras de Lucia del proyecto de Meta (26 oct). Gasto de Meta: £3.600 aquí,
+£3.593 allí (diferencia de lectura, < 0,2 %). La cifra "plazas activas empezadas" del script (1.664 frente a 2.725 la semana
 pasada) no es creíble y no se usa: probable fallo de comparación de fechas en `scripts/semana-datos.cjs` (línea 154). Stock y
 flujos de plazas no cuadran y la semana anterior se ha recalculado al alza en cancelaciones (58 → 80) y bajas (39 → 54).
 Search Console: 24 y 25 oct incompletos. Supermetrics devuelve cost sin moneda (GBP). El píxel cuenta matrículas como compras
