@@ -1,5 +1,8 @@
 # Brief SEO · Comparativa «Diluu frente a Outschool, Preply e italki» (EN)
 
+> **Sustituido el 26 oct** por docs/analisis/brief-comparativa-frances-2026-10.md (decisión de Lucia: solo francés, rehaciendo
+> /blog/online-french-classes-for-kids/, publicación el 3 nov). Este borrador queda solo como referencia; no se usa.
+
 Preparado el 26 oct 2026 para Bárbara. Idea del proyecto de Meta (F37), con el OK pendiente de Lucia. No es urgente: es
 una apuesta barata a dos meses para que ChatGPT, Perplexity y el modo IA de Google citen a Diluu cuando un padre pregunta
 «best online French classes for kids» o «best online Spanish classes for kids».
