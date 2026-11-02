@@ -2,6 +2,132 @@
 
 Lo escribe la skill seo-lunes (domingo por la noche, hora de Bali). Entrada más reciente arriba.
 
+## Semana 44 (26 oct–1 nov 2026) · preparado el lunes 2 nov, 14:00 hora de Bali (WITA, UTC+8)
+
+**Pasos y notas de Bárbara** (colección `dias`): marcó 17 pasos, los cinco días con nota (la semana anterior marcó 8 de unos 19).
+- Lunes 26: l1, l2, l3 (seguimientos) y l6 (brief del A2), marcados entre el 27 y el 30. Pidió la indexación del A1 ES
+  («Se ha solicitado la indexación»). La del EN la frenó la cuota diaria de Search Console. El martes anota el EN y el
+  FR como «ya indexada». Era el pendiente de la semana pasada: queda cerrado.
+- Martes 27: m1 y m2 (borrador del A2 y cambios). ActivityHero: ficha publicada.
+- Miércoles 28: x1, x2 y x3 (revisión en frío, versión EN y nota) y el primer paso de la comparativa (precios).
+- Jueves 29: j1 (repaso con el brief) y el segundo paso de la comparativa. **El A2 está publicado en ES y EN el 29 oct**
+  (dateModified 29 oct en las dos), una semana antes de lo previsto y sin la revisión de la página publicada.
+- Viernes 30: v3–v6 y el último paso de la comparativa. Línea base de IA hecha (12 preguntas). En la nota deja los rangos
+  de precios de la comparativa, comprobados el 30 oct.
+- Dudas de sus notas: (1) no puede entrar en Facebook ni en Instagram (lo repite el 27, el 28, el 29 y el 30), así que no hace
+  los seguimientos por otra vía; (2) dónde guardar las capturas de las respuestas de las IA; (3) el 28 dice que hizo la
+  comparativa pero no sabe dónde dejarla; (4) cómo pegar el post de libros en «Revisar con Claude» para que puntúe
+  bien (26 y 27 oct). La 4 ya la resuelve el flujo del 28 oct: el informe de la página publicada.
+
+**Revisiones:** A1 en `ok` (Lucia, 22 oct). Libros en `ok` (Lucia, 28 oct, sobre la página publicada). **El A2 no tiene
+revisión**: está publicado desde el 29 oct sin el «listo».
+
+**Publicado y comprobado con curl (2 nov):** las tres URLs del A1, la de libros y las dos del A2 responden 200. Todas
+tienen title, una sola H1 y canonical propia, y ninguna lleva noindex, LOROPEPE ni «prueba gratis». El A2 tiene el
+title «Las mejores aplicaciones para aprender español para niños» (ES, ≈ 2.100 palabras) y «Best Spanish Learning Apps
+for Kids: By Age and Price» (EN, ≈ 2.300). La comparativa de francés **todavía no está en la web**:
+/blog/online-french-classes-for-kids/ sigue con el post antiguo (no nombra a Preply, italki ni Outschool) y se publica
+el martes 3. Ninguno de los pasos de la semana pedía URL, así que no hay verificaciones nuevas en la base.
+
+**Resultados (Search Console; «ahora» va hasta el 1 nov):**
+
+| Post | Antes (28 d) | Ahora | Clics | Posición antes → ahora |
+| --- | --- | --- | --- | --- |
+| A1 ES | 105 impr. | 60 (18 días) | 0 | 38,5 → 25,1 |
+| A1 EN | 328 | 58 (18 días) | 0 | 24,4 → 51,5 |
+| A1 FR | 66 | 29 (18 días) | 0 | 37,0 → 29,8 |
+| Libros ES | 81 | 33 (7 días) | 0 | 34,9 → 29,9 |
+| A2 ES (apps) | 92 | 18 (4 días) | 0 | 14,1 → 8,4 |
+| A2 EN (apps) | 2.647 | 730 (4 días) | 0 | 32,3 → 33,0 |
+
+En impresiones al día: el A1 EN baja de 11,7 a 3,2 aunque ya está indexado, y sigue en la posición 51. Es la peor señal
+del trimestre en el blog. El ES se mantiene (3,8 → 3,3) y mejora de posición. Libros sube de 2,9 a 4,7. El A2 EN sube
+de 95 a 183, pero ya subía antes de publicar porque hereda las impresiones del -2, que redirige desde el 22 oct; la
+posición no se ha movido (33). El A2 ES entra en el top 10 (8,4). Con 4 a 7 días de datos no hay conclusiones. El post
+de EE. UU. sale de la tabla porque redirige a /spanish-classes-for-kids/ (decisión del 26 oct).
+
+**Enlaces** (37 tarjetas): 17 contactadas, 4 respondieron (Le Petit Journal, BiliKids, Cathy Duffy y FLAM, sin cambios), 4
+«enlace conseguido», 11 por contactar (9 con correo y 2 fichas: Happity y Hoop) y 1 rechazada. Las 4 conseguidas,
+comprobadas:
+- Mum's Guide To: enlace nofollow a /spanish-classes-for-kids/.
+- ActivityHero: ficha publicada el 27 oct; el enlace a diluu.com solo aparece en los datos que carga con JavaScript.
+- KidsActivities.ie: ficha publicada, pero en la página no aparece ningún enlace a diluu.com.
+- Qwoted: perfil de experto. No es un enlace de un medio y no cuenta para los 8.
+
+Fichas: 3 de 10. Enlaces de medios: 0 de 8. **Vencidos:** a ninguno de los 12 correos del 19 oct se le ha registrado el
+seguimiento 1, que tocaba el 26 oct (Bárbara marcó l3, pero el tablero no lo recoge en ninguna tarjeta), y hoy les toca el
+seguimiento 2. Las 5 fichas enviadas el 20 oct (020, Yell, French Morning, Online Curriculum Directory y Homeschool Hub Utah)
+se comprueban mañana, 3 nov. No hacen falta correos nuevos: las 9 tarjetas por contactar que no son fichas ya lo llevan, y
+con 11 por contactar no se añaden candidatos (la semana pasada Lucia pidió además que no hubiera contactos nuevos).
+
+**Clics de padres** (regla del 26 oct: por página, sin marca):
+- Semana del 26 oct al 1 nov: 21 clics y 1.254 impresiones (19–25 oct: 20 y 1.246).
+- Octubre completo: **104 clics** y 5.485 impresiones, frente a 101 en septiembre y 143 en octubre de 2025. El objetivo
+  de diciembre es 110 y el de marzo, 150.
+
+La serie de agosto de 2025 a septiembre de 2026 coincide con la del 26 oct. Search Console ya no deja leer antes del 2 jul
+de 2025, así que junio y julio de 2025 se quedan con la lectura anterior. Búsquedas sin marca con clics o en el top 10:
+- «cours de français en ligne pour enfants»: 2 clics, posición 4,3.
+- Modo IA de Google: «quelles sont les meilleures classes de français en ligne pour enfants ?» (23 impr., pos. 2,1) y
+  la de español (17 en posición 1 con /fr/espagnol-pour-la-maternelle/ y 13 en 4,9 con
+  /fr/blog/meilleurs-cours-de-francais-en-ligne-pour-enfants/).
+- «cours de français pour enfants de 7 ans» (5; 4) y «cours espagnol enfant en ligne» (1; 1).
+
+**GA4 (octubre completo):**
+- Asistentes de IA: **164 sesiones y 69 eventos clave** (ChatGPT 139, Gemini 22, Perplexity 2, Copilot 1; septiembre:
+  135 y 44). Superan ya el objetivo de diciembre (150). La página que más recibe es /french-classes-for-kids (29 sesiones
+  y 18 eventos).
+- Orgánico en páginas de padres: ≈ 389 sesiones y 140 eventos (septiembre: 145), 73 de ellos en
+  /french-classes-for-kids. Hay 735 sesiones orgánicas con la página de entrada «(not set)» que no se pueden repartir.
+
+**IA, línea base (`ia/2026-10`, 30 oct):** Diluu sale en 7 de las 12 preguntas en al menos un asistente y en 10 de las 36
+respuestas. Por asistente:
+- ChatGPT, 5 de 12, siempre en el top 3: niño de 6 años que entiende pero no habla, francés en Irlanda, «mejores clases
+  de español online para niños» y las dos de francés nuevas.
+- Perplexity, 5 de 12 (3 en el top 3).
+- Gemini, 0 de 12.
+
+Objetivo: +2 respuestas en diciembre.
+
+**Salud de la web (rápida):** 204 URLs en los sitemaps. 4 no dan 200 directo, todas ya en el encargo al developer (sección
+0.7): /fr/french/, que redirige a la página de francés, y los tres formularios de referidos, que acaban en un Google Form
+cerrado.
+
+**Pieza siguiente:** esta semana el A2 está en fase «publicar», pero ya está publicado. Lo que queda es revisar la página
+publicada hasta el «listo», indexar, enlazarla desde otros posts y ofrecerla a tres sitios. El A3 (borrador desde el 9 nov) no
+tiene brief: se prepara el domingo 8. El brief solo se hace cuando la pieza entra en borrador la semana siguiente.
+
+**Tareas de la semana del 2 nov:**
+- Lunes: seguimientos de enlaces (los 12 correos del 19 oct van con retraso) y revisión SEO del A2 sobre la página publicada.
+- Martes 3: publicar la comparativa y revisarla hasta el «listo». Comprobar las 5 fichas del 20 oct.
+- Miércoles 4: La Tundra por Instagram, si Bárbara ya tiene acceso. Enlazar el A2 desde otros posts.
+- Viernes 6: dos fichas de directorio (Happity y Hoop).
+- Pendiente: pedir la indexación de libros y, con el «listo», la del A2.
+
+### Pendientes para Lucia
+1. **Artículo 2 publicado sin el «listo».** Bárbara lo publicó el 29 oct en ES y EN, una semana antes del plan, y no hay
+   revisión en la base. La página está bien en lo básico (200, title, una H1, canonical, sin LOROPEPE), pero nadie ha
+   comprobado los datos de las apps ni los precios. Esta semana hay que pasarlo por el informe y «Revisar con Claude» antes
+   de indexarlo. No hace falta tu OK, pero conviene que sepa que el orden es revisar y después publicar.
+2. **Acceso a Facebook e Instagram:** Bárbara lo pide en cuatro notas seguidas (27–30 oct). Sin acceso no hace los
+   seguimientos por otra vía, y La Tundra va por Instagram el miércoles 4. ¿Le das acceso o quitamos «otra vía» de sus
+   tarjetas?
+3. **Capturas de las IA:** pregunta dónde guardarlas. Una opción es una carpeta compartida (Drive). Otra es no guardarlas,
+   porque la herramienta ya registra si salimos y en qué puesto.
+4. **Comparativa de francés: precios de Preply.** En su nota del 30 oct pone «35–60 $ por clase de 50 min (tu hoja)», muy
+   por encima del rango de partida (3–40 $), y no dice haberlo comprobado en la web de Preply. Por la regla del 28 oct, lo que
+   no se pueda ver en una web pública se quita. La revisión del martes debería comprobarlo. italki y Outschool sí
+   están comprobados en su web.
+5. **Seguimientos de enlaces sin registrar:** 12 tarjetas siguen con el último contacto del 19 oct. O no se han enviado o
+   no se pulsó el botón. Preguntar a Bárbara cuál de las dos.
+6. **Siguen abiertos de la semana pasada:** FLAM (decisión prevista el 7 nov), BiliKids (¿Zoom o descartar?) y
+   KidsActivities.ie, cuya ficha no lleva enlace a diluu.com (¿se puede añadir la web en la ficha?).
+
+### Para el registro del lunes
+- SEO semana 44: 17 pasos marcados (8 la anterior). A1 indexado. El A2 se publicó el 29 oct sin el «listo» (se revisa esta semana) y la comparativa sale el 3 nov. Línea base de IA: Diluu en 7 de 12 preguntas y en 10 de 36 respuestas (Gemini 0).
+- Enlaces: 3 fichas de 10 y 0 enlaces de medios de 8. Los seguimientos de los 12 correos del 19 oct no constan. Bárbara no tiene acceso a Facebook ni a Instagram.
+- Clics de padres: 104 en octubre (objetivo de diciembre: 110; sep 101) y 21 esta semana. IA: 164 sesiones y 69 eventos en octubre, ya por encima del objetivo de diciembre (150).
+
 ## Semana 43 (19–25 oct 2026) · preparado el lunes 26 oct, 13:00 hora de Bali (WITA, UTC+8)
 
 **Pasos y notas de Bárbara** (colección `dias`): marcó 8 de unos 19 pasos.
