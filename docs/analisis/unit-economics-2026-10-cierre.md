@@ -37,6 +37,33 @@ de octubre es £62 (≈ objetivo); con la base de producción, £86,7 (+45 %).
 - El problema de octubre es el numerador (gasto +8,5 % sobre presupuesto en Meta) y el denominador (171 familias nuevas,
   −23 % frente a septiembre con pruebas pagadas casi iguales), no el valor de la familia.
 
+
+## 0 bis. CAC máximo que soportan las campañas (pregunta de Lucia, 2 nov)
+
+Base: contribución £34 por familia y mes (ARPU Stripe £68,4 × 55 % tras profes − £3,45 de soporte), LTV12 de contribución
+£248, LTV proyectado £495–560, coste de ventas £10 por familia nueva. CAC de medios = CAC completo − £10. Todo por familia
+nueva de la base de producción (171 en octubre); con la base de Stripe (239) el CAC de octubre es £62 y entra en la banda.
+
+| Criterio | CAC completo máximo | CAC de medios máximo | Payback | Octubre 2026 (base: £96,7 / £86,7) |
+| --- | --- | --- | --- | --- |
+| Escalar (5:1 a 12 meses) | £50 | £40 | 1,5 meses | No |
+| Guardrail mínimo (3:1 a 12 meses) | £83 | **£73** | 2,4 meses | No (2,6:1) |
+| Escalar con el LTV proyectado (5:1) | £99–112 | £89–102 | 3 meses | Sí (5,1–5,8:1) |
+| Mínimo con el LTV proyectado (3:1) | £165–187 | £155–177 | 5 meses | Sí |
+| No perder dinero en 12 meses (1:1) | £248 | £238 | 7 meses | Sí |
+| No perder dinero en la vida de la familia | £495–560 | £485–550 | 15–16 meses | Sí |
+
+Lectura: por encima de £73 de medios por familia nueva la familia tarda más de 2,4 meses en devolver lo que costó y el
+ratio a 12 meses baja del 3:1; sigue siendo rentable (se recupera en el primer trimestre de vida y rinde 5:1 a vida
+completa), pero sin margen para una caída de retención: con el churn de los meses 2–6 al 10 % en vez del 8 %, el LTV12 baja
+un 11 % y £73 pasa a ser £65. Techo absoluto razonable: £100 de medios (5:1 proyectado, payback 3 meses); por encima, cada
+familia extra no se paga hasta el cuarto mes y la hoja de ruta de 2027 (crecer siendo rentables) no cuadra.
+
+Propuesta de banda para el guardrail de Meta, por familia nueva de la base de producción, mensual: **< £60 subir un 15 %**
+(≈ 3,5:1 a 12 meses, equivale a los £50 de Stripe del plan), **£60–75 mantener**, **> £75 bajar un 15 %**, **> £100 cortar
+tests y volver al núcleo**. Octubre (£86,7) → bajar; noviembre ya baja a £7.500. Si Lucia prefiere la base de Stripe (la del
+plan), los umbrales son los del 2 oct (£50 / £65) y octubre (£62) cae en "mantener".
+
 ## 1. Cohorte y retención (base de producción, 2 nov)
 
 | Cohorte (primera matrícula) | Familias | 1 mes | 2 | 3 | 6 | 9 | 12 | Vivas el 2 nov |
