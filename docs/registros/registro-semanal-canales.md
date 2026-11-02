@@ -130,6 +130,12 @@ sin conector en la sesión programada. Search Console: 31 oct y 1 nov incompleto
 recalculando (semana 43: 49 → 44). "Plazas activas empezadas" del script (1.865) sigue sin usarse (probable fallo de fechas).
 Supermetrics devuelve cost sin moneda (GBP). El píxel cuenta matrículas como compras desde agosto.
 
+**Correcciones de Lucia (2 nov, 12:40 Bali).** El foco 1 estaba mal planteado: el presupuesto se decide por rendimiento, no por
+los £7.500 del plan; la regla del CAC (£86,7 > £65) da −15 % → Meta ≈ £11.500 en noviembre (propuesta, pendiente de OK) más
+£2.000 de BF. El foco 2 también: la conversión prueba → familia nueva es 47 % (42 % y 43 % las dos semanas anteriores); lo que
+cayó son los añadidos y vueltas (7 frente a ≈ 20/semana en octubre). Decisiones nuevas en docs/contexto/decisiones.md
+(oferta de BF, email de pausa el 15 nov, landing dentro de BF, entregas de Marta hechas, conector de Stripe como vía oficial).
+
 ## Semana 43 · del 19 al 25 de octubre de 2026 (lectura del lunes 26 oct, 09:40 Bali)
 
 **Objetivo Q4.** 3.000 plazas (suelo) / 3.100 el 31 dic; ≥ 700 altas (oct ≥ 320, nov ≥ 240, dic ≥ 140). Quedan 67 días (hoy incluido; 9 semanas completas y 4 días).

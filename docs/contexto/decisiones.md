@@ -1,5 +1,33 @@
 # Decisiones (más reciente arriba)
 
+- **2026-11-02** · Correcciones y decisiones de Lucia sobre el registro de la semana 44 (12:40 Bali):
+  (1) El presupuesto de Meta se decide por rendimiento, no por el plan: los £7.500 de noviembre eran una cifra del
+  2 oct. Coste por prueba pagada estable (£35,5–42,2 en las semanas 41–44 con gasto de £2.700–3.600; sin saturación),
+  pero CAC de medios £86,7 por familia nueva (> £65) y LTV:CAC 2,6:1 a 12 meses (< 3:1): la regla da −15 %, no −45 %.
+  Propuesta de Claude: Meta ≈ £11.500 en noviembre (≈ £385/día) + BF aparte; pendiente del OK de Lucia. Dato que falta:
+  conversión de las pruebas de nov–dic 2025 frente a oct 2025 (efecto Navidad), se saca de la base.
+  (2) La conversión prueba → familia nueva no es el problema (42 %, 43 %, 47 % en las últimas tres semanas; cohorte
+  sep 45,5 %; objetivo 48 %). Las 50 altas de la semana 44 son 43 familias nuevas (+43 %) y 7 añadidos/vueltas (oct
+  ≈ 20/semana): la caída está en hermanos, segundo idioma y vueltas, no en captación. Datos que faltan: conversión por
+  cohorte semanal (7/14/30 d), por idioma y por canal de origen de la prueba (se añaden a semana-datos.cjs); Kommo
+  (tiempo al primer contacto, motivo de no compra) no está disponible.
+  (3) Black Friday para familias nuevas, oferta decidida: «apúntate ahora, diciembre gratis y lo que pagas empieza en
+  enero». Diciembre gratis cuesta 3 semanas de clase (1–21 dic): ≈ £26 de contribución por familia. Presupuesto
+  propuesto: £2.000 en Meta (24 nov–1 dic, templadas: ≈ 900 familias con prueba sin curso desde julio, web 90 d, lista),
+  +£500–1.000 a lookalikes si al tercer día el coste por alta es < £40; objetivo 60 altas ≤ £55 de medios. Primer cobro
+  de renovación (febrero) = punto de churn a vigilar. Noviembre total ≈ £15.000 (Meta £11.500 + BF £2.000 + Google £1.500).
+  (4) Umbral de CAC de medios por familia nueva (contribución £34/mes, LTV12 £248): ≤ £73 permite escalar (3:1 a
+  12 meses); £100 es el techo (5:1 a vida completa, payback 3 meses). Propuesta para el 5 nov: < £75 subir Meta 15 %,
+  > £100 bajar 15 %, entre medias mantener; semanal, coste por prueba pagada en banda £33–42.
+  (5) Stripe: no hace falta `STRIPE_API_KEY`; el conector (GetCharges por listado, hora de Londres, jq sobre los
+  ficheros) es la vía oficial de la rutina. Se retira el pendiente.
+  (6) Notion: la página Q4 2026 sigue en la misma URL; el 404 es de la integración de Claude (1f8d872b…): Lucia la
+  comparte con la conexión desde Notion. Brevo: el conector está en la sesión; última campaña clásica 30 sep (RTG26).
+  (7) Política de pausa larga: email a las familias con la información de la pausa de Navidad el 15 nov.
+  (8) Landing de curso directo con garantía: no sale el 3 nov; se prueba dentro de la oferta de BF y, según vaya, se
+  arranca en enero.
+  (9) Marta: plan de BF, informe «qué vende y qué no» y brief de vídeos de BF entregados (Lucia, 2 nov).
+
 - **2026-11-02** · Revisión mensual de octubre (docs/registros/revision-mensual-2026-10.md): 261 altas (objetivo 320), 171
   familias nuevas, 2.973 plazas el 2 nov, paid £14.821 (+5,9 %), CAC de medios £86,7 por familia nueva (sep £72,9),
   LTV:CAC 2,3:1 a 12 meses. Clasificación: Meta MANTENER a la baja (£7.500 en noviembre, como el plan; cortar UGC ES, FR ABO

@@ -24,7 +24,8 @@ activas; por semana, semana anterior y trimestre: plazas nuevas, canceladas neta
 altas (familias), familias nuevas, bajas aprox.; motivos de cancelación, pruebas y nuevas por día; referidos de la
 semana y acumulados desde el 23 sep; pruebas pagadas de Stripe (semana y anterior) si hay `STRIPE_API_KEY` en `.env`.
 Si Stripe sale "sin dato", NO sigas sin él (Lucia, 26 oct): saca las pruebas pagadas con el conector de Stripe de la
-sesión (`stripe_api_read`, `GetCharges` con `created[gte]`/`created[lt]` en hora de Londres, `limit 100`, paginando con
+sesión (vía oficial desde el 2 nov; Lucia no va a poner `STRIPE_API_KEY`: no lo pidas en los pendientes; las respuestas
+de 100 cargos superan el límite de tokens y se procesan con `jq -s` sobre los ficheros de tool-results sin cargarlos) (`stripe_api_read`, `GetCharges` con `created[gte]`/`created[lt]` en hora de Londres, `limit 100`, paginando con
 `starting_after`; mismo filtro que el script: `succeeded`, `metadata.direct_trial = true`, sin reembolso ni pruebas internas de Lucia). Nunca la búsqueda de Stripe
 (el 19 oct dio 51 en vez de 69). Si tampoco se puede, "falta Stripe" va el primero en "Pendientes para Lucia" y Meta y
 el CAC no se juzgan con el píxel: el píxel mete matrículas y se deja pruebas. No uses plazas.sh ni
