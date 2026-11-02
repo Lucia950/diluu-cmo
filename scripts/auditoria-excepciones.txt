@@ -1,0 +1,2 @@
+# Redirecciones que están así a propósito: la auditoría no las marca. Una ruta por línea, con «# motivo y fecha».
+/es/home/  # portada antigua en español → /es/, es correcta (26 oct 2026)

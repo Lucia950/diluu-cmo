@@ -1,5 +1,65 @@
 # Decisiones (más reciente arriba)
 
+- **2026-11-02** · Revisión mensual de octubre (docs/registros/revision-mensual-2026-10.md): 261 altas (objetivo 320), 171
+  familias nuevas, 2.973 plazas el 2 nov, paid £14.821 (+5,9 %), CAC de medios £86,7 por familia nueva (sep £72,9),
+  LTV:CAC 2,3:1 a 12 meses. Clasificación: Meta MANTENER a la baja (£7.500 en noviembre, como el plan; cortar UGC ES, FR ABO
+  a la mitad o fuera, Video1 FR ≤ 30 %), Google MANTENER (£1.500; **EEUU exacta CORTADA**: £148 / 0 en octubre, £356 / 3 desde
+  septiembre; PMax y keywords FR se leen el 6 nov), SEO ARREGLAR, IA pasa de MEDIR a MANTENER (164 sesiones, línea base
+  10 de 36 respuestas), Email CAMBIAR DE FUNCIÓN, Referidos ARREGLAR (2 de 25), Social MANTENER. Tres decisiones para Lucia:
+  5 nov CAC (propuesta: familia nueva de la base, subir < £80 / bajar > £100) y Black Friday + pausa larga; 7 nov FLAM y
+  schema de precios. Script nuevo `scripts/mes-datos.cjs`; el stock de plazas a fecha pasada no se reconstruye (fuentes.md).
+  Auditoría web: 39 páginas de clases con el schema desfasado porque la API subió los precios EUR/USD el 1 nov (encargo 0.8).
+
+- **2026-10-28** · Revisión SEO de los posts sobre lo publicado, sin pasar por Lucia (Lucia): Bárbara publica con el OK
+  de la persona en la sesión del blog, saca el informe de la página publicada (`scripts/informe-revision.py` del repo
+  del blog: title, meta, canonical, hreflang, fechas, H1/H2/H3, enlaces y alt reales) y lo pega en «Revisar con
+  Claude». La herramienta rechaza el texto copiado y solo acepta el informe. Si pide cambios: aplicar, republicar y
+  revisar otra vez; con el «listo», indexar. Claude da el «listo» solo: los datos de libros, precios y Diluu son
+  públicos y ya no van a «Datos a confirmar» (solo bloquean los corchetes o las cifras inventadas). La herramienta
+  no puede leer la URL por sí misma: el blog es estático y no envía CORS. Pasos y textos cambiados en la herramienta
+  (v37), en la skill seo-lunes y en el CLAUDE.md del blog. Post de libros: OK de Lucia el 28 oct sobre la página
+  publicada (la nota de 68/100 era sobre texto plano, incompleto). La comparativa de francés tampoco necesita ya el OK
+  de Lucia (cambia la decisión del 26 oct): se publica el 3 nov y pasa la revisión después; lo que no se pueda comprobar
+  en una web pública se quita. Script y regla subidos al repo del blog (commit c1a1d79, sin despliegue).
+
+- **2026-10-27** · Herramienta SEO Diluu, tablero de Enlaces (Lucia): «Enlace conseguido» (en directorios, «Ficha
+  publicada») se puede marcar desde cualquier estado, no solo desde Respondió o En negociación: en un directorio basta
+  con registrarse. Sigue pidiendo la URL donde está el enlace; si falta, abre la ficha con el campo listo (v36).
+
+- **2026-10-26** · Auditoría técnica automática de la web (Lucia, OK): `scripts/auditoria-web.py`. Cada domingo (seo-lunes)
+  `--rapido`: las URLs de los sitemaps deben dar 200 directo. Cada día 1 (revisión mensual, sección 4 bis) la completa:
+  URLs con tráfico histórico (`scripts/auditoria-urls-historicas.csv`, 293 rutas de Search Console desde jun 2025, se
+  amplía cada mes), enlaces internos, páginas de clases sin JavaScript (contadores, precios de la API, schema,
+  canonical, hreflang), sitemap de Yoast y alarma de búsquedas ocultas (> 50 % de los clics sin marca de las páginas
+  de clases; sep 2026: 100 de 101). Primera pasada (26 oct): páginas de clases 39/39 bien; 23 URLs con tráfico que
+  cambian de idioma o dan 404, /fr/french/ enlazada desde 40 páginas y los formularios de referidos cerrados →
+  encargo al developer, sección 0.7. WordPress (26 oct, Lucia): 8 posts que redirigían pasados a borrador (los 3 de
+  0.6 d, Duolingo EN y 4 duplicados ES); salen del sitemap de Yoast y las redirecciones siguen. Indexación pedida en
+  Search Console para los 9 posts recuperados (Thanksgiving, idioma más fácil, HeySpanish is Diluu, en ES/EN/FR);
+  los 9 EN nuevos, el 27 oct en la tarea programada de PageSpeed.
+
+- **2026-10-26** · Métrica del SEO (Lucia, OK): «clics de padres» = clics de Google a las páginas de clases, de prueba
+  y de precios, contados por página (sin la dimensión de búsqueda), menos los clics de marca visibles. La regla anterior
+  filtraba por el texto de la búsqueda y daba ≈ 1 clic al mes porque Google oculta la mayoría de las búsquedas de una
+  web pequeña (1–25 oct: 2.169 clics de diluu.com sin búsqueda visible). Serie nueva: jul–sep 2025 179/mes, jul–sep
+  2026 103/mes, 1–25 oct 85. Objetivos: 110 al mes en diciembre (antes 25) y 150 en marzo. Filtros en la skill
+  seo-lunes (y registro-semanal); panel de Bárbara actualizado (v35). Encargo al developer: sección 0.6 del encargo
+  de páginas de clases (URLs antiguas con tráfico que dan 404, p. ej. /es/home/ con 775 clics, y enlaces internos a
+  ellas). Canibalización: docs/analisis/canibalizacion-paginas-clases-2026-10.md (Lucia da el OK a tres 301
+  de posts a /spanish-classes-for-kids/: online-spanish-classes-for-kids, -lessons- y -usa; encargo 0.6 d). Enlaces internos de Bárbara: a las páginas de francés y por edad (posición
+  3–15), no a «online spanish classes for kids» (posición 50+).
+
+- **2026-10-26** · Apuesta de visibilidad en asistentes de IA (Lucia): comparativa de clases de francés online para niños
+  (Diluu, Preply, italki y Outschool; Novakid solo enseña inglés) rehaciendo /blog/online-french-classes-for-kids/ (EN,
+  0 impresiones en 6 meses). La escribe Bárbara esta semana (precios mié 28, borrador jue 29, revisión y nota vie 30) y
+  se publica el 3 nov solo con el OK de Lucia. Precios de Diluu de la API pública; los de la competencia, como rangos
+  (son marketplaces) que verifica Bárbara con fecha. Preguntas a las IA: 12 (las 10 de la línea base + «best online
+  french classes for kids» y «meilleurs cours de français en ligne pour enfants»). Encargo al developer: contadores y
+  precios escritos en el HTML (hoy salen a 0 y vacíos sin JavaScript) y textos del bloque de precios en el idioma de
+  cada página (docs/analisis/encargo-dev-contadores-precios-2026-10.md). Schema Course (Lucia): «desde 10 $ por clase» (plan
+  anual, 3 clases a la semana, en grupo) en todas las páginas de clases; hoy llevan 11, 44 o 47,80 €. Lectoescritura (Lucia): solo individual, desde 15,75 € por clase (plan anual, 3/semana); schema 15.75 EUR y widget solo individual (encargo, sección 5). Brief y medición: docs/analisis/brief-comparativa-frances-2026-10.md
+  (revisión 7 dic y 8 ene 2027).
+
 - **2026-10-26** · Correcciones de Lucia al registro de la semana 43: (1) si Stripe falta, se usa el conector de Stripe
   (listado de cargos, nunca la búsqueda) o se pide el acceso; Meta y el CAC no se juzgan con el píxel (skill y rutina
   actualizadas). Semana 43: 92 pruebas pagadas, £39,1 por prueba (sem. 42: 69, £42,2). (2) El WhatsApp automático a la

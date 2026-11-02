@@ -53,5 +53,32 @@ const D = {
     "CAC de medios con familias nuevas de la base de producción; el umbral £60/£79 con la base está propuesto desde el 12 oct y sin decidir.",
     "Brevo: la API lista campañas clásicas; A/B y automatizaciones no aparecen. Notion: copia de la página Q4 2026 con última edición el 19 oct."
   ],
+  // Bloque mensual: lo escribe la revisión mensual (día 1); la rutina de los lunes lo conserva tal cual.
+  mes: {
+    titulo: "Cierre de octubre de 2026",
+    lede: "261 altas (objetivo 320) y 171 familias nuevas con 355 pruebas pagadas: el embudo se rompe entre la prueba y la matrícula. Paid £14.821 (+5,9 %), CAC de medios £86,7 por familia nueva (sep £72,9), LTV:CAC 2,3:1 a 12 meses. Plazas 2.973 el 2 nov (+91 en el mes). Quedan 439 altas en 59 días.",
+    tiles: [
+      ["Altas", "261", "objetivo 320 · sep 310 · 171 familias nuevas (sep 223)"],
+      ["Plazas activas", "2.973", "2 nov · +91 en el mes · 449 nuevas · 236 canceladas netas (se recontarán)"],
+      ["Paid", "£14.821", "Meta £13.567 (+8,5 %) · Google £1.254 · presupuesto £14.000"],
+      ["CAC de medios", "£86,7", "por familia nueva · £56,8 por alta · plan ≤ £60"],
+      ["Pruebas pagadas", "355", "£38,2 de Meta por prueba · conversión 30 d cohorte sep 45,5 %"],
+      ["LTV:CAC 12 m", "2,3:1", "proyectado 4,7–5,3:1 · payback 3,1 meses · 11 oct: 2,9:1"]
+    ],
+    canales: [
+      ["Meta Ads", "Mantener (a la baja)", "£13.567 · 253 compras píxel · 355 pruebas pagadas · £38,2 / prueba", "Nov £7.500: fuera UGC ES, FR ABO a la mitad, Video1 ≤ 30 %"],
+      ["Google Ads", "Mantener", "£1.254 · 22 conv. · £57", "£1.500; EEUU exacta cortada; PMax y FR keywords se leen el 6 nov"],
+      ["SEO", "Arreglar", "104 clics de padres (obj. 110 dic) · 0 enlaces de medios", "Comparativa FR 3 nov, A2 6 nov, A3 20 nov"],
+      ["IA", "Mantener", "164 sesiones / 69 eventos · Diluu en 10 de 36 respuestas", "Página de 10 datos 27 nov"],
+      ["Email", "Cambiar de función", "GA4 216 / 95 · Brevo sin dato", "Email 1 prueba sin pago 15 nov"],
+      ["Referidos", "Arreglar", "2 altas de 25 · 549 códigos · 6 invitaciones", "Lectura 16 nov"]
+    ],
+    decisiones: [
+      "<b>5 nov · CAC:</b> denominador y umbrales del guardrail de Meta (propuesta: familia nueva de la base; subir si < £80, bajar si > £100). Octubre £86,7 → Meta se queda en £7.500.",
+      "<b>5 nov · Black Friday y pausa larga:</b> oferta de BF para familias nuevas (vencida desde el 22 oct) y política de pausa larga (vencida desde el 20 oct).",
+      "<b>7 nov · FLAM y precios:</b> respuesta a FLAM Monde sobre /fr/cours-flam-en-ligne y si el schema Course sigue a la API (10,25 $ desde el 1 nov) o se fija en 10 $."
+    ],
+    enlace: "docs/registros/revision-mensual-2026-10.md"
+  },
   fuentes: "Fuentes: base de producción de Diluu (26 oct 2026, 09:38 Bali, scripts/semana-datos.cjs); Supermetrics: Meta Ads (act_2456974117647730 y act_911299640142242), Google Ads (4584208097), GA4 (425989233), Search Console (diluu.com), 1–25 oct 2026; Brevo (API); Notion, página Q4 2026; docs/equipo/marta-plan-entregas.md; Stripe (cifras de Lucia, proyecto de Meta, 26 oct). Lo escribe la rutina registro-semanal cada lunes."
 };

@@ -38,9 +38,9 @@ Fechas: M1 = día 1 del mes, D = domingo de la semana, L = lunes. Cuentas en GBP
 3. **Google por día y campaña** · ds `AW` · cuenta `["4584208097"]` · `Date,Campaignname,Cost,Clicks,Conversions` · M1→D.
 4. **GA4 por día y canal** · ds `GAWA` · cuenta `["425989233"]` · `date,sessionDefaultChannelGrouping,sessions,conversions` · M1→D.
 5. **Search Console por día** · ds `GW` · cuenta `["sc-domain:diluu.com"]` · settings `{"report_type":"STANDARD"}` · `Date,clicks,impressions` · L→D.
-6. **Search Console, búsquedas de padres por día** · igual que 5 con filtro
-   `query =~ "class|clases|cours|lesson|tutor|learn (spanish|french)|aprender español|apprendre|online (spanish|french)|(spanish|french) for kids|(español|francés) para niños|heritage|bilingual kids|lectoescritura" AND query !~ "diluu|dilluu|hey spanish|map|mapa|carte|hispanohablantes|hispanophones|spanish speaking countries|países|paises|disney"`
-   (es la regla del panel SEO; no uses otra). Para el mes, misma consulta con `Yearmonth` M1→D.
+6. **Search Console, clics de padres por día** (métrica del panel SEO desde el 26 oct 2026) · igual que 5, dos
+   consultas: A con filtro `page =~ "classes-for-kids|online-language-classes-[0-9]|cours-de-francais|cours-despagnol|cours-de-langues|clases-de-espanol|clases-de-frances|clases-de-idiomas|espanol-para|espagnol-pour|frances-para|lectoescritura|literacy|lire-et-ecrire|heritage|kindergartners|cours-flam|how-much-do-online|cuanto-cuestan|/trial-|clase-de-prueba|cours-dessai" AND page !~ "near-me|online-spanish-classes-for-kids-usa|/blog/online-french|/blog/online-spanish"` y B con el mismo filtro `AND query =~ "diluu|dilluu|dillu|diilu|dilu|hey ?spanish"`. Clics de padres = A − B (por página, sin
+   dimensión de búsqueda, para contar las búsquedas que Google oculta). Para el mes, las mismas con `Yearmonth` M1→D.
 7. **Brevo**: una llamada a `email_campaign_management_get_email_campaigns` con `limit 10` y `excludeHtmlContent true`,
    sin filtro de fechas; mira `sentDate`. Los envíos A/B y las automatizaciones no salen en la lista: si Lucia dice que
    un email salió, salió; escribe "no aparece en la API" y nunca "no se envió".
@@ -85,7 +85,7 @@ a la semana anterior. Cada punto con la cifra que lo justifica.
    plazas, altas, tabla de canales, CAC, detalle de Meta y Google, GA4, guardrails, foco, Marta, Bárbara en tres
    líneas, avisos de datos).
 2. Dashboard: edita SOLO `dashboard/semana-cmo-data.js` (el `const D`; añade la semana a las series y quita la más
-   antigua para dejar seis). Valida con `node -e "new Function(require('fs').readFileSync('dashboard/semana-cmo-data.js','utf8')+';return D')()"`.
+   antigua para dejar seis). Conserva el bloque `mes:` tal cual: lo escribe la revisión mensual el día 1. Valida con `node -e "new Function(require('fs').readFileSync('dashboard/semana-cmo-data.js','utf8')+';return D')()"`.
    Antes de publicar, lee la versión viva (`Artifact` action `read`, url https://claude.ai/artifact/LsYQbEjQcBu4xcmiTWL5Lw);
    si no, la publicación se rechaza. Publica con `Artifact`: `file_path dashboard/semana-cmo.html`, esa `url` y
    `files {"semana-cmo-data.js": "dashboard/semana-cmo-data.js"}`. No toques el HTML salvo que Lucia lo pida.

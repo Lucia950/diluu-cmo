@@ -13,6 +13,15 @@ Script: `node "$S/mongo-read.cjs"` con `S=/Users/luciamarin/.claude/plugins/cach
   hoy): 2.803.
 - Plazas nuevas de un periodo: enrolments con `createdAt` en el periodo y `previousEnrolmentId: null`
   (excluye cambios de grupo). Sep 2026: 519; 1–8 oct: 120.
+- **Referidos (desde el 12 oct 2026, fuente de verdad; Stripe no los ve):** `scripts/referidos.sh INI FIN`.
+  `v3-referral-codes` = una familia que ha abierto "Referidos" en el panel (código y cupón de Stripe
+  del 100 % para la prueba, sin canjes porque la prueba referida no pasa por el checkout);
+  `v3-referrals` = cada amigo que reserva una prueba con código (`status`: TRIAL_SCHEDULED,
+  NOT_CONVERTED, ...; `earned` = recompensa acreditada); `v3-bookings` con `sourceId` `referral:<código>`
+  = la prueba referida (`cancelled`, `convertedEnrolmentIds`); alta referida = enrolment nuevo cuyo
+  `trialBookingId` apunta a una de esas pruebas. Se excluyen dos cuentas internas del equipo (ids en
+  el script). 23 sep–11 oct: 332 códigos (309 de familias activas), 2 referidos reales, 1 alta, 0
+  recompensas acreditadas. GA4 no mide el panel (students.diluu.com).
 - Plazas canceladas (bajas): enrolments con `end.lastLesson` en el periodo y `end.reason: "CANCEL"`
   (CHANGE = cambio de grupo, no es baja: en sep 2026 hubo 999 CHANGE y 359 CANCEL). Dentro de CANCEL,
   descuenta `end.cancellationReason` NO_ES_CANCELACION y REACTIVADA (sep: 24 y 8). Sep 2026: 359
@@ -20,17 +29,40 @@ Script: `node "$S/mongo-read.cjs"` con `S=/Users/luciamarin/.claude/plugins/cach
   clases 53, otro 47, no responde 32, pago fallido 32, pausa/viaje 24, no les gustan 16, dinero 16.
   El conteo "sin sucesor" vía $lookup sobrestima (sep 402) porque algunos CHANGE no enlazan sucesor.
 - Pruebas: `v3-bookings` con `type: "TRIAL"` y `lessonStart` en el periodo. Ago 648, sep 630, 1–8 oct 168.
+- No presentados: `v3-trial-results` con `attended: false` (status REPORTED) sobre pruebas con `lessonStart` en el
+  periodo; antelación de la reserva = `lessonStart` − `createdAt` del booking (`v3-bookings.id` = `bookingId`).
+  Ago 95/602 (15,8 %), sep 85/571 (14,9 %), 1–13 oct 28/208 (13,5 %); sep–oct: < 1 día 6,5 %, 1–3 días 10,5 %,
+  3–7 días 23,6 %.
+- **Stock de plazas a una fecha pasada: no se reconstruye.** `count` con `createdAt ≤ fecha` y `end` nulo o posterior da
+  4.357 el 1 oct y 3.155 el 31 oct 2026 (frente a 2.882 y 2.973 leídos en el día): los finales se editan después de la
+  lectura y los cambios de grupo (≈ 1.000 CHANGE al mes) dejan la matrícula vieja y la nueva solapadas. La serie oficial
+  son las lecturas del día (lunes y día 1). La base empieza en octubre de 2025 (1.399 matrículas creadas ese mes por la
+  migración): no sirve para comparar altas interanuales; para 2025 se usan las cifras de Stripe del plan Q4.
+- **Conversión prueba → curso a 30 días** (`scripts/mes-datos.cjs`): pruebas con `lessonStart` en el mes, no canceladas,
+  emparejadas con matrículas cuyo `trialBookingId` es esa prueba y creadas en los 30 días siguientes. Sep 2026: 45,5 % por
+  prueba (53,5 % de las asistidas con resultado; 52,5 % por familia); ago: 39,9 % / 46,7 % / 46,7 %. El panel direct-course
+  mide otra cosa (ago 45 %): no mezclar.
+- **Bajas en los primeros 30 días**: plazas nuevas del mes con CANCEL neta y última clase ≤ 30 días tras la creación. Sep
+  2026: 6,7 % de las plazas, 8,4 % de las familias (ago 9,6 % / 9,2 %). El 14,8 % de agosto del plan era por suscripción
+  de Stripe: otra definición.
 - Los campos `course.weekday`/`course.time` están en UTC.
+- **Retención de familias** (scripts/retencion-familias.sh): familia = `client.id`; cohorte = mes de su
+  primera matrícula (`min createdAt`); viva = alguna matrícula con `end` null o `end.lastLesson` ≥ hoy;
+  vida = última `end.lastLesson` menos primera `startDate` (incluye pausas y Navidad). Lectura del
+  11 oct 2026 en docs/analisis/unit-economics-2026-10.md: 7,4 meses de vida en el primer año, 42 %
+  vivas a los 12 meses, churn 4,5 %/mes a partir del año.
 
 ## Supermetrics (ds_id → cuentas)
 - FA (Meta): act_2456974117647730, act_911299640142242. Campos: Date, cost, impressions,
   action_link_click, offsite_conversions_fb_pixel_purchase, link_CTR, CPM, adcampaign_name.
 - AW (Google Ads): 4584208097. Campos: Date, Cost, Clicks, Conversions, Campaignname.
 - GW (Search Console): sc-domain:diluu.com, settings {"report_type": "STANDARD"}. Campos:
-  Yearmonth/Date, query, page, clicks, impressions, position. "Búsquedas de padres" = consultas sin
-  marca (diluu, dilluu, hey spanish) ni mapas (map, mapa, carte, hispanohablantes, hispanophones,
-  spanish speaking countries, países) que contengan class, clases, cours, lessons, tutor, kids,
-  niños, enfants, online, aprender, learn.
+  Yearmonth/Date, query, page, clicks, impressions, position. "Clics de padres" (desde el 26 oct 2026) = clics a
+  las páginas de clases, de prueba y de precios, por página y sin la dimensión de búsqueda, menos los
+  clics de marca visibles en esas páginas (diluu, dilluu, dillu, diilu, dilu, hey spanish). Filtros
+  exactos en .claude/skills/seo-lunes/SKILL.md. Antes se filtraba por el texto de la búsqueda y salía
+  ≈ 1 clic al mes: Google oculta la mayoría de las búsquedas de una web pequeña (1–25 oct 2026: 2.169
+  clics de diluu.com sin búsqueda visible). Con la definición nueva: jul–sep 2026, 103 al mes.
 - GAWA (GA4): 425989233. Campos: date/yearMonth, sessionDefaultChannelGrouping, landingPage,
   sessions, conversions. Ojo: en oct 2026 aparece "Cross-network" con 905 sesiones (sep: 14): revisar
   el etiquetado antes de atribuir.
@@ -46,6 +78,19 @@ Script: `node "$S/mongo-read.cjs"` con `S=/Users/luciamarin/.claude/plugins/cach
 Solo para ingresos, MRR, cupones y metadatos de campaña (bf26, promo, referral_code). No se usa
 para contar altas ni bajas: hay familias que pagan por Seal Subscriptions fuera de Stripe. Si el
 conector falla ("connection invalidated"), reconectar desde ajustes de conectores de claude.ai.
+- **Sigma no está contratado** (11 oct 2026): `stripe_analytics` devuelve "requires a Sigma subscription".
+  El conector MCP (`stripe_api_read`) funciona, pero devuelve cada suscripción entera (≈ 3.000 tokens):
+  no sirve para paginar cohortes ni contar; solo para consultas puntuales.
+- **Supermetrics tiene conector de Stripe (ds ST)**, autenticado el 11 oct 2026, pero la licencia
+  1847450 no lo incluye (`LICENSE_DATA_SOURCE_NOT_AVAILABLE`). Campos útiles si se contrata: report
+  Charges con customer_id, customer_created_date, charge_currency, charge_amount, charge_amount_refunded.
+- Vía para el cálculo exacto (unit economics v4.1 por cliente): clave restringida de solo lectura en
+  `.env` como `STRIPE_API_KEY` (la pega Lucia; `.env` está en .gitignore) y script en scripts/.
+- **Pruebas pagadas (desde el 19 oct 2026):** cargos con éxito ≤ 400 (4 $, 3 €, £3), agrupados por día en hora
+  de Londres (así los cuenta el proyecto de Meta). Se leen con el listado `/v1/charges` paginado
+  (scripts/semana-datos.cjs, con `STRIPE_API_KEY`), nunca con la búsqueda (`/v1/charges/search`): la búsqueda
+  dejó fuera el domingo 18 oct y dio 51 pruebas en vez de 69. Semana 5–11 oct: 76; 12–18 oct: 69 (£42,2 de Meta
+  por prueba). No incluye pruebas referidas (gratis).
 
 ## Plan Q4: cifras de referencia
 Presupuesto paid oct £14.000 (Meta 12.500 + Google 1.500), nov £9.000, dic £4.500. Altas objetivo
