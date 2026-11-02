@@ -56,17 +56,17 @@ const D = {
   // Bloque mensual: lo escribe la revisión mensual (día 1); la rutina de los lunes lo conserva tal cual.
   mes: {
     titulo: "Cierre de octubre de 2026",
-    lede: "261 altas (objetivo 320) y 171 familias nuevas con 355 pruebas pagadas: el embudo se rompe entre la prueba y la matrícula. Paid £14.821 (+5,9 %), CAC de medios £86,7 por familia nueva (sep £72,9), LTV:CAC 2,3:1 a 12 meses. Plazas 2.973 el 2 nov (+91 en el mes). Quedan 439 altas en 59 días.",
+    lede: "261 altas (objetivo 320) y 171 familias nuevas con 348 pruebas pagadas: el embudo se rompe entre la prueba y la matrícula. Paid £14.821 (+5,9 %), CAC de medios £86,7 por familia nueva de la base (£62 por suscripción nueva de Stripe), LTV:CAC 2,6:1 a 12 meses. Stripe: MRR £120,5k, 239 suscripciones nuevas, cestas pagadas 78 %. Plazas 2.973 el 2 nov (+91). Quedan 439 altas en 59 días.",
     tiles: [
       ["Altas", "261", "objetivo 320 · sep 310 · 171 familias nuevas (sep 223)"],
       ["Plazas activas", "2.973", "2 nov · +91 en el mes · 449 nuevas · 236 canceladas netas (se recontarán)"],
       ["Paid", "£14.821", "Meta £13.567 (+8,5 %) · Google £1.254 · presupuesto £14.000"],
-      ["CAC de medios", "£86,7", "por familia nueva · £56,8 por alta · plan ≤ £60"],
-      ["Pruebas pagadas", "355", "£38,2 de Meta por prueba · conversión 30 d cohorte sep 45,5 %"],
-      ["LTV:CAC 12 m", "2,3:1", "proyectado 4,7–5,3:1 · payback 3,1 meses · 11 oct: 2,9:1"]
+      ["CAC de medios", "£86,7", "por familia nueva (base) · £62,0 por suscripción nueva viva de Stripe (239) · £56,8 por alta · plan ≤ £60"],
+      ["Pruebas pagadas", "348", "Stripe, cargos · £39,0 de Meta por prueba · Meta 52 %, orgánico 29 % · conversión 30 d cohorte sep 45,5 %"],
+      ["LTV:CAC 12 m", "2,6:1", "ARPU £68,4 (MRR £120,5k / 1.763) · proyectado 5,1–5,8:1 · payback 2,8 meses · con base Stripe 3,4:1"]
     ],
     canales: [
-      ["Meta Ads", "Mantener (a la baja)", "£13.567 · 253 compras píxel · 355 pruebas pagadas · £38,2 / prueba", "Nov £7.500: fuera UGC ES, FR ABO a la mitad, Video1 ≤ 30 %"],
+      ["Meta Ads", "Mantener (a la baja)", "£13.567 · 253 compras píxel · 348 pruebas pagadas · £39,0 / prueba", "Nov £7.500: fuera UGC ES, FR ABO a la mitad, Video1 ≤ 30 %"],
       ["Google Ads", "Mantener", "£1.254 · 22 conv. · £57", "£1.500; EEUU exacta cortada; PMax y FR keywords se leen el 6 nov"],
       ["SEO", "Arreglar", "104 clics de padres (obj. 110 dic) · 0 enlaces de medios", "Comparativa FR 3 nov, A2 6 nov, A3 20 nov"],
       ["IA", "Mantener", "164 sesiones / 69 eventos · Diluu en 10 de 36 respuestas", "Página de 10 datos 27 nov"],

@@ -3,7 +3,28 @@
 Método v4.1 adaptado a familia (docs/analisis/unit-economics-2026-10.md, 11 oct). Todo en libras con los tipos fijos
 de CLAUDE.md. Fuentes: base de producción a 2 nov 2026 (`scripts/retencion-familias.sh`, `scripts/mes-datos.cjs`);
 Meta y Google por Supermetrics (1–31 oct); coste de ventas y soporte del P&L de septiembre y agosto (sin cierre de octubre
-hasta la revisión del CFO del 5 nov). Stripe sigue sin clave en `.env`: el ingreso por familia no se ha recalculado.
+hasta la revisión del CFO del 5 nov). Stripe leído con el conector el 2 nov (sin clave en `.env`): cargos de octubre,
+suscripciones creadas en octubre y todas las suscripciones vivas (sección 0).
+
+## 0. Actualización con Stripe (2 nov, 13:00 Bali): sustituye a las cifras de las secciones 2 y 3
+
+| Medida | Valor | Base |
+| --- | --- | --- |
+| MRR a 2 nov | **£120,5k** | 1.763 suscripciones vivas (`trialing` 1.705, `active` 46, `past_due` 12; una por familia), importe de los items normalizado a mes (4 semanas × 13/12), tipos fijos de CLAUDE.md |
+| Ingreso por familia y mes (ARPU) | **£68,4** | £120,5k ÷ 1.763 (2 oct: £63 = £105–110k ÷ 1.688). Parte del salto es la estructura de precios nueva del 22 oct (migración de cobros) |
+| Contribución por familia y mes | **£34** | £68,4 × 55 % tras profes − £3,45 de soporte |
+| LTV12 de contribución | **£248** | 7,3 meses × £34 |
+| LTV proyectado de contribución | **£495–560** | 14,5–16,5 meses × £34 |
+| Ingresos cobrados en octubre | **≈ £125,2k** | 2.355 cargos con éxito netos de £0,5k de reembolsos (pruebas £1,3k); sep P&L £118,8k; el P&L del 5 nov manda |
+| Suscripciones nuevas de octubre | 328 creadas · **239 vivas** · 18 canceladas · 71 checkouts caducados | Cestas pagadas 78 % (objetivo 80 %); MRR de las nuevas £17,2k = £72 por familia nueva |
+| CAC de medios por suscripción nueva viva (base Stripe) | **£62,0** | £14.821 ÷ 239 (sep £60,2 ÷ 270; objetivo del plan ≤ £60 con esta base) |
+| CAC completo (base) → LTV:CAC | £96,7 → **2,6:1 a 12 meses · 5,1–5,8:1 proyectado · payback 2,8 meses** | 171 familias nuevas de la base de producción |
+| CAC completo (Stripe) → LTV:CAC | £72 → 3,4:1 a 12 meses · 6,9–7,8:1 proyectado · payback 2,1 meses | 239 suscripciones nuevas vivas |
+
+Lectura: el valor de la familia sube (ARPU £63 → £68) y el ratio a 12 meses queda en 2,6:1 con la base de producción,
+por debajo del 3:1 que pide el guardrail; con la base de Stripe (la del plan) sí pasa el 3:1. La diferencia entre
+denominadores (171 frente a 239) es la decisión del CAC pendiente de Lucia desde el 15 oct: con Stripe el CAC de medios
+de octubre es £62 (≈ objetivo); con la base de producción, £86,7 (+45 %).
 
 ## Resumen
 

@@ -10,15 +10,17 @@ la página Q4 2026): las fechas salen de docs/planes/q4-seguimiento-objetivos-fe
 
 ## Resumen en seis líneas
 
-1. **Octubre cierra con 261 altas (objetivo ≥ 320, −18 %) y 171 familias nuevas (sep 223, −23 %)** con 355 pruebas
-   pagadas (≈ las de septiembre) y £14.821 de paid (+5,9 % sobre los £14.000 del plan). El embudo se rompió entre la
-   prueba y la matrícula, no en el coste por prueba (£38,2 de Meta, mejor que en septiembre).
+1. **Octubre cierra con 261 altas (objetivo ≥ 320, −18 %) y 171 familias nuevas (sep 223, −23 %)** con 348 pruebas
+   pagadas (Stripe, listado de cargos) y £14.821 de paid (+5,9 % sobre los £14.000 del plan). El embudo se rompió entre la
+   prueba y la matrícula, no en el coste por prueba (£39,0 de Meta, mejor que en septiembre).
 2. **Plazas: 2.973 el 2 nov** (2.882 el 2 oct: +91). Faltan 27 para el suelo y 127 para el objetivo. 449 nuevas y 236
    canceladas netas (8,2 % del stock de partida; septiembre 321). Las cancelaciones de la segunda quincena (45 y 26 por
    semana frente a 64–72) se recontarán al alza: el registro llega con retraso.
-3. **CAC de medios por familia nueva £86,7** (sep £72,9; plan ≤ £60). Por alta, £56,8. Rompe los dos umbrales (£65 de
-   Stripe y £79 propuesto para la base): la regla dice bajar Meta un 15 %; el plan de noviembre ya la baja a £7.500.
-4. **LTV:CAC a 12 meses 2,3:1** (2,9:1 el 11 oct); proyectado 4,7–5,3:1. La retención no empeora (churn < 3 meses
+3. **CAC de medios por familia nueva £86,7** (sep £72,9; plan ≤ £60). Por alta, £56,8; **por suscripción nueva viva de
+   Stripe (239), £62,0**, la base con la que se fijó el objetivo (sep £60,2). Con la base de producción rompe los dos
+   umbrales (£65 y £79 propuesto): la regla dice bajar Meta un 15 %; el plan de noviembre ya la baja a £7.500.
+4. **LTV:CAC a 12 meses 2,6:1** (2,9:1 el 11 oct); proyectado 5,1–5,8:1. Stripe (2 nov): MRR £120,5k en 1.763 familias,
+   £68 por familia y mes (2 oct: £63); ingresos cobrados en octubre ≈ £125k. La retención no empeora (churn < 3 meses
    8,3 %, antes 9,0 %); empeora el CAC. Meta: MANTENER sin subir.
 5. **Conversión prueba → curso a 30 días de la cohorte de septiembre: 45,5 % por prueba, 52,5 % por familia** (agosto
    39,9 % / 46,7 %). Bajas en los primeros 30 días: 8,4 % de las familias (ago 9,2 %). Referidos: 2 altas de 25.
@@ -41,7 +43,7 @@ la página Q4 2026): las fechas salen de docs/planes/q4-seguimiento-objetivos-fe
 | Plazas nuevas | | 449 (1,72 por alta) | 519 (1,67) | | Base |
 | Plazas canceladas netas (brutas) | pérdida ≤ 9,5 % | 236 (278) · **8,2 %** del stock del 2 oct | 321 (359) · ≈ 11 % | | Base; oct se recontará al alza |
 | Pruebas (clases) | | 519 · no presentados 14,4 % | 630 · 14,9 % | 358 | Base |
-| Pruebas pagadas | | **355** (£38,2 de Meta por prueba) | ≈ 360–380 (semanas del proyecto de Meta) | | Stripe + diarios de Meta |
+| Pruebas pagadas (Stripe, cargos con `direct_trial`, hora de Londres) | | **348** (£39,0 de Meta por prueba) · por semana 46 / 75 / 68 / 90 / 69 · Meta 180 (52 %), orgánico 100, directo 30, Google 27, email 10 · ES 197 / FR 149 | ≈ 360–380 (semanas del proyecto de Meta) | | Stripe, listado de cargos (2 nov) |
 | Conversión prueba → curso 30 d (cohorte del mes anterior) | ≥ 48 % | sep: **45,5 %** por prueba (53,5 % de las asistidas) · 52,5 % por familia | ago: 39,9 % · 46,7 % · 46,7 % | | Base (definición en fuentes.md) |
 | Bajas en los primeros 30 días (cohorte del mes anterior) | ≤ 14 % | sep: 6,7 % plazas · **8,4 % familias** | ago: 9,6 % · 9,2 % | | Base |
 | Trimestre: altas | ≥ 700 | 261 (37 %) | | Q4 2025: 377 | |
@@ -62,14 +64,15 @@ la página Q4 2026): las fechas salen de docs/planes/q4-seguimiento-objetivos-fe
 
 | Canal | Presupuesto oct | Gasto oct | Resultado | Coste | Septiembre | Octubre 2025 |
 | --- | --- | --- | --- | --- | --- | --- |
-| Meta Ads | £12.500 | **£13.567 (+8,5 %)** | 253 compras píxel (incluyen matrículas) · 355 pruebas pagadas (Stripe, todos los orígenes) · CTR cuenta 1,12 %, núcleo 1,17 % · CPM £16,1 · frecuencia ≤ 2,9 | £53,6 / compra píxel · **£38,2 / prueba pagada** | £14.544 · 292 · £49,8 · CTR 1,11 % · CPM £18,7 | £8.467 · 177 · £47,8 · CTR 1,29 % · CPM £10,9 |
+| Meta Ads | £12.500 | **£13.567 (+8,5 %)** | 253 compras píxel (incluyen matrículas) · 348 pruebas pagadas (Stripe, todos los orígenes; 180 con utm o fbclid de Meta) · CTR cuenta 1,12 %, núcleo 1,17 % · CPM £16,1 · frecuencia ≤ 2,9 | £53,6 / compra píxel · **£39,0 / prueba pagada** (£75 por prueba con utm de Meta) | £14.544 · 292 · £49,8 · CTR 1,11 % · CPM £18,7 | £8.467 · 177 · £47,8 · CTR 1,29 % · CPM £10,9 |
 | Google Ads | £1.500 | £1.254 (−16 %) | 22 conversiones | £57 / conv. | £1.709 · 38 · £45 | £300 · 33 · £9 |
 | Total | £14.000 | **£14.821 (+5,9 %)** | | | £16.253 | £8.767 |
 
 CAC de medios (Meta + Google, base de producción): **£86,7 por familia nueva** (171) · £56,8 por alta (261) · £84,7 por
 familia "comprada" (171 nuevas + 4 que vuelven tras > 90 días). Septiembre: £72,9 / £52,4. Solo Meta: £79,3 por familia
-nueva. Objetivo del plan: ≤ £60 (medido con familias nuevas de Stripe; sin cifra de Stripe este mes). Por el embudo:
-£38,2 por prueba pagada ÷ 48 % de familias nuevas por prueba pagada (171/355) ≈ £79 de Meta.
+nueva. **Con Stripe (suscripciones nuevas vivas en octubre: 239): £62,0**, frente al objetivo del plan ≤ £60 medido con esa
+misma base (sep £60,2 con 270). Por el embudo: £39,0 por prueba pagada ÷ 49 % de familias nuevas por prueba pagada
+(171/348) ≈ £79 de Meta.
 
 Meta por campaña (octubre; entre paréntesis, los 14 días 18–31 oct):
 - FR Prospecting Video1: £4.224, 107 compras, £39 (14 d £1.196 / 37 = £32). **31,1 % del gasto: supera el tope del 30 %.**
@@ -136,7 +139,17 @@ reasignado (3.220 → 87).
 - **Ventas** (hoja TRACKING VENTAS INTERNO). Plazas de octubre: 321 (Lucía F. 80, Bárbara 36, directo 205, Victoria 0;
   sep 397: 85 / 49 / 256 / 7). Bonus de octubre: Lucía F. 49 familias (298 $), Bárbara 27 (84 $), Virginia 1, Victoria 0;
   vendedoras 77 de 182 familias pagadas (42 %); curso directo sin vendedora 105 familias / 205 plazas. Conversión a 30 días
-  del panel: pendiente de Victoria. Enlaces de pago creados en Stripe: sin dato (objetivo 0 desde el 1 nov).
+  del panel: pendiente de Victoria. **Enlaces de pago con vendedora en Stripe (metadato `sales_agent`): 23 en octubre**
+  (Lucía F. 12, Bárbara 9, Virginia 2; 15 vivos y 8 caducados): el objetivo es 0 desde el 1 nov, se comprueba en noviembre.
+- **Stripe (leído el 2 nov con el conector, 2.355 cargos con éxito y 328 suscripciones de octubre; definiciones en
+  fuentes.md).** Ingresos cobrados en octubre ≈ **£125,2k** netos de reembolsos (£0,5k devueltos; pruebas £1,3k; 291 cargos
+  fallidos), frente a £118,8k de facturación de septiembre en el P&L (el P&L del 5 nov es la cifra oficial). **MRR a 2 nov
+  £120,5k en 1.763 suscripciones vivas** (una por familia; casi todas en estado `trialing` por la migración de cobros del
+  22 oct), **£68,4 por familia y mes** (2 oct: £63; parte del salto es la nueva estructura de precios del 22 oct). **Suscripciones
+  nuevas de octubre: 328 creadas, 239 vivas** (32 / 54 / 45 / 52 / 56 por semana ISO), 18 ya canceladas, **71 checkouts
+  caducados** → cestas pagadas 257 de 328 = **78 %** (punto de partida 68 %, objetivo 80 %); en la landing de curso directo
+  144 pagadas y 68 caducadas (68 %). Plan de las nuevas: 4 semanas 125, trimestral 12, anual 1 (101 sin metadato: altas
+  desde el panel). MRR de las 239 nuevas: £17,2k (£72 por familia nueva).
 
 ### 1.5 Tests del plan (ninguno tiene métrica todavía)
 
@@ -151,11 +164,12 @@ reasignado (3.220 → 87).
 
 ## 2. Unit economics
 
-Detalle en docs/analisis/unit-economics-2026-10-cierre.md. ARPU por familia £63 (sin recalcular: Stripe sin clave), vida
-en el primer año 7,3 meses, LTV12 de contribución £226, proyectado £450–510. **CAC de medios £86,7 y completo £96,7 por
-familia nueva → LTV:CAC 2,3:1 a 12 meses (11 oct: 2,9:1) y 4,7–5,3:1 proyectado; payback 3,1 meses.** Churn por antigüedad
-(1 may → 2 nov): 8,3 % (< 3 meses), 6,2 % (3–12), 4,5 % (> 12). Lo que empeora es el CAC, no el valor de la familia.
-Guardrail: < 3:1 a 12 meses → Meta no se escala.
+Detalle en docs/analisis/unit-economics-2026-10-cierre.md. ARPU por familia **£68,4** (Stripe, 2 nov: MRR £120,5k ÷ 1.763),
+vida en el primer año 7,3 meses, contribución £34 por familia y mes, LTV12 de contribución **£248**, proyectado **£495–560**.
+**CAC de medios £86,7 y completo £96,7 por familia nueva (base) → LTV:CAC 2,6:1 a 12 meses (11 oct: 2,9:1) y 5,1–5,8:1
+proyectado; payback 2,8 meses.** Con la base de Stripe (CAC completo £72 por suscripción nueva viva): 3,4:1 a 12 meses.
+Churn por antigüedad (1 may → 2 nov): 8,3 % (< 3 meses), 6,2 % (3–12), 4,5 % (> 12). Lo que empeora es el CAC, no el valor
+de la familia. Guardrail: < 3:1 a 12 meses con la base de producción → Meta no se escala.
 
 ## 3. Canales: clasificación y presupuesto de noviembre (£9.000: Meta £7.500 + Google £1.500)
 
@@ -233,9 +247,12 @@ decisión sobre el schema. `scripts/auditoria-urls-historicas.csv` pasa de 293 a
 
 ## 5. Avisos sobre los datos
 
-- Stripe: sin `STRIPE_API_KEY`. Las pruebas pagadas son 297 de los diarios del proyecto de Meta (4–29 oct; la semana 12–18
-  con la cifra de Lucia, 69) más 58 leídas con el conector (442 cargos del 1–3 y 30–31 oct, hora de Londres, mismo filtro
-  que el script). Ingresos, MRR y suscripciones nuevas del mes: sin dato hasta la revisión del CFO (5 nov).
+- Stripe: sin `STRIPE_API_KEY`; todo leído con el conector el 2 nov (Lucia lo pidió a las 12:30 Bali): 31 páginas diarias de
+  cargos (2.646 cargos, hora de Londres, mismo filtro que `semana-datos.cjs`), 4 páginas de suscripciones creadas en octubre
+  y 24 páginas de suscripciones vivas (`trialing` + `active` + `past_due`, por ventanas de creación). Pruebas pagadas 348
+  frente a 355 de la primera versión (diarios de Meta + 5 días); por semana coincide con el proyecto de Meta a ≤ 3 %. MRR
+  con los tipos fijos de CLAUDE.md; DKK, HKD, ILS, PLN, SGD y AED no tienen tipo fijo y se han convertido a 0,115 / 0,098 /
+  0,21 / 0,20 / 0,58 / 0,21 (con el 0,77 de "resto" el DKK sumaba £3,8k de más): propuesta para CLAUDE.md.
 - Base de producción: las cancelaciones se registran con retraso; octubre se recontará. El stock a fecha pasada no se
   reconstruye (fuentes.md). `course.language` no existe en las matrículas (idioma en `course.subject`): el reparto por
   idioma queda para el script del mes que viene.

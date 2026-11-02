@@ -86,6 +86,16 @@ conector falla ("connection invalidated"), reconectar desde ajustes de conectore
   Charges con customer_id, customer_created_date, charge_currency, charge_amount, charge_amount_refunded.
 - Vía para el cálculo exacto (unit economics v4.1 por cliente): clave restringida de solo lectura en
   `.env` como `STRIPE_API_KEY` (la pega Lucia; `.env` está en .gitignore) y script en scripts/.
+- **Lectura por el conector (2 nov 2026, sin clave):** `GetCharges` con `created` por día de Londres (≈ 100 cargos al día;
+  los días con más de 100 necesitan `starting_after`), `GetSubscriptions` con `created` por ventanas y `status`. Cada
+  respuesta supera el límite de tokens y se guarda en un fichero de tool-results: se procesa con `jq` sin cargarla.
+  **Desde la migración de cobros del 22 oct casi todas las suscripciones vivas están en `trialing`** (el periodo de prueba
+  acaba en el siguiente cobro): el MRR se suma con `trialing` + `active` + `past_due`, items normalizados a mes (4 semanas
+  × 13/12). 2 nov: 1.763 vivas, MRR £120,5k, £68,4 por familia. Suscripciones nuevas del mes = creadas en el mes
+  (`enrolment_checkout` = landing, `sales_agent` = enlace de pago de vendedora, sin metadato = panel); `incomplete_expired`
+  = checkout caducado. Octubre: 328 creadas, 239 vivas, 71 caducadas. Ingresos cobrados = cargos `succeeded` netos de
+  `amount_refunded` (oct ≈ £125,2k). Tipos sin fijar en CLAUDE.md usados: DKK 0,115, HKD 0,098, ILS 0,21, PLN 0,20,
+  SGD 0,58, AED 0,21 (el 0,77 de "resto" infla el DKK).
 - **Pruebas pagadas (desde el 19 oct 2026):** cargos con éxito ≤ 400 (4 $, 3 €, £3), agrupados por día en hora
   de Londres (así los cuenta el proyecto de Meta). Se leen con el listado `/v1/charges` paginado
   (scripts/semana-datos.cjs, con `STRIPE_API_KEY`), nunca con la búsqueda (`/v1/charges/search`): la búsqueda

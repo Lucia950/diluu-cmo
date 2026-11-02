@@ -9,6 +9,12 @@
   5 nov CAC (propuesta: familia nueva de la base, subir < £80 / bajar > £100) y Black Friday + pausa larga; 7 nov FLAM y
   schema de precios. Script nuevo `scripts/mes-datos.cjs`; el stock de plazas a fecha pasada no se reconstruye (fuentes.md).
   Auditoría web: 39 páginas de clases con el schema desfasado porque la API subió los precios EUR/USD el 1 nov (encargo 0.8).
+  Stripe leído por el conector a petición de Lucia (2 nov, 12:30 Bali): 348 pruebas pagadas (£39,0 de Meta por prueba),
+  ingresos cobrados ≈ £125,2k, MRR £120,5k en 1.763 familias (£68,4 por familia), 239 suscripciones nuevas vivas (CAC de
+  medios £62,0 con esta base, la del plan), cestas pagadas 78 %, 23 enlaces de pago con vendedora todavía en octubre.
+  LTV:CAC 2,6:1 a 12 meses con la base de producción y 3,4:1 con Stripe. Las suscripciones vivas están en `trialing` desde
+  la migración de cobros del 22 oct: el MRR se suma con `trialing` + `active` + `past_due`. Notion: la integración no ve
+  la página Q4 2026 (404; la búsqueda solo encuentra EQUIPO OPS): hay que compartirla con la conexión de Claude.
 
 - **2026-10-28** · Revisión SEO de los posts sobre lo publicado, sin pasar por Lucia (Lucia): Bárbara publica con el OK
   de la persona en la sesión del blog, saca el informe de la página publicada (`scripts/informe-revision.py` del repo
