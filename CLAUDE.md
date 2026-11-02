@@ -63,7 +63,9 @@ horas en hora de Bali e indica la zona.
   base de producción. Familia nueva = su primera matrícula de la historia. Baja = familia cuya
   última plaza se cancela en el periodo. Plaza (enrolment) = un alumno en un grupo. Sep 2026:
   310 altas, 223 familias nuevas, 220 bajas, 519 plazas nuevas, 359 plazas canceladas.
-- CAC de medios = gasto en anuncios ÷ familias nuevas (o altas: di cuál usas). CAC completo = él
+- CAC de medios = gasto en anuncios ÷ familias nuevas (o altas: di cuál usas). Para el guardrail de Meta, familia
+  nueva = suscripción de Stripe creada en el mes y viva al cierre (decidido el 2 nov 2026; la base de producción se
+  anota como contraste). CAC completo = él
   más el coste de ventas (£10 por familia nueva en sep 2026).
 - Moneda de trabajo: libras. Tipos fijos: USD 0,735 · EUR 0,855 · AUD 0,479 · SEK 0,0752 ·
   NZD 0,436 · JPY 0,00496 · CAD 0,538 · CHF 0,915 · resto 0,77.
@@ -90,7 +92,7 @@ semana, y desde agosto cuenta matrículas como compras.
 
 ## Guardrails
 - No escalar un canal si empeora el CAC blended o el LTV:CAC baja de 3:1.
-- Meta: CAC de medios por familia nueva > £65 → bajar un 15 %; < £50 → subir un 15 % (a mitad
+- Meta: CAC de medios por familia nueva (base Stripe) > £65 → bajar un 15 %; < £50 → subir un 15 % (a mitad
   de mes). CTR < 1,1 % → rotar creativos, medido solo sobre las campañas optimizadas a compra (el CTR de cuenta
   baja cada vez que corre un cribado por reproducciones). Frecuencia 7 d > 3,5 → avisar.
 - Google: la genérica no sube mientras su CPA > £90; el francés puede subir a £20/día.
@@ -105,7 +107,8 @@ semana, y desde agosto cuenta matrículas como compras.
   la hace en el margen. Marta solo ve sus fechas (Notion); las fechas límite viven aquí.
 - Bárbara: revisión de sus compromisos de ventas el 13 oct 2026. Después, SEO con objetivos
   propios que no dependen de Marta (docs/equipo/barbara-seo-propuesta.md); seguimiento
-  asíncrono por Notion, sin reunión semanal.
+  asíncrono en la herramienta "SEO Diluu" (no usa Notion), sin reunión semanal. Lleva blog,
+  enlaces e IA; las páginas de clases las hace Lucia.
 
 ## Formato de trabajo
 - Cada análisis termina en decisiones accionables, no solo en un informe.

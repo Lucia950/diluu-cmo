@@ -86,6 +86,9 @@ conector falla ("connection invalidated"), reconectar desde ajustes de conectore
   Charges con customer_id, customer_created_date, charge_currency, charge_amount, charge_amount_refunded.
 - Vía para el cálculo exacto (unit economics v4.1 por cliente): clave restringida de solo lectura en
   `.env` como `STRIPE_API_KEY` (la pega Lucia; `.env` está en .gitignore) y script en scripts/.
+- **Familias nuevas para el guardrail del CAC de Meta (decidido el 2 nov 2026): suscripciones creadas en el mes y vivas al
+  cierre** (`GetSubscriptions`, `created` del mes, `status` all, y se cuentan `trialing` + `active` + `past_due`; una por
+  familia). Oct 2026: 239 (sep: 270). Umbrales del plan: < £50 subir Meta, > £65 bajar.
 - **Lectura por el conector (2 nov 2026, sin clave):** `GetCharges` con `created` por día de Londres (≈ 100 cargos al día;
   los días con más de 100 necesitan `starting_after`), `GetSubscriptions` con `created` por ventanas y `status`. Cada
   respuesta supera el límite de tokens y se guarda en un fichero de tool-results: se procesa con `jq` sin cargarla.

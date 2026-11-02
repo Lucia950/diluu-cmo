@@ -48,7 +48,9 @@ Fechas: M1 = día 1 del mes, D = domingo de la semana, L = lunes. Cuentas en GBP
 Cálculos: semana = suma de L→D; ritmo del mes = gasto M1→D ÷ días × días del mes; CTR del núcleo = clics ÷
 impresiones de las campañas sin "CRIBADO" ni "Reproducciones"; CPA píxel = cost ÷ compras; coste por prueba pagada =
 gasto Meta de la semana ÷ pruebas pagadas de Stripe; CAC de medios por familia nueva = (Meta + Google) ÷ familias
-nuevas de la base, semana y mes. Guardrails de CLAUDE.md: tests con CPA píxel > £80, Video1 FR ≤ 30 % del gasto,
+nuevas de la base, semana y mes (contraste). **El guardrail se mide con Stripe (decidido el 2 nov): suscripciones creadas
+en el mes y vivas (`GetSubscriptions` por el conector, `created` del mes, estados trialing/active/past_due; ficheros con jq);
+umbrales £50 / £65.** Guardrails de CLAUDE.md: tests con CPA píxel > £80, Video1 FR ≤ 30 % del gasto,
 CTR del núcleo ≥ 1,1 %, frecuencia ≤ 3,5, CAC < £50 / > £65 (base Stripe; ≈ £60/£79 con la base de producción,
 propuesto el 12 oct), Google: genérica congelada, francés sube solo con CPA 14 d < £90, nada con < 14 días.
 

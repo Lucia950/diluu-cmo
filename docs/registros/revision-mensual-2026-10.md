@@ -205,9 +205,10 @@ debajo del umbral que decida Lucia.
   referidos 2 de 25; (7) FLAM reclama la marca de /fr/cours-flam-en-ligne (3 sesiones orgánicas en octubre: coste bajo de
   retirarla).
 - **Las 3 decisiones de Lucia este mes:**
-  1. **5 nov · CAC:** denominador y umbrales del guardrail de Meta. Propuesta: CAC de medios por familia nueva de la base,
-     mensual; subir Meta un 15 % si < £80, bajar un 15 % si > £100; semanalmente, coste por prueba pagada de Stripe
-     (banda £33–42). Octubre (£86,7) → Meta se queda en los £7.500 del plan.
+  1. **CAC, decidido el 2 nov (Lucia):** la base del guardrail es Stripe (suscripciones nuevas vivas del mes), con los
+     umbrales del plan (< £50 subir Meta 15 %, > £65 bajar 15 %). Octubre £62,0 → mantener. La cifra de la base de
+     producción (£86,7) queda como contraste. Semanalmente, coste por prueba pagada de Stripe (banda £33–42). El nivel de
+     Meta en noviembre (plan £7.500 frente a la propuesta de £11.500 de la semana 44) sigue pendiente de Lucia.
   2. **5 nov · Black Friday y pausa larga:** elegir la oferta de BF para familias nuevas (análisis del 22 oct: oferta 1)
      antes de que Marta escriba los 5 emails (5 nov), y escribir la política de pausa larga (T2, vencida el 20 oct) para
      que Stripe y el guion de ventas (3 nov) salgan.

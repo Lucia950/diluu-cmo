@@ -1,5 +1,14 @@
 # Decisiones (más reciente arriba)
 
+- **2026-11-02** · Guardrail del CAC de Meta, decidido (Lucia, 13:10 Bali): **la base es Stripe**, como en el plan del 2 oct.
+  Denominador = suscripciones creadas en el mes y vivas al cierre (una por familia; leídas por el conector, `GetSubscriptions`
+  con `created` del mes y estado `trialing`/`active`/`past_due`). Umbrales del plan: CAC de medios < £50 → Meta +15 %;
+  > £65 → −15 %; entre medias, mantener. Octubre: £14.821 / 239 = **£62,0 → mantener** (sep £60,2). En términos de LTV
+  (contribución £34/mes, LTV12 £248): £65 de medios + £10 de ventas = 3,3:1 a 12 meses, coherente con el mínimo de 3:1.
+  La cifra por familia nueva de la base de producción (£86,7) se sigue anotando como contraste, no decide. La regla no
+  obliga a bajar Meta en noviembre: el nivel (plan £7.500 frente a la propuesta de £11.500 del registro de la semana 44)
+  es una decisión de presupuesto pendiente de Lucia.
+
 - **2026-11-02** · Correcciones y decisiones de Lucia sobre el registro de la semana 44 (12:40 Bali):
   (1) El presupuesto de Meta se decide por rendimiento, no por el plan: los £7.500 de noviembre eran una cifra del
   2 oct. Coste por prueba pagada estable (£35,5–42,2 en las semanas 41–44 con gasto de £2.700–3.600; sin saturación),

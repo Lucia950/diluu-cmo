@@ -23,7 +23,7 @@ suscripciones creadas en octubre y todas las suscripciones vivas (sección 0).
 
 Lectura: el valor de la familia sube (ARPU £63 → £68) y el ratio a 12 meses queda en 2,6:1 con la base de producción,
 por debajo del 3:1 que pide el guardrail; con la base de Stripe (la del plan) sí pasa el 3:1. La diferencia entre
-denominadores (171 frente a 239) es la decisión del CAC pendiente de Lucia desde el 15 oct: con Stripe el CAC de medios
+denominadores (171 frente a 239) era la decisión del CAC pendiente desde el 15 oct, tomada el 2 nov a favor de Stripe: con Stripe el CAC de medios
 de octubre es £62 (≈ objetivo); con la base de producción, £86,7 (+45 %).
 
 ## Resumen
@@ -59,7 +59,9 @@ completa), pero sin margen para una caída de retención: con el churn de los me
 un 11 % y £73 pasa a ser £65. Techo absoluto razonable: £100 de medios (5:1 proyectado, payback 3 meses); por encima, cada
 familia extra no se paga hasta el cuarto mes y la hoja de ruta de 2027 (crecer siendo rentables) no cuadra.
 
-Propuesta de banda para el guardrail de Meta, por familia nueva de la base de producción, mensual: **< £60 subir un 15 %**
+**Decisión de Lucia (2 nov, 13:10 Bali): la base del guardrail es Stripe** (suscripciones nuevas vivas del mes) con los umbrales
+del plan, £50 / £65; octubre £62,0 → mantener. £65 de medios equivalen a 3,3:1 a 12 meses con esta contribución. Lo que sigue
+era la propuesta alternativa con la base de producción, que queda como referencia: **< £60 subir un 15 %**
 (≈ 3,5:1 a 12 meses, equivale a los £50 de Stripe del plan), **£60–75 mantener**, **> £75 bajar un 15 %**, **> £100 cortar
 tests y volver al núcleo**. Octubre (£86,7) → bajar; noviembre ya baja a £7.500. Si Lucia prefiere la base de Stripe (la del
 plan), los umbrales son los del 2 oct (£50 / £65) y octubre (£62) cae en "mantener".
