@@ -3,6 +3,133 @@
 Formato de cada entrada: periodo, plazas, tabla de canales, foco de la semana, Marta y Bárbara,
 avisos de datos. La entrada más reciente va arriba. Lo escribe la skill registro-semanal.
 
+## Semana 44 · del 26 de octubre al 1 de noviembre de 2026 (lectura del lunes 2 nov, 12:10 Bali)
+
+**Objetivo Q4.** 3.000 plazas (suelo) / 3.100 el 31 dic; ≥ 700 altas (oct ≥ 320, nov ≥ 240, dic ≥ 140). Quedan 60 días (hoy incluido; 8 semanas completas y 4 días). Octubre cerró con 261 altas (revisión mensual de hoy): para mantener 700 hacen falta 439 en noviembre y diciembre (7,3/día).
+
+**Plazas (base de producción, 2 nov).** 2.980 activas (contratadas y no finalizadas, con pausadas; 2.913 el 26 oct: +67).
+Faltan 20 para el suelo y 120 para el objetivo. Semana 26 oct–1 nov: 84 nuevas (12,0/día; semana anterior 90) y 28
+canceladas netas (4,0/día; la semana anterior, recalculada hoy, 44): los flujos dan +56 y el stock sube 67, casi cuadra
+por primera vez en tres semanas. Releído (segunda ejecución del script, mismas cifras): canceladas −36 % frente a la semana
+anterior. 39 cancelaciones ya programadas. Del 1 oct al 1 nov: 460 nuevas, 238 canceladas netas. Proyección con 1,65 plazas
+por alta y pérdida del 9,5–10,5 % mensual: si noviembre y diciembre cumplen 240 y 140 altas, el 31 dic queda en ≈ 2.970–3.030:
+el suelo está en el filo y el 3.100 no se alcanza sin bajar la pérdida (pausa larga, trimestral de BF). Pruebas: 122 en la
+semana (128 la anterior); por día 9, 25, 17, 15, 7, 30, 19. No presentados: 17 de 110 con resultado (15,5 %; anterior 16,8 %;
+trimestre 14,1 %). **Pruebas pagadas en Stripe: 85** (92 la anterior, −8 %): 26–29 oct de los diarios del proyecto de Meta
+(12, 12, 14, 11) y 30 oct–1 nov del conector de Stripe (13, 10, 13; listado de cargos en hora de Londres, mismo filtro que el
+script; 2 con `gclid`).
+
+**Altas (base de producción).** 50 familias con matrícula nueva en la semana (60 la anterior); 267 del 1 oct al 1 nov.
+Familias nuevas: 43 (30 la anterior, +43 %; releído: mismas cifras); 177 en el trimestre. Por el embudo: 43 familias nuevas
+sobre 92 pruebas pagadas de la semana anterior (47 %; la semana pasada 43 %). Bajas de familias (aprox.): 22 (31 la anterior),
+156 en el trimestre. **Noviembre:** objetivo 240 en 30 días = 8,0 altas/día (56/semana). Al ritmo de esta semana (7,1/día)
+cierra en ≈ 214 (−26); al ritmo de octubre (8,4/día), en ≈ 252.
+
+| Canal | Inversión 26 oct–1 nov | Ritmo mes / presupuesto | Resultado | Coste | Semana anterior | Clasificación |
+| --- | --- | --- | --- | --- | --- | --- |
+| Meta Ads | £3.355 (−7 %) | Oct cerrado £13.567 / £12.500 (+8,5 %) · nov: £582 el día 1 frente a £250/día del plan (£7.500) | 85 pruebas pagadas en Stripe · 68 compras píxel (incluye matrículas) · CTR del núcleo (= cuenta, sin cribados) 1,19 % · frecuencia ≤ 2,2 | **£39,5 / prueba pagada** (+1 %) · £49,3 / compra píxel | £3.601 · 92 pruebas · £39,1 | MANTENER a la baja (revisión de hoy: £7.500 en noviembre) |
+| Google Ads | £252 | Oct cerrado £1.254 / £1.500 · nov 1: £25 | 3,0 conversiones (marca 2,7; PMax 0,3) | £84 / conv. | £264 · 6 · £44 | MANTENER; EEUU exacta cortada (revisión de hoy) |
+| SEO | £0 | — | Clics de padres (A − B): 21 en la semana (20 la anterior); 1.071 clics totales de Search Console (1.219 la anterior) | — | 20 · 1.219 | ARREGLAR |
+| Email (Brevo) | £0 | — | Brevo: sin dato (no hay conector en la sesión programada); GA4: 55 sesiones, 15 conv. | — | 27 / 15 | CAMBIAR DE FUNCIÓN |
+| Referidos | £0 | — | Semana: 68 códigos nuevos, 3 amigos invitados, 5 pruebas (0 convertidas aún), 0 altas. 23 sep–1 nov: 549 familias con código, 7 amigos, 11 pruebas (3 convertidas), 2 altas (3 plazas), 2 recompensas | 30 $ de crédito por alta | 70 códigos · 0 amigos · 0 altas | ARREGLAR (2 de 25; primeras invitaciones tras el WhatsApp a embajadoras del 26 oct) |
+| Social orgánico | £0 | — | GA4: 36 sesiones, 23 conv. | — | 39 / 24 | MANTENER |
+| IA (ChatGPT, Gemini) | £0 | — | GA4: 57 sesiones, 33 conv. (la semana con más conversiones del trimestre) | — | 49 / 22 | MANTENER (desde la revisión de hoy) |
+
+CAC de medios (Meta + Google, base de producción):
+- por familia nueva: £83,9 en la semana (£3.607 / 43) y £87,2 del 1 oct al 1 nov (£15.428 / 177; octubre cerrado £86,7);
+- por alta: £72,1 en la semana (£3.607 / 50) y £57,8 en el trimestre (£15.428 / 267).
+La semana no es vara (compara el gasto de hoy con matrículas de pruebas de 1–3 semanas antes); la vara semanal es el coste
+por prueba pagada (£39,5, dentro de la banda £33–42 propuesta). El denominador y los umbrales del guardrail se deciden el
+5 nov (propuesta: familia nueva, subir < £80 / bajar > £100). Con cualquiera de las dos reglas, Meta no sube.
+
+Meta por campaña (26 oct–1 nov; CPA píxel): USA Prospecting ES £1.034, 18 (£57); FR Prospecting Compra de prueba £698, 8
+(£87; la semana anterior £383, 6); FR TEST Creativos ABO £542, 6 (£90; la anterior £717: −24 %, no a la mitad); USA TEST
+Conversión ES £488, 8 (£61); FR Prospecting Video1 £356, 22 (£16; 10,6 % del gasto, ≤ 30 %); ES Europa+AU pool £210, 5 (£42);
+FR AU+CA Compra de prueba £22, 0; USA TEST UGC ES £5, 1 (prácticamente parada, como pedía la revisión). CPM £15,6–18,5; CTR
+1,19 %. Gasto diario £379–582 (media £479): **el plan de noviembre es £250/día** y el 1 nov gastó £582. Si no se baja hoy,
+noviembre va a ≈ £14.000–17.000 frente a £7.500.
+
+Google por campaña: semana: Francés idioma inglés £84, 0 conv. (41 clics); PMax Español EN £69, 0,26 (140 clics); keywords EN
+£49, 0 (20 clics); Francés keywords FR £22, 0; Marca £17, 2,74; genérica ES £12, 0 (congelada; sin gasto desde el 29).
+14 días (19 oct–1 nov): Francés idioma inglés £162, 1 conv. (> £90: no sube); keywords EN £138, 2 (£69). Nuevas desde el
+23 oct (10 días): PMax £102, 0,26 conv. (la regla de la revisión, fuera si 0 conversiones con > £120, se cumple hacia el 3–4 nov);
+Francés keywords FR £40, 0. Lectura el 6 nov con 14 días.
+
+GA4 26 oct–1 nov (sesiones / conversiones): Paid Social 2.586 / 497; Direct 769 / 105; Organic Search 1.429 / 74; Paid Search
+259 / 34; AI Assistant 57 / 33; Organic Social 36 / 23; Email 55 / 15; Unassigned 59 / 12 (49 el domingo 1); Referral 182 / 11.
+Reparto de conversiones (806): Paid Social 62 %, Direct 13 %, Organic Search 9 %, Paid Search 4 %, AI 4 %, Email 2 %.
+
+SEO (para el panel de Bárbara): clics de padres con la métrica nueva (A − B, por página): 21 del 26 oct al 1 nov (44 − 23 de
+marca) y 20 la semana anterior; 104 en octubre (revisión mensual). Search Console total: 1.071 clics y 42.946 impresiones
+(31 oct y 1 nov aún incompletos).
+
+**Guardrails.** Meta: presupuesto de noviembre (£250/día) superado desde el primer día (£582); tests con CPA píxel > £80: FR
+ABO (£90) y FR Compra de prueba (£87, test con lectura el 16 nov) suman £1.240 (37 % del gasto); las pausas de tests > £80
+están aprobadas desde el 14 oct y la revisión de hoy pide el ABO a la mitad o fuera: se aplican en la rutina diaria de Meta.
+CAC de medios del trimestre £87,2 por familia nueva (> £65 y > £79) o £57,8 por alta: la regla dice bajar, y noviembre ya baja
+a £7.500. Coste por prueba pagada £39,5 (estable). CTR del núcleo 1,19 % (≥ 1,1 %); frecuencia ≤ 2,2 (≤ 3,5); Video1 FR 10,6 %
+(≤ 30 %). Google: genérica congelada; francés £162 por conversión en 14 días → no sube; EEUU exacta cortada; PMax y keywords
+FR sin 14 días (6 nov).
+
+**Foco de la semana.**
+1. **Meta tiene que bajar hoy a ≈ £250/día.** La semana gastó £3.355 (£479/día) y el 1 nov, £582; el plan de noviembre
+   (£7.500, aprobado el 14 oct y confirmado en la revisión de hoy) da £250/día. Cada día al ritmo actual son £230–330 de más.
+   Recortes ya decididos: UGC ES fuera (ya está a £5), FR ABO a la mitad o fuera (£542 / 6, £90), Video1 ≤ 30 %; la pausa de
+   tests > £80 está aprobada desde el 14 oct. Lo aplica el proyecto de Meta; aquí no se vuelve a pedir.
+2. **Noviembre arranca por debajo del ritmo:** 50 altas en la semana (7,1/día) frente a 8,0/día necesarias (≈ 214 al cierre,
+   −26). El cuello sigue siendo prueba → curso, no el volumen: 85 pruebas pagadas y 43 familias nuevas (47 %). Cadencia 0/3/10
+   sobre las 49 pruebas de jueves a domingo y lectura de la cesta abandonada: primera semana completa con el WhatsApp de 2 h
+   (punto de partida 65 % de cestas pagadas, objetivo 80 %).
+3. **Decisiones del 5 y 7 nov (revisión mensual):** denominador y umbrales del CAC; oferta de Black Friday para familias
+   nuevas y política de pausa larga (vencidas desde el 22 y el 20 oct; sin ellas, los emails de BF de Marta del 5 nov y la
+   pausa activa el 15 nov no tienen base); FLAM y schema de precios el 7 nov. Landing de curso directo: salía como muy tarde el
+   3 nov y nadie tiene asignada la landing ni el reembolso (vencido el 28 oct).
+4. **Marta:** el brief de vídeos de BF y los textos de la landing (su fecha, 31 oct) tienen margen hasta el jueves 5 nov; el
+   plan de BF y el informe "qué vende y qué no" ya pasaron su límite real (31 oct) sin confirmar. Si no han llegado, Lucia los
+   cierra esta semana: sin plan ni brief, Daniela y Morgane no llegan a los vídeos del 14 nov.
+5. **Lo que más cambió:** canceladas −36 % (28 frente a 44) y plazas +67 hasta 2.980, a 20 del suelo; IA, récord del
+   trimestre en conversiones (33 frente a 22); referidos se mueven por primera vez desde el email (3 invitaciones, 5 pruebas)
+   tras el WhatsApp a embajadoras.
+
+**Pendientes para Lucia** (Notion devolvió 404 a la integración; fechas de docs/planes/q4-seguimiento-objetivos-fechas-2026-10-14.md,
+la revisión mensual de hoy y docs/equipo/marta-plan-entregas.md).
+- Datos: pegar `STRIPE_API_KEY` (clave restringida de solo lectura) en `.env`: esta semana las pruebas pagadas salen de los
+  diarios de Meta y del conector (cuatro llamadas pesadas). Y volver a compartir la página Q4 2026 de Notion con la integración
+  (404 hoy y en la revisión mensual).
+- Hoy 2 nov: bajar Meta a ≈ £250/día (proyecto de Meta); pedir creativos de la tarjeta regalo; lectura de referidos (3
+  invitaciones y 5 pruebas en la semana, 2 altas de 25).
+- Esta semana: 3 nov landing de curso directo (sin responsable), textos del T1 y guion de la pausa larga, comparativa de
+  francés publicada (Bárbara); 5 nov decisiones de CAC, oferta de BF y pausa larga; 5 nov límite real del brief de vídeos y
+  textos de la landing de BF (Marta, su fecha 31 oct) y su fecha de los 5 emails de BF (límite 10 nov); 6 nov lectura de PMax y
+  keywords FR, artículo 2; 7 nov FLAM y schema, tarjeta regalo y landing, formación de la pausa larga (Victoria), páginas de
+  clases (Lucia).
+- Próxima semana (9–15 nov): 10 nov BF montado y probado (Marta; límite 14), emails de pausa navideña y trimestral (Marta;
+  límite 14), plan de enero de ventas; 12 nov email "hizo la prueba y no pagó" (Marta; límite 15); 13 nov T1 montado; 14 nov
+  todo probado; 15 nov pausa larga activa y regla de mitad de mes de Meta.
+- Vencidas: 20 oct política de pausa larga; 22 oct oferta de BF para familias nuevas; 24 oct confirmación 48 h de pruebas,
+  encargo al developer (sección 0) y marca HeySpanish; 28 oct quién hace la landing con garantía y el reembolso; 31 oct 6–8
+  creativos de Meta, estudio de plazas perdidas y especificación de medición en Stripe; desde el 15 oct, denominador del CAC
+  (se decide el 5 nov).
+
+**Marta.** Fechas de docs/equipo/marta-plan-entregas.md y de la copia del plan (Notion no se pudo leer); su tablero no se
+consulta; estado: lo confirma Lucia. Plan de Black Friday en una página (24 oct; límite 31 oct): consta un plan con tres
+ofertas del 22 oct; sin confirmar, límite pasado. Informe "qué vende y qué no" (28 oct; límite 31 oct): sin confirmar, límite
+pasado. Brief de vídeos de BF y textos de la landing (31 oct; límite 5 nov): estado sin confirmar, margen hasta el jueves.
+5 emails de BF en Brevo (5 nov; límite 10 nov): esta semana. Todo montado y probado y emails de pausa y trimestral (10 nov;
+límite 14 nov): próxima semana.
+
+**Bárbara.** Sin dato nuevo: seo-lunes no corrió el domingo 1 nov (la última entrada de docs/registros/seo-semanal.md es la de
+la semana 43). Su último bloque "Para el registro del lunes" (26 oct): 8 de unos 19 pasos marcados; A1 sin indexar y post de
+libros sin publicar; 19 contactos, 4 respuestas, 1 ficha con enlace y 0 enlaces de medios; FLAM reclama por su marca (decisión
+de Lucia el 7 nov). Dato de hoy: 21 clics de padres en la semana (métrica nueva), 104 en octubre (objetivo 110 en diciembre).
+
+**Avisos de datos.** Stripe: el script sigue sin `STRIPE_API_KEY`; las 85 pruebas pagadas combinan los diarios del proyecto de
+Meta (26–29 oct, 49) y el conector de Stripe (30 oct–1 nov, 36; 293 cargos leídos, mismo filtro). El gasto de Meta del 26 oct
+es £479 aquí y £469 en el diario (lectura anterior; < 2 %). Notion: 404 a la integración, se usa la copia del 14 oct. Brevo:
+sin conector en la sesión programada. Search Console: 31 oct y 1 nov incompletos. Las canceladas de semanas pasadas se siguen
+recalculando (semana 43: 49 → 44). "Plazas activas empezadas" del script (1.865) sigue sin usarse (probable fallo de fechas).
+Supermetrics devuelve cost sin moneda (GBP). El píxel cuenta matrículas como compras desde agosto.
+
 ## Semana 43 · del 19 al 25 de octubre de 2026 (lectura del lunes 26 oct, 09:40 Bali)
 
 **Objetivo Q4.** 3.000 plazas (suelo) / 3.100 el 31 dic; ≥ 700 altas (oct ≥ 320, nov ≥ 240, dic ≥ 140). Quedan 67 días (hoy incluido; 9 semanas completas y 4 días).
