@@ -171,11 +171,11 @@ proyectado; payback 2,8 meses.** Con la base de Stripe (CAC completo £72 por su
 Churn por antigüedad (1 may → 2 nov): 8,3 % (< 3 meses), 6,2 % (3–12), 4,5 % (> 12). Lo que empeora es el CAC, no el valor
 de la familia. Guardrail: < 3:1 a 12 meses con la base de producción → Meta no se escala.
 
-## 3. Canales: clasificación y presupuesto de noviembre (£9.000: Meta £7.500 + Google £1.500)
+## 3. Canales: clasificación y presupuesto de noviembre (£17.000 desde el 4 nov: Meta £13.500 + Black Friday £2.000 + Google £1.500; el plan decía £9.000)
 
 | Canal | Clasificación | Por qué | Noviembre |
 | --- | --- | --- | --- |
-| Meta Ads | **MANTENER (a la baja)** | CAC por familia nueva £86,7 > £65 y > £79; CTR del núcleo 1,17 % (≥ 1,1 %); Video1 FR 31 % del gasto (> 30 %); frecuencia ≤ 2,9; £38,2 por prueba pagada mejora | £7.500 como en el plan (−40 %; absorbe el −15 % de la regla). Dentro: cortar UGC ES (£725 / 11 en el mes, £194 por prueba Stripe); FR ABO a la mitad o fuera (£105 por compra en 14 días, 17 % del gasto FR); Video1 ≤ 30 %; Compra de prueba FR y USA Conversión siguen como tests con lectura el 16 nov. Fuerte hasta el 20 nov; después retargeting y ganadores |
+| Meta Ads | **MANTENER** | CAC Stripe £62,0 (< £65: mantener; por familia nueva de la base £86,7, contraste); CTR del núcleo 1,17 % (≥ 1,1 %); Video1 FR 31 % del gasto (> 30 %); frecuencia ≤ 2,9; £39,0 por prueba pagada mejora | **£13.500 (decidido el 4 nov; el plan decía £7.500)** + £2.000 de BF aparte. Dentro: cortar UGC ES (£725 / 11 en el mes, £194 por prueba Stripe); FR ABO a la mitad o fuera (£105 por compra en 14 días, 17 % del gasto FR); Video1 ≤ 30 %; Compra de prueba FR y USA Conversión siguen como tests con lectura el 16 nov. Fuerte hasta el 20 nov; después retargeting y ganadores |
 | Google Ads | **MANTENER** | £57 por conversión; keywords EN £56; francés £94 (> £90) | £1.500. EEUU exacta CORTAR (decisión de hoy); genérica congelada; francés sin subir; PMax y keywords FR se leen el 6 nov con 14 días (si 0 conversiones con > £120, fuera) |
 | SEO | **ARREGLAR** | 104 clics de padres (objetivo 110 en dic); 0 enlaces de medios de 8; A1 sin indexar | Sin presupuesto. Comparativa de francés 3 nov, A2 6 nov, A3 20 nov, "Diluu en 10 datos" 27 nov; encargo al developer (sección 0) sin desplegar |
 | IA (asistentes) | **MANTENER** (antes MEDIR) | 164 sesiones / 69 eventos; línea base 10 de 36 respuestas | Comparativa de francés y página de 10 datos; lectura 7 dic |
@@ -184,14 +184,14 @@ de la familia. Guardrail: < 3:1 a 12 meses con la base de producción → Meta n
 | Social orgánico | MANTENER | 246 sesiones / 110 eventos | — |
 | Leads | CORTAR (vigente) | — | — |
 
-Reasignación: ninguna hacia arriba. El dinero que sale de UGC ES y FR ABO (≈ £2.800 al ritmo de octubre) no se recoloca:
-noviembre baja a £7.500 y la regla de mitad de mes (15 nov) solo permite subir si el CAC de medios de 1–15 nov queda por
-debajo del umbral que decida Lucia.
+Reasignación (actualizada el 4 nov): Meta se queda al ritmo de octubre (£13.500) en vez de bajar a £7.500; lo que sale de UGC ES
+y FR ABO (≈ £2.800) va al núcleo ES y a FR Compra de prueba. Freno semanal: coste por prueba pagada de Meta > £46 dos
+semanas seguidas, o CAC Stripe del 1–15 nov > £65 → −15 %.
 
 ## 4. Lo que hay que tener en cuenta para el trimestre
 
 - **Altas:** 261 de 700. Faltan 439 en 59 días (8 semanas y 3 días): **52 a la semana**. Octubre hizo 59 a la semana con
-  £14.800 de paid; noviembre tendrá £9.000 y diciembre £4.500 con pausa desde el 22. Reparto necesario: nov ≥ 270, dic ≥ 170
+  £14.800 de paid; noviembre tendrá £17.000 (decidido el 4 nov) y diciembre £4.500 con pausa desde el 22. Reparto necesario: nov ≥ 270, dic ≥ 170
   (el plan decía 240 / 140 contando con 320 en octubre). Al ritmo de octubre: nov ≈ 250, dic ≈ 175 → ≈ 690. Con la
   estacionalidad de 2025 (nov −35 %, dic −60 % sobre oct): ≈ 600.
 - **Plazas:** 2.973; faltan 27 para 3.000 y 127 para 3.100. Al ritmo de octubre (1,72 plazas por alta, pérdida 8–9 %):

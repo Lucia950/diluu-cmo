@@ -66,6 +66,25 @@ era la propuesta alternativa con la base de producción, que queda como referenc
 tests y volver al núcleo**. Octubre (£86,7) → bajar; noviembre ya baja a £7.500. Si Lucia prefiere la base de Stripe (la del
 plan), los umbrales son los del 2 oct (£50 / £65) y octubre (£62) cae en "mantener".
 
+## 0 ter. Cómo sabremos si el LTV mejora (pregunta de Lucia, 4 nov)
+
+Los 7,3 meses solo se pueden medir en cohortes que ya han cumplido un año, así que la cifra se mueve despacio: cada revisión
+mensual añade la cohorte que acaba de cumplir 12 meses (la de nov-25 el 1 dic; hoy la de oct-25 da 7,6 meses, 231 días).
+Para ver la mejora antes, la revisión mensual publica estos indicadores adelantados de la tabla de la sección 1:
+
+| Indicador | Base (may–jul 2025) | Último dato (2 nov) | Lectura |
+| --- | --- | --- | --- |
+| Supervivencia al mes 1 | 90 % | sep-26 93 %, ago-26 93 % | mejor |
+| Supervivencia al mes 3 | 67–78 % (media 71 %) | jul-26 73 %, ago-26 81 % (provisional) | mejor |
+| Supervivencia al mes 6 | 54–59 % (media 56 %) | abr-26 59 % | igual |
+| Churn mensual < 3 meses de antigüedad | 9,0 % (11 oct) | 8,3 % | mejor |
+| Ingreso por familia y mes (Stripe) | £63 (2 oct) | £68,4 | mejor |
+
+Regla: el LTV12 se da por mejorado cuando la cohorte que cumple 12 meses supera los 7,3 meses, o cuando m3 y m6 de las
+cohortes nuevas superan el 71 % y el 56 % de la base dos meses seguidos. Si m3 de ago-26 se confirma en 81 % y m6 sigue
+≥ 59 %, el LTV12 de las familias que compramos hoy estaría en £270–290, no en £248. Pendiente (1 dic): sustituir los
+meses de calendario por meses facturados por familia en Stripe (facturas por cliente), que descuentan las pausas.
+
 ## 1. Cohorte y retención (base de producción, 2 nov)
 
 | Cohorte (primera matrícula) | Familias | 1 mes | 2 | 3 | 6 | 9 | 12 | Vivas el 2 nov |

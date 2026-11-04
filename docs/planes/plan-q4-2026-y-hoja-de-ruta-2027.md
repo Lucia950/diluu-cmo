@@ -212,6 +212,8 @@ El P&L no es el límite: septiembre cerró con £23.479 de EBITDA (19,8 %) y el 
 
 "Otro marketing" es la diferencia entre la línea de marketing del P&L y el paid (colaboradores, herramientas, contenido): £3,2k en julio, £6,7k en agosto y £3,7k en septiembre. El Q4 queda \~£4.600 por debajo del P&L.
 
+**Revisión del 4 nov 2026 (Lucia):** noviembre pasa de £9.000 a **£17.000** de paid (Meta £13.500 al ritmo de octubre + Black Friday £2.000 + Google £1.500). La estacionalidad de noviembre de 2025 no era demanda: Meta gastó £3,4k y cambió de objetivo. Detalle en docs/contexto/decisiones.md.
+
 **Regla de ajuste a mitad de mes:** si el CAC de medios por familia nueva del mes va por debajo de £50, Meta sube un 15 %; si va por encima de £65, baja un 15 %. Sin esperar al mes siguiente.
 
 **Cómo sale cada cifra**

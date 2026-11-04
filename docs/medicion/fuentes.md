@@ -106,6 +106,6 @@ conector falla ("connection invalidated"), reconectar desde ajustes de conectore
   por prueba). No incluye pruebas referidas (gratis).
 
 ## Plan Q4: cifras de referencia
-Presupuesto paid oct £14.000 (Meta 12.500 + Google 1.500), nov £9.000, dic £4.500. Altas objetivo
+Presupuesto paid oct £14.000 (Meta 12.500 + Google 1.500), nov £17.000 (Meta 13.500 + BF 2.000 + Google 1.500; decidido el 4 nov, antes £9.000), dic £4.500. Altas objetivo
 oct 300 / nov 220 / dic 120. Sep 2026: Meta £14.544 y 292 compras píxel (CPA £49,8); Google £1.709 y
 35 conversiones (£48,8); altas 359; familias nuevas 270; CAC medios/familia nueva £60,2.

@@ -21,7 +21,13 @@ Todo en libras con los tipos fijos de CLAUDE.md. Di siempre qué cohorte y qué 
 7. **LTV:CAC** con LTV12 de contribución y con LTV proyectado; **payback** = CAC completo ÷ margen
    de contribución mensual.
 8. Compara con el cálculo anterior (docs/analisis/) y con el panel CFO; explica cada diferencia.
-   Guardrail: LTV:CAC < 3:1 → el escalado de Meta queda en revisión.
+   Guardrail: LTV:CAC < 3:1 → el escalado de Meta queda en revisión. El ratio se calcula solo con el CAC de medios
+   por suscripción nueva viva de Stripe + £10 de ventas (Lucia, 4 nov 2026); el CAC de la base se anota como contraste.
+9. **Seguimiento del LTV (cada mes, desde nov 2026):** vida en el primer año con `scripts/retencion-familias.sh` para
+   todas las cohortes que ya tienen 12 meses (añade la nueva cada mes) y tabla de indicadores adelantados: supervivencia a
+   1, 3 y 6 meses de las últimas seis cohortes frente a la base may–jul 2025 (90 / 71 / 56 %), churn por antigüedad
+   (`--antiguedad` a 6 meses) y ARPU de Stripe (MRR trialing+active+past_due ÷ familias). El LTV12 mejora si la cohorte que
+   cumple 12 meses supera 7,3 meses o si m3 y m6 superan la base dos meses seguidos.
 
 Nota: el documento "unit-economics-2026-09 (v4.1)" del proyecto de claude.ai es la referencia
 completa del método; cópialo a docs/analisis/ cuando Lucia lo exporte.

@@ -1,5 +1,18 @@
 # Decisiones (más reciente arriba)
 
+- **2026-11-04** · Presupuesto de paid de noviembre (Lucia, OK): **£17.000** = Meta £13.500 (≈ £450/día, el nivel de octubre)
+  + Black Friday £2.000 aparte (24 nov–1 dic, templadas) + Google £1.500. Sustituye a los £9.000 del plan del 2 oct
+  (Meta £7.500), que se fijaron antes de ver octubre y con una estacionalidad de noviembre de 2025 que no vale (Meta gastó
+  £3,4k ese mes y cambió de objetivo). Motivos: coste por prueba pagada estable (£35,5–42,2 con £2.700–3.600 semanales),
+  CAC Stripe £62 (tope 3:1: £73; techo £100) y 439 altas pendientes para 700. Freno semanal: coste por prueba pagada de
+  Meta > £46 dos semanas seguidas, o CAC Stripe del 1–15 nov > £65 → −15 %. Enero sigue en £22.000. Trimestre: ≈ £36.300
+  de paid frente a £27.500 del plan, dentro de los £44.100 de marketing del P&L si "otro marketing" se queda en ≈ £12k.
+  **Seguimiento del LTV**: cada revisión mensual recalcula la vida en el primer año con las cohortes que ya tienen 12 meses
+  (noviembre añade la de nov-25) y publica los indicadores adelantados (supervivencia a 1, 3 y 6 meses de las últimas
+  cohortes frente a la base may–jul 2025, churn por antigüedad, ARPU de Stripe); el LTV12 "mejora" cuando la cohorte que
+  cumple 12 meses supera 7,3 meses o cuando m3/m6 de las nuevas superan 67 %/55 %. Pendiente para el 1 dic: meses
+  facturados por familia en Stripe (facturas por cliente) para sustituir los meses de calendario.
+
 - **2026-11-04** · LTV:CAC con un solo CAC (Lucia): el ratio y las decisiones se calculan solo con el CAC de medios por
   suscripción nueva viva de Stripe (+ £10 de ventas); octubre 3,4:1 a 12 meses (antes se daban dos: 2,6:1 con la base y
   3,4:1 con Stripe). El CAC por familia nueva de la base y el CAC por alta se anotan como contraste, sin ratio. LTV12 de
