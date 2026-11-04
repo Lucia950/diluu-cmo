@@ -45,3 +45,6 @@
   finales se editan después y los cambios de grupo dejan matrículas solapadas; el stock oficial es la lectura del día
   (`plazas_activas_hoy`) y las de los lunes. `course.language` no existe (el idioma está en `course.subject`).
   Las pruebas pagadas de Stripe no están en este script: con `STRIPE_API_KEY` usar la función de `semana-datos.cjs`.
+- **`conversion-cohortes.cjs`** (4 nov 2026): conversión prueba → curso por semana ISO de la prueba a 7, 14 y 30 días (solo
+  pruebas con esa antigüedad), no presentados y mezcla de idiomas; y por mes e idioma a 14 días. Sep 2026: 41,8 % a 14 d;
+  oct: 36,9 % (ES 35,3 %, FR 38,8 %). Pendiente de integrarlo en semana-datos.cjs (decisión del 2 nov).
