@@ -18,12 +18,19 @@ mes anterior y mismo mes de 2025:
   revisado, emparejados con su matrícula posterior). Bajas en los primeros 30 días de la cohorte.
 - SEO (clics de padres, pruebas desde páginas de padres, sesiones desde IA, artículos, enlaces:
   tablero y panel de Bárbara), email (altas por automatización),
-  referidos (altas con código), ventas (ventas válidas por código y enlaces de pago creados).
+  referidos (`scripts/referidos.sh` del mes: familias que invitan, pruebas y altas referidas, coste
+  por alta = crédito + incentivo al amigo; desde feb 2027, retención de las referidas frente al
+  resto), ventas (ventas válidas por código y enlaces de pago creados).
 - Tests activos del plan (Black Friday, pausa, tarjeta regalo, garantía) con su métrica de éxito.
 
 ## 2. Unit economics
 Ejecuta la skill unit-economics con el mes cerrado y guarda el resultado en
-docs/analisis/unit-economics-AAAA-MM.md. Comenta el cambio frente al mes anterior.
+docs/analisis/unit-economics-AAAA-MM.md. Comenta el cambio frente al mes anterior. Incluye el seguimiento del LTV
+(paso 9 de la skill: cohorte que cumple 12 meses e indicadores adelantados). **Desde el 1 dic 2026 (Lucia, 4 nov): meses
+facturados por familia en Stripe** en vez de meses de calendario: facturas pagadas (`GetInvoices`, `status paid`, por
+`created`, paginadas por el conector y procesadas con jq desde los ficheros) agrupadas por cliente para las cohortes de
+familias con 12 meses; meses pagados = facturas de suscripción pagadas en los 12 meses siguientes a la primera. Compara con
+los 7,3 meses de calendario y usa el dato facturado para el LTV12.
 
 ## 3. Canales
 Para cada canal, aplica clasificar-canal y propón la reasignación de presupuesto del mes que
@@ -34,6 +41,19 @@ empieza, con la regla de ajuste a mitad de mes (decisiones.md) y los guardrails 
 - Riesgos con cifra (pérdida de plazas, CAC, fatiga creativa, dependencia de un anuncio, Navidad).
 - Las 3 decisiones que Lucia debe tomar este mes, con fecha.
 - Entregas de Marta y Bárbara del mes (docs/equipo/) y las que se retrasaron.
+
+## 4 bis. Auditoría técnica de la web (scripts/auditoria-web.py)
+1. Search Console del mes cerrado (Supermetrics, ds GW, `["sc-domain:diluu.com"]`, settings `{"report_type":"STANDARD"}`):
+   `page,clicks,impressions` con filtro `impressions > 10`, `max_rows 2000` → escríbelo en
+   `data/gsc-paginas-AAAA-MM.csv` (page,clicks,impressions).
+2. Búsquedas ocultas en las páginas de clases, mismo mes, con el filtro A de los clics de padres (skill seo-lunes):
+   clics totales (A), clics de marca (B) y clics con `query == "(unknown)"` (C). Sin marca = A − B.
+3. `python3 scripts/auditoria-web.py --gsc data/gsc-paginas-AAAA-MM.csv --oculto C A−B` (≈ 75 s). Amplía
+   `scripts/auditoria-urls-historicas.csv` (va al commit) y escribe `data/auditoria-web-AAAA-MM-DD.md`.
+4. En la revisión, sección «Salud de la web»: cuántos problemas por apartado frente al mes anterior y los 10 más
+   importantes por clics. Lo que sea del developer (redirecciones, enlaces, páginas de clases) se añade al encargo
+   abierto (docs/analisis/encargo-developer-paginas-clases-2026-10.md o uno nuevo con fecha) con su tabla; lo de
+   WordPress, a Lucia. Una redirección que esté así a propósito va a `scripts/auditoria-excepciones.txt` con motivo.
 
 ## 5. Salidas
 docs/registros/revision-mensual-AAAA-MM.md (secciones 1–4, cifras con fuente), decisiones nuevas a

@@ -1,5 +1,14 @@
 # Decisiones (más reciente arriba)
 
+- **2026-11-04** · Diciembre 2026, propuesta de ads (pendiente del OK de Lucia): docs/planes/ads-diciembre-2026.md. Datos de la
+  Navidad de 2025: con Meta apagado (£68 en todo diciembre) hubo 56 pruebas y 25 altas; la demanda volvió el 29 dic (33 reservas,
+  £1.695) y desde el 5 ene 120 reservas/semana a £33–36 por compra del píxel, el coste más bajo del año; apagar no costó
+  aprendizaje. Propuesta: £150/día del 1 al 13 dic solo núcleo, tarjeta regalo £500, £100/día de mantenimiento del 14 al 25
+  ("reserva tu prueba de enero" + retargeting), relanzamiento £2.000 del 26 al 31 subiendo un 20 %/día hacia los £700/día de
+  enero; Google £1.000 con genérica y PMax paradas del 15 al 26. Total ≈ £6.700 (plan £4.500). Decisión final el 1 dic con la
+  conversión a 14 días de noviembre (si < 35 %, 1–13 dic a £100/día). Pendiente también desde el 4 nov: meses facturados por
+  familia en Stripe en la revisión del 1 dic (añadido a la skill revision-mensual).
+
 - **2026-11-04** · Presupuesto de paid de noviembre (Lucia, OK): **£17.000** = Meta £13.500 (≈ £450/día, el nivel de octubre)
   + Black Friday £2.000 aparte (24 nov–1 dic, templadas) + Google £1.500. Sustituye a los £9.000 del plan del 2 oct
   (Meta £7.500), que se fijaron antes de ver octubre y con una estacionalidad de noviembre de 2025 que no vale (Meta gastó
