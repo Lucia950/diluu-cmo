@@ -1,5 +1,72 @@
 # Decisiones (más reciente arriba)
 
+- **2026-11-04** · LTV:CAC con un solo CAC (Lucia): el ratio y las decisiones se calculan solo con el CAC de medios por
+  suscripción nueva viva de Stripe (+ £10 de ventas); octubre 3,4:1 a 12 meses (antes se daban dos: 2,6:1 con la base y
+  3,4:1 con Stripe). El CAC por familia nueva de la base y el CAC por alta se anotan como contraste, sin ratio. LTV12 de
+  contribución £248 = 7,3 meses de vida en el primer año (cohortes may–jul 2025, base de producción, tiempo entre la
+  primera y la última clase con tope de 365 días, incluye pausas) × £34 de contribución mensual (ARPU Stripe £68,4 × 55 %
+  tras profes − £3,45 de soporte). Aviso: si las pausas no se cobran, 7,3 meses de calendario sobreestiman los meses
+  pagados; pendiente de medir meses facturados por familia en Stripe. Noviembre 2025 no sirve de referencia estacional:
+  Meta gastó £3,4k (−60 % frente a octubre) y cambió de objetivo (CPM £5–7, 24 compras, £143 por compra).
+
+- **2026-11-03** · Enlaces internos desde las páginas con más tráfico (Lucia dio el OK a tocar los mapas): no hace falta. Las
+  tres páginas de mapas ya enlazan 3 veces cada una a su página de clases con el texto de la búsqueda de compra, y los
+  13 posts con más sesiones orgánicas de octubre también (1–3 enlaces cada uno). La palanca está agotada. Diagnóstico de
+  los clics de padres (Search Console, ago–oct 2025 frente a 2026): la caída está en las páginas en español, que
+  perdieron su tráfico con el cambio de URL de abril de 2026 (antiguas /es/spanish-classes-for-kids/,
+  /es/spanish-for-kindergartners/ y literacy-from-scratch: ≈ 208 clics en ago–oct 2025; las nuevas, ≈ 15 en ago–oct 2026).
+  Se recuperan desde que las redirecciones se arreglaron (clases ES: 49 → 148 → 253 impresiones de ago a oct).
+  /french-classes-for-kids/ sube de 80 a 424 clics. /spanish-classes-for-kids/ nunca ha posicionado para búsquedas
+  genéricas (posición 40–80 también en 2025).
+
+- **2026-11-02** · WordPress, hecho con Claude in Chrome (Lucia, OK): las redirecciones de /referidos-diluu/,
+  /referrals-diluu/ y /programme-de-parrainage/ (plugin Redirection; llevaban a formularios de Google cerrados, 668, 472
+  y 512 visitas acumuladas) van ahora a https://students.diluu.com/referrals (panel de familias). Las páginas de WordPress
+  «French» (/fr/french/, cuya redirección la hace el servidor) y las tres de referidos pasan a borrador: salen del sitemap
+  de Yoast y las redirecciones siguen. La portada /fr/ es estática y no cambia. auditoria-web --rapido: 200 URLs, todas
+  200. Encargo al developer en un solo prompt: FLAM, llms.txt (hoy lo genera el plugin Hostinger Tools con 2 URLs que dan
+  404) y sameAs del schema Organization (docs/analisis/encargo-dev-2026-11-02-flam-llms-schema.md; faltan las URLs de
+  Instagram, Facebook y LinkedIn). Fichas públicas (2 nov): Google Maps ya sin dirección, 108 reseñas, 5,0, pero sigue
+  enlazando a heyspanish.com; Trustpilot (94 reseñas, 4,9, «no ha pedido reseñas recientemente») y Yelp siguen con
+  178 Webheath, NW6. Bing Webmaster Tools: sin verificar (ni DNS, ni fichero, ni etiqueta).
+
+- **2026-11-02** · SEO, segunda tanda (Lucia, 17:00 Bali):
+  (1) **FLAM: se quita de toda la web y no se vuelve a nombrar nunca** (textos, metas, schema, menús, URL; tampoco
+  «Français Langue Maternelle»). /fr/cours-flam-en-ligne/ pasa a /fr/francais-pour-enfants-bilingues/ con 301; hoy
+  15 páginas y 61 menciones, y el menú de todas las páginas FR. Encargo al developer: docs/analisis/encargo-dev-flam-2026-11.md.
+  Bárbara contesta hoy a FLAM Dublin (texto en su tarjeta: retirada antes del vie 6 nov) y confirma cuando esté en la web;
+  Parapluie FLAM pasa a Rechazado (sin seguimientos). El menú del blog FR (74 ficheros) lo cambia Claude desde el repo del
+  blog cuando la URL nueva esté publicada.
+  (2) **«Pregúntale a Peter»** en la herramienta SEO Diluu (v40), en honor a Peter Lead: chat con Claude (capacidad sample)
+  con el plan, las reglas (`D.peter.reglas`) y el paso o la tarjeta. Marca, dinero, terceros, accesos y cambios de plan
+  van «para Lucia» (colección `preguntas`; Lucia contesta en la pestaña Semana).
+  (3) **10 búsquedas de compra** (`D.compra`, pestaña Datos), cada una con una sola página; todos los enlaces internos y
+  externos de Bárbara van a esa página. Posición semanal en seo-lunes. La comparativa de español del 7 dic rehace
+  /blog/best-online-spanish-courses-for-kids/, que es la URL que Google enseña para «online spanish classes for kids».
+  (4) Herramienta: plan por estado (el A2, publicado el 29 oct, ya no pide publicarse), campos de precios en el paso de la
+  comparativa que entran solos en el texto, columna «a quién recomienda cada IA» en las preguntas, brief del A3 con mapa
+  de búsquedas (la versión FR no se toca: 201 impresiones, posición 19,6). Reseñas de Google al mes, métrica de ops.
+
+- **2026-11-02** · SEO de Bárbara, auditoría de la semana 44 (Lucia, 16:00 Bali):
+  (1) **Objetivos nuevos de Bárbara**: sesiones desde asistentes de IA 220 al mes en diciembre (antes 150; octubre 164–171)
+  y Diluu en 14 de 36 respuestas de las IA en diciembre (línea base 30 oct: 10 de 36; Gemini 0 de 12, prioridad). Enlaces:
+  10 fichas de directorio + 3 menciones en podcasts o medios (antes 8 enlaces de medios). Las fichas cuentan como presencia
+  (citas), no como enlaces: de las 4 «conseguidas», solo Mum's Guide To lleva un enlace visible (nofollow); KidsActivities.ie
+  solo enlaza en Premium (no se paga) y ActivityHero lo carga con JavaScript. Clics de padres (110 en dic) queda como métrica
+  del equipo, que depende sobre todo de las páginas de clases (Lucia). Bárbara ve también lo que trae el canal: pruebas
+  pagadas de origen orgánico en Stripe (octubre: 100 de 348; incluye búsquedas de marca y asistentes).
+  (2) Pieza libre de la semana del 7 dic: comparativa de clases de español online para niños (equivalente a la de francés).
+  (3) **Los briefs y todas las comprobaciones previas los hace Claude** (búsquedas que trae el post y cuáles conserva o se
+  mueven a otra URL, canibalización, enlaces, datos), siempre antes de encargarle nada a Bárbara y según lo que haya que
+  publicar; no se espera al domingo anterior. El brief del A3 se hace ahora.
+  (4) El plan de la herramienta avanza por el estado de cada pieza, no por la fecha: si ya está publicada, salta a revisión.
+  La herramienta guía para que lo que Bárbara averigua (precios de la comparativa, a quién citan las IA) entre directamente
+  en el texto del artículo o del brief, no para guardarlo aparte. Las capturas de las IA no se guardan.
+  (5) Redes: Bárbara tiene acceso al Instagram de Learn with Diluu y usa su Facebook personal para los mensajes por otra vía.
+  (6) BiliKids: sí al Zoom con Lucia; se reserva en https://caluu.diluu.com/VNKv8VsEGkgTsBPb1hHg6QvE (vale para cualquier
+  reunión de enlaces).
+  (7) Los 5 enlaces internos del 22 oct están publicados (commit aa309ff del blog, 30 oct). Respuesta a Bárbara publicada en la herramienta el 2 nov (respuestas/2026-11-02).
+
 - **2026-11-02** · Guardrail del CAC de Meta, decidido (Lucia, 13:10 Bali): **la base es Stripe**, como en el plan del 2 oct.
   Denominador = suscripciones creadas en el mes y vivas al cierre (una por familia; leídas por el conector, `GetSubscriptions`
   con `created` del mes y estado `trialing`/`active`/`past_due`). Umbrales del plan: CAC de medios < £50 → Meta +15 %;

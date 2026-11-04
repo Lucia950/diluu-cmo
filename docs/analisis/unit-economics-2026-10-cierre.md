@@ -38,7 +38,7 @@ de octubre es £62 (≈ objetivo); con la base de producción, £86,7 (+45 %).
   −23 % frente a septiembre con pruebas pagadas casi iguales), no el valor de la familia.
 
 
-## 0 bis. CAC máximo que soportan las campañas (pregunta de Lucia, 2 nov)
+## 0 bis. CAC máximo que soportan las campañas (pregunta de Lucia, 2 nov; el 4 nov Lucia fija que el ratio se calcula solo con el CAC de Stripe)
 
 Base: contribución £34 por familia y mes (ARPU Stripe £68,4 × 55 % tras profes − £3,45 de soporte), LTV12 de contribución
 £248, LTV proyectado £495–560, coste de ventas £10 por familia nueva. CAC de medios = CAC completo − £10. Todo por familia
