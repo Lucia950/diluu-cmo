@@ -1,5 +1,38 @@
 # Decisiones (más reciente arriba)
 
+- **2026-11-09** · SEO de Bárbara, semana 45 y herramienta v41 (Lucia, mediodía Bali):
+  (1) **Preguntas a Bárbara por la herramienta, no por Slack**: bloque «Preguntas para ti» en Hoy (colección `preguntasLucia`;
+  cada pregunta con su campo de respuesta y botón «Pedir ayuda a Peter», que responde con el contexto de la herramienta). Lucia
+  escribe las suyas desde el mismo bloque; Claude las escribe por la base; la rutina seo-lunes lee las respuestas. Primeras 12 el
+  9 nov: artículo 2 en «cambios» (84/100: los 5 cambios son menores, Claude da el «listo» cuando sepamos qué la frenó), los tres
+  directorios pasados a Rechazado el 6 nov (020.co.uk, Homeschool Hub Utah y Online Homeschool Curriculum Directory tienen alta
+  gratuita), Hoop, Happity, FLAM Dublin (respuesta final sin confirmar envío), Connection First y Spanish Mama (sin seguimiento
+  desde el 19 oct), Growing Up Bilingual (125 $: no se paga), cómo hizo la línea base de las IA, The Raising Bilinguals y El Ibérico.
+  (2) **Método fijo para las preguntas a las IA** (paso del viernes y guía): ChatGPT y Perplexity en incógnito y sin sesión; Gemini
+  con una cuenta de Google creada solo para esto y la actividad desactivada; nunca la cuenta de Diluu ni la de Bárbara (con memoria,
+  el asistente sabe que quiere oír «Diluu»); una conversación nueva por pregunta; anotar cuenta y país. Si la línea base del 30 oct
+  (10 de 36) se hizo con sesión, se repite. La métrica que decide sigue siendo GA4 (sesiones y eventos clave desde asistentes).
+  (3) **El Ibérico**: Lucia da declaraciones. Paco de la Coba (fundador y director del periódico gratuito en español de Londres,
+  2010; hoy digital) pidió el 6 nov la propuesta a su correo: respuesta redactada en la tarjeta, Bárbara la envía el lunes 9 a
+  director@eliberico.com. Propuesta editorial (reportaje sobre niños que entienden español pero no lo hablan, test gratuito); si
+  contestan con tarifas, se cierra.
+  (4) Instagram: Lucia da acceso a Bárbara el 10 nov (desde Meta Business Suite no podía iniciar conversaciones). La Tundra, los
+  seguimientos parados por Instagram y Hoop pasan al martes.
+  (5) El brief del artículo 3 se escribió en local el 3 nov y no se publicó hasta hoy (la rutina seo-lunes del 9 nov se interrumpió
+  en un permiso): Bárbara no lo veía. Publicado en la v41 con las 10 búsquedas de compra. Pendiente: pasar seo-lunes a rutina en la
+  nube (domingo 20:00 Bali = 12:00 UTC) y una rutina diaria que avise a Lucia por Slack de las respuestas de colaboraciones.
+
+- **2026-11-04** · WhatsApp de cesta abandonada a las 2 h: **funciona desde hoy, 4 nov** (Lucia), no desde el 24–25 oct como
+  decían el registro de la semana 43 y la revisión de octubre. Los cuatro workflows de n8n («Cestas › abierta», «2 h sin
+  pagar», «pagada», «nos escribe») se publicaron el 4 nov a las 12:18 Bali; plantilla `curso_directo_dudas_<idioma>`;
+  **la tarea de Kommo a las 24 h no está montada**. Lucia pide su efectividad en los próximos informes: entra en
+  registro-semanal (bloque "Cesta abandonada") y en revision-mensual, con `scripts/cestas.cjs` (fuentes.md). Se mide por
+  familia, no por pedido: **línea base sin WhatsApp (sem. 40–44) 90,4 % de las familias que abren cesta de curso directo
+  acaban pagando; de las 39 que seguían sin pagar a las 2 h, 24 (61,5 %) pagaron solas después**. El margen real del
+  WhatsApp son ≈ 3 familias por semana (las 15 de 39 que no volvieron), no "una de cada tres" como sugería el 68 % por
+  pedido de Stripe (que mezcla reintentos de la misma familia). Efecto = recuperadas tarde − 61,5 % × abiertas a las 2 h;
+  nada que concluir antes de 4 semanas (≈ 1 dic). Análisis: docs/analisis/cesta-abandonada-linea-base-2026-11-04.md.
+
 - **2026-11-04** · Diciembre 2026, propuesta de ads (pendiente del OK de Lucia): docs/planes/ads-diciembre-2026.md. Datos de la
   Navidad de 2025: con Meta apagado (£68 en todo diciembre) hubo 56 pruebas y 25 altas; la demanda volvió el 29 dic (33 reservas,
   £1.695) y desde el 5 ene 120 reservas/semana a £33–36 por compra del píxel, el coste más bajo del año; apagar no costó

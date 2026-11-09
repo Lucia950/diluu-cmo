@@ -2,6 +2,79 @@
 
 Lo escribe la skill seo-lunes (domingo por la noche, hora de Bali). Entrada más reciente arriba.
 
+## Semana 45 (2–8 nov 2026) · preparado el lunes 9 nov, 13:00 hora de Bali (WITA, UTC+8), a mano
+
+La rutina seo-lunes del domingo no dejó registro: Lucia la lanzó el lunes 9 a las 09:22 Bali y se interrumpió en un permiso.
+Esta entrada la escribe Claude en la sesión del CMO con los datos de la herramienta (base del artefacto), Search Console y GA4.
+**No hecho de la rutina:** correos redactados para los 10 sitios nuevos de «Por contactar» (uno duplicado: LCA News = Le Courrier
+Australien), refresco de los datos `D.*` del panel y «Pendientes de días anteriores» revisados.
+
+### Qué hizo Bárbara (base del artefacto, `dias`)
+- 17 pasos marcados, como la semana anterior: lun l1–l5; mar e21, e22, m3, m4; mié x1; jue e43, j1, j2; vie v1, v3, v4, v6.
+- No hechos: x2 (ofrecer el artículo 2 a tres sitios), La Tundra y los mensajes por Instagram (sin acceso), Hoop.
+- URLs guardadas y comprobadas con curl el 9 nov (`verificaciones`): comparativa de francés (enlaza 4 veces a las páginas de
+  francés); 3 posts enlazan al artículo 2 (online-language-classes-vs-apps ES, family-activities ES y EN); 2 posts FR enlazan a
+  las páginas de francés (livres-francais, francais-vs-espagnol). Todo 200.
+- Notas: lun 2 «ME FALTA AÑADIRLOS» con los 10 candidatos (los añadió el vie 6); mar 3 reenvió revisiones del A2 buscando 100 y
+  lo dejó en «cambios»; jue 5 comparativa indexada, «no encuentro el brief del artículo 3», «ESTANCADA CON INSTAGRAM»; vie 6 nota vacía.
+
+### Resultados
+| Métrica | Sem. 45 (2–8 nov) | Sem. 44 | Fuente |
+| --- | --- | --- | --- |
+| Clics de padres (páginas de clases, prueba y precios, sin marca) | 37 (1.552 impr.) | 21 (1.254) | Search Console, filtros A−B |
+| Clics totales A / marca B | 79 / 42 | — | Search Console |
+| Sesiones desde asistentes de IA (1–8 nov) | 65 (ChatGPT 59, Gemini 6) · 18 eventos clave | octubre: 164 / 69 | GA4 |
+Ritmo de IA 8 sesiones/día frente a 5,3 en octubre: noviembre apunta a ≈ 240, por encima del objetivo nuevo (220). Los dos
+últimos días de Search Console pueden subir aún. Búsquedas que empiezan a dar clics: «clases de español para niños de 3 a 5 años»
+(pos. 9, /es/espanol-para-preescolar/), «cours de français pour enfants de 7 ans» (pos. 5 y pos. 1 en la página FR de clases).
+
+### Publicaciones y revisiones
+- Comparativa de francés (/blog/online-french-classes-for-kids/): publicada el 3 nov, revisión 88/100 y «listo» el 5 nov, indexada.
+- Artículo 2 (apps): publicado el 29 oct, revisión 84/100 el 3 nov en «cambios» con 5 cambios menores (uno «mantener», uno
+  opcional, tres de una línea). Sigue sin «listo» ni indexación confirmada. Pregunta abierta a Bárbara (qué la frenó); Claude da
+  el «listo» en cuanto conteste.
+- Brief del artículo 3 (mi hijo entiende español pero no lo habla, EN+ES, 20 nov): escrito el 3 nov en local y **sin publicar
+  hasta hoy** (ni Peter ni Bárbara lo veían el 5 nov). Publicado en la v41 con las 10 búsquedas de compra. Esta semana: borrador.
+
+### Enlaces (tablero, 57 tarjetas)
+- Fichas conseguidas 5 de 10 (Mum's Guide To, KidsActivities.ie, ActivityHero, French Morning y Yell, las dos últimas el 6 nov) +
+  perfil en Qwoted. 11 seguimientos 1 enviados (2 y 5 nov) y 6 mensajes por otra vía.
+- Respuestas: El Ibérico (Paco de la Coba pide la propuesta a su correo; Lucia da declaraciones; respuesta redactada el 9 nov),
+  Growing Up Bilingual (125 $ por el enlace: no se paga; respuesta que declina redactada el 5 nov, envío sin confirmar).
+- En negociación: BiliKids (falta mandar el enlace de reuniones caluu). FLAM Dublin: web limpia desde el 3 nov, respuesta final
+  sin confirmar envío.
+- Pasados a Rechazado el 6 nov sin motivo: 020.co.uk, Homeschool Hub Utah y Online Homeschool Curriculum Directory (los tres con
+  alta gratuita; el último, prioridad alta con 8 competidoras dentro). Preguntado a Bárbara uno a uno.
+- Sin seguimiento desde el 19 oct: Connection First y Spanish Mama. Happity contactada el 6 nov (falta el acceso de proveedor).
+
+### Preguntas a Peter (11, 2 para Lucia)
+Siete de enlaces (destinatarios y asuntos de OFTP, Mezzoguild, El Ibérico y Mommy Poppins; dónde dejar los sitios; si el paso de
+sitios es solo listados gratis; correo de The Raising Bilinguals, que no envió por parecerle inseguro), una de revisión (de dónde
+salen las URLs del A2) y dos para Lucia: no encuentra el brief del A3. Patrón: casi todo está escrito en la propia tarjeta.
+Peter contestó bien y sin inventar.
+
+### Herramienta: v41 (9 nov)
+- Bloque **«Preguntas para ti»** en Hoy (colección `preguntasLucia`): Lucia o Claude preguntan ahí, Bárbara contesta en el día y
+  puede pedir ayuda a Peter, que responde con el contexto de la herramienta. 12 preguntas abiertas el 9 nov (A2, 3 directorios,
+  Hoop, Happity, FLAM Dublin, Connection First y Spanish Mama, Growing Up Bilingual, línea base de las IA, The Raising Bilinguals,
+  El Ibérico). La rutina lee las respuestas.
+- **Método fijo de preguntas a las IA** en el paso del viernes y en la guía: incógnito y sin sesión (ChatGPT, Perplexity); Gemini con
+  cuenta de Google creada solo para esto y actividad desactivada; nunca la cuenta de Diluu ni la de Bárbara; una conversación por
+  pregunta; anotar cuenta y país. Si la línea base del 30 oct se hizo con sesión, se repite.
+- Reglas de Peter ampliadas con las dos cosas anteriores.
+
+### Semana 46 (9–13 nov): «Artículo 3, borrador»
+- Lun: contestar a El Ibérico (texto en la tarjeta), declinar Growing Up Bilingual, respuesta final a FLAM Dublin, enlace caluu a
+  BiliKids, seguimiento 1 a Connection First y Spanish Mama, seguimiento 2 a los correos del 19 oct; leer el brief del A3;
+  contestar las 12 preguntas de «Preguntas para ti». Contactos nuevos solo con correo redactado (hoy no lo tienen).
+- Mar: La Tundra, Hoop y los mensajes parados por Instagram (Lucia da el acceso el 10 nov); borrador del A3 (EN primero).
+- Mié: borrador ES y revisión en frío. Jue: repaso con el brief y seguimientos. Vie: France-Amérique (edición de febrero), nota.
+- Arrastrado: «listo» e indexación del artículo 2.
+
+### Pendientes para Lucia
+- Acceso a Instagram para Bárbara (10 nov). Declaraciones para El Ibérico si Paco acepta (48 h). Decidir si seo-lunes pasa a
+  rutina en la nube (domingo 20:00 Bali = 12:00 UTC) y si se crea la rutina diaria de avisos por Slack de colaboraciones.
+
 ## Semana 44 (26 oct–1 nov 2026) · preparado el lunes 2 nov, 14:00 hora de Bali (WITA, UTC+8)
 
 **Pasos y notas de Bárbara** (colección `dias`): marcó 17 pasos, los cinco días con nota (la semana anterior marcó 8 de unos 19).
