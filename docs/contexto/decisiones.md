@@ -8,7 +8,9 @@
   al entorno `diluu-meta-ads` (`env_01A831JhorxPeR4m7FtQue1q`), que sí abre diluu.com y la web; Lucia da acceso a la app de
   Claude a `Lucia950/diluu-cmo` (hecho desde su Chrome, con código de GitHub, y sincronizado en claude.ai); el prompt indica
   partir siempre del fichero de datos vivo del artefacto y completar la entrada de la semana si ya existe. La rutina local del
-  domingo (`seo-lunes-diluu`) se desactiva cuando la nube lleve dos domingos bien. Regla: no publicar la herramienta desde
+  domingo (`seo-lunes-diluu`) ya está desactivada (comprobado el 9 nov, 22:00 Bali): no hay riesgo de que las dos publiquen
+  el mismo domingo; se reactiva solo si la nube falla. Search Console en Supermetrics volvió a responder a las 22:00 Bali sin
+  reconectar: el fallo de las 15:00 fue pasajero. Regla: no publicar la herramienta desde
   local sin leer antes la versión viva del fichero de datos (la nube puede ir por delante del repo).
   **Resultado (20:45–20:55 Bali)**: segunda ejecución en el entorno nuevo, todo correcto en 9 minutos: artefacto v46
   (1794228821-65ef), registro de la semana 45 completado sin duplicar, sitemaps 200/200, las 12 URL publicadas verificadas,
