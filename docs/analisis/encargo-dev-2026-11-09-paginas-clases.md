@@ -165,10 +165,19 @@ Lo que se puede cerrar sin Lucia (comprobado en la web o en la API el 9 nov):
 - **Precio de la prueba en el title EN**: la página dice «€3 or $4». Recomendación: quitar el precio del title («Online
   Spanish Classes for Kids (4–12) | Live, Small Groups | Diluu») y dejarlo en la meta: «Trial class €3 or $4».
 
-Lo que solo puede confirmar Lucia:
-- «La mayoría de nuestras familias viven en EE. UU. o Reino Unido» (son los dos mercados principales; la cifra exacta,
-  por moneda de Stripe, no está publicada). Alternativa sin cifra: «Gran parte de nuestras familias viven allí».
-- Franjas horarias por zona («tardes y fines de semana para Reino Unido, Irlanda, EE. UU. y Australia»): si no es así,
-  dejar solo «los horarios se muestran en tu zona horaria».
-- Equipo necesario (ordenador o tableta con cámara y micrófono, conexión estable): es lo lógico, pero no está en la web.
-- Si las clases de 10–12 años duran más de 30 minutos.
+Confirmado por Lucia (9 nov, 21:40 Bali). Textos definitivos para las marcas que quedaban:
+- **Familias en EE. UU. y Reino Unido**: no se afirma «la mayoría». FAQ ES: «¿Sirve si vivimos en Estados Unidos o en
+  Reino Unido? → Sí: gran parte de nuestras familias viven allí. Las clases se dan por videollamada y los horarios se
+  muestran en tu zona horaria.»
+- **Franjas horarias**: fuera la frase de «tardes y fines de semana por zona». En el bloque de ciudades (EN y ES) el P2
+  queda solo: «Class times are shown in your time zone.» / «Los horarios se muestran en tu zona horaria.»
+- **Equipo**: FAQ ES «¿Qué necesitamos en casa? → Un ordenador o tableta con cámara y micrófono, y una conexión estable.»
+  EN: «What do we need at home? → A computer or tablet with a camera and microphone, and a stable connection.» (Lo del
+  adulto cerca ya está en la FAQ actual de menores de 6; no se repite aquí.)
+- **Duración**: todas las clases de principiantes duran 30 minutos; las de 10–12 años de nivel intermedio, 45. FAQ ES:
+  «¿Con qué frecuencia son las clases? → Contratas 1, 2 o 3 clases a la semana (recomendamos 2). Las clases duran 30
+  minutos; las de 10 a 12 años de nivel intermedio, 45.» EN: «How often are the classes? → You book 1, 2 or 3 classes a
+  week (we recommend 2). Classes last 30 minutes; intermediate groups aged 10–12 have 45-minute classes.»
+Con esto no queda ninguna marca [CONFIRMAR] abierta: las demás están resueltas arriba (grupo de máximo 6, 4 en
+principiantes y preescolar; meta ES de 155 caracteres; preescolar 4–6 años; FAQ de 3 años con el texto actual; informes de
+progreso sin cifra; reseñas a /reviews/; ciudades por GA4; title EN sin precio y «Trial class €3 or $4» en la meta).
