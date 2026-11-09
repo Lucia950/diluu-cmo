@@ -58,7 +58,7 @@ Cuenta GW `["sc-domain:diluu.com"]`, settings `{"report_type":"STANDARD"}`; GA4 
 1. **Clics de padres por mes** (métrica desde el 26 oct 2026; decisión de Lucia): clics a las páginas de clases, de
    prueba y de precios **por página, sin la dimensión de búsqueda** (así entran las búsquedas que Google oculta, que en
    una web pequeña son la mayoría), **menos** los clics de marca visibles en esas mismas páginas. Dos consultas
-   `Yearmonth,clicks,impressions`, del 26 de junio de 2025 (límite de Search Console) al domingo:
+   `Yearmonth,clicks,impressions`, del 9 de julio de 2025 (Supermetrics no lee Search Console antes de esa fecha; comprobado el 9 nov 2026) al domingo:
    - A (todo): filtro `page =~ "classes-for-kids|online-language-classes-[0-9]|cours-de-francais|cours-despagnol|cours-de-langues|clases-de-espanol|clases-de-frances|clases-de-idiomas|espanol-para|espagnol-pour|frances-para|lectoescritura|literacy|lire-et-ecrire|heritage|kindergartners|cours-flam|how-much-do-online|cuanto-cuestan|/trial-|clase-de-prueba|cours-dessai" AND page !~ "near-me|online-spanish-classes-for-kids-usa|/blog/online-french|/blog/online-spanish"`
    - B (marca): el mismo filtro `AND query =~ "diluu|dilluu|dillu|diilu|dilu|hey ?spanish"`
    Clics de padres = A − B (y lo mismo con las impresiones) → `D.meses`, `D.clics`, `D.impresiones` (el mes en curso

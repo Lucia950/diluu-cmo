@@ -10,6 +10,12 @@
   partir siempre del fichero de datos vivo del artefacto y completar la entrada de la semana si ya existe. La rutina local del
   domingo (`seo-lunes-diluu`) se desactiva cuando la nube lleve dos domingos bien. Regla: no publicar la herramienta desde
   local sin leer antes la versión viva del fichero de datos (la nube puede ir por delante del repo).
+  **Resultado (20:45–20:55 Bali)**: segunda ejecución en el entorno nuevo, todo correcto en 9 minutos: artefacto v46
+  (1794228821-65ef), registro de la semana 45 completado sin duplicar, sitemaps 200/200, las 12 URL publicadas verificadas,
+  correo de Hoop redactado, push a main (e735f02, 795c362). Lo único que el entorno no abre son los dominios de terceros
+  (sitios de outreach y competencia): decisión pendiente de Lucia, abrir la red del entorno `diluu-meta-ads` o dejar que
+  Bárbara verifique cada contacto antes de enviar (las tarjetas ya lo avisan). La skill cambia la fecha de inicio de la
+  serie mensual a 2025-07-09 (Supermetrics no lee Search Console antes).
 
 - **2026-11-09** · Meta en noviembre (Lucia, 18:30 Bali, tras el registro de la semana 45): **se acepta el ritmo real, ≈ £15.400**
   (£514/día del 1 al 8 nov) en vez de volver a los £450/día (£13.500) del 4 nov. Motivo: coste por prueba pagada £32,6 (108 pruebas,
