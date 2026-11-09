@@ -136,3 +136,39 @@ foto real.
 7. Nada roto: widget de precios con moneda, botón de prueba (ES a /trial-sp/ sin parámetro; EN a /trial-sp/?lang=en),
    canonical y hreflang iguales que hoy.
 ```
+
+## Respuestas a las marcas [CONFIRMAR] (9 nov, 21:30 Bali; fuentes: páginas vivas de diluu.com, API de precios, GA4)
+
+Lo que se puede cerrar sin Lucia (comprobado en la web o en la API el 9 nov):
+- **Tamaño de grupo**: máximo 6 niños por clase; 4 en los grupos de principiantes y en preescolar (4–6 años). La frase
+  «grupos de máximo 4» del hero y la meta ES era un error del encargo: sustituir por «grupos de máximo 6 niños (4 en los
+  grupos de principiantes)». En preescolar sí es «máximo 4».
+- **Meta ES** (155 caracteres): «Español en directo para niños de 4 a 12 años de familias hispanohablantes en EE. UU.,
+  Reino Unido y Europa. Grupos de máximo 6, profes nativas. Prueba 3 €.»
+- **Frecuencia y duración**: la familia contrata 1, 2 o 3 clases a la semana (la API recomienda 2); las clases duran
+  30 minutos (es lo que dice la web para todas las edades desde los 4 años). Si los grupos de 10–12 duran más, lo dice
+  Lucia; si no, «30 minutos».
+- **Adulto cerca**: la FAQ actual ya lo dice: para menores de 6, un adulto cerca en las primeras sesiones; a partir de 6,
+  suelen participar más solos. Usar ese texto.
+- **Edad de preescolar**: 4 a 6 años, máximo 4 niños, 30 minutos (página actual).
+- **¿Y si tiene 3 años?**: la página ya responde: con 3 años todavía no; recomendamos el canal de YouTube de Diluu y
+  empezar las clases al cumplir 4.
+- **Informes de progreso**: la página ya anuncia «Informes de progreso: seguimiento periódico para los padres». FAQ:
+  «Recibes informes de progreso periódicos de la profesora y puedes ver su evolución en el panel de familias», sin cifra
+  de frecuencia (no está publicada).
+- **Reseñas**: «Leer más» → https://diluu.com/reviews/ (existe, 200).
+- **56 países**: cifra que ya está en las tres páginas (contador); se conserva donde esté.
+- **Ciudades** (GA4, 11 ago–8 nov, eventos clave por ciudad): Londres 752, Nueva York 234, Los Ángeles 172, Dublín 134,
+  Sídney 130, Bath 126, Miami 97, Melbourne 91, Chicago 88, Houston 83, Seattle 75, Boston 60, Bristol 47, Birmingham 46,
+  Mánchester 26; más de 60 ciudades con 5 o más eventos clave. Texto: «Londres, Nueva York, Los Ángeles, Dublín, Sídney,
+  Miami y más de 50 ciudades» (EN igual). Son eventos clave de la web, no familias contadas: proxy aceptable para la frase.
+- **Precio de la prueba en el title EN**: la página dice «€3 or $4». Recomendación: quitar el precio del title («Online
+  Spanish Classes for Kids (4–12) | Live, Small Groups | Diluu») y dejarlo en la meta: «Trial class €3 or $4».
+
+Lo que solo puede confirmar Lucia:
+- «La mayoría de nuestras familias viven en EE. UU. o Reino Unido» (son los dos mercados principales; la cifra exacta,
+  por moneda de Stripe, no está publicada). Alternativa sin cifra: «Gran parte de nuestras familias viven allí».
+- Franjas horarias por zona («tardes y fines de semana para Reino Unido, Irlanda, EE. UU. y Australia»): si no es así,
+  dejar solo «los horarios se muestran en tu zona horaria».
+- Equipo necesario (ordenador o tableta con cámara y micrófono, conexión estable): es lo lógico, pero no está en la web.
+- Si las clases de 10–12 años duran más de 30 minutos.
