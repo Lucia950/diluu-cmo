@@ -1,8 +1,10 @@
 # Decisiones (más reciente arriba)
 
 - **2026-11-09** · Google Ads: **PMax se corta** (Lucia, 22:15 Bali; £186 y 1,3 conversiones en 17 días, lectura del registro de
-  la semana 45). La pausa se ejecuta desde el proyecto GOOGLE ADS (en el CMO `manage_campaign` está en las reglas deny) y se
-  anota allí; el presupuesto liberado se queda sin reasignar hasta la lectura de PMax y keywords FR prevista.
+  la semana 45). La campaña «PMax - Español - EN (prueba)» (24381629181, £10/día) **ya estaba en pausa desde las 11:07 Bali del
+  9 nov** (la pausó la revisión semanal de Google Ads); la sesión abierta a las 22:30 lo comprobó sin escribir nada y dejó
+  constancia en el proyecto GOOGLE ADS (`informes/2026-11-09-pmax-pausada.md`, commit da5367d). Genérica, Francés y Francés
+  FR sin cambios. Los £10/día liberados se quedan sin reasignar hasta la lectura prevista de PMax y keywords FR.
 
 - **2026-11-09** · seo-lunes se queda en la nube (Lucia, 20:30 Bali). La primera ejecución (lanzada a mano a las 19:52 Bali)
   hizo todo lo que depende de datos (Supermetrics, hoja, base del artefacto, 6 correos y 3 registros redactados, fichero de
