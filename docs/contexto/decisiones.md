@@ -1,5 +1,11 @@
 # Decisiones (más reciente arriba)
 
+- **2026-11-09** · Meta en noviembre (Lucia, 18:30 Bali, tras el registro de la semana 45): **se acepta el ritmo real, ≈ £15.400**
+  (£514/día del 1 al 8 nov) en vez de volver a los £450/día (£13.500) del 4 nov. Motivo: coste por prueba pagada £32,6 (108 pruebas,
+  el mejor del trimestre) y CAC Stripe 1–8 nov £57,5, en banda. Los £2.000 de Black Friday (24 nov–1 dic) siguen aparte; noviembre
+  total ≈ £18.900 (Meta 15.400 + BF 2.000 + Google 1.500). Frenos vigentes: coste por prueba > £46 dos semanas seguidas o CAC Stripe
+  del 1–15 nov > £65 → −15 %. Pendiente de Lucia: el corte de PMax en Google (£186 / 1,3 conv. en 17 días).
+
 - **2026-11-09** · Revisión de la estrategia SEO y herramienta v42 (Lucia, 17:00 Bali; análisis en
   docs/analisis/seo-revision-estrategia-2026-11-09.md):
   (1) **Qué convierte** (GA4, 11 ago–8 nov, Organic Search + AI Assistant, eventos clave): mapas 10.800 sesiones → 11; blog

@@ -101,7 +101,7 @@ concluye nada; lectura con 4 semanas (≈ 1 dic).
 
 **Pendientes para Lucia** (Notion devolvió 404 otra vez a la integración 1f8d872b…: fechas de
 docs/planes/q4-seguimiento-objetivos-fechas-2026-10-14.md, decisiones.md y docs/equipo/marta-plan-entregas.md).
-- Hoy 9 nov: Meta a £450/día o aceptar £15.400 (foco 1); OK o no al corte de PMax (foco 4); mirar en n8n si «Cestas › 2 h sin
+- Hoy 9 nov: **Meta: Lucia acepta ≈ £15.400 (decidido a las 18:30 Bali; decisiones.md)**; OK o no al corte de PMax (foco 4); mirar en n8n si «Cestas › 2 h sin
   pagar» corrió (0 ejecuciones vistas por la API); compartir la página Q4 2026 de Notion con la conexión de Claude (tercera
   semana en 404).
 - Esta semana (9–15 nov): 10 nov límite real de los 5 emails de BF (Marta); 10 nov plan de enero de ventas; 10 nov Marta: todo
