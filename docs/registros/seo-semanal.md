@@ -2,12 +2,12 @@
 
 Lo escribe la skill seo-lunes (domingo por la noche, hora de Bali). Entrada más reciente arriba.
 
-## Semana 45 (2–8 nov 2026) · preparado el lunes 9 nov, 13:00 hora de Bali (WITA, UTC+8), a mano
+## Semana 45 (2–8 nov 2026) · preparado el lunes 9 nov, 13:00 hora de Bali (WITA, UTC+8), a mano; completado por la rutina en la nube a las 19:52 y 20:45 Bali
 
 La rutina seo-lunes del domingo no dejó registro: Lucia la lanzó el lunes 9 a las 09:22 Bali y se interrumpió en un permiso.
 Esta entrada la escribe Claude en la sesión del CMO con los datos de la herramienta (base del artefacto), Search Console y GA4.
-**No hecho de la rutina:** correos redactados para los 10 sitios nuevos de «Por contactar» (uno duplicado: LCA News = Le Courrier
-Australien), refresco de los datos `D.*` del panel y «Pendientes de días anteriores» revisados.
+Lo que a las 13:00 quedaba sin hacer (correos de «Por contactar», refresco de `D.*`, salud de la web, comprobación de lo publicado) lo
+completó la rutina en la nube por la noche: ver «Completado por la rutina en la nube» más abajo.
 
 ### Qué hizo Bárbara (base del artefacto, `dias`)
 - 17 pasos marcados, como la semana anterior: lun l1–l5; mar e21, e22, m3, m4; mié x1; jue e43, j1, j2; vie v1, v3, v4, v6.
@@ -21,8 +21,8 @@ Australien), refresco de los datos `D.*` del panel y «Pendientes de días anter
 ### Resultados
 | Métrica | Sem. 45 (2–8 nov) | Sem. 44 | Fuente |
 | --- | --- | --- | --- |
-| Clics de padres (páginas de clases, prueba y precios, sin marca) | 37 (1.552 impr.) | 21 (1.254) | Search Console, filtros A−B |
-| Clics totales A / marca B | 79 / 42 | — | Search Console |
+| Clics de padres (páginas de clases, prueba y precios, sin marca) | 38 (1.625 impr.; a las 13:00 se leyeron 37 / 1.552) | 21 (1.254) | Search Console, filtros A−B, lectura de las 20:45 |
+| Clics totales A / marca B | 80 / 42 (impresiones 3.167 / 1.542) | — | Search Console, 2–8 nov |
 | Sesiones desde asistentes de IA (1–8 nov) | 65 (ChatGPT 59, Gemini 6) · 18 eventos clave | octubre: 164 / 69 | GA4 |
 Ritmo de IA 8 sesiones/día frente a 5,3 en octubre: noviembre apunta a ≈ 240, por encima del objetivo nuevo (220). Los dos
 últimos días de Search Console pueden subir aún. Búsquedas que empiezan a dar clics: «clases de español para niños de 3 a 5 años»
@@ -71,9 +71,49 @@ Peter contestó bien y sin inventar.
 - Mié: borrador ES y revisión en frío. Jue: repaso con el brief y seguimientos. Vie: France-Amérique (edición de febrero), nota.
 - Arrastrado: «listo» e indexación del artículo 2.
 
+### Completado por la rutina en la nube (lunes 9 nov, 19:52 y 20:45 Bali)
+- Panel refrescado (`D.*`, v45 a las 19:52 y v46 a las 20:53, versión 1794228821-65ef): Search Console del 9 jul 2025 al 8 nov 2026 (Supermetrics ya no deja
+  leer antes del 9 jul 2025; jun–jul 2025 se quedan con la lectura del 26 oct), GA4 del 1 al 8 nov, las 30 búsquedas a 90 días
+  (11 ago–8 nov), la serie de las 10 búsquedas de compra (semana del 2 nov: «cours de français pour enfants de 7 ans» pos. 5;
+  «cours de français en ligne pour enfants» pos. 48; «quelles sont les meilleures classes de français…» pos. 1,5; «online french
+  classes for kids» pos. 50; las otras 6 no salieron con su página asignada), «Qué páginas convierten» (90 días) y los resultados de
+  lo publicado hasta el 8 nov (la comparativa: 5 impresiones, posición 5, 6 días; el A1 completa sus 28 días el 16 nov).
+- Clics de padres definitivos de la semana: **38 (1.625 impresiones)**; Search Console 2–8 nov, A 80 clics / 3.167 impr. menos
+  marca B 42 / 1.542. Del 1 al 8 nov: 40 (1.847), frente a 110 de objetivo mensual en diciembre.
+- Salud de la web (`auditoria-web.py --rapido`, 20:45 Bali): **200 URLs de los sitemaps, todas 200**.
+- Lo publicado, con curl desde la nube (20:45 Bali): las 7 URL de la tabla de resultados y las 5 que guardó Bárbara el 4 y el 6 nov
+  (enlaces al artículo 2 y a las páginas de francés) responden 200, con title, una H1, canonical propia, sin noindex, sin LOROPEPE
+  ni «prueba gratis», y con 4–14 enlaces a páginas de clases o al artículo 2 cada una.
+- Enlaces: 13 tarjetas en «Por contactar»: **10 con correo redactado** (6 nuevas del 6 nov redactadas el 9: Bilingual Kidspot, Français
+  à Londres, France-Amérique · French Education Guide, Melbourne Accueil, SBS en español y Spanish Playground; La Tundra, The Raising
+  Bilinguals y SourceBottle ya lo tenían; Hoop, redactado a las 20:50: pedir a organisers@hoop.co.uk que la ficha antigua de HeySpanish
+  pase a Diluu) y 3 directorios con pasos de registro (Enrichment.kids, Modulo y The Homeschool Mom). LCA News pasó a Rechazado con
+  motivo (duplicado de Le Courrier Australien). **Los 6 sitios nuevos y los 3 directorios no se pudieron abrir desde la nube** (el
+  entorno solo resuelve diluu.com): cada tarjeta pide a Bárbara confirmar correo o formulario antes de enviar.
+- Brief del artículo 3: ya está en la herramienta (BRIEFS[3], 10.500 caracteres) con el mapa de búsquedas del 9 may al 8 nov: los dos
+  posts casi no tienen búsquedas visibles y las dos objetivo tienen 0 impresiones; el artículo las gana desde cero.
+- «Preguntas para ti»: las 12 del 9 nov siguen abiertas a las 20:45 Bali (Bárbara empieza a las 09:00 de Chile = 21:00 Bali). Ninguna
+  respuesta de «¿qué te frenó?» todavía. Hoja de búsquedas sin cambios desde la mañana: `D.queries` conserva los estados de la v42.
+
 ### Pendientes para Lucia
-- Acceso a Instagram para Bárbara (10 nov). Declaraciones para El Ibérico si Paco acepta (48 h). Decidir si seo-lunes pasa a
-  rutina en la nube (domingo 20:00 Bali = 12:00 UTC) y si se crea la rutina diaria de avisos por Slack de colaboraciones.
+- Acceso a Instagram para Bárbara (10 nov). Declaraciones para El Ibérico si Paco acepta.
+- Entorno de la nube `diluu-meta-ads`: abre diluu.com pero **no los dominios de terceros** (bilingualkidspot.com, francaisalondres.com,
+  france-amerique.com, melbourneaccueil.com, sbs.com.au, spanishplayground.net, enrichment.kids, joinmodulo.com, thehomeschoolmom.com):
+  la rutina no puede verificar contactos nuevos ni leer a la competencia para los briefs. Decidir: ampliar la lista de dominios del
+  entorno (o quitar la restricción) o dejar esa verificación a Bárbara antes de enviar (lo que dicen hoy las tarjetas).
+- Skill seo-lunes: la consulta mensual fija arranca el 26 jun 2025 y Supermetrics la rechaza (Search Console solo desde el 9 jul 2025);
+  cambiar la fecha de inicio en la skill a 2025-07-09 (la rutina lo resolvió a mano esta vez).
+- Artículo 2 en «cambios» desde el 3 nov (6 días, 84/100): Claude da el «listo» en cuanto Bárbara conteste la pregunta 1 de
+  «Preguntas para ti».
+- Comprobar que el push de esta rutina llegó a `main` de Lucia950/diluu-cmo (el de las 19:52 se quedó en la sesión).
+
+### Para el registro del lunes
+- SEO sem. 45: clics de padres 38 (1.625 impr.; sem. 44: 21); 1–8 nov 40 frente a 110 de objetivo mensual; sesiones desde IA 1–8 nov
+  65 (18 eventos clave), ritmo ≈ 240/mes, por encima del objetivo de 220.
+- Bárbara: 17 pasos; comparativa de francés publicada, «listo» 88/100 e indexada; artículo 2 en «cambios» desde el 3 nov; fichas 5 de
+  10 (+ French Morning y Yell); El Ibérico pide propuesta (respuesta redactada); 13 tarjetas por contactar listas (10 con correo).
+- Semana 46: borrador del artículo 3 (brief en la herramienta), La Tundra, Hoop e Instagram el martes, 12 preguntas en «Preguntas para
+  ti» por contestar; la rutina en la nube funcionó salvo el acceso a dominios de terceros (pendiente de Lucia).
 
 ## Semana 44 (26 oct–1 nov 2026) · preparado el lunes 2 nov, 14:00 hora de Bali (WITA, UTC+8)
 

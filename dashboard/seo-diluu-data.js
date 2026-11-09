@@ -14,7 +14,7 @@ const A2 = fase => ({ ...briefDe(2), n: 2, nombre: "Artículo 2: las mejores app
   kw: [["¿cuáles son las mejores aplicaciones para aprender español para niños?","ES",66,10.2],["mejores aplicaciones para aprender español para niños","ES",9,10.0],["mejores aplicaciones para aprender español niños","ES",5,10.0],["aplicaciones para niños en español","ES",5,5.4],["best spanish app for kids","EN",46,40.3],["spanish app for kids","EN",29,57.0],["spanish apps for kids","EN",28,29.3],["spanish for kids app","EN",24,58.1],["spanish learning apps for kids","EN",18,58.6],["best spanish learning app for kids","EN",16,36.1],["what are the most effective spanish learning apps for kids?","EN",13,9.3],["best app to learn spanish","EN",9,10.2]], aviso: "Búsquedas de Search Console del 26 abr al 25 oct 2026 que ya traen estos dos posts (sin marca ni las automáticas \"children spanish language app\"; en inglés se suman las del principal y las del duplicado). El duplicado /blog/best-spanish-learning-app-for-kids-2/ ya redirige (301) al principal (comprobado el 26 oct): no hay que pedir nada al developer; Google irá pasando sus impresiones al principal." });
 const A3 = fase => ({ ...briefDe(3), n: 3, nombre: "Artículo 3: mi hijo entiende español pero no lo habla", fase, fecha: "20 nov", idiomas: ["EN","ES"], tema: "qué hacer cuando un niño que crece fuera entiende el español pero contesta siempre en inglés: por qué pasa y qué funciona en casa", busqueda: "my child understands spanish but won't speak", otras: ["understand spanish but can't speak it", "spanish for heritage speakers kids"], busqueda2: "mi hijo entiende español pero no lo habla", match: ["artículo 3"],
   existe: ["diluu.com/blog/spanish-for-kids-who-understand-but-wont-speak-it/", "diluu.com/es/blog/clases-de-espanol-para-ninos-que-entienden-pero-no-lo-hablan/"],
-  kw: [["understand spanish but can't speak it","EN",2,53.5],["my daughter doesn't know this word in spanish","EN",5,33.6]], aviso: "Los dos posts tienen 204 (EN) y 173 (ES) impresiones en seis meses, casi todas con la búsqueda oculta. La versión FR (201 impresiones, posición 19,6) no se toca." });
+  kw: [["entienden","ES",10,45.3],["español niños","ES",3,28.3],["my daughter doesn't know this word in spanish","EN",5,33.6],["understand in spanish","EN",3,97.7]], aviso: "Search Console, 9 may–8 nov 2026, sin marca y con más de 2 impresiones: los dos posts casi no tienen búsquedas visibles (Google las oculta); las que salen son sueltas. Las búsquedas objetivo («my child understands spanish but won't speak», «mi hijo entiende español pero no lo habla») tienen hoy 0 impresiones: el artículo las tiene que ganar desde cero. La versión FR (201 impresiones, posición 19,6) no se toca." });
 const A4 = fase => ({ ...briefDe(4), n: 4, nombre: "Artículo 4: enseñar francés a niños en casa", fase, fecha: "4 dic", idiomas: ["ES","EN"], tema: "cómo enseñar o mantener el francés de un niño en casa cuando la familia vive fuera de un país francófono, por edades", busqueda: "cómo enseñar francés a niños", otras: ["enseñar francés"], busqueda2: "how to teach kids french at home", match: ["artículo 4"],
   existe: ["diluu.com/es/blog/how-teach-kids-french-at-home/", "diluu.com/blog/how-teach-kids-french-at-home/"],
   kw: [["cómo enseñar francés a niños","ES",40,11.5],["enseñar frances","ES",22,39.4],["how to teach kids new languages","EN",15,11.2],["how to teach kids french","EN",2,60.5]] });
@@ -25,9 +25,9 @@ const EX_COMPARATIVA_PUB = {"dia": 2, "t": "Publica la comparativa de francés",
 // Revisión SEO de la comparativa ya publicada (flujo del 28 oct: publicar → informe de la página → «listo» → indexar).
 const EX_COMPARATIVA_REV = {"dia": 2, "t": "Revisión SEO de la comparativa publicada, hasta que diga «listo»", "min": 20, "como": "<p>En la sesión del blog pega este texto con la URL de la comparativa: Claude te da el <b>informe de la página publicada</b>. Pégalo entero aquí debajo y pulsa <b>Revisar con Claude</b>. Si pide cambios, aplícalos, vuelve a publicar y revisa otra vez. Pide la indexación cuando diga «listo».</p>", "prompt": "informe", "rev": "enviar", "pz": "comparativa", "gate": "comparativa", "guia": "articulo"};
 const D = {
-  actualizado: "2026-11-02",
-  queriesPeriodo: "12 meses hasta el 2 nov (hoja). Desde el 15 nov: últimos 90 días",
-  compraSerie: {},
+  actualizado: "2026-11-08",
+  queriesPeriodo: "últimos 90 días hasta el 8 nov (11 ago–8 nov 2026, Search Console; búsqueda exacta, sin variantes)",
+  compraSerie: { "2026-11-02": [5, 48, 1.5, null, null, null, null, null, null, 50] },
   convPaginas: { periodo: "11 ago – 8 nov 2026 (90 días), GA4 425989233, canales Organic Search + AI Assistant; eventos clave, no pruebas pagadas", filas: [
     ["/french-classes-for-kids", 494, 202, "página de clases FR"],
     ["/fr/cours-de-francais-pour-enfants-en-ligne", 157, 37, "página de clases FR"],
@@ -50,56 +50,56 @@ const D = {
     ["/es/blog/how-to-teach-your-child-spanish-at-home-free", 9, 0, "artículo 1 ES"],
     ["/blog/best-spanish-learning-app-for-kids + ES", 8, 1, "artículo 2"]
   ] },
-  periodo: "Actualizado el 2 de noviembre de 2026 · Search Console hasta el 1 nov (los dos últimos días aún pueden subir algo) y GA4 de octubre completo",
+  periodo: "Actualizado el 9 de noviembre de 2026 (rutina en la nube, 20:00 y 20:45 Bali) · Search Console hasta el 8 nov (los dos últimos días aún pueden subir algo) y GA4 del 1 al 8 nov",
   objetivos: [
-    {"k": "Posts rehechos (dos idiomas)", "v": 2, "meta": 4, "fecha": "4 dic", "d": "Artículo 1 (ES, EN y FR) indexado el 26–27 oct. Artículo 2 (apps), publicado el 29 oct en ES y EN: esta semana se revisa la página publicada hasta el «listo» y se indexa. Artículo 3 (entiende pero no habla): brief listo, se escribe del 9 al 13 nov"},
+    {"k": "Posts rehechos (dos idiomas)", "v": 2, "meta": 4, "fecha": "4 dic", "d": "Artículo 1 (ES, EN y FR) indexado el 26–27 oct. Artículo 2 (apps), publicado el 29 oct en ES y EN: revisión 84/100 en «cambios» desde el 3 nov; contesta en «Preguntas para ti» qué te frenó y Claude da el «listo». Artículo 3 (entiende pero no habla): brief en la pieza de esta semana; borrador del 9 al 13 nov, publicar del 16 al 20"},
     {"k": "Posts que ya existen, mejorados", "v": 1, "meta": 2, "fecha": "dic", "d": "Libros en español para niños: publicado el 26 oct, OK de Lucia el 28 oct; falta pedir la indexación. Series en español (posición 31), semana del 14 dic"},
-    {"k": "Menciones en podcasts o medios", "v": 0, "meta": 3, "fecha": "31 dic", "d": "Nuevo objetivo (2 nov): sustituye a «8 enlaces de medios». BiliKids (podcast) quiere una reunión con Lucia: es el primer «sí». Las tarjetas nuevas salen de páginas que ya recomiendan clases como las nuestras"},
-    {"k": "Fichas en directorios", "v": 3, "meta": 10, "fecha": "31 dic", "d": "Cuentan como presencia (Google y las IA nos conocen), no como enlaces. Publicadas: Mum's Guide To (único enlace visible, nofollow), ActivityHero (el enlace va con JavaScript) y KidsActivities.ie (la gratuita no enlaza; no se paga el Premium). 020, Yell, French Morning, Online Curriculum Directory y Homeschool Hub Utah se comprueban el 3 nov. Quedan Happity y Hoop"},
+    {"k": "Menciones en podcasts o medios", "v": 0, "meta": 3, "fecha": "31 dic", "d": "Nuevo objetivo (2 nov): sustituye a «8 enlaces de medios». BiliKids (podcast) quiere una reunión con Lucia: es el primer «sí» (falta mandarle el enlace de reuniones). El Ibérico (Paco de la Coba) pidió la propuesta el 6 nov: la respuesta está en la tarjeta. Las tarjetas nuevas salen de páginas que ya recomiendan clases como las nuestras"},
+    {"k": "Fichas en directorios", "v": 5, "meta": 10, "fecha": "31 dic", "d": "Cuentan como presencia (Google y las IA nos conocen), no como enlaces. Publicadas: Mum's Guide To (único enlace visible, nofollow), ActivityHero (el enlace va con JavaScript), KidsActivities.ie (la gratuita no enlaza; no se paga el Premium), French Morning y Yell (las dos el 6 nov). Quedan Happity (contactada el 6 nov) y Hoop (correo redactado el 9 nov para pasar la ficha antigua de HeySpanish a Diluu). 020, Homeschool Hub Utah y Online Curriculum Directory pasaron a Rechazado el 6 nov sin motivo: pregunta abierta en «Preguntas para ti». Tres directorios nuevos con pasos de registro desde el 9 nov: Enrichment.kids, Modulo y The Homeschool Mom"},
     {"k": "Respuestas de las IA en las que sale Diluu", "v": 10, "meta": 14, "fecha": "dic", "d": "Línea base (30 oct): 10 de 36 respuestas (12 preguntas × 3 asistentes). ChatGPT 5 de 12 (todas en el top 3), Perplexity 5 de 12 y Gemini 0 de 12: Gemini es la prioridad (tira del índice de Google, de la ficha de Google y de las reseñas)"},
-    {"k": "Sesiones desde IA al mes", "v": 164, "meta": 220, "fecha": "dic · 300 en mar", "d": "Octubre: 164 sesiones y 69 eventos clave (ChatGPT 139, Gemini 22, Perplexity 2, Copilot 1) · septiembre: 135 / 44. Objetivo de diciembre subido de 150 a 220 el 2 nov. /french-classes-for-kids es la página que más recibe"},
+    {"k": "Sesiones desde IA al mes", "v": 164, "meta": 220, "fecha": "dic · 300 en mar", "d": "1–8 nov: 65 sesiones y 18 eventos clave (ChatGPT 59, Gemini 6), 8 al día frente a 5,3 en octubre: el mes apunta a ≈ 240. Octubre: 164 sesiones y 69 eventos clave (ChatGPT 139, Gemini 22, Perplexity 2, Copilot 1) · septiembre: 135 / 44. Objetivo de diciembre subido de 150 a 220 el 2 nov. /french-classes-for-kids es la página que más recibe"},
     {"k": "Pruebas pagadas que llegan por Google y las IA", "v": 100, "meta": null, "fecha": "octubre", "d": "Stripe: 100 de las 348 clases de prueba pagadas de octubre (29 %) llegaron por búsqueda orgánica (Google, Bing y asistentes de IA). Es la segunda fuente después de Meta (180) y casi cuatro veces Google Ads (27). Incluye a quien busca «Diluu» después de ver un anuncio"},
-    {"k": "Clics de padres al mes (equipo)", "v": 104, "meta": 110, "fecha": "dic · 150 en mar", "d": "Métrica del equipo: depende sobre todo de las páginas de clases, que lleva Lucia. Tus enlaces internos y externos a las 10 búsquedas de compra la empujan. Octubre: 104 · septiembre: 101 · octubre de 2025: 143. Semana 26 oct–1 nov: 21"}
+    {"k": "Clics de padres al mes (equipo)", "v": 104, "meta": 110, "fecha": "dic · 150 en mar", "d": "Métrica del equipo: depende sobre todo de las páginas de clases, que lleva Lucia. Tus enlaces internos y externos a las 10 búsquedas de compra la empujan. Octubre: 104 · septiembre: 101 · octubre de 2025: 143. Semana 2–8 nov: 38 (1.625 impresiones; la anterior, 21). 1–8 nov: 40"}
   ],
-  meses: ["jun 25","jul","ago","sep","oct","nov","dic","ene 26","feb","mar","abr","may","jun","jul","ago","sep","oct"],
-  clics: [16,163,173,202,143,95,63,119,83,103,95,79,56,108,101,101,104],
-  impresiones: [2877,17293,16419,13454,8260,7409,5503,7116,5595,6154,2981,2590,2825,2829,3444,5011,5485],
-  iaMeses: ["ene 26","feb","mar","abr","may","jun","jul","ago","sep","oct"],
-  iaSesiones: [0,0,0,0,0,23,15,30,135,164],
-  convMeses: ["ene 26","feb","mar","abr","may","jun","jul","ago","sep","oct"],
-  conv: [0,1,0,1,1,0,1,8,145,140],
+  meses: ["jun 25","jul","ago","sep","oct","nov","dic","ene 26","feb","mar","abr","may","jun","jul","ago","sep","oct","nov*"],
+  clics: [16,163,173,202,143,95,63,119,83,103,95,79,56,108,101,101,104,40],
+  impresiones: [2877,17293,16419,13454,8260,7409,5503,7116,5595,6154,2981,2590,2825,2829,3444,5011,5485,1847],
+  iaMeses: ["ene 26","feb","mar","abr","may","jun","jul","ago","sep","oct","nov*"],
+  iaSesiones: [0,0,0,0,0,23,15,30,135,164,65],
+  convMeses: ["ene 26","feb","mar","abr","may","jun","jul","ago","sep","oct","nov*"],
+  conv: [0,1,0,1,1,0,1,8,145,140,42],
   // [búsqueda, idioma, impresiones 12 m, clics, posición, dónde responde, estado]
   queries: [
-    ["clases de español para niños","ES",393,2,17.4,"/es/clases-de-espanol-para-ninos-online","Página de Lucia"],
-    ["español para niños","ES",280,2,53.7,"/es/clases-de-espanol-para-ninos-online","Página de Lucia"],
+    ["clases de español para niños","ES",56,0,35.8,"/es/clases-de-espanol-para-ninos-online","Página de Lucia"],
+    ["español para niños","ES",34,1,48.5,"/es/clases-de-espanol-para-ninos-online","Página de Lucia"],
     ["clases de español online para niños en Estados Unidos","ES",0,0,null,"/es/clases-de-espanol-para-ninos-online","Página de Lucia"],
     ["mi hijo entiende español pero no lo habla","ES",0,0,null,"artículo 3 ES (20 nov): /es/blog/clases-de-espanol-para-ninos-que-entienden-pero-no-lo-hablan + test /es/test/mi-hijo-entiende-espanol-pero-no-lo-habla","Artículo"],
     ["cómo mantener el español de mi hijo en el extranjero","ES",0,0,null,"artículo 1 ES: /es/blog/how-to-teach-your-child-spanish-at-home-free","Artículo"],
-    ["aprender español para niños","ES",81,1,28.6,"artículo 1 (16 oct): /es/blog/how-to-teach-your-child-spanish-at-home-free","Artículo"],
-    ["cómo enseñar español a niños","ES",78,1,6.5,"artículo 1 (16 oct): /es/blog/how-to-teach-your-child-spanish-at-home-free","Artículo"],
-    ["aplicaciones para aprender español niños","ES",129,1,3.9,"artículo 2 (6 nov): /es/blog/best-spanish-learning-app-for-kids","Artículo"],
-    ["libros para aprender español para niños","ES",115,8,13.5,"/es/blog/spanish-books-for-kids","Mejorar (19 dic)"],
-    ["programas educativos para niños en español","ES",37,1,4.0,"/es/blog/spanish-kids-shows-on-youtube","Vigilar"],
-    ["idiomas para niños","ES",190,2,34.3,"artículo nuevo","Sin plan"],
-    ["clases de español para niños de 3 a 5 años","ES",31,1,6.4,"/es/espanol-para-preescolar","Página de Lucia"],
-    ["actividades para enseñar español a niños extranjeros","ES",2,0,46.5,"artículo nuevo","Sin plan"],
-    ["clases de francés para niños cerca de mi","ES",6,1,9.7,"/es/clases-de-frances-para-ninos-de-10-a-12-anos","Vigilar"],
-    ["spanish online classes for kids","EN",69,1,49.7,"/spanish-classes-for-kids","Página de Lucia"],
-    ["spanish classes near me","EN",45,2,20.0,"/spanish-classes-for-kids","Página de Lucia"],
+    ["aprender español para niños","ES",8,0,43.8,"artículo 1 (16 oct): /es/blog/how-to-teach-your-child-spanish-at-home-free","Artículo"],
+    ["cómo enseñar español a niños","ES",0,0,null,"artículo 1 (16 oct): /es/blog/how-to-teach-your-child-spanish-at-home-free","Artículo"],
+    ["aplicaciones para aprender español niños","ES",0,0,null,"artículo 2 (6 nov): /es/blog/best-spanish-learning-app-for-kids","Artículo"],
+    ["libros para aprender español para niños","ES",6,0,24.8,"/es/blog/spanish-books-for-kids","Mejorar (19 dic)"],
+    ["programas educativos para niños en español","ES",0,0,null,"/es/blog/spanish-kids-shows-on-youtube","Vigilar"],
+    ["idiomas para niños","ES",38,0,41.3,"artículo nuevo","Sin plan"],
+    ["clases de español para niños de 3 a 5 años","ES",1,1,9.0,"/es/espanol-para-preescolar","Página de Lucia"],
+    ["actividades para enseñar español a niños extranjeros","ES",0,0,null,"artículo nuevo","Sin plan"],
+    ["clases de francés para niños cerca de mi","ES",0,0,null,"/es/clases-de-frances-para-ninos-de-10-a-12-anos","Vigilar"],
+    ["spanish online classes for kids","EN",5,0,33.6,"/spanish-classes-for-kids","Página de Lucia"],
+    ["spanish classes near me","EN",19,1,25.8,"/spanish-classes-for-kids","Página de Lucia"],
     ["toddler spanish classes near me","EN",2,1,2.5,"/spanish-classes-for-kids-4-6","Vigilar"],
-    ["how to teach kids spanish at home","EN",11,1,38.8,"artículo 1 (16 oct): /blog/how-to-teach-your-child-spanish-at-home-free","Artículo"],
-    ["duolingo for kids spanish","EN",72,3,12.0,"artículo 2 (6 nov): /es/blog/best-spanish-learning-app-for-kids","Artículo"],
-    ["spanish kids shows / spanish tv for kids","EN",223,3,36.0,"/blog/spanish-kids-shows-on-youtube","Mejorar (19 dic)"],
-    ["spanish classes london","EN",27,1,16.0,"artículo nuevo (enero): test de Londres","Sin plan"],
+    ["how to teach kids spanish at home","EN",0,0,null,"artículo 1 (16 oct): /blog/how-to-teach-your-child-spanish-at-home-free","Artículo"],
+    ["duolingo for kids spanish","EN",0,0,null,"artículo 2 (6 nov): /es/blog/best-spanish-learning-app-for-kids","Artículo"],
+    ["spanish kids shows / spanish tv for kids","EN",6,0,66.2,"/blog/spanish-kids-shows-on-youtube","Mejorar (19 dic)"],
+    ["spanish classes london","EN",8,0,5.9,"artículo nuevo (enero): test de Londres","Sin plan"],
     ["spanish for heritage speakers kids","EN",0,0,null,"artículo 3 (20 nov): /blog/spanish-for-kids-who-understand-but-wont-speak-it","Artículo"],
     ["my child understands spanish but won't speak","EN",0,0,null,"artículo 3 (20 nov): /blog/spanish-for-kids-who-understand-but-wont-speak-it","Artículo"],
-    ["french classes for kids online","EN",26,1,36.1,"/french-classes-for-kids","Página de Lucia"],
-    ["cours de français en ligne pour enfants","FR",210,2,9.5,"/fr/cours-de-francais-pour-enfants-en-ligne","Página de Lucia"],
-    ["cours de français pour enfants de 7 ans","FR",35,1,8.1,"/fr/cours-de-francais-pour-enfants-de-7-a-9-ans","Página de Lucia"],
-    ["cómo enseñar francés a niños","ES",40,1,11.5,"artículo 4 (4 dic): /es/blog/how-teach-kids-french-at-home","Artículo"],
-    ["cours espagnol enfant gratuit","FR",37,1,7.1,"/fr/cours-despagnol-pour-enfants-de-7-a-9-ans","Vigilar"],
-    ["livres pour enfants en espagnol","FR",38,1,9.4,"/fr/blog/spanish-books-for-kids","Vigilar"],
-    ["dessin animé pour apprendre l'espagnol","FR",24,2,13.0,"/fr/blog/spanish-disney-movies","Vigilar"]
+    ["french classes for kids online","EN",0,0,null,"/french-classes-for-kids","Página de Lucia"],
+    ["cours de français en ligne pour enfants","FR",15,2,20.1,"/fr/cours-de-francais-pour-enfants-en-ligne","Página de Lucia"],
+    ["cours de français pour enfants de 7 ans","FR",27,1,4.2,"/fr/cours-de-francais-pour-enfants-de-7-a-9-ans","Página de Lucia"],
+    ["cómo enseñar francés a niños","ES",0,0,null,"artículo 4 (4 dic): /es/blog/how-teach-kids-french-at-home","Artículo"],
+    ["cours espagnol enfant gratuit","FR",0,0,null,"/fr/cours-despagnol-pour-enfants-de-7-a-9-ans","Vigilar"],
+    ["livres pour enfants en espagnol","FR",0,0,null,"/fr/blog/spanish-books-for-kids","Vigilar"],
+    ["dessin animé pour apprendre l'espagnol","FR",0,0,null,"/fr/blog/spanish-disney-movies","Vigilar"]
   ],
   // [tarea, línea, fecha ISO, estado]
   tareas: [
@@ -113,15 +113,15 @@ const D = {
     ["Seguimiento 1 de los 12 correos del 19 oct (vencido: no consta en el tablero)","Enlaces","2026-10-26","En curso"],
     ["Artículo 2: borrador ES y EN con el brief","Blog","2026-10-28","Hecho"],
     ["Comparativa de francés: precios comprobados el 30 oct (Preply, italki y Outschool)","IA","2026-10-30","Hecho"],
-    ["Comparativa de francés publicada en /blog/online-french-classes-for-kids/ y revisada hasta el «listo»","IA","2026-11-03","Sin empezar"],
-    ["Comprobar las 5 fichas de directorio enviadas el 20 oct","Enlaces","2026-11-03","Sin empezar"],
+    ["Comparativa de francés publicada el 3 nov en /blog/online-french-classes-for-kids/, revisión 88/100 y «listo» el 5 nov, indexada","IA","2026-11-03","Hecho"],
+    ["Comprobar las 5 fichas de directorio enviadas el 20 oct: French Morning y Yell publicadas el 6 nov; 020, Homeschool Hub Utah y Online Curriculum Directory en Rechazado sin motivo","Enlaces","2026-11-03","Hecho"],
     ["Artículo 2: publicado el 29 oct; revisión de la página publicada hasta el «listo» e indexación","Blog","2026-11-03","En curso"],
-    ["Dos fichas de directorio (Happity y Hoop)","Enlaces","2026-11-06","Sin empezar"],
-    ["Artículo 3 publicado: niños que entienden pero no hablan","Blog","2026-11-20","Sin empezar"],
+    ["Dos fichas de directorio (Happity contactada el 6 nov; Hoop sin empezar desde el 13 oct)","Enlaces","2026-11-06","En curso"],
+    ["Artículo 3 publicado: niños que entienden pero no hablan (borrador 9–13 nov)","Blog","2026-11-20","En curso"],
     ["Texto de \"Diluu en 10 datos\" y FAQ para Lucia","IA","2026-11-27","Sin empezar"],
     ["Artículo 4 publicado: enseñar francés a niños en casa","Blog","2026-12-04","Sin empezar"],
-    ["Responder a FLAM Dublin con el texto de su tarjeta (después de que la web esté sin «FLAM»)","Enlaces","2026-11-03","Sin empezar"],
-    ["Contestar a BiliKids con el enlace de reuniones de Lucia","Enlaces","2026-11-03","Sin empezar"],
+    ["Responder a FLAM Dublin con el texto de su tarjeta (la web está limpia desde el 3 nov; envío sin confirmar)","Enlaces","2026-11-03","En curso"],
+    ["Contestar a BiliKids con el enlace de reuniones de Lucia","Enlaces","2026-11-03","En curso"],
     ["Comparativa de clases de español online para niños (rehace /blog/best-online-spanish-courses-for-kids/)","IA","2026-12-11","Sin empezar"],
     ["3 menciones en podcasts o medios y 10 fichas de directorio","Enlaces","2026-12-31","Sin empezar"]
   ],
@@ -147,7 +147,8 @@ const D = {
     "\"Clics de padres\" (desde el 26 oct) = clics de Google a las páginas de clases, de prueba y de precios, contados por página, menos los clics de búsquedas de marca (Diluu, HeySpanish). Antes se contaban por el texto de la búsqueda y salía 1 clic al mes: Google oculta la mayoría de las búsquedas de una web pequeña. La serie entera se ha recalculado con la regla nueva.",
     "Las conversiones de GA4 son eventos clave (reservas, compras y otros), no pruebas pagadas; su definición cambió en julio de 2026. Sirven para la tendencia.",
     "Las posiciones son medias de 12 meses (lectura del 8 oct; se refrescan cuando una fila cambia de estado y el día 1 de cada mes).",
-    "Octubre ya está completo (Search Console hasta el 1 nov; los últimos días aún pueden subir algo). Toda la serie de clics de padres sale de la regla nueva (por página, sin marca); junio de 2025 solo cuenta desde el 26 jun y, desde este mes, Search Console ya no deja leer antes del 2 jul de 2025: junio y julio de 2025 se quedan con la lectura del 26 oct.",
+    "Noviembre va del 1 al 8 (asterisco en las gráficas). Toda la serie de clics de padres sale de la regla nueva (por página, sin marca); Search Console en Supermetrics ya solo deja leer desde el 9 jul de 2025: junio y julio de 2025 se quedan con la lectura del 26 oct.",
+    "Las cifras de las 30 búsquedas son de los últimos 90 días y de la búsqueda exacta: muchas salen a 0 porque Google oculta la mayoría de las búsquedas de una web pequeña y solo enseña las repetidas. Sirven para ver tendencia y posición, no para medir el trabajo (eso lo hacen los clics de padres y GA4 por página).",
     "Aparecen búsquedas conversacionales con Diluu en posición 1–5 (semana del 26 oct: \"quelles sont les meilleures classes de français en ligne pour enfants ?\", 23 impresiones en posición 2,1, y la de español, 17 en posición 1 en /fr/espagnol-pour-la-maternelle/). Es la huella del modo IA de Google: dan impresiones, pero todavía casi no dan clics.",
     "Estados de las 30 búsquedas (desde el 9 nov): «Página de Lucia» = la trabaja Lucia en las páginas de clases, no es parte de tu trabajo; «Artículo» o «Mejorar» = tu pieza; «Vigilar» = ya hay una página que responde y solo se mira la posición; «Sin plan» = nadie ha decidido qué hacer (lo decide Lucia). El 9 nov salieron de la lista «cursos para niños de 10 a 12 años» y las dos de lectoescritura (9 impresiones en 6 meses, todas de México y España) y entraron tres búsquedas de la diáspora en español, que hoy no nos enseñan en Google (0 impresiones): son objetivo, no posición."
   ],
@@ -162,32 +163,33 @@ const D = {
   ],
   // Resultados de lo publicado (lo rellena la rutina de los lunes): [post, URL, fecha publicación, impresiones 28 d antes, impresiones 28 d ahora, clics ahora, posición antes, posición ahora]
   resultados: [
-    ["Artículo 1 (ES)", "https://diluu.com/es/blog/how-to-teach-your-child-spanish-at-home-free/", "15 oct", 105, 60, 0, 38.5, 25.1],
-    ["Artículo 1 (EN)", "https://diluu.com/blog/how-to-teach-your-child-spanish-at-home-free/", "15 oct", 328, 58, 0, 24.4, 51.5],
-    ["Artículo 1 (FR)", "https://diluu.com/fr/blog/enseigner-le-francais-a-la-maison-gratuitement/", "16 oct", 66, 29, 0, 37.0, 29.8],
-    ["Libros en español para niños (ES)", "https://diluu.com/es/blog/spanish-books-for-kids/", "26 oct", 81, 33, 0, 34.9, 29.9],
-    ["Artículo 2: apps (ES)", "https://diluu.com/es/blog/best-spanish-learning-app-for-kids/", "29 oct", 92, 18, 0, 14.1, 8.4],
-    ["Artículo 2: apps (EN)", "https://diluu.com/blog/best-spanish-learning-app-for-kids/", "29 oct", 2647, 730, 0, 32.3, 33.0]
+    ["Artículo 1 (ES)", "https://diluu.com/es/blog/how-to-teach-your-child-spanish-at-home-free/", "15 oct", 105, 107, 2, 38.5, 27.2],
+    ["Artículo 1 (EN)", "https://diluu.com/blog/how-to-teach-your-child-spanish-at-home-free/", "15 oct", 328, 100, 1, 24.4, 41.1],
+    ["Artículo 1 (FR)", "https://diluu.com/fr/blog/enseigner-le-francais-a-la-maison-gratuitement/", "16 oct", 66, 41, 0, 37.0, 24.7],
+    ["Libros en español para niños (ES)", "https://diluu.com/es/blog/spanish-books-for-kids/", "26 oct", 81, 77, 1, 34.9, 19.5],
+    ["Artículo 2: apps (ES)", "https://diluu.com/es/blog/best-spanish-learning-app-for-kids/", "29 oct", 92, 110, 0, 14.1, 20.2],
+    ["Artículo 2: apps (EN)", "https://diluu.com/blog/best-spanish-learning-app-for-kids/", "29 oct", 2647, 2473, 0, 32.3, 33.3],
+    ["Comparativa de francés (EN)", "https://diluu.com/blog/online-french-classes-for-kids/", "3 nov", 16, 5, 0, 7.9, 5.0]
   ],
-  resultadosNota: "\"Antes\" = 28 días anteriores a la publicación (artículo 1: 17 sep–14 oct; libros: 28 sep–25 oct; artículo 2: 1–28 oct). \"Ahora\" = desde la publicación hasta el 1 nov: 18 días en el artículo 1, 7 en libros y 4 en el artículo 2. En impresiones al día: A1 EN de 11,7 a 3,2 (sigue cayendo pese a la indexación), A1 ES de 3,8 a 3,3, libros de 2,9 a 4,7 y apps EN de 95 a 183 (ya subía antes de publicar, al heredar el duplicado -2 que redirige desde el 22 oct). Las seis URL responden 200, con title, una H1, canonical propia, sin noindex y sin LOROPEPE ni «prueba gratis» (comprobado el 2 nov). El post de EE. UU. sale de la tabla: redirige a /spanish-classes-for-kids/ (decisión del 26 oct). Los 28 días completos del A1 se leen el 16 nov.",
-  fuentes: "Fuentes: Search Console (diluu.com) y GA4 (425989233) vía Supermetrics, 26 jun 2025 – 1 nov 2026 (GA4 hasta el 31 oct); hoja SEO Diluu · Búsquedas (2 nov); colecciones dias, revisiones, respuestas, contactos y publicados de esta página. El tablero de enlaces vive en esta página. Lo actualiza la rutina seo-lunes (domingo por la noche, hora de Bali). Las casillas y las notas se guardan en esta página."
+  resultadosNota: "\"Antes\" = 28 días anteriores a la publicación (artículo 1: 17 sep–14 oct; libros: 28 sep–25 oct; artículo 2: 1–28 oct; comparativa: 6 oct–2 nov). \"Ahora\" = desde la publicación hasta el 8 nov: 25 días en el artículo 1, 14 en libros, 11 en el artículo 2 y 6 en la comparativa. En impresiones al día: A1 ES de 3,8 a 4,3 (y 2 clics, los primeros), A1 EN de 11,7 a 4,0 (sigue por debajo de antes), A1 FR de 2,4 a 1,6, libros de 2,9 a 5,5 (posición de 34,9 a 19,5; 1 clic), apps ES de 3,3 a 10 (posición 14 → 20) y apps EN de 95 a 225 (hereda el duplicado -2). La comparativa aún no tiene 28 días: posición 5 con 5 impresiones. Las siete URL se comprobaron con curl desde la nube el 9 nov a las 20:45 (hora de Bali): 200, title, una H1, canonical propia, sin noindex y sin LOROPEPE ni «prueba gratis»; también las cinco URL que guardó Bárbara el 4 y el 6 nov (enlaces al artículo 2 y a las páginas de francés). El post de EE. UU. sale de la tabla: redirige a /spanish-classes-for-kids/ (decisión del 26 oct). Los 28 días completos del A1 se leen el 16 nov.",
+  fuentes: "Fuentes: Search Console (diluu.com) y GA4 (425989233) vía Supermetrics, 9 jul 2025 – 8 nov 2026 (GA4 hasta el 8 nov; las 30 búsquedas, 11 ago–8 nov); hoja SEO Diluu · Búsquedas (9 nov); colecciones dias, revisiones, respuestas, contactos y publicados de esta página; auditoría de los sitemaps del 9 nov (20:45 Bali): 200 URLs, todas 200. El tablero de enlaces vive en esta página. Lo actualiza la rutina seo-lunes (domingo por la noche, hora de Bali). Las casillas y las notas se guardan en esta página."
 };
 
 // Las 10 búsquedas de compra (2 nov 2026): cada una tiene UNA página. Los enlaces internos del blog y los de otros sitios
 // apuntan a esa página con ese texto. [búsqueda, idioma, página asignada, impresiones 6 m, posición 6 m, posición última semana, nota]
 D.compra = [
   ["cours de français pour enfants de 7 ans", "FR", "/fr/cours-de-francais-pour-enfants-de-7-a-9-ans/", 23, 4.3, null, "A un paso del top 3"],
-  ["cours de français en ligne pour enfants", "FR", "/fr/cours-de-francais-pour-enfants-en-ligne/", 30, 5.4, null, "La que más clics trae sin marca (2 en octubre)"],
+  ["cours de français en ligne pour enfants", "FR", "/fr/cours-de-francais-pour-enfants-en-ligne/", 30, 5.4, null, "La que más clics trae sin marca (2 en octubre). Semana 2–8 nov: 1 impresión en posición 48; Google enseñó también /fr/ (42) y /fr/francais-pour-enfants-bilingues/ (22)"],
   ["quelles sont les meilleures classes de français en ligne pour enfants ?", "FR", "/fr/cours-de-francais-pour-enfants-en-ligne/", 89, 3.8, null, "Modo IA de Google: da impresiones, casi no da clics"],
-  ["quelles sont les meilleures classes d'espagnol en ligne pour enfants ?", "FR", "/fr/cours-despagnol-pour-enfants-en-ligne/", 135, 4.0, null, "Modo IA; hoy Google enseña sobre todo /fr/espagnol-pour-la-maternelle/"],
+  ["quelles sont les meilleures classes d'espagnol en ligne pour enfants ?", "FR", "/fr/cours-despagnol-pour-enfants-en-ligne/", 135, 4.0, null, "Modo IA; hoy Google enseña sobre todo /fr/espagnol-pour-la-maternelle/ (2–8 nov: 18 impresiones en posición 1) y el post meilleurs-cours-de-francais (9, posición 3,6); la página asignada no sale"],
   ["cours d'espagnol pour enfants", "FR", "/fr/cours-despagnol-pour-enfants-en-ligne/", 47, 54, null, "Hoy la ganan posts del blog: hay que enlazar la página de clases"],
   ["spanish classes london", "EN", "/spanish-classes-for-kids/", 17, 3.8, null, "Ya en el top 5"],
   ["clases de francés para niños", "ES", "/es/clases-de-frances-para-ninos-online/", 13, 19, null, ""],
-  ["clases de español para niños", "ES", "/es/clases-de-espanol-para-ninos-online/", 73, 37, null, "Hoy la gana el artículo 1 ES (posición 36): enlazar la página de clases con este texto"],
-  ["online spanish classes for kids", "EN", "/spanish-classes-for-kids/", 179, 50, null, "La más buscada. Hoy Google enseña /blog/best-online-spanish-courses-for-kids/ (posición 48), que se rehace como comparativa en diciembre"],
-  ["online french classes for kids", "EN", "/french-classes-for-kids/", 74, 61, null, "Incluye «french classes for kids». Es la página que más recomiendan las IA"]
+  ["clases de español para niños", "ES", "/es/clases-de-espanol-para-ninos-online/", 73, 37, null, "Hoy la gana el artículo 1 ES (2–8 nov: 7 impresiones en posición 34,7) y el post ES de cursos online (posición 27): enlazar la página de clases con este texto"],
+  ["online spanish classes for kids", "EN", "/spanish-classes-for-kids/", 179, 50, null, "La más buscada. Hoy Google enseña /blog/best-online-spanish-courses-for-kids/ (2–8 nov: 5 impresiones en posición 67), que se rehace como comparativa en diciembre"],
+  ["online french classes for kids", "EN", "/french-classes-for-kids/", 74, 61, null, "Incluye «french classes for kids». Es la página que más recomiendan las IA. 2–8 nov: 1 impresión en posición 50; Google enseñó también /blog/how-teach-kids-french-at-home/ (70)"]
 ];
-D.compraNota = "Search Console, 4 may–1 nov 2026, sin marca. Posición media: menos es mejor. La última semana la rellena Claude cada lunes. En cada enlace que pongas (en el blog o en una ficha de directorio) usa la página asignada.";
+D.compraNota = "Search Console, 4 may–1 nov 2026, sin marca. Posición media: menos es mejor. La última semana (2–8 nov) la rellena Claude cada lunes; «—» = la página asignada no salió para esa búsqueda esa semana. En cada enlace que pongas (en el blog o en una ficha de directorio) usa la página asignada.";
 
 // Pregúntale a Peter (2 nov 2026, en honor a Peter Lead): reglas que Claude lleva en cada respuesta. Las actualiza la rutina.
 D.peter = {
@@ -204,6 +206,7 @@ Dónde va cada cosa:
 - Cada enlace, interno o externo, apunta a la página asignada a una de las 10 búsquedas de compra (pestaña Datos), con ese texto.
 - La clase de prueba cuesta 3 € o 4 $. No hay prueba gratis ni códigos (LOROPEPE no vale).
 - La palabra «FLAM» no se usa nunca, en ningún sitio (es una marca registrada).
+- Dónde están las cosas que Bárbara suele buscar: el brief de la pieza de la semana está en Hoy, dentro del paso «Lee el brief» y en la pestaña Semana (botón «Ver el brief completo»); las URLs de un artículo publicado están en Datos › Resultados de lo publicado y en la tarjeta de la pieza; las búsquedas de compra y su página, en Datos.
 - «Preguntas para ti» (bloque en Hoy): Lucia o Claude le preguntan ahí a Bárbara en vez de por Slack. Si te pregunta desde una de ellas, ayúdala a contestar con lo que hay en la herramienta (qué paso era, qué revisión dice, qué tarjeta) y dale una respuesta corta que pueda pegar; no se la pases a Lucia salvo que pida una decisión suya.
 - Preguntas a las IA: siempre en incógnito y sin sesión (ChatGPT, Perplexity); Gemini con la cuenta de Google creada solo para esto y la actividad desactivada; nunca la cuenta de Diluu ni la suya. Una conversación nueva por pregunta.
 Pasa a Lucia (paraLucia = true) y no lo resuelvas tú si la pregunta va de: marca o temas legales; dinero, pagos o precios de Diluu que no estén en la web; reuniones, acuerdos o colaboraciones con terceros; accesos y contraseñas; cambiar el plan, los objetivos o las fechas; tocar páginas que no son del blog; o si no estás seguro. En ese caso dile qué puede hacer mientras tanto.`
