@@ -1,5 +1,16 @@
 # Decisiones (más reciente arriba)
 
+- **2026-11-09** · seo-lunes se queda en la nube (Lucia, 20:30 Bali). La primera ejecución (lanzada a mano a las 19:52 Bali)
+  hizo todo lo que depende de datos (Supermetrics, hoja, base del artefacto, 6 correos y 3 registros redactados, fichero de
+  datos con noviembre y las 30 búsquedas a 90 días, registro y artefacto publicado, v45) y falló en dos cosas de configuración:
+  el entorno «Default» no abre ningún dominio externo (sin auditoría de sitemaps, sin curl de lo publicado, sin verificar
+  contactos) y la app de Claude en GitHub no tenía acceso al repo (el commit se quedó en la sesión). Arreglos: la rutina pasa
+  al entorno `diluu-meta-ads` (`env_01A831JhorxPeR4m7FtQue1q`), que sí abre diluu.com y la web; Lucia da acceso a la app de
+  Claude a `Lucia950/diluu-cmo` (hecho desde su Chrome, con código de GitHub, y sincronizado en claude.ai); el prompt indica
+  partir siempre del fichero de datos vivo del artefacto y completar la entrada de la semana si ya existe. La rutina local del
+  domingo (`seo-lunes-diluu`) se desactiva cuando la nube lleve dos domingos bien. Regla: no publicar la herramienta desde
+  local sin leer antes la versión viva del fichero de datos (la nube puede ir por delante del repo).
+
 - **2026-11-09** · Meta en noviembre (Lucia, 18:30 Bali, tras el registro de la semana 45): **se acepta el ritmo real, ≈ £15.400**
   (£514/día del 1 al 8 nov) en vez de volver a los £450/día (£13.500) del 4 nov. Motivo: coste por prueba pagada £32,6 (108 pruebas,
   el mejor del trimestre) y CAC Stripe 1–8 nov £57,5, en banda. Los £2.000 de Black Friday (24 nov–1 dic) siguen aparte; noviembre
