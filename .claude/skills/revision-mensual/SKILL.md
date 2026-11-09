@@ -21,7 +21,23 @@ mes anterior y mismo mes de 2025:
   referidos (`scripts/referidos.sh` del mes: familias que invitan, pruebas y altas referidas, coste
   por alta = crédito + incentivo al amigo; desde feb 2027, retención de las referidas frente al
   resto), ventas (ventas válidas por código y enlaces de pago creados).
-- Tests activos del plan (Black Friday, pausa, tarjeta regalo, garantía) con su métrica de éxito.
+- **Preguntas a las IA por API** (desde la revisión de diciembre; Lucia, 9 nov): `node "$(ls -td
+  ~/.claude/plugins/cache/diluu/diluu-ops/*/ | head -1)scripts/personal-keys.cjs" run -- node scripts/ia-respuestas.cjs`
+  (claves propias de Lucia: OPENAI_API_KEY, GEMINI_API_KEY, PERPLEXITY_API_KEY; ≈ 36 llamadas, sin sesión ni memoria, con el
+  país del padre que pregunta). Escribe `data/ia-respuestas-AAAA-MM.{json,md}`. Con el JSON, escribe en la base del
+  artefacto SEO Diluu (slug 8d1e7569-a31f-4070-92d4-31519c64d89b) el documento `ia/AAAA-MM` con `r`, `citas`, `fuente: "api"`
+  y `actualizado` (merge con `ifVersion` si existe; si Bárbara ya rellenó `r` a mano ese mes, guarda lo de la API en `rApi` y
+  compara los dos en la revisión). Métrica: «Diluu aparece en X de 36» (línea base manual 30 oct: 10; objetivo 14 en
+  diciembre; Gemini 0 de 12) y a quién recomiendan. Es un indicador: la métrica que decide sigue siendo GA4 (sesiones y
+  eventos clave desde asistentes). Si una clave falta, el script lo dice y se anota en pendientes; no se inventa.
+- Cesta abandonada de curso directo (desde la revisión de noviembre, Lucia 4 nov):
+  `node "$(ls -td ~/.claude/plugins/cache/diluu/diluu-ops/*/ | head -1)scripts/personal-keys.cjs" run -- node
+  scripts/cestas.cjs --desde <lunes de la semana 40>` (la versión más reciente del plugin en caché) y, por familia (fuentes.md): familias que abrieron, % pagadas, abiertas a las 2 h y
+  recuperadas tarde del mes frente a la línea base sin WhatsApp (sem. 40–44: 90,4 % y 61,5 %); WhatsApp de n8n
+  enviados, pagaron después y en 24 h; matrículas atribuibles al mes (recuperadas tarde − 61,5 % × abiertas a las 2 h)
+  y su valor (× £68 de ARPU × meses de vida). Con ≥ 4 semanas de datos, decide si el test sigue, cambia el mensaje
+  o se añade la tarea de Kommo a las 24 h (no existe en n8n el 4 nov).
+- Tests activos del plan (Black Friday, pausa, tarjeta regalo, garantía, cesta abandonada) con su métrica de éxito.
 
 ## 2. Unit economics
 Ejecuta la skill unit-economics con el mes cerrado y guarda el resultado en

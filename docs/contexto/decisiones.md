@@ -1,5 +1,23 @@
 # Decisiones (más reciente arriba)
 
+- **2026-11-09** · Rutinas en la nube y preguntas a las IA por API (Lucia, 15:00–16:30 Bali):
+  (1) **Aviso diario por Slack** de las novedades de Bárbara: rutina en la nube `trig_01VNb5bPhpwTNRqbWxU4X1UK` («Diluu SEO ·
+  aviso diario a Lucia», 10:00 Bali, Sonnet 5.5, conector Slack), primera ejecución el 10 nov. Lee `contactos` (actualizado en
+  26 h con estado Respondió / En negociación / Enlace conseguido / Ficha publicada / Rechazado / Sin respuesta), `preguntas`
+  para Lucia sin respuesta, `preguntasLucia` respondidas, `revisiones` y la nota del día; si hay algo, un DM a Lucia; si no, nada.
+  (2) **seo-lunes pasa a la nube** (domingo 20:00 Bali, Fable 5.1, conectores Supermetrics y Google Sheets, repo diluu-cmo):
+  pendiente de que el repo exista en GitHub. El repo `Lucia950/diluu-cmo` que figuraba desde el 8 oct **nunca se creó ni se
+  subió** (34 commits locales; Lucia950 solo tiene diluu-meta-ads, diluu-google-ads y StillHere). Lucia lo crea privado y
+  Claude hace el primer push y la rutina. La skill seo-lunes lee desde hoy `preguntasLucia` y sabe que corre en la nube (sin
+  mongo ni claves; push a main o rama + PR).
+  (3) **Preguntas a las IA por API, no a mano**: `scripts/ia-respuestas.cjs` (OpenAI Responses + web_search con ubicación,
+  Gemini con grounding, Perplexity sonar; 36 llamadas; país del padre fijado por pregunta; clasificación igual que la
+  herramienta; citas). Lo ejecuta la revisión mensual desde el 1 dic. Claves que Lucia guarda con claves-propias:
+  `OPENAI_API_KEY`, `GEMINI_API_KEY`, `PERPLEXITY_API_KEY`. El paso manual del viernes de Bárbara se mantiene hasta comparar las
+  dos lecturas en diciembre (decisión pendiente). GA4 sigue siendo la métrica que decide.
+  (4) El Ibérico: la respuesta a Paco deja claro que lo gratuito es el cuestionario online de 2 minutos, no una clase (la clase
+  de prueba cuesta 3 £); si el periodista escribe «prueba gratuita», se pide la corrección.
+
 - **2026-11-09** · SEO de Bárbara, semana 45 y herramienta v41 (Lucia, mediodía Bali):
   (1) **Preguntas a Bárbara por la herramienta, no por Slack**: bloque «Preguntas para ti» en Hoy (colección `preguntasLucia`;
   cada pregunta con su campo de respuesta y botón «Pedir ayuda a Peter», que responde con el contexto de la herramienta). Lucia

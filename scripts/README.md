@@ -9,6 +9,12 @@
   (10 USD grupo, 15,75 EUR lectoescritura según la API), canonical, noindex, hreflang; (4) sitemap de Yoast;
   (5) alarma si > 50 % de los clics sin marca de las páginas de clases llegan sin búsqueda visible. Informe en
   `data/auditoria-web-AAAA-MM-DD.md`. Redirecciones aceptadas a propósito: `auditoria-excepciones.txt`.
+- **`ia-respuestas.cjs [--probar] [--mes AAAA-MM] [--solo ChatGPT,Gemini,Perplexity]`**: las 12 preguntas a las IA
+  (`PREGUNTAS_IA` del HTML de la herramienta) por API: OpenAI Responses con `web_search` y ubicación del usuario, Gemini con
+  grounding de Google y Perplexity `sonar`, sin sesión ni memoria. Clasifica como la herramienta («No sale», «Sale 1.º–3.º»,
+  «Sale 4.º o más»), saca a quién recomiendan y qué dicen de Diluu, y escribe `data/ia-respuestas-AAAA-MM.{json,md}`.
+  Claves propias de Lucia (`personal-keys.cjs run --`): `OPENAI_API_KEY`, `GEMINI_API_KEY`, `PERPLEXITY_API_KEY`; modelos por
+  `OPENAI_MODEL`, `GEMINI_MODEL`, `PERPLEXITY_MODEL`. Lo ejecuta la revisión mensual (día 1); `--probar` no gasta nada.
 - **`semana-datos.cjs [LUNES] [--sin-stripe]`**: todos los datos de la rutina semanal en UNA conexión a la
   base de producción (≈ 20 s): plazas activas (definición oficial), empezadas, cancelaciones programadas,
   familias activas; por semana, semana anterior y trimestre: plazas nuevas, canceladas netas y brutas, pruebas,
@@ -45,6 +51,13 @@
   finales se editan después y los cambios de grupo dejan matrículas solapadas; el stock oficial es la lectura del día
   (`plazas_activas_hoy`) y las de los lunes. `course.language` no existe (el idioma está en `course.subject`).
   Las pruebas pagadas de Stripe no están en este script: con `STRIPE_API_KEY` usar la función de `semana-datos.cjs`.
+- **`cestas.cjs [--desde LUNES] [--hasta DÍA]`** (4 nov 2026): cesta abandonada de curso directo por familia y semana ISO
+  (abiertas, pagadas, pagadas ≤ 2 h, abiertas a las 2 h, recuperadas tarde y en 24 h, mediana de horas), línea base sin
+  WhatsApp (sem. 40–44: 90,4 % pagan; 61,5 % de las abiertas a las 2 h se recuperan solas) frente a semanas con WhatsApp;
+  cestas del panel aparte. Con `node "$(ls -td ~/.claude/plugins/cache/diluu/diluu-ops/*/ | head -1)scripts/personal-keys.cjs" run -- node
+  scripts/cestas.cjs` (versión más reciente del plugin) lee además las ejecuciones del workflow
+  «Cestas › 2 h sin pagar» de n8n (enviados por idioma, pagaron después, en 24 h). Escribe `data/cestas-AAAA-MM-DD.json`.
+  Lo usan registro-semanal y revision-mensual.
 - **`conversion-cohortes.cjs`** (4 nov 2026): conversión prueba → curso por semana ISO de la prueba a 7, 14 y 30 días (solo
   pruebas con esa antigüedad), no presentados y mezcla de idiomas; y por mes e idioma a 14 días. Sep 2026: 41,8 % a 14 d;
   oct: 36,9 % (ES 35,3 %, FR 38,8 %). Pendiente de integrarlo en semana-datos.cjs (decisión del 2 nov).
