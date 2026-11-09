@@ -105,7 +105,8 @@ Peter contestó bien y sin inventar.
   cambiar la fecha de inicio en la skill a 2025-07-09 (la rutina lo resolvió a mano esta vez).
 - Artículo 2 en «cambios» desde el 3 nov (6 días, 84/100): Claude da el «listo» en cuanto Bárbara conteste la pregunta 1 de
   «Preguntas para ti».
-- Comprobar que el push de esta rutina llegó a `main` de Lucia950/diluu-cmo (el de las 19:52 se quedó en la sesión).
+- GitHub: el push de esta rutina sí llegó a `main` (commit e735f02, 20:55 Bali); el de las 19:52 se quedó en la sesión. La rutina en la
+  nube ya hace las cinco salidas; queda verla correr sola el domingo 15 nov.
 
 ### Para el registro del lunes
 - SEO sem. 45: clics de padres 38 (1.625 impr.; sem. 44: 21); 1–8 nov 40 frente a 110 de objetivo mensual; sesiones desde IA 1–8 nov
