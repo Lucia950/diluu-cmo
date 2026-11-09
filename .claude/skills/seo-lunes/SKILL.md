@@ -82,7 +82,8 @@ Cuenta GW `["sc-domain:diluu.com"]`, settings `{"report_type":"STANDARD"}`; GA4 
    `max_rows 300`. Páginas de padres = classes-for-kids, cours-de-francais, heritage, lectoescritura, literacy,
    kindergartners, clases-de-espanol, espanol-para; nunca /trial ni /course-direct. → `D.iaSesiones`, `D.conv` y los
    objetivos de sesiones IA y eventos.
-6. **IA**: documento `ia/AAAA-MM` de la colección `ia` si existe (36 respuestas: 12 preguntas × 3 asistentes):
+6. **IA**: documento `ia/AAAA-MM` de la colección `ia` si existe (36 respuestas: 12 preguntas × 3 asistentes; desde
+   diciembre lo escribe la revisión mensual con `fuente: "api"` y `citasApi`, y el paso del viernes de Bárbara es revisarlo):
    "Diluu aparece en X de 36" (línea base 30 oct: 10; objetivo 14 en diciembre; Gemini 0 de 12) y, desde noviembre,
    `citas` por pregunta (a quién recomiendan y qué dicen de Diluu).
 7. **Las 10 búsquedas de compra** (`D.compra`, decisión del 2 nov): `query,page,clicks,impressions,position` de lunes a
@@ -106,7 +107,17 @@ demás, [CONFIRMAR] (y no se publica con corchetes).
 
 ## 4. Salidas
 1. Edita SOLO `dashboard/seo-diluu-data.js` (`BRIEFS`, `A1–A4.kw`, `D.periodo`, `D.objetivos`, series, `D.queries`,
-   `D.tareas` con fecha ISO y estado, `D.resultados`, `D.avisos` si cambia la fecha, `D.fuentes`). No toques el HTML
+   `D.tareas` con fecha ISO y estado, `D.resultados`, `D.avisos` si cambia la fecha, `D.fuentes`). **Desde la v42 (9 nov)**
+   también: `D.actualizado` = fecha ISO de los datos (la herramienta avisa en rojo si pasan más de 8 días); `D.queries` con
+   impresiones, clics y posición de los **últimos 90 días** (una consulta `query,clicks,impressions,position` con filtro
+   `query =~ "^(…las 30…)$"`) y `D.queriesPeriodo` = "últimos 90 días hasta el <domingo>"; estados permitidos: «Página de
+   Lucia», «Artículo», «Mejorar (fecha)», «Vigilar», «Sin plan», «En curso», «Publicado», «Descartada» (nunca «Pendiente»);
+   `D.compraSerie["<lunes de la semana>"]` = array con la posición semanal de las 10 búsquedas de compra en el mismo orden
+   que `D.compra` (se añade una clave por semana, se conservan las anteriores); `D.convPaginas` = GA4 de los últimos 90 días,
+   canales Organic Search + AI Assistant, por página de destino (sesiones, eventos clave, qué es), las 20 filas con más
+   eventos más los tres mapas y dos posts informativos de contraste. Las tarjetas de `contactos` movidas a Rechazado o Sin
+   respuesta llevan `motivo`; los documentos de `preguntasLucia` con `de: "Herramienta"` son respuestas de Bárbara a
+   «¿qué te frenó?» en pasos con más de 7 días: van al registro y, si piden algo de Lucia, a «Pendientes para Lucia». No toques el HTML
    (rutina, prompts, guías) salvo que Lucia lo pida. Valida con
    `node -e "new Function(require('fs').readFileSync('dashboard/seo-diluu-data.js','utf8')+';return D')()"`.
 2. Lee la versión viva antes de publicar (`Artifact` action `read` con la url; si no, se rechaza) y publica con

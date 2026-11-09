@@ -148,6 +148,8 @@ thead th{font-weight:700;color:var(--ink2);font-size:12px;text-transform:upperca
 td.n,th.n{text-align:right}
 .tbl-wrap{overflow-x:auto}
 .chip{display:inline-flex;align-items:center;gap:6px;padding:2px 10px;border-radius:999px;font-size:11.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
+.datos-viejos{margin:8px 0 0;padding:8px 12px;border-radius:10px;background:var(--warn-soft);color:var(--yellow-ink);font-size:13.5px;font-weight:600}
+.freno{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:8px;font-size:13px;color:var(--yellow-ink)} .freno input{flex:1;min-width:220px;font:inherit;padding:6px 8px;border:1px solid var(--line);border-radius:8px}
 .chip.good{background:var(--good-soft);color:var(--good)} .chip.warn{background:var(--warn-soft);color:var(--yellow-ink)} .chip.critical{background:var(--critical-soft);color:var(--critical)} .chip.neutral{background:var(--accent-soft);color:var(--accent)} .chip.muted{background:var(--line);color:var(--ink2)}
 .filters{display:flex;gap:6px;flex-wrap:wrap}
 .filters button{appearance:none;border:1px solid var(--line);background:var(--surface);color:var(--ink2);font:inherit;font-size:12.5px;font-weight:700;border-radius:999px;padding:3px 10px;cursor:pointer}
@@ -530,13 +532,18 @@ details.peter-h p{margin-top:6px;overflow-wrap:anywhere}
     </section>
     <section>
       <h2>Búsquedas objetivo: posición en Google</h2>
-      <p class="sub">Las 30 búsquedas de padres del diagnóstico, con su posición media de 12 meses. Un post nuevo tarda de 4 a 12 semanas en moverse. El estado lo actualiza Claude cada lunes con las URLs que guardas al publicar.</p>
+      <p class="sub">Las 30 búsquedas de padres del diagnóstico. Impresiones y posición del periodo que indica la columna (desde el 15 nov, los últimos 90 días: las medias de 12 meses escondían la caída de abril). Un post nuevo tarda de 4 a 12 semanas en moverse. Estados: <b>Página de Lucia</b> (no es tu trabajo), <b>Artículo</b> o <b>Mejorar</b> (tu pieza), <b>Vigilar</b> (ya responde una página; solo se mira) y <b>Sin plan</b> (lo decide Lucia).</p>
       <div class="filters" id="qFilters"></div>
-      <div class="card tbl-wrap"><table id="queries"><thead><tr><th>Búsqueda</th><th>Idioma</th><th class="n">Impresiones 12 m</th><th class="n">Clics</th><th class="n">Posición</th><th>Dónde responde</th><th>Estado</th></tr></thead><tbody></tbody></table></div>
+      <div class="card tbl-wrap"><table id="queries"><thead><tr><th>Búsqueda</th><th>Idioma</th><th class="n" id="qImprH">Impresiones</th><th class="n">Clics</th><th class="n">Posición</th><th>Dónde responde</th><th>Estado</th></tr></thead><tbody></tbody></table></div>
     </section>
     <section>
       <h2>Tus posts publicados: antes y ahora</h2>
       <div class="card" id="resultados"></div>
+    </section>
+    <section>
+      <h2>Qué páginas convierten (GA4, orgánico e IA)</h2>
+      <p class="sub">Sesiones que llegan por Google o por los asistentes de IA y los eventos clave que generan, por página de destino. Es la medida que importa: una página con pocas sesiones y muchos eventos vale más que un post con miles de visitas y ninguno. Los mapas y los chistes no cuentan.</p>
+      <div class="card" id="convPaginas"></div>
     </section>
     <section>
       <h2>Preguntas a las IA: este mes</h2>
@@ -815,7 +822,8 @@ function pasosDia(dow, sem) {
     { id: "v4", t: "Mira qué toca la semana que viene", min: 10, como: "<p>Pestaña Semana, fila siguiente.</p>", datos: "proxima" },
     { id: "v6", t: "Aprendizaje de SEO de la semana", min: 15, como: "<p>Una idea, cómo aplicarla y algo para leer. Si lees algo útil en los recursos (Guías → Recursos), apúntalo en la nota.</p>", aprende: true }
   ];
-  if (sem && sem.ia) dias[5].push({ id: "v5", t: "Preguntas a las IA (ChatGPT, Gemini y Perplexity)", min: 45, como: "<p><b>Método fijo (desde el 9 nov):</b> ChatGPT y Perplexity en una <b>ventana de incógnito y sin iniciar sesión</b>. Gemini obliga a entrar: usa la cuenta de Google creada solo para esto, con la actividad de las apps de Gemini desactivada. <b>Nunca la cuenta de Diluu ni la tuya</b>: si el asistente recuerda que trabajas en Diluu, te la nombra y el dato no vale. Cada pregunta en una conversación nueva, tal cual está escrita. Marca abajo si aparece Diluu y en qué puesto (se guarda solo) y apunta en la nota del día desde qué cuenta y país preguntaste. Captura solo de las respuestas en las que salgamos.</p>", ia: true, demo: "ia", guia: "ia" });
+  if (sem && sem.ia && sem.lunes >= "2026-12-01") dias[5].push({ id: "v5", t: "Preguntas a las IA: revisa las respuestas de la API", min: 10, como: "<p><b>Desde diciembre las 12 preguntas las hace Claude por API</b> (ChatGPT, Gemini y Perplexity, sin sesión ni memoria, con el país del padre que pregunta) el día 1 de cada mes. Tú ya no preguntas a mano. Abajo ves el resultado: comprueba que cada fila tiene sentido, y en la última columna anota <b>a quién recomienda cada IA</b> y <b>qué dice de Diluu</b> con lo que leas en «Citas de la API». Si una respuesta te parece rara, díselo a Lucia en «Preguntas para ti».</p>", ia: true, guia: "ia" });
+  else if (sem && sem.ia) dias[5].push({ id: "v5", t: "Preguntas a las IA (ChatGPT, Gemini y Perplexity)", min: 45, como: "<p><b>Método fijo (desde el 9 nov):</b> ChatGPT y Perplexity en una <b>ventana de incógnito y sin iniciar sesión</b>. Gemini obliga a entrar: usa la cuenta de Google creada solo para esto, con la actividad de las apps de Gemini desactivada. <b>Nunca la cuenta de Diluu ni la tuya</b>: si el asistente recuerda que trabajas en Diluu, te la nombra y el dato no vale. Cada pregunta en una conversación nueva, tal cual está escrita. Marca abajo si aparece Diluu y en qué puesto (se guarda solo) y apunta en la nota del día desde qué cuenta y país preguntaste. Captura solo de las respuestas en las que salgamos.</p>", ia: true, demo: "ia", guia: "ia" });
   const EXCOMO = { directorios: "<p>En la pestaña Enlaces, las tarjetas de tipo Directorio con formulario: abre el formulario, copia los datos de la ficha que trae la tarjeta y envíalo. Son enlaces casi seguros. Mueve la tarjeta a Contactado: a los 14 días te recuerda comprobar si la ficha está publicada. Objetivo: 10 fichas antes del 31 dic.</p>", diezdatos: "<p>Pega este texto en Claude (chat normal), revisa el resultado y pégalo en la nota del día para Lucia.</p>", enlacesClases: "<p>Google enseña hoy estos posts en lugar de las páginas de clases, y varios no enlazan a ellas. Un enlace con el texto de la búsqueda ayuda a que Google entienda cuál es la página buena. En la sesión del blog.</p>" };
   (sem && sem.extra || []).forEach((x, k) => { dias[x.dia] = [...dias[x.dia], { id: "e" + x.dia + k, t: x.t, min: x.min, como: x.como || EXCOMO[x.prompt] || "", prompt: x.prompt || null, texto: x.texto || null, publica: !!x.publica, guia: x.guia, rev: x.rev, pz: x.pz ? REV_EXTRA[x.pz] : undefined, gate: x.gate, campos: x.campos }]; });
   return dias[dow] || [];
@@ -1132,7 +1140,7 @@ function tablaKw(pz) {
 }
 function tablaEnlaces() { return `<div class="enl-slot"></div>`; }
 function tablaCompra() {
-  return `<div class="tbl-wrap"><table><thead><tr><th>Búsqueda</th><th>Idioma</th><th>Página a la que apuntan los enlaces</th><th class="n">Impr. 6 m</th><th class="n">Posición</th><th class="n">Última semana</th><th>Nota</th></tr></thead><tbody>${(D.compra || []).map(r => `<tr><td><b>${esc(r[0])}</b></td><td>${esc(r[1])}</td><td><a href="https://diluu.com${esc(r[2])}" target="_blank" rel="noopener">${esc(r[2])}</a></td><td class="n">${r[3]}</td><td class="n">${fmt(r[4])}</td><td class="n">${r[5] === null || r[5] === undefined ? "—" : fmt(r[5])}</td><td style="font-size:12.5px">${esc(r[6] || "")}</td></tr>`).join("")}</tbody></table></div><p class="sub" style="font-size:12.5px">${esc(D.compraNota || "")}</p>`;
+  return `<div class="tbl-wrap"><table><thead><tr><th>Búsqueda</th><th>Idioma</th><th>Página a la que apuntan los enlaces</th><th class="n">Impr. 6 m</th><th class="n">Posición</th><th class="n">Semana a semana</th><th>Nota</th></tr></thead><tbody>${(D.compra || []).map((r, ri) => `<tr><td><b>${esc(r[0])}</b></td><td>${esc(r[1])}</td><td><a href="https://diluu.com${esc(r[2])}" target="_blank" rel="noopener">${esc(r[2])}</a></td><td class="n">${r[3]}</td><td class="n">${fmt(r[4])}</td><td class="n" style="white-space:nowrap">${(() => { const ks = Object.keys(D.compraSerie || {}).sort().slice(-6); const v = ks.map(k => (D.compraSerie[k] || [])[ri]).filter(x => x !== undefined && x !== null); return v.length ? v.map(fmt).join(" → ") : (r[5] === null || r[5] === undefined ? "desde el 15 nov" : fmt(r[5])); })()}</td><td style="font-size:12.5px">${esc(r[6] || "")}</td></tr>`).join("")}</tbody></table></div><p class="sub" style="font-size:12.5px">${esc(D.compraNota || "")}</p>`;
 }
 function bloqueDatos(tipo, ctx) {
   ctx = ctx || ctxDe(hoy.iso);
@@ -1236,12 +1244,14 @@ function stepsHtml(ctx, pasos) {
     const pubLabels = pzS && pzS.idiomas && p.pub && p.pub.startsWith("a") ? pzS.idiomas.map(x => "URL en " + LANG[x]).join("|") : "URL del post";
     const fl = falloDe(ctx.iso, p.id), pideUrl = requiereUrl(p) && !p.pub;
     const urlBox = pideUrl ? `<div class="url-box"><label>URL publicada en diluu.com${p.prompt === "enlacesClases" || p.prompt === "enlazar" ? " (una por post que has cambiado, una por línea)" : ""}<textarea data-url-in rows="2" placeholder="https://diluu.com/…"></textarea></label><div class="acts"><button class="btn-p" type="button" data-url-save>Guardar y marcar hecho</button><span class="saved url-st"></span></div></div>` : "";
+    const viejo = ctx.iso <= isoAdd(hoy.iso, -7) && !esLucia, frenoKey = ctx.iso + "|" + p.id, frenoDicho = Object.values(rev.preg || {}).some(x => x && x.sobre === frenoKey);
+    const frenoBox = viejo ? (frenoDicho ? `<p class="freno">Ya explicaste qué te frenó con este paso; Lucia lo tiene.</p>` : `<div class="freno"><span>Lleva más de 7 días pendiente: <b>¿qué te frenó?</b></span><input data-freno-in placeholder="Una línea para Lucia (falta acceso, no sé cómo, no me dio tiempo, no aplica…)"><button class="lnk" type="button" data-freno="${frenoKey}">Enviar a Lucia</button><span class="saved"></span></div>`) : "";
     const avisoUrl = requiereUrl(p) ? `<p class="url-need">${p.pub ? "Para marcarlo hecho, guarda antes las URLs publicadas (en «Cómo se hace»)." : "Para marcarlo hecho, pega la URL donde está publicado: se comprueba en la web cada domingo."}</p>` : "";
     return `<div class="step${fl ? " fallo" : ""}" data-id="${p.id}" data-iso="${ctx.iso}">
       <input type="checkbox" id="chk-${uid}" aria-label="Hecho: ${esc(p.t)}">
       <div style="min-width:0">
         <label class="t" for="chk-${uid}">${i + 1}. ${esc(p.t)}</label>
-        <div class="meta"><span class="min">${p.min} min</span>${g ? `<a href="#guias" data-guia="${g.id}">Guía: ${esc(g.t)}</a>` : ""}<button class="lnk lnk-peter" type="button" data-peter-paso="${ctx.iso}|${p.id}">Pregúntale a Peter</button></div>${fl ? `<p class="url-fail">✗ No está en la web. ${esc(fl.motivo || "")}</p>` : ""}${avisoUrl}${urlBox}
+        <div class="meta"><span class="min">${p.min} min</span>${g ? `<a href="#guias" data-guia="${g.id}">Guía: ${esc(g.t)}</a>` : ""}<button class="lnk lnk-peter" type="button" data-peter-paso="${ctx.iso}|${p.id}">Pregúntale a Peter</button></div>${fl ? `<p class="url-fail">✗ No está en la web. ${esc(fl.motivo || "")}</p>` : ""}${frenoBox}${avisoUrl}${urlBox}
         <details><summary>Cómo se hace</summary><div class="como">${p.como || ""}${p.demo ? `<div class="demo" data-demo="${p.demo}"></div>` : ""}${p.links ? `<p>${p.links.map(l => `<a href="${l[1]}" target="_blank" rel="noopener">${esc(l[0])}</a>`).join(" · ")}</p>` : ""}${p.datos ? bloqueDatos(p.datos, ctx) : ""}${p.aprende ? aprendeHtml(APRENDE[ctx.lunes]) : ""}${p.brief ? briefHtml(pzS) : ""}${p.rev && pzS ? `<div class="rev-slot" data-n="${pzS.n}" data-nombre="${esc(pzS.nombre)}" data-mode="${p.rev}"></div>` : ""}${p.pub ? `<div class="pub-slot" data-k="${p.pub}" data-nombre="${esc(pzS ? pzS.nombre : p.pub)}" data-labels="${esc(pubLabels)}"></div>` : ""}${p.ia ? `<div class="ia-slot"></div>` : ""}${p.campos ? camposHtml(p, ctx) : ""}${promptBox(pr)}</div></details>${gateN(p, pzS) !== null ? `<div class="rev-gate" data-gate="${gateN(p, pzS)}"></div>` : ""}
       </div></div>`;
   }).join("");
@@ -1696,6 +1706,11 @@ async function moverCard(id, nuevo) {
   const upd = { estado: nuevo, actualizado: new Date().toISOString() };
   if (nuevo === "Contactado" && !c.primer) upd.primer = hoy.iso;
   if (["Contactado","Seguimiento 1 enviado","Seguimiento 2 enviado","Respondió","En negociación","Sin respuesta","Rechazado"].includes(nuevo)) upd.ultimo = hoy.iso;
+  if (nuevo === "Rechazado" || nuevo === "Sin respuesta") {
+    const m = window.prompt(nuevo === "Rechazado" ? "¿Por qué se rechaza? Una línea para Lucia: qué pasó, qué pidieron (dinero, enlace de pago, otra cosa) o por qué no encaja." : "Sin respuesta: ¿qué se envió y cuándo? Una línea para Lucia (correo + otra vía + 2 seguimientos, o lo que falte).");
+    if (!m || !m.trim()) { aviso("Para mover a «" + nuevo + "» hace falta el motivo: Lucia lo lee en su aviso diario."); return; }
+    upd.motivo = m.trim(); upd.notas = (hoy.iso + " (Bárbara, " + nuevo + "): " + m.trim() + (c.notas ? "\n\n" + c.notas : "")).trim();
+  }
   if (nuevo === "Por contactar") { upd.creado = hoy.iso; upd.primer = ""; upd.ultimo = ""; }
   if (nuevo === "Enlace conseguido") {
     const inp = $('#pnl [data-f="urlEnlace"]'), u = inp ? inp.value.trim() : (c.urlEnlace || "");
@@ -1760,6 +1775,17 @@ function renderPub() {
     el.querySelectorAll("input,button").forEach(x => x.disabled = esLucia);
   });
 }
+// --- ¿Qué te frenó? (9 nov): pasos con más de 7 días pendientes → preguntasLucia, ya respondida, para el aviso diario de Lucia
+document.addEventListener("click", async e => {
+  const b = e.target.closest("[data-freno]"); if (!b || !db || esLucia) return;
+  const box = b.closest(".freno"), inp = box.querySelector("[data-freno-in]"), st = box.querySelector(".saved"), txt = (inp.value || "").trim();
+  if (!txt) { st.textContent = "Escribe una línea."; return; }
+  const [iso, id] = b.dataset.freno.split("|"), c = ctxDe(iso), paso = pasosCtx(c).find(p => p.id === id), ahora = new Date().toISOString();
+  try {
+    await db.doc("preguntasLucia/" + hoy.iso + "-freno-" + iso + "-" + id).set({ fecha: hoy.iso, creado: ahora, de: "Herramienta", texto: `¿Qué te frenó con «${paso ? paso.t : id}» (del ${corta(iso)})?`, sobre: b.dataset.freno, respuesta: txt, respondidoEl: ahora, estado: "respondida" });
+    box.innerHTML = "Gracias: Lucia lo ve en su aviso de mañana. Si ya no aplica, ella lo quita de aquí.";
+  } catch { st.textContent = "No se ha podido guardar; vuelve a intentarlo."; }
+});
 // --- PREGUNTAS A LAS IA (colección "ia", un documento por mes) ---
 const IA_ASIST = ["ChatGPT", "Gemini", "Perplexity"], IA_OPC = ["", "No sale", "Sale 1.º–3.º", "Sale 4.º o más"];
 const iaMes = hoy.iso.slice(0, 7);
@@ -1772,10 +1798,10 @@ function renderIA() {
   $$(".ia-slot").forEach(el => {
     if (el.contains(document.activeElement)) return;
     const previa = !el.closest(".step") && hechasDe(iaDoc) === 0 && hechasDe(iaPrev) > 0;
-    const doc = previa ? iaPrev : iaDoc, mes = previa ? iaMesPrev : iaMes, ro = previa || esLucia;
+    const doc = previa ? iaPrev : iaDoc, mes = previa ? iaMesPrev : iaMes, api = doc.fuente === "api", ro = previa || esLucia || api;
     const r = doc.r || {}, sale = Object.values(r).filter(v => v && v.startsWith("Sale")).length, hechas = Object.values(r).filter(Boolean).length;
     const sig = (D.semanas.find(x => x.ia && x.lunes >= lunes) || {}).lunes;
-    el.innerHTML = `<p style="font-size:13.5px">${previa ? `<span class="chip neutral">Última ronda: ${MESES[Number(mes.slice(5)) - 1]}</span> La de ${MESES[Number(iaMes.slice(5)) - 1]} se hace el viernes ${sig ? corta(isoAdd(sig, 4)) : "de la semana de las IA"}; mientras, aquí ves la anterior (solo lectura).<br>` : ""}<b>Diluu aparece en ${sale} de ${hechas || PREGUNTAS_IA.length * IA_ASIST.length}</b> respuestas · ${MESES[Number(mes.slice(5)) - 1]} ${mes.slice(0, 4)} · objetivo: 14 de 36 en diciembre (línea base de octubre: 10; Gemini 0); la 11 y la 12 miden la comparativa de francés</p><p style="font-size:13px">En la última columna apunta, en cada pregunta, <b>a quién recomienda cada IA</b> (los nombres) y, si sale Diluu, <b>qué dice de nosotros</b>. Las capturas no hacen falta: esto entra directo en el brief de la comparativa de español y en «Diluu en 10 datos».</p><div class="tbl-wrap"><table><thead><tr><th>Pregunta</th>${IA_ASIST.map(a => `<th>${a}</th>`).join("")}<th>A quién recomienda y qué dice de Diluu</th></tr></thead><tbody>${PREGUNTAS_IA.map((q, i) => `<tr><td style="font-size:12.5px">${i + 1}. ${esc(q)}</td>${IA_ASIST.map(a => `<td><select data-ia="${i}-${a}" ${ro ? "disabled" : ""}>${IA_OPC.map(o => `<option ${r[i + "-" + a] === o ? "selected" : ""} value="${o}">${o || "—"}</option>`).join("")}</select></td>`).join("")}<td><input class="ia-cita" data-ia-cita="${i}" value="${esc((doc.citas || {})[i] || "")}" placeholder="ChatGPT: … · Perplexity: … · Diluu: …" ${ro ? "readonly" : ""}></td></tr>`).join("")}</tbody></table></div>`;
+    el.innerHTML = `<p style="font-size:13.5px">${previa ? `<span class="chip neutral">Última ronda: ${MESES[Number(mes.slice(5)) - 1]}</span> La de ${MESES[Number(iaMes.slice(5)) - 1]} se hace el viernes ${sig ? corta(isoAdd(sig, 4)) : "de la semana de las IA"}; mientras, aquí ves la anterior (solo lectura).<br>` : ""}<b>Diluu aparece en ${sale} de ${hechas || PREGUNTAS_IA.length * IA_ASIST.length}</b> respuestas · ${MESES[Number(mes.slice(5)) - 1]} ${mes.slice(0, 4)} · objetivo: 14 de 36 en diciembre (línea base de octubre: 10; Gemini 0); la 11 y la 12 miden la comparativa de francés</p><p style="font-size:13px">En la última columna apunta, en cada pregunta, <b>a quién recomienda cada IA</b> (los nombres) y, si sale Diluu, <b>qué dice de nosotros</b>. Las capturas no hacen falta: esto entra directo en el brief de la comparativa de español y en «Diluu en 10 datos».</p><div class="tbl-wrap"><table><thead><tr><th>Pregunta</th>${IA_ASIST.map(a => `<th>${a}</th>`).join("")}<th>A quién recomienda y qué dice de Diluu</th></tr></thead><tbody>${PREGUNTAS_IA.map((q, i) => `<tr><td style="font-size:12.5px">${i + 1}. ${esc(q)}</td>${IA_ASIST.map(a => `<td><select data-ia="${i}-${a}" ${ro ? "disabled" : ""}>${IA_OPC.map(o => `<option ${r[i + "-" + a] === o ? "selected" : ""} value="${o}">${o || "—"}</option>`).join("")}</select></td>`).join("")}<td><input class="ia-cita" data-ia-cita="${i}" value="${esc((doc.citas || {})[i] || "")}" placeholder="ChatGPT: … · Perplexity: … · Diluu: …" ${ro && !api ? "readonly" : ""}></td></tr>`).join("")}</tbody></table></div>${api ? `<p style="font-size:13px;margin-top:8px"><b>Leído por API el ${corta((doc.fecha || "").slice(0, 10))}</b> (${esc(doc.resumen || "")}). Las casillas no se tocan; la última columna sí.</p><details><summary>Citas de la API (a quién recomienda cada asistente)</summary><ul style="font-size:12.5px">${PREGUNTAS_IA.map((q, i) => `<li><b>${i + 1}.</b> ${IA_ASIST.map(a => { const c = (doc.citasApi || {})[i + "-" + a]; return c ? `${a}: ${esc((c.recomienda || []).join(", ") || "nadie en concreto")}${c.diluu ? ` · Diluu: «${esc(c.diluu)}»` : ""}` : `${a}: —`; }).join(" · ")}</li>`).join("")}</ul></details>` : ""}`;
   });
 }
 document.addEventListener("change", async e => {
@@ -1857,10 +1883,11 @@ function columns(el, labels, data, colorVar, goal, unit) {
   el.appendChild(svg);
 }
 let qFiltro = "todas";
-const estadoCls = e => e.startsWith("Página") ? "muted" : e === "Artículo" ? "neutral" : e.startsWith("Mejorar") ? "warn" : e === "Publicado" || e === "Hecho" ? "good" : e === "En revisión" || e === "En curso" ? "neutral" : "muted";
+const estadoCls = e => e.startsWith("Página") ? "muted" : e === "Artículo" ? "neutral" : e.startsWith("Mejorar") ? "warn" : e === "Publicado" || e === "Hecho" ? "good" : e === "En revisión" || e === "En curso" ? "neutral" : e === "Sin plan" ? "warn" : e === "Vigilar" || e === "Descartada" ? "muted" : "muted";
 function renderQueries() {
   const filtros = [["todas", "Todas"], ["semana", "Pieza de la semana"], ["Artículo", "Artículos"], ["Mejorar", "Posts a mejorar"], ["ES", "ES"], ["EN", "EN"], ["FR", "FR"]];
   $("#qFilters").innerHTML = filtros.map(f => `<button type="button" data-f="${f[0]}" aria-pressed="${qFiltro === f[0]}">${f[1]}</button>`).join("");
+  const qh = $("#qImprH"); if (qh) qh.textContent = "Impresiones · " + (D.queriesPeriodo || "");
   const enSemana = queriesDe(semana && semana.pieza);
   const rows = D.queries.filter(q => qFiltro === "todas" ? true : qFiltro === "semana" ? enSemana.includes(q) : qFiltro === "Artículo" ? q[6] === "Artículo" : qFiltro === "Mejorar" ? q[6].startsWith("Mejorar") : q[1] === qFiltro);
   $("#queries tbody").innerHTML = rows.length ? rows.map(q => `<tr><td>${esc(q[0])}</td><td>${q[1]}</td><td class="n">${q[2].toLocaleString("es-ES")}</td><td class="n">${q[3]}</td><td class="n">${q[4] === null ? "—" : fmt(q[4])}</td><td>${esc(q[5])}</td><td><span class="chip ${estadoCls(q[6])}">${esc(q[6])}</span></td></tr>`).join("") : `<tr><td colspan="7">Sin filas para este filtro.</td></tr>`;
@@ -1871,6 +1898,7 @@ function renderDatos() {
   columns($("#chImpr"), D.meses, D.impresiones, "--s1", null, "impresiones");
   columns($("#chIA"), D.iaMeses, D.iaSesiones, "--s3", 220, "sesiones");
   const ce = $("#compra"); if (ce) ce.innerHTML = tablaCompra();
+  const cp = $("#convPaginas"); if (cp && D.convPaginas) cp.innerHTML = `<p class="sub" style="font-size:13px">${esc(D.convPaginas.periodo)}</p><div class="tbl-wrap"><table><thead><tr><th>Página de destino</th><th class="n">Sesiones</th><th class="n">Eventos clave</th><th class="n">Por 100 sesiones</th><th>Qué es</th></tr></thead><tbody>${D.convPaginas.filas.map(r => `<tr class="${r[2] >= 10 && r[1] < 1000 ? "hl" : ""}"><td>${esc(r[0])}</td><td class="n">${r[1].toLocaleString("es-ES")}</td><td class="n">${r[2]}</td><td class="n">${r[1] ? (100 * r[2] / r[1]).toFixed(r[2] / r[1] >= 0.1 ? 0 : 1) : "—"}</td><td>${esc(r[3])}</td></tr>`).join("")}</tbody></table></div>`;
   columns($("#chConv"), D.convMeses, D.conv, "--s2", null, "eventos clave");
   $("#avisos").innerHTML = D.avisos.map(a => `<li>${esc(a)}</li>`).join("");
   $("#fuentes").textContent = D.fuentes;
@@ -2140,6 +2168,11 @@ document.addEventListener("change", async e => {
 // --- arranque ---
 showTab(location.hash.slice(1) || "hoy", false);
 $("#periodo").textContent = D.periodo;
+(function avisoDatos() {
+  const el = $("#periodo"); if (!el || !D.actualizado) return;
+  const dias = Math.round((new Date(hoy.iso) - new Date(D.actualizado)) / 86400000);
+  if (dias > 8) { const p = document.createElement("p"); p.className = "datos-viejos"; p.textContent = `Los datos del panel son del ${corta(D.actualizado)} (${dias} días): la rutina del domingo no ha corrido o ha fallado. Lo que ves de posiciones, clics y enlaces puede estar desfasado; avisa a Lucia si sigue así el martes.`; el.insertAdjacentElement("afterend", p); }
+})();
 renderPlan(); renderDatos(); renderGuias(); renderSemana();
 renderHoyHead(); renderPieza(); renderSteps(); renderNota(); renderBoard(); renderResultados(); renderIA();
 

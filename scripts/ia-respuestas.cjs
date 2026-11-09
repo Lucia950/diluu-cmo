@@ -140,7 +140,7 @@ async function main() {
     }
   }
   const sale = Object.values(r).filter(v => v.startsWith("Sale")).length, hechas = Object.keys(r).length;
-  const salida = { mes: MES, fecha: new Date().toISOString(), fuente: "api", preguntas: PQ, r, citas: cit, textos, errores, resumen: `Diluu aparece en ${sale} de ${hechas}` };
+  const salida = { mes: MES, fecha: new Date().toISOString(), fuente: "api", preguntas: PQ, r, citasApi: cit, textos, errores, resumen: `Diluu aparece en ${sale} de ${hechas}` };
   fs.mkdirSync(path.join(RAIZ, "data"), { recursive: true });
   const base = path.join(RAIZ, "data", `ia-respuestas-${MES}`);
   fs.writeFileSync(base + ".json", JSON.stringify(salida, null, 2));

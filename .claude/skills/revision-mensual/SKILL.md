@@ -25,7 +25,7 @@ mes anterior y mismo mes de 2025:
   ~/.claude/plugins/cache/diluu/diluu-ops/*/ | head -1)scripts/personal-keys.cjs" run -- node scripts/ia-respuestas.cjs`
   (claves propias de Lucia: OPENAI_API_KEY, GEMINI_API_KEY, PERPLEXITY_API_KEY; ≈ 36 llamadas, sin sesión ni memoria, con el
   país del padre que pregunta). Escribe `data/ia-respuestas-AAAA-MM.{json,md}`. Con el JSON, escribe en la base del
-  artefacto SEO Diluu (slug 8d1e7569-a31f-4070-92d4-31519c64d89b) el documento `ia/AAAA-MM` con `r`, `citas`, `fuente: "api"`
+  artefacto SEO Diluu (slug 8d1e7569-a31f-4070-92d4-31519c64d89b) el documento `ia/AAAA-MM` con `r`, `citasApi`, `fecha`, `resumen`, `fuente: "api"`
   y `actualizado` (merge con `ifVersion` si existe; si Bárbara ya rellenó `r` a mano ese mes, guarda lo de la API en `rApi` y
   compara los dos en la revisión). Métrica: «Diluu aparece en X de 36» (línea base manual 30 oct: 10; objetivo 14 en
   diciembre; Gemini 0 de 12) y a quién recomiendan. Es un indicador: la métrica que decide sigue siendo GA4 (sesiones y

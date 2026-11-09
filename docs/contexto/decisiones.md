@@ -1,5 +1,29 @@
 # Decisiones (más reciente arriba)
 
+- **2026-11-09** · Revisión de la estrategia SEO y herramienta v42 (Lucia, 17:00 Bali; análisis en
+  docs/analisis/seo-revision-estrategia-2026-11-09.md):
+  (1) **Qué convierte** (GA4, 11 ago–8 nov, Organic Search + AI Assistant, eventos clave): mapas 10.800 sesiones → 11; blog
+  sin mapas 1.400 → 10; páginas de clases 930 → 270 (/french-classes-for-kids 402 → 148); IA 390 → 140. Decisiones: desde el
+  A4 (último informativo), los artículos de Bárbara solo con intención de compra o de problema; francés primero; las páginas
+  de clases de español son un problema de páginas (encargo de Lucia), no de posts; medir por página de destino.
+  (2) **No se invierte en «clases de español para niños» ni «español para niños»** (Search Console 6 meses: 110 impresiones,
+  1 clic, posición 35; México 43, España 17, EE. UU. 16, Reino Unido 10; Google enseña el A1 ES, no la página de clases).
+  La página ES se orienta a la diáspora. **Fuera de las 30 búsquedas** «cursos para niños de 10 a 12 años» y las dos de
+  lectoescritura (9 impresiones en 6 meses, México y España); **entran** «clases de español online para niños en Estados
+  Unidos» (página ES, Lucia), «mi hijo entiende español pero no lo habla» (A3 ES + test) y «cómo mantener el español de mi
+  hijo en el extranjero» (A1 ES). Hoy las tres tienen 0 impresiones: son objetivo. Hoja y herramienta actualizadas.
+  (3) **Ciudades: ningún programa.** «london» 105 impresiones y 2 clics en 12 meses; Dublin, Manchester, Nueva York y Miami
+  0. Solo el test de Londres de enero (≥ 1 prueba pagada en 8 semanas) y mejorar /blog/spanish-classes-for-kids-near-me/
+  (4 sesiones → 7 eventos clave).
+  (4) **Herramienta v42** (versión 1794216192-50ef): estados de las 30 búsquedas «Página de Lucia / Artículo / Mejorar /
+  Vigilar / Sin plan» (nunca «Pendiente») y columna de impresiones con su periodo (90 días desde el 15 nov); motivo
+  obligatorio al mover una tarjeta a Rechazado o Sin respuesta (campo `motivo`, se añade a notas); aviso rojo bajo la
+  cabecera si los datos tienen más de 8 días (`D.actualizado`); en los pasos con más de 7 días pendientes, «¿qué te frenó?»
+  que se guarda en `preguntasLucia` (de «Herramienta») y llega a Lucia por el aviso diario; el paso de las IA del viernes
+  pasa desde diciembre a revisar las respuestas de la API (10 min; la ronda del 27 nov es la última a mano, para
+  comparar); nueva tabla «Qué páginas convierten» (`D.convPaginas`) y tendencia semanal de las 10 búsquedas de compra
+  (`D.compraSerie`, la rellena seo-lunes). Search Console en Supermetrics perdió la conexión el 9 nov: Lucia la reconecta.
+
 - **2026-11-09** · Rutinas en la nube y preguntas a las IA por API (Lucia, 15:00–16:30 Bali):
   (1) **Aviso diario por Slack** de las novedades de Bárbara: rutina en la nube `trig_01VNb5bPhpwTNRqbWxU4X1UK` («Diluu SEO ·
   aviso diario a Lucia», 10:00 Bali, Sonnet 5.5, conector Slack), primera ejecución el 10 nov. Lee `contactos` (actualizado en
