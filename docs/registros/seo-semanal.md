@@ -6,7 +6,7 @@ Lo escribe la skill seo-lunes (domingo por la noche, hora de Bali). Entrada más
 
 Primera ejecución de la rutina en la nube sin intervención (domingo 20:00 Bali). Datos: base del artefacto (dias, revisiones, preguntas,
 preguntasLucia, contactos, publicados, ia), Search Console y GA4 por Supermetrics, hoja de búsquedas, curl desde la nube. Sin Stripe ni
-base de producción (no están en la nube). Artefacto publicado: **v47** (versión 1794745435-8bc0).
+base de producción (no están en la nube). Artefacto publicado: **v48** (versión 1794745641-7b5c; la v47 de las 20:25 fue la misma rutina, antes de corregir las búsquedas del artículo 4).
 
 ### Qué hizo Bárbara (base del artefacto, `dias`)
 - 16 pasos marcados (sem. 45: 17): lun l1–l6 (l3–l5 marcados el martes); mar m1, m2; mié x1–x3; jue j2 (marcado el viernes); vie v1, v3, v4, v6.
@@ -99,7 +99,7 @@ asignada, por primera vez); «online french classes for kids» 38,5 (su página;
 - Nuevas en «Preguntas para ti» (4, de Claude, 16 nov): artículo 2 (listo e indexación), El Ibérico (¿otro correo con tarifas?), artículo 3 y
   acceso a Claude, los tres directorios que vuelven.
 
-### Herramienta: v47 (15 nov)
+### Herramienta: v48 (15 nov)
 `D.actualizado` 15 nov; series de padres e IA hasta el 15 nov; 30 búsquedas a 90 días; `compraSerie` con la semana del 9 nov y notas por fila;
 «Qué páginas convierten» 18 ago–15 nov (29 filas, con las páginas de prueba marcadas como no padres); resultados de lo publicado; objetivos
 (fichas 6/10, IA 125, padres 75); tareas (FLAM hecha, El Ibérico, 11 mensajes, re-registro de los 3 directorios); `BRIEFS[4]` y `A4.kw`/`aviso`.
