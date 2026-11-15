@@ -2,6 +2,145 @@
 
 Lo escribe la skill seo-lunes (domingo por la noche, hora de Bali). Entrada más reciente arriba.
 
+## Semana 46 (9–15 nov 2026) · preparado el domingo 15 nov, 20:00–20:30 hora de Bali (WITA, UTC+8), rutina en la nube
+
+Primera ejecución de la rutina en la nube sin intervención (domingo 20:00 Bali). Datos: base del artefacto (dias, revisiones, preguntas,
+preguntasLucia, contactos, publicados, ia), Search Console y GA4 por Supermetrics, hoja de búsquedas, curl desde la nube. Sin Stripe ni
+base de producción (no están en la nube). Artefacto publicado: **v47** (versión 1794745435-8bc0).
+
+### Qué hizo Bárbara (base del artefacto, `dias`)
+- 16 pasos marcados (sem. 45: 17): lun l1–l6 (l3–l5 marcados el martes); mar m1, m2; mié x1–x3; jue j2 (marcado el viernes); vie v1, v3, v4, v6.
+- Artículo 3: borradores ES y EN pedidos y repasados el 10 y el 11 nov en la sesión del blog (notas con las dos URL en localhost; «no he
+  publicado nada», correcto: se publica del 16 al 20). El jueves 12 no hizo el repaso final con el brief (j1 sin marcar).
+- Nota del viernes 13: «no pude avanzar con tareas que implicaban Claude y Claude blog» (no entra en Claude con heyspanishuk@gmail.com,
+  pregunta a Peter del 13 nov); «me queda pendiente post nuevo y dos fichas, los intentaré avanzar el fin de semana». Enrichment.kids quedó
+  publicada ese día (6.ª ficha).
+- Enlaces, su mejor semana: 11 primeros mensajes nuevos (10 nov: Bilingual Kidspot, La Tundra, Melbourne Accueil, SBS en español, Spanish
+  Playground; 13 nov: Club Hub UK, ellaslist, Français à Londres, MommyMaestra, Mother Tongues, Multilingual Parenting, The Homeschool Mom),
+  10 seguimientos 1 (13 nov) y 4 mensajes por otra vía (Instagram ya con acceso).
+- Sin URLs guardadas en pasos que cambian el blog (nada que verificar en `verificaciones`).
+
+### Resultados
+| Métrica | Sem. 46 (9–15 nov) | Sem. 45 | Fuente |
+| --- | --- | --- | --- |
+| Clics de padres (páginas de clases, prueba y precios, sin marca) | **35** (1.532 impr.) | 38 (1.625) | Search Console, A 76 clics / 2.750 impr. − marca B 41 / 1.218; el 14 y el 15 nov aún pueden subir |
+| Clics de padres del mes (1–15 nov) | **75** (3.381 impr.) | oct completo: 104 | Search Console; a ritmo de ≈ 150 en el mes, el mejor desde enero (objetivo dic: 110) |
+| Sesiones desde asistentes de IA (1–15 nov) | **125** (ChatGPT 116, Gemini 9) · 44 eventos clave | 1–8 nov: 65 / 18 | GA4; 8,3 al día frente a 5,3 en octubre → ≈ 250 en el mes (objetivo 220) |
+| Serie mensual | nov* 75 / 3.381 | oct 104 / 5.485 | Search Console A − B; Supermetrics ya solo lee desde el 15 jul 2025 (el 9 nov era el 9 jul): jun–jul 2025 conservan la lectura del 26 oct |
+
+Búsquedas de padres que se mueven (9–15 nov, páginas de clases, sin marca): «cours de français pour enfants» 3 impr. en posición 12,7 y
+«cours de français pour enfants de 7 ans» posición 7 (/fr/…7-a-9-ans/); «quelles sont les meilleures classes de français en ligne pour
+enfants ?» 14 impr. en posición 1,4 (modo IA de Google) y la de español sale por primera vez con la página asignada (1 impr., posición 1);
+«español preescolar» posición 10 y «aprender a leer desde cero» posición 10 (/es/lectoescritura…); «spanish for heritage speakers online
+course» posición 9; «online spanish preschool» posición 20,5. Ninguna de las 68 filas tiene clics visibles: los 35 clics vienen de búsquedas
+que Google oculta.
+
+**Las 30 búsquedas a 90 días (18 ago–15 nov)**: «aplicaciones para aprender español niños» 1 impresión y **1 clic en posición 1** (artículo 2 ES);
+«clases de español para niños de 3 a 5 años» 1 clic, pos. 9; «cours de français pour enfants de 7 ans» 29 impr., 1 clic, pos. 4,4;
+«cours de français en ligne pour enfants» 15 impr., 2 clics, pos. 20,1; «spanish classes near me» 17 impr., 1 clic, pos. 28,6; «clases de español
+para niños» 53 impr., 0 clics, pos. 36,2; «idiomas para niños» 37 / 0 / 40,4; «spanish classes london» 6 / 0 / 5,7. Las 16 restantes, 0 impresiones.
+Hoja de búsquedas: sin cambios de estado (sigue con «Pendiente» en 24 filas; `D.queries` conserva los estados de la v42).
+
+**Las 10 búsquedas de compra, semana del 9 nov** (`D.compraSerie`): «7 ans» pos. 7; «quelles… français» 1,4; «quelles… espagnol» 1 (la página
+asignada, por primera vez); «online french classes for kids» 38,5 (su página; el post how-teach-kids-french-at-home también sale, en 62,5);
+«clases de español para niños» la sigue ganando el artículo 1 ES (4 impr., pos. 32); «online spanish classes for kids» la enseña
+/blog/best-online-spanish-courses-for-kids/ (4 impr., pos. 40); las otras 4 sin impresiones con su página.
+
+### Publicaciones y revisiones
+- Resultados de lo publicado (Search Console, lectura del 15 nov; tabla en la herramienta): artículo 1 ES a 28 días 140 impr. y **3 clics**
+  (antes 105 y 0; posición 38,5 → 28,5); artículo 1 EN 121 impr., 1 clic (antes 328: sigue por debajo, posición 24 → 40); A1 FR 52 (antes 66).
+  Libros ES (21 días): 128 impr., 2 clics, posición 34,9 → 19,7. Apps ES (18 días): 168 impr., 2 clics, posición 14 → 21. Apps EN: 3.837 impr.
+  (213 al día frente a 95), 0 clics, posición 33; el duplicado -2 sigue recibiendo impresiones. Comparativa de francés (13 días): 8 impr.,
+  posición 4,6, sin clics.
+- Las 7 URL de la tabla y los 4 posts que se rehacen (A3 ES/EN y A4 ES/EN) responden 200 con title, una H1, canonical propia, sin noindex y
+  sin LOROPEPE ni «prueba gratis» (curl desde la nube, 20:10 Bali). `auditoria-web.py --rapido`: **200 URLs de los sitemaps, todas 200**.
+- Artículo 2: Bárbara contestó el 9 nov qué la frenó (la herramienta le dio «listo» con 86 y al reenviar bajó a 84 y volvió a pedir cambios).
+  **Claude lo da por bueno** (84/100, cambios menores). La rutina no escribe en `revisiones`: Lucia marca el ok (o se hace desde la sesión del
+  CMO) y Bárbara pide la indexación. Pregunta puesta en «Preguntas para ti».
+- Artículo 3: en la semana prevista. Falta el repaso final con el brief (jueves) y publicar (16–20 nov) → informe → «Revisar con Claude» → «listo»
+  → indexar. Riesgo: el acceso a Claude de Bárbara (viernes 13).
+- **Brief del artículo 4 escrito y publicado** (`BRIEFS[4]`, 10.300 caracteres; semana del 23 nov): rehace /blog/how-teach-kids-french-at-home/
+  (16 may–15 nov: 372 impr., 3 clics, pos. 21,5) y /es/blog/how-teach-kids-french-at-home/ (91 impr., 1 clic, pos. 17,4). Mapa de búsquedas:
+  conserva «how to teach kids new languages» (15, pos. 11,2), «enseñar frances» y «como enseñar frances a niños»; las de «online french classes
+  for kids» (11 impr., pos. 39–60) son de /french-classes-for-kids/: el post la enlaza y deja de competir. Duplicado
+  /blog/how-teach-kids-french-at-home-2/ (32 impr.): pedir el 301. Competencia leída solo en los resultados de Google (la nube no abre
+  sus webs): guías de vendedores en inglés (Outschool, Dinolingo, Studycat, Talk in French), casi nada para padres en español. Es el último
+  artículo informativo del plan (decisión del 9 nov).
+
+### Enlaces (tablero, 69 tarjetas tras la rutina)
+- Estados antes de la rutina (63): Seguimiento 1 enviado 22, Contactado 14, Rechazado 7, Enlace conseguido 7, Por contactar 6, Respondió 4,
+  En negociación 3. **Fichas conseguidas 6 de 10** (+ Enrichment.kids, 13 nov) + perfil en Qwoted.
+- Respuestas de la semana: **El Ibérico** (Paco de la Coba, 10 nov): «cuando tengáis el reportaje, enviádnoslo y, si pasa el corte editorial,
+  lo publicamos», sin tarifas. Bárbara escribió en «Preguntas para ti» que «piden pagar»: el texto guardado en la tarjeta no lo dice; se le
+  pregunta. La tarjeta pasa a En negociación; el borrador de respuesta espera la fecha y las declaraciones de Lucia. **Devenir Bilingue**
+  (Emmanuelle Labbé, 12 nov): ficha en su anuario ahora y volver a hablar en 4 meses (sí) o publirreportaje de 900 € (no); respuesta en
+  francés redactada en la tarjeta, recordatorio para la semana del 9 mar 2027. **Homeschoolpicks** (9 nov): solo opciones de pago
+  (500–2.500 $) → Rechazado con motivo. **Growing Up Bilingual** (125 $) → Rechazado con motivo (Bárbara declinó el 6 nov).
+- Correcciones de la rutina: **020.co.uk, Homeschool Hub Utah y Online Homeschool Curriculum Directory vuelven a «Por contactar»** (Bárbara
+  los pasó a Rechazado por error con el botón «la ficha no se ha publicado»; las fichas del 20 oct no aparecieron: hay que registrarse otra vez).
+  **Expatica → Rechazado** (ficha de 299 € por país y año). The Raising Bilinguals: el aviso que vio Bárbara es un certificado caducado
+  (ERR_CERT_DATE_INVALID): la vía pasa a Instagram.
+- Tarjetas nuevas (6, redactadas por la rutina; contactos **sin verificar desde la nube**, cada tarjeta lo avisa): Multicultural Kid Blogs
+  (artículo de invitada), Kid World Citizen (mención), **Viva la Mami** (podcast latino activo: entrevista a Lucia por Caluu), Hispanic Mama
+  (artículo), Mykidstime y Dublin City Mum (directorios, Irlanda, francés primero). «Por contactar» con correo redactado: 10 (020, France-Amérique,
+  Hoop, The Raising Bilinguals, SourceBottle + las 5 nuevas con correo); directorios por registro: Modulo, Homeschool Hub Utah, Online
+  Curriculum Directory, Dublin City Mum.
+- Vencidos: 13 seguimientos 2 de la tanda del 19 oct (seg. 1 el 2–5 nov, toca ya: Dublin Accueil, Expat.com, Express News, Homeschool.com,
+  Macaroni Kid, OFTP, Oxford Brookes, Sydney Accueil, UFE, Lepetitjournal y Cathy Duffy sin respuesta desde el 23 oct) y BiliKids (En negociación
+  desde el 2 nov, falta el enlace de Caluu). Hoop: el acceso de Zoho Vault no funciona (respuesta de Bárbara del 9 nov).
+
+### Preguntas a Peter (12 desde el 9 nov, 5 para Lucia) y «Preguntas para ti»
+- Las 12 preguntas del 9 nov están **todas respondidas** (9 nov, 22:00–22:40 Bali). Lo relevante: Hoop, credenciales de Zoho incorrectas;
+  Happity, escribió a hello@ pidiendo cambiar la ficha; FLAM Dublin, enviado el 4 nov; Connection First y Spanish Mama, no hizo seguimientos
+  porque el primero era por Instagram (ya hechos el 13); IA, línea base en incógnito y sin sesión (vale); The Raising Bilinguals, certificado.
+- Peter: 12 conversaciones (brief del A3, «¿aún no se publica?», «¿lo publico?», El Ibérico ×2, acceso a Claude, MommyMaestra ×2, Mother Tongues,
+  Expatica, ellaslist ×2). Respondió bien y sin inventar; pasó a Lucia lo que toca (dinero, accesos, teléfono, tercero). Un fallo de uso: Bárbara
+  le pidió «guarda este mail» y Peter no puede escribir en la tarjeta (ella lo hizo). Sin cambios en `D.peter.reglas`.
+- Nuevas en «Preguntas para ti» (4, de Claude, 16 nov): artículo 2 (listo e indexación), El Ibérico (¿otro correo con tarifas?), artículo 3 y
+  acceso a Claude, los tres directorios que vuelven.
+
+### Herramienta: v47 (15 nov)
+`D.actualizado` 15 nov; series de padres e IA hasta el 15 nov; 30 búsquedas a 90 días; `compraSerie` con la semana del 9 nov y notas por fila;
+«Qué páginas convierten» 18 ago–15 nov (29 filas, con las páginas de prueba marcadas como no padres); resultados de lo publicado; objetivos
+(fichas 6/10, IA 125, padres 75); tareas (FLAM hecha, El Ibérico, 11 mensajes, re-registro de los 3 directorios); `BRIEFS[4]` y `A4.kw`/`aviso`.
+
+### Semana 47 (16–20 nov): «Artículo 3, publicar»
+- Lun: seguimientos 2 vencidos (13), enlace de Caluu a BiliKids, respuesta a Devenir Bilingue (tarjeta), contestar las 4 «Preguntas para ti»;
+  repaso final del A3 con el brief si ya entra en Claude.
+- Mar–mié: publicar el artículo 3 (EN y ES) con el OK en la sesión del blog → informe (`scripts/informe-revision.py`) → «Revisar con Claude» →
+  «listo» → indexar. Indexación del artículo 2 cuando Lucia marque el ok.
+- Jue: 5 correos nuevos (Viva la Mami, Multicultural Kid Blogs, Kid World Citizen, Hispanic Mama, Mykidstime), confirmando antes cada contacto.
+- Vie: dos fichas: volver a registrar Online Homeschool Curriculum Directory y 020.co.uk; Dublin City Mum si sobra tiempo. Nota de la semana.
+- Semana del 23: artículo 4 (brief ya en la herramienta) y «Diluu en 10 datos» (27 nov).
+
+### Pendientes para Lucia
+- **Acceso de Bárbara a Claude** con heyspanishuk@gmail.com: no entra desde el viernes 13; bloquea el repaso final y la publicación del
+  artículo 3 (16–20 nov) y la indexación.
+- **El Ibérico**: Paco acepta recibir el reportaje sin tarifas (10 nov). Faltan tus declaraciones (o entrevista) sobre niños que entienden
+  español pero no lo hablan en Reino Unido y la fecha de entrega para el borrador de la tarjeta. Bárbara dice que «piden pagar»: se le ha
+  pedido el correo; si llega con tarifas, se cierra.
+- **Artículo 2**: Claude lo da por bueno (84/100). Marcar `revisiones/a2` en ok desde la herramienta (pestaña Semana) o desde la sesión del CMO;
+  la rutina no escribe en esa colección.
+- **ellaslist** (Australia) pide un teléfono de Diluu para la ficha del directorio: ¿cuál, o se deja vacío?
+- **Hoop**: las credenciales de Zoho Vault no funcionan (Bárbara, 9 nov); revisar o resetear la cuenta de organizador (lucia@heyspanish.com).
+- **Developer**: 301 de /blog/how-teach-kids-french-at-home-2/ → /blog/how-teach-kids-french-at-home/ y de /blog/best-spanish-learning-app-for-kids-2/
+  → /blog/best-spanish-learning-app-for-kids/ (los duplicados siguen recibiendo impresiones).
+- Entorno `diluu-meta-ads`: sigue sin abrir dominios de terceros (WebFetch y curl fallan; WebSearch sí funciona). Las 6 tarjetas nuevas y los
+  briefs se hacen con resultados de Google sin abrir las páginas; Bárbara confirma cada contacto antes de enviar. Decisión pendiente desde el 9 nov.
+- Supermetrics: Search Console ya solo desde el **15 jul 2025** (el 9 nov era el 9 jul); la rutina lo resolvió sola. Si sigue retrocediendo,
+  la serie mensual anterior se queda con la lectura del 26 oct.
+- Hoja «SEO Diluu · Búsquedas»: 24 filas siguen en «Pendiente» (estado que la herramienta ya no usa). Si la hoja deja de ser la fuente de los
+  estados, decirlo y la rutina deja de leerla.
+
+### Para el registro del lunes
+- SEO sem. 46: clics de padres 35 (1.532 impr.; sem. 45: 38); 1–15 nov 75 frente a 110 de objetivo mensual (ritmo ≈ 150, el mejor desde enero);
+  sesiones desde IA 1–15 nov 125 (44 eventos clave), ritmo ≈ 250/mes, por encima del objetivo de 220.
+- Bárbara: 16 pasos; borradores del artículo 3 hechos (se publica 16–20 nov); 11 primeros mensajes y 10 seguimientos; fichas 6 de 10
+  (+ Enrichment.kids); El Ibérico acepta el reportaje sin tarifas (faltan declaraciones y fecha de Lucia); Devenir Bilingue ofrece ficha gratis
+  (sí) o 900 € (no); artículo 2 dado por bueno por Claude (Lucia marca el ok).
+- Semana 47: publicar e indexar el artículo 3, 13 seguimientos 2, 5 correos nuevos (contactos sin verificar desde la nube), re-registro de
+  3 directorios; bloqueo: acceso de Bárbara a Claude desde el 13 nov. Brief del artículo 4 ya en la herramienta.
+
 ## Semana 45 (2–8 nov 2026) · preparado el lunes 9 nov, 13:00 hora de Bali (WITA, UTC+8), a mano; completado por la rutina en la nube a las 19:52 y 20:45 Bali
 
 La rutina seo-lunes del domingo no dejó registro: Lucia la lanzó el lunes 9 a las 09:22 Bali y se interrumpió en un permiso.
